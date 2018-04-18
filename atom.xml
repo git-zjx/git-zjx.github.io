@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-18T07:40:44.973Z</updated>
+  <updated>2018-04-18T08:52:53.122Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,30 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/18/hello-world/"/>
-    <id>http://yoursite.com/2018/04/18/hello-world/</id>
-    <published>2018-04-18T06:22:00.699Z</published>
-    <updated>2018-04-18T07:40:44.973Z</updated>
+    <title>设计模式-单例模式</title>
+    <link href="http://yoursite.com/2018/04/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/04/18/设计模式-单例模式/</id>
+    <published>2018-04-18T08:20:19.000Z</published>
+    <updated>2018-04-18T08:52:53.122Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;单例模式，也叫单子模式，是一种常用的软件设计模式。在应用这个模式时，单例对象的类必须保证只有一个实例存在。&lt;/p&gt;
+&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;懒汉方式：指全局的单例实例在第一次被使用时构建。&lt;/li&gt;
+&lt;li&gt;饿汉方式：指全局的单例实例在类装载时构建。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;私有化一个属性用于存放唯一的一个实例。&lt;/li&gt;
+&lt;li&gt;私有化构造方法，私有化克隆方法，用来创建并只允许创建一个实例。&lt;/li&gt;
+&lt;li&gt;公有化静态方法，用于向系统提供这个实例。&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="PS3" scheme="http://yoursite.com/tags/PS3/"/>
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
     
-      <category term="Games" scheme="http://yoursite.com/tags/Games/"/>
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
