@@ -225,6 +225,8 @@
       
         
         
+          
+        
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>简单工厂模式又称静态工厂方法模式，简单工厂模式的工厂类一般是使用静态方法，通过接收的参数的不同来返回不同的对象实例。<br>还有一种说法是认为静态工厂方法模式和简单工厂模式是两种模式，详情看<a href="https://laravel-china.org/docs/php-design-patterns/2018/SimpleFactory" target="_blank" rel="noopener">简单工厂模式</a>和<a href="https://laravel-china.org/docs/php-design-patterns/2018/StaticFactory" target="_blank" rel="noopener">静态工厂方法模式</a></p>
@@ -235,9 +237,9 @@
 <li>集中了所有实例的创建逻辑，容易违反GRASPR的高内聚的责任分配原则</li>
 <li>不修改代码的话，是无法扩展的</li>
 </ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleFactory</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">produce</span><span class="params">($type = <span class="string">''</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> ($type) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'chicken'</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Chicken();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'pig'</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Pig();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">echo</span> <span class="string">"生产错误\n"</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SimpleFactory::produce(<span class="string">'chicken'</span>);</span><br><span class="line">SimpleFactory::produce(<span class="string">'pig'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/toutou/p/4899388.html" target="_blank" rel="noopener">详解设计模式之工厂模式(简单工厂+工厂方法+抽象工厂)</a><br><a href="https://laravel-china.org/docs/php-design-patterns/2018/SimpleFactory" target="_blank" rel="noopener">简单工厂模式（Simple Factory）</a><br><a href="https://laravel-china.org/docs/php-design-patterns/2018/StaticFactory" target="_blank" rel="noopener">静态工厂模式（Static Factory）</a></p>
-
+          <div class="read-more">
+            <a href="/2018/04/18/设计模式-简单工厂模式/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>

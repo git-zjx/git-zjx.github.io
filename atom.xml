@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-18T09:19:29.831Z</updated>
+  <updated>2018-04-18T09:21:41.131Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,18 @@
     <link href="http://yoursite.com/2018/04/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2018/04/18/设计模式-简单工厂模式/</id>
     <published>2018-04-18T09:01:47.000Z</published>
-    <updated>2018-04-18T09:19:29.831Z</updated>
+    <updated>2018-04-18T09:21:41.131Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;简单工厂模式又称静态工厂方法模式，简单工厂模式的工厂类一般是使用静态方法，通过接收的参数的不同来返回不同的对象实例。&lt;br&gt;还有一种说法是认为静态工厂方法模式和简单工厂模式是两种模式，详情看&lt;a href=&quot;https://laravel-china.org/docs/php-design-patterns/2018/SimpleFactory&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;简单工厂模式&lt;/a&gt;和&lt;a href=&quot;https://laravel-china.org/docs/php-design-patterns/2018/StaticFactory&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;静态工厂方法模式&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;能够根据外界给定的信息，决定究竟应该创建哪个具体类的对象。明确区分了各自的职责和权力，有利于整个软件体系结构的优化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点&quot;&gt;&lt;/a&gt;缺点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;集中了所有实例的创建逻辑，容易违反GRASPR的高内聚的责任分配原则&lt;/li&gt;
+&lt;li&gt;不修改代码的话，是无法扩展的&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
