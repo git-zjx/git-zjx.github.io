@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-19T05:33:07.920Z</updated>
+  <updated>2018-04-19T07:50:16.717Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>设计模式-建造者模式</title>
+    <link href="http://yoursite.com/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/04/19/设计模式-建造者模式/</id>
+    <published>2018-04-19T07:32:31.000Z</published>
+    <updated>2018-04-19T07:50:16.717Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;建造者模式又叫生成器模式，是一种对象构建模式。它可以将复杂对象的建造过程抽象出来（抽象类别），使这个抽象过程的不同实现方法可以构造出不同表现（属性）的对象。&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象建造者（Builder）：为创建一个Product对象的各个部件指定抽象接口。&lt;/li&gt;
+&lt;li&gt;具体建造者（ConcreteBuilder）：实现Builder的接口以构造和装配该产品的各个部件。定义并明确它所创建的表示。提供一个检索产品的接口&lt;/li&gt;
+&lt;li&gt;导演角色（Director）：构造一个使用Builder接口的对象。&lt;/li&gt;
+&lt;li&gt;产品角色（Product）：表示被构造的复杂对象。ConcreateBuilder创建该产品的内部表示并定义它的装配过程。包含定义组成部件的类，包括将这些部件装配成最终产品的接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;封装性&lt;/li&gt;
+&lt;li&gt;建造者独立，容易扩展&lt;/li&gt;
+&lt;li&gt;便于控制细节风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点&quot;&gt;&lt;/a&gt;缺点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;建造者模式所创建的产品一般具有较多的共同点，其组成部分相似；如果产品之间的差异性很大，则不适合使用建造者模式，因此其使用范围受到一定的限制。&lt;/li&gt;
+&lt;li&gt;如果产品的内部变化复杂，可能会导致需要定义很多具体建造者类来实现这种变化，导致系统变得很庞大。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;使用场景&quot;&gt;&lt;a href=&quot;#使用场景&quot; class=&quot;headerlink&quot; title=&quot;使用场景&quot;&gt;&lt;/a&gt;使用场景&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;创建复杂对象的算法独立于组成对象的部件&lt;/li&gt;
+&lt;li&gt;同一个创建过程需要有不同的内部表象的产品对象&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="创建型" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>设计模式-抽象工厂模式</title>
     <link href="http://yoursite.com/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2018/04/19/设计模式-抽象工厂模式/</id>
     <published>2018-04-19T02:58:00.000Z</published>
-    <updated>2018-04-19T05:33:07.920Z</updated>
+    <updated>2018-04-19T05:35:08.295Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;抽象工厂模式提供了一种方式，可以将一组具有同一主题的单独的工厂封装起来。在正常使用中，客户端程序需要创建抽象工厂的具体实现，然后使用抽象工厂作为接口来创建这一主题的具体对象。客户端程序不需要知道（或关心）它从这些内部的工厂方法中获得对象的具体类型，因为客户端程序仅使用这些对象的通用接口。抽象工厂模式将一组对象的实现细节与他们的一般使用分离开来。&lt;/p&gt;
+&lt;p&gt;抽象工厂模式的实质是『提供接口，创建一系列相关或独立的对象，而不指定这些对象的具体类』。&lt;/p&gt;
+&lt;h3 id=&quot;产品族&quot;&gt;&lt;a href=&quot;#产品族&quot; class=&quot;headerlink&quot; title=&quot;产品族&quot;&gt;&lt;/a&gt;产品族&lt;/h3&gt;&lt;p&gt;产品族，是指位于不同产品等级结构，功能相关联的产品组成的家族。&lt;br&gt;抽象工厂是指一个工厂等级结构可以创建出分属于不同产品等级结构的一个产品族中的所有对象。&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象工厂角色：担任这个角色的是工厂方法模式的核心，它是与应用系统商业逻辑无关的。&lt;/li&gt;
+&lt;li&gt;具体工厂角色：这个角色直接在客户端的调用下创建产品的实例。这个角色含有选择合适的产品对象的逻辑，而这个逻辑是与应用系统的商业逻辑紧密相关的。&lt;/li&gt;
+&lt;li&gt;抽象产品角色：担任这个角色的类是工厂方法模式所创建的对象的父类，或它们共同拥有的接口。&lt;/li&gt;
+&lt;li&gt;具体产品角色：抽象工厂模式所创建的任何产品对象都是某一个具体产品类的实例。这是客户端最终需要的东西，其内部一定充满了应用系统的商业逻辑。&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
