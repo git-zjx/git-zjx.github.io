@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-19T08:59:52.822Z</updated>
+  <updated>2018-04-19T09:32:44.497Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,22 +17,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>设计模式-对象池模式</title>
+    <link href="http://yoursite.com/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%AF%B9%E8%B1%A1%E6%B1%A0%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/04/19/设计模式-对象池模式/</id>
+    <published>2018-04-19T09:20:07.000Z</published>
+    <updated>2018-04-19T09:32:44.497Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;一个对象池包含一组已经初始化过且可以使用的对象，而可以在有需求时创建和销毁对象。池的用户可以从池子中取得对象，对其进行操作处理，并在不需要时归还给池子而非直接销毁它。这是一种特殊的工厂对象。&lt;/p&gt;
+&lt;h3 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h3&gt;&lt;p&gt;运用对象池化技术可以显著地提升性能，尤其是当对象的初始化过程代价较大或者频率较高时。&lt;/p&gt;
+&lt;h3 id=&quot;使用场景&quot;&gt;&lt;a href=&quot;#使用场景&quot; class=&quot;headerlink&quot; title=&quot;使用场景&quot;&gt;&lt;/a&gt;使用场景&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;类的实例可重用于交互。&lt;/li&gt;
+&lt;li&gt;类的实例化过程开销较大。&lt;/li&gt;
+&lt;li&gt;类的实例化的频率较高。&lt;/li&gt;
+&lt;li&gt;类参与交互的时间周期有限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;节省了创建类的实例的开销。&lt;/li&gt;
+&lt;li&gt;节省了创建类的实例的时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点&quot;&gt;&lt;/a&gt;缺点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;存储空间随着对象的增多而增大。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="创建型" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>设计模式-多例模式</title>
     <link href="http://yoursite.com/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%9A%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2018/04/19/设计模式-多例模式/</id>
     <published>2018-04-19T08:55:58.000Z</published>
-    <updated>2018-04-19T08:59:52.822Z</updated>
+    <updated>2018-04-19T09:33:04.853Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;多例模式：在多例模式中，多例类可以有多个实例，而且多例类必须自己创建、管理自己的实例，并向外界提供自己的实例。&lt;/p&gt;
-&lt;h3
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;多例模式：在多例模式中，多例类可以有多个实例，而且多例类必须自己创建、管理自己的实例，并向外界提供自己的实例。&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;p&gt;单例模式的推广版本&lt;/p&gt;
     
     </summary>
     
