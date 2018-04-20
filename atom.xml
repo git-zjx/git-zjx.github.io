@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-20T02:54:24.705Z</updated>
+  <updated>2018-04-20T05:49:47.037Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-桥梁模式</title>
+    <link href="http://yoursite.com/2018/04/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%A2%81%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/04/20/设计模式-桥梁模式/</id>
+    <published>2018-04-20T05:14:11.000Z</published>
+    <updated>2018-04-20T05:49:47.037Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将抽象部分与它的实现部分分离，使它们都可以独立地变化。&lt;/p&gt;
+&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象（Abstraction）角色：它定义了抽象类的接口而且维护着一个指向实现（Implementor）角色的引用。&lt;/li&gt;
+&lt;li&gt;精确抽象（RefinedAbstraction）角色：实现并扩充由抽象角色定义的接口。&lt;/li&gt;
+&lt;li&gt;实现（Implementor）角色：给出了实现类的接口，这里的接口与抽象角色中的接口可以不一致。&lt;/li&gt;
+&lt;li&gt;具体实现（ConcreteImplementor）角色：给出了实现角色定义接口的具体实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象和现实分离，为了解决继承的缺点而提出的设计模式&lt;/li&gt;
+&lt;li&gt;优秀的扩充能力&lt;/li&gt;
+&lt;li&gt;实现细节对客户透明&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="结构型" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-适配器模式</title>
