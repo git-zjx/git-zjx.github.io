@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-19T09:32:44.497Z</updated>
+  <updated>2018-04-20T02:54:24.705Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-适配器模式</title>
+    <link href="http://yoursite.com/2018/04/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/04/20/设计模式-适配器模式/</id>
+    <published>2018-04-20T00:37:21.000Z</published>
+    <updated>2018-04-20T02:54:24.705Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无法在一起工作的两个类能够在一起工作。&lt;/p&gt;
+&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;类适配器模式&lt;/li&gt;
+&lt;li&gt;对象适配器模式&lt;/li&gt;
+&lt;li&gt;接口适配器模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;目标角色：所期待得到的接口&lt;/li&gt;
+&lt;li&gt;源角色：需要适配的接口&lt;/li&gt;
+&lt;li&gt;适配器角色：适配器把源角色转换成目标角色&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;可以让任何两个没有关联的类一起运行。&lt;/li&gt;
+&lt;li&gt;提高了类的复用。&lt;/li&gt;
+&lt;li&gt;增加了类的透明度。&lt;/li&gt;
+&lt;li&gt;灵活性好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点&quot;&gt;&lt;/a&gt;缺点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;过多地使用适配器，会让系统非常零乱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;适配器模式主要解决正在服役的项目问题，不是为了解决正处在开发阶段的问题&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="结构型" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-对象池模式</title>
