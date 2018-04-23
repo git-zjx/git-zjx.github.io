@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-04-20T08:39:24.834Z</updated>
+  <updated>2018-04-23T05:30:30.823Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-数据映射模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/04/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%95%B0%E6%8D%AE%E6%98%A0%E5%B0%84%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/04/23/设计模式-数据映射模式/</id>
+    <published>2018-04-23T05:24:48.000Z</published>
+    <updated>2018-04-23T05:30:30.823Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;数据映射器是一种数据访问层，它执行持久性数据存储（通常是关系数据库）和内存数据表示（域层）之间的数据双向传输。 该模式的目标是保持内存表示和持久数据存储相互独立，并保持数据映射器本身。 该层由一个或多个映射器（或数据访问对象）组成，执行数据传输。 映射器实现的范围有所不同。 通用映射器将处理许多不同的域实体类型，专用映射器将处理一个或几个。&lt;/p&gt;
+&lt;h3 id=&quot;使用场景&quot;&gt;&lt;a href=&quot;#使用场景&quot; class=&quot;headerlink&quot; title=&quot;使用场景&quot;&gt;&lt;/a&gt;使用场景&lt;/h3&gt;&lt;p&gt;数据库对象关系映射器（ ORM ）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-组合模式</title>
