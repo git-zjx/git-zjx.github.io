@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-04-26T01:34:15.401Z</updated>
+  <updated>2018-04-26T01:37:52.501Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="http://www.zhaojiaxing.top/2018/04/26/Nginx-%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/04/26/Nginx-内置变量/</id>
     <published>2018-04-26T00:49:49.000Z</published>
-    <updated>2018-04-26T01:34:15.401Z</updated>
+    <updated>2018-04-26T01:37:52.501Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
+      &lt;p&gt;&lt;code&gt;$arg_name&lt;/code&gt;：请求中的参数名，即「?」后面的&lt;code&gt;arg_name=arg_value&lt;/code&gt;形式的&lt;code&gt;arg_name&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$args&lt;/code&gt;：请求中的参数值，即「?」后面的&lt;code&gt;arg_name=arg_value&lt;/code&gt;形式的&lt;code&gt;arg_value&lt;/code&gt;     &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$binary_remote_addr&lt;/code&gt;：客户端地址的二进制形式，固定长度为4个字节  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$body_bytes_sent&lt;/code&gt;：传输给客户端的字节数，响应头不计算在内  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$bytes_sent&lt;/code&gt;：传输给客户端的字节数  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$connection&lt;/code&gt;：TCP连接的序列号   &lt;/p&gt;
     
     </summary>
     
