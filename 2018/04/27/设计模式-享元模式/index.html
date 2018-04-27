@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="设计模式-享元模式"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/categories/设计模式/结构型/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/04/27/设计模式-享元模式/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -97,11 +97,7 @@
 
 
 
-    <title>
-  
-    结构型 · ZJX
-  
-</title>
+    <title> 设计模式-享元模式 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -213,163 +209,137 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title category">
-          <h2 class="archive-name">结构型</h2>
-        </div>
-      
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          设计模式-享元模式
+        
+      </h1>
 
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-27
-          
+      <div class="post-meta">
+        <span class="post-time">
+          2018-04-27
         </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/27/设计模式-享元模式/" class="archive-post-link">
-            设计模式-享元模式
-          </a>
-        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/结构型/">结构型</a>
+            
+          </div>
+        
+        
+        <div class="post-visits"
+             data-url="/2018/04/27/设计模式-享元模式/"
+             data-title="设计模式-享元模式">
+            阅读次数
+          </div>
+        
       </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现方式"><span class="toc-text">实现方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点"><span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用场景"><span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>享元模式使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件；它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。通常物件中的部分状态是可以分享。常见做法是把它们放在外部数据结构，当需要使用时再将它们传递给享元。</p>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<li>抽象享元角色：为具体享元角色规定了必须实现的方法，而外蕴状态就是以参数的形式通过此方法传入。</li>
+<li>具体享元角色：实现抽象角色规定的方法。如果存在内蕴状态，就负责为内蕴状态提供存储空间。</li>
+<li>享元工厂角色：负责创建和管理享元角色。要想达到共享的目的，这个角色的实现是关键！</li>
+<li>客户端角色：维护对所有享元对象的引用，而且还需要存储对应的外蕴状态。</li>
+</ul>
+<a id="more"></a>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>大大减少程序创建的对象数量</li>
+<li>降低内存占用</li>
+<li>增强程序性能</li>
+</ul>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
+<li>增加了系统的复杂性</li>
+</ul>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>系统中存在大量相似的对象</li>
+<li>细粒度的对象都具备较接近的外部状态，而且内部状态与环境无关，也就是说对象没有特定身份</li>
+<li>需要缓冲池的场景</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://zh.wikipedia.org/wiki/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener">享元模式</a><br><a href="https://baike.baidu.com/item/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/10541959" target="_blank" rel="noopener">享元模式</a></p>
+
+      
+    </div>
+
     
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-24
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/24/设计模式-流接口模式/" class="archive-post-link">
-            设计模式-流接口模式
-          </a>
-        </span>
-      </div>
-    
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-24
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/24/设计模式-门面模式/" class="archive-post-link">
-            设计模式-门面模式
-          </a>
-        </span>
-      </div>
-    
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/04/27/设计模式-享元模式/">http://www.zhaojiaxing.top/2018/04/27/设计模式-享元模式/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-24
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/24/设计模式-依赖注入模式/" class="archive-post-link">
-            设计模式-依赖注入模式
-          </a>
-        </span>
-      </div>
-    
+
+
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-23
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/23/设计模式-装饰模式/" class="archive-post-link">
-            设计模式-装饰模式
-          </a>
-        </span>
-      </div>
-    
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-23
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/23/设计模式-数据映射模式/" class="archive-post-link">
-            设计模式-数据映射模式
-          </a>
-        </span>
-      </div>
     
-      
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/20/设计模式-组合模式/" class="archive-post-link">
-            设计模式-组合模式
-          </a>
-        </span>
-      </div>
     
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/20/设计模式-桥梁模式/" class="archive-post-link">
-            设计模式-桥梁模式
-          </a>
-        </span>
-      </div>
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/PHP/">PHP</a>
+            
+              <a href="/tags/设计模式/">设计模式</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
     
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-04-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/20/设计模式-适配器模式/" class="archive-post-link">
-            设计模式-适配器模式
-          </a>
-        </span>
-      </div>
     
-  </section>
-
-  
-  <nav class="pagination">
-    
+      <a class="next" href="/2018/04/27/Nginx-try-files理解/">
+        <span class="next-text nav-default">Nginx-try_files理解</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
