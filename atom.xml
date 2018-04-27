@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-04-26T01:37:52.501Z</updated>
+  <updated>2018-04-27T06:09:10.943Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-try_files理解</title>
+    <link href="http://www.zhaojiaxing.top/2018/04/27/Nginx-try-files%E7%90%86%E8%A7%A3/"/>
+    <id>http://www.zhaojiaxing.top/2018/04/27/Nginx-try-files理解/</id>
+    <published>2018-04-27T06:02:36.000Z</published>
+    <updated>2018-04-27T06:09:10.943Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以 &lt;code&gt;try_files $uri $uri/ /index.php;&lt;/code&gt; 为例&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当用户请求 &lt;code&gt;http://servers.blog.ustc.edu.cn/example&lt;/code&gt; 时，这里的 &lt;code&gt;$uri&lt;/code&gt; 就是 &lt;code&gt;/example&lt;/code&gt;。&lt;code&gt;try_files&lt;/code&gt; 会到硬盘里尝试找这个文件。如果存在名为 &lt;code&gt;/$root/example&lt;/code&gt;的文件，就直接把这个文件的内容发送给用户。&lt;/li&gt;
+&lt;li&gt;如果未找到 &lt;code&gt;example&lt;/code&gt; 的文件，然后就看 &lt;code&gt;$uri/&lt;/code&gt;，增加了一个 &lt;code&gt;/&lt;/code&gt;，也就是看有没有名为 &lt;code&gt;/$root/example/&lt;/code&gt; 的目录。&lt;/li&gt;
+&lt;li&gt;如果又未找到，就会 &lt;code&gt;fall back&lt;/code&gt; 到 &lt;code&gt;try_files&lt;/code&gt; 的最后一个选项 &lt;code&gt;/index.php&lt;/code&gt;，发起一个内部 「子请求」，也就是相当于 &lt;code&gt;nginx&lt;/code&gt; 发起一个 &lt;code&gt;HTTP&lt;/code&gt; 请求到 &lt;code&gt;http://servers.blog.ustc.edu.cn/index.php&lt;/code&gt;。这个请求会被 &lt;code&gt;location ~ \.php$ { ... } catch&lt;/code&gt;住，也就是进入 &lt;code&gt;FastCGI&lt;/code&gt; 的处理程序。具体的 &lt;code&gt;URI&lt;/code&gt; 及参数在 &lt;code&gt;REQUEST_URI&lt;/code&gt; 中传递给 &lt;code&gt;FastCGI&lt;/code&gt; 和 程序，因此不受 &lt;code&gt;URI&lt;/code&gt; 变化的影响。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx-内置变量</title>
