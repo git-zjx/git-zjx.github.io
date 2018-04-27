@@ -215,7 +215,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/04/27/Linux-vmstat命令/">Linux-vmstat命令</a>
+          <a class="post-link" href="/2018/04/27/Linux-vmstat命令/"></a>
         
       </h1>
 
@@ -224,16 +224,10 @@
           2018-04-27
         </span>
         
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
         
         <div class="post-visits"
              data-url="/2018/04/27/Linux-vmstat命令/"
-             data-title="Linux-vmstat命令">
+             data-title="">
             阅读次数
           </div>
         
@@ -249,7 +243,14 @@
         
 
         
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>vmstat</code> 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。</p>
+          <hr>
+<p>title： Linux-vmstat命令<br>date： 2018-04-27 16：35：32<br>categories：</p>
+<ul>
+<li>Linux<br>tags：</li>
+<li>Linux</li>
+</ul>
+<hr>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>vmstat</code> 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmstat(选项)(参数)</span><br></pre></td></tr></table></figure>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-a：显示活动内页；</span><br><span class="line">-f：显示启动后创建的进程总数；</span><br><span class="line">-m：显示slab信息；</span><br><span class="line">-n：头信息仅显示一次；</span><br><span class="line">-s：以表格方式显示事件计数器和内存状态；</span><br><span class="line">-d：报告磁盘状态；</span><br><span class="line">-p：显示指定的硬盘分区状态；</span><br><span class="line">-S：输出信息的单位。</span><br></pre></td></tr></table></figure>
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
@@ -258,37 +259,40 @@
 </ul>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vmstat 3</span><br><span class="line">procs -----------memory---------- ---swap-- -----io---- --system-- -----cpu------</span><br><span class="line"> r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st</span><br><span class="line"> 0  0    320  42188 167332 1534368    0    0     4     7    1    0  0  0 99  0  0</span><br><span class="line"> 0  0    320  42188 167332 1534392    0    0     0     0 1002   39  0  0 100  0  0</span><br><span class="line"> 0  0    320  42188 167336 1534392    0    0     0    19 1002   44  0  0 100  0  0</span><br><span class="line"> 0  0    320  42188 167336 1534392    0    0     0     0 1002   41  0  0 100  0  0</span><br><span class="line"> 0  0    320  42188 167336 1534392    0    0     0     0 1002   41  0  0 100  0  0</span><br></pre></td></tr></table></figure>
 <h4 id="字段说明"><a href="#字段说明" class="headerlink" title="字段说明"></a>字段说明</h4><h5 id="Procs（进程）"><a href="#Procs（进程）" class="headerlink" title="Procs（进程）"></a>Procs（进程）</h5><ul>
-<li>r: 运行队列中进程数量，这个值也可以判断是否需要增加CPU。（长期大于1）</li>
-<li>b: 等待IO的进程数量。</li>
+<li>r：运行队列中进程数量，这个值也可以判断是否需要增加CPU。（长期大于1）</li>
+<li>b：等待IO的进程数量。</li>
 </ul>
 <h5 id="Memory（内存）"><a href="#Memory（内存）" class="headerlink" title="Memory（内存）"></a>Memory（内存）</h5><ul>
-<li>swpd: 使用虚拟内存大小，如果swpd的值不为0，但是SI，SO的值长期为0，这种情况不会影响系统性能。</li>
-<li>free: 空闲物理内存大小。</li>
-<li>buff: 用作缓冲的内存大小。</li>
-<li>cache: 用作缓存的内存大小，如果cache的值大的时候，说明cache处的文件数多，如果频繁访问到的文件都能被cache处，那么磁盘的读IO bi会非常小。</li>
+<li>swpd：使用虚拟内存大小，如果swpd的值不为0，但是SI，SO的值长期为0，这种情况不会影响系统性能。</li>
+<li>free：空闲物理内存大小。</li>
+<li>buff：用作缓冲的内存大小。</li>
+<li>cache：用作缓存的内存大小，如果cache的值大的时候，说明cache处的文件数多，如果频繁访问到的文件都能被cache处，那么磁盘的读IO bi会非常小。</li>
 </ul>
 <h5 id="Swap"><a href="#Swap" class="headerlink" title="Swap"></a>Swap</h5><ul>
-<li>si: 每秒从交换区写到内存的大小，由磁盘调入内存。</li>
-<li>so: 每秒写入交换区的内存大小，由内存调入磁盘。<br>注意：内存够用的时候，这2个值都是0，如果这2个值长期大于0时，系统性能会受到影响，磁盘IO和CPU资源都会被消耗。有些朋友看到空闲内存（free）很少的或接近于0时，就认为内存不够用了，不能光看这一点，还要结合si和so，如果free很少，但是si和so也很少（大多时候是0），那么不用担心，系统性能这时不会受到影响的。</li>
+<li>si：每秒从交换区写到内存的大小，由磁盘调入内存。</li>
+<li>so：每秒写入交换区的内存大小，由内存调入磁盘。<br>注意：内存够用的时候，这2个值都是0，如果这2个值长期大于0时，系统性能会受到影响，磁盘IO和CPU资源都会被消耗。有些朋友看到空闲内存（free）很少的或接近于0时，就认为内存不够用了，不能光看这一点，还要结合si和so，如果free很少，但是si和so也很少（大多时候是0），那么不用担心，系统性能这时不会受到影响的。</li>
 </ul>
 <h5 id="IO（现在的Linux版本块的大小为1kb）"><a href="#IO（现在的Linux版本块的大小为1kb）" class="headerlink" title="IO（现在的Linux版本块的大小为1kb）"></a>IO（现在的Linux版本块的大小为1kb）</h5><ul>
-<li>bi: 每秒读取的块数</li>
-<li>bo: 每秒写入的块数<br>注意：随机磁盘读写的时候，这2个值越大（如超出1024k)，能看到CPU在IO等待的值也会越大。</li>
+<li>bi：每秒读取的块数</li>
+<li>bo：每秒写入的块数<br>注意：随机磁盘读写的时候，这2个值越大（如超出1024k)，能看到CPU在IO等待的值也会越大。</li>
 </ul>
 <h5 id="system（系统）"><a href="#system（系统）" class="headerlink" title="system（系统）"></a>system（系统）</h5><ul>
-<li>in: 每秒中断数，包括时钟中断。</li>
-<li>cs: 每秒上下文切换数。<br>注意：上面2个值越大，会看到由内核消耗的CPU时间会越大。</li>
+<li>in：每秒中断数，包括时钟中断。</li>
+<li>cs：每秒上下文切换数。<br>注意：上面2个值越大，会看到由内核消耗的CPU时间会越大。</li>
 </ul>
 <h5 id="CPU（以百分比表示）"><a href="#CPU（以百分比表示）" class="headerlink" title="CPU（以百分比表示）"></a>CPU（以百分比表示）</h5><ul>
-<li><p>us: 用户进程执行时间百分比(user time)<br>us的值比较高时，说明用户进程消耗的CPU时间多，但是如果长期超50%的使用，那么我们就该考虑优化程序算法或者进行加速。</p>
+<li><p>us：用户进程执行时间百分比(user time)<br>us的值比较高时，说明用户进程消耗的CPU时间多，但是如果长期超50%的使用，那么我们就该考虑优化程序算法或者进行加速。</p>
 </li>
-<li><p>sy: 内核系统进程执行时间百分比(system time)<br>sy的值高时，说明系统内核消耗的CPU资源多，这并不是良性表现，我们应该检查原因。</p>
+<li><p>sy：内核系统进程执行时间百分比(system time)<br>sy的值高时，说明系统内核消耗的CPU资源多，这并不是良性表现，我们应该检查原因。</p>
 </li>
-<li><p>wa: IO等待时间百分比<br>wa的值高时，说明IO等待比较严重，这可能由于磁盘大量作随机访问造成，也有可能磁盘出现瓶颈（块操作）。</p>
+<li><p>id：空闲时间百分比</p>
 </li>
-<li><p>id: 空闲时间百分比</p>
+<li><p>wa：IO等待时间百分比<br>wa的值高时，说明IO等待比较严重，这可能由于磁盘大量作随机访问造成，也有可能磁盘出现瓶颈（块操作）。</p>
+</li>
+<li><p>st：虚拟机偷取时间<br>st是专门对虚拟机来说的，一台物理是可以虚拟化出几台虚拟机的。在其中一台虚拟机上用top查看发现st不为0，就说明本来有这么多个cpu时间是安排给我这个虚拟机的，但是由于某种虚拟技术，把这个cpu时间分配给了其他的虚拟机了。这就叫做偷取</p>
 </li>
 </ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/yjf512/p/3383915.html" target="_blank" rel="noopener">你不一定懂的cpu显示信息</a><br><a href="http://man.linuxde.net/vmstat" target="_blank" rel="noopener">vmstat命令</a></p>
 
         
       
