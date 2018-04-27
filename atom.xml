@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-04-27T09:28:40.908Z</updated>
+  <updated>2018-04-27T09:30:10.084Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,26 +17,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Linux-vmstat命令</title>
     <link href="http://www.zhaojiaxing.top/2018/04/27/Linux-vmstat%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/04/27/Linux-vmstat命令/</id>
-    <published>2018-04-27T08:35:32.940Z</published>
-    <updated>2018-04-27T09:28:40.908Z</updated>
+    <published>2018-04-27T08:35:32.000Z</published>
+    <updated>2018-04-27T09:30:10.084Z</updated>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title： Linux-vmstat命令&lt;br&gt;date： 2018-04-27 16：35：32&lt;br&gt;categories：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Linux&lt;br&gt;tags：&lt;/li&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;&lt;code&gt;vmstat&lt;/code&gt; 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。&lt;/p&gt;
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;&lt;code&gt;vmstat&lt;/code&gt; 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vmstat(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
   </entry>
   
