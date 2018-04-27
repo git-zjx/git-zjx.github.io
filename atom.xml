@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-04-27T08:32:23.748Z</updated>
+  <updated>2018-04-27T09:20:40.444Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-vmstat命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/04/27/Linux-vmstat%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/04/27/Linux-vmstat命令/</id>
+    <published>2018-04-27T08:35:32.000Z</published>
+    <updated>2018-04-27T09:20:40.444Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;&lt;code&gt;vmstat&lt;/code&gt; 命令的含义为显示虚拟内存状态（「Viryual Memor
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-享元模式</title>
