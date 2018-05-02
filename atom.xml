@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-02T05:29:34.860Z</updated>
+  <updated>2018-05-02T06:30:52.332Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-迭代器模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-迭代器模式/</id>
+    <published>2018-05-02T06:19:57.000Z</published>
+    <updated>2018-05-02T06:30:52.332Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;它提供一种方法访问一个容器对象中各个元素， 而又不需暴露该 对象的内部细节。在PHP中我们对迭代模式的使用，通常只需实现Iterator接口即可&lt;/p&gt;
+&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;它支持以不同的方式遍历一个聚合对象。 &lt;/li&gt;
+&lt;li&gt;迭代器简化了聚合类。 &lt;/li&gt;
+&lt;li&gt;在同一个聚合上可以有多个遍历。 &lt;/li&gt;
+&lt;li&gt;在迭代器模式中，增加新的聚合类和迭代器类都很方便，无须修改原有代码。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-命令模式</title>
@@ -517,32 +547,6 @@
 &lt;li&gt;导演角色（Director）：构造一个使用Builder接口的对象。&lt;/li&gt;
 &lt;li&gt;产品角色（Product）：表示被构造的复杂对象。ConcreateBuilder创建该产品的内部表示并定义它的装配过程。包含定义组成部件的类，包括将这些部件装配成最终产品的接口。&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="创建型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-抽象工厂模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/19/设计模式-抽象工厂模式/</id>
-    <published>2018-04-19T02:58:00.000Z</published>
-    <updated>2018-04-20T06:24:27.943Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;抽象工厂模式提供了一种方式，可以将一组具有同一主题的单独的工厂封装起来。在正常使用中，客户端程序需要创建抽象工厂的具体实现，然后使用抽象工厂作为接口来创建这一主题的具体对象。客户端程序不需要知道（或关心）它从这些内部的工厂方法中获得对象的具体类型，因为客户端程序仅使用这些对象的通用接口。抽象工厂模式将一组对象的实现细节与他们的一般使用分离开来。&lt;/p&gt;
-&lt;p&gt;抽象工厂模式的实质是『提供接口，创建一系列相关或独立的对象，而不指定这些对象的具体类』。&lt;/p&gt;
-&lt;h3 id=&quot;产品族&quot;&gt;&lt;a href=&quot;#产品族&quot; class=&quot;headerlink&quot; title=&quot;产品族&quot;&gt;&lt;/a&gt;产品族&lt;/h3&gt;&lt;p&gt;产品族，是指位于不同产品等级结构，功能相关联的产品组成的家族。&lt;br&gt;抽象工厂是指一个工厂等级结构可以创建出分属于不同产品等级结构的一个产品族中的所有对象。&lt;/p&gt;
     
     </summary>
     
