@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-04-27T09:30:10.084Z</updated>
+  <updated>2018-05-02T02:52:07.903Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-代理模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-代理模式/</id>
+    <published>2018-05-02T02:43:22.000Z</published>
+    <updated>2018-05-02T02:52:07.903Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;为其他对象提供一种代理以控制对这个对象的访问。&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象角色：通过接口或抽象类声明真实角色实现的业务方法。&lt;/li&gt;
+&lt;li&gt;代理角色：实现抽象角色，是真实角色的代理，通过真实角色的业务逻辑方法来实现抽象方法，并可以附加自己的操作。&lt;/li&gt;
+&lt;li&gt;真实角色：实现抽象角色，定义真实角色所要实现的业务逻辑，供代理角色调用。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-vmstat命令</title>
@@ -513,33 +542,6 @@
 &lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;能够根据外界给定的信息，决定究竟应该创建哪个具体类的对象。明确区分了各自的职责和权力，有利于整个软件体系结构的优化。&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="创建型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-单例模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/18/设计模式-单例模式/</id>
-    <published>2018-04-18T08:20:19.000Z</published>
-    <updated>2018-04-20T06:23:05.407Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;单例模式，也叫单子模式，是一种常用的软件设计模式。在应用这个模式时，单例对象的类必须保证只有一个实例存在。&lt;/p&gt;
-&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;懒汉方式：指全局的单例实例在第一次被使用时构建。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;饿汉方式：指全局的单例实例在类装载时构建。&lt;/p&gt;
     
     </summary>
     
