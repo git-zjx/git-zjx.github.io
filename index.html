@@ -215,6 +215,65 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/02/设计模式-命令模式/">设计模式-命令模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-02
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+        <div class="post-visits"
+             data-url="/2018/05/02/设计模式-命令模式/"
+             data-title="设计模式-命令模式">
+            阅读次数
+          </div>
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
+          <div class="read-more">
+            <a href="/2018/05/02/设计模式-命令模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/02/设计模式-责任链模式/">设计模式-责任链模式</a>
         
       </h1>
@@ -752,70 +811,6 @@
 <p>依赖注入的观念就是<strong>将所有东西先在“外面”准备好，然后再带入“内部”的程式</strong>中，如此一来你就能够在检视程式码的时候，一目了然地知道这个程式依赖著哪些类别。</p>
           <div class="read-more">
             <a href="/2018/04/24/设计模式-依赖注入模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/23/设计模式-装饰模式/">设计模式-装饰模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-23
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/结构型/">结构型</a>
-            
-          </div>
-        
-        
-        <div class="post-visits"
-             data-url="/2018/04/23/设计模式-装饰模式/"
-             data-title="设计模式-装饰模式">
-            阅读次数
-          </div>
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活，这样可以给某个对象而不是整个类添加一些功能。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>装饰类和被装饰类可以独立发展</li>
-<li>是继承关系的替代方案</li>
-<li>优秀的扩展性</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/04/23/设计模式-装饰模式/" class="read-more-link">阅读更多</a>
           </div>
         
       

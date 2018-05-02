@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-02T05:18:17.430Z</updated>
+  <updated>2018-05-02T05:29:34.860Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-命令模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-命令模式/</id>
+    <published>2018-05-02T05:19:59.000Z</published>
+    <updated>2018-05-02T05:29:34.860Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;p&gt;Client（客户）：负责创建一个具体的命令（Concrete Command）&lt;br&gt;Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。&lt;br&gt;Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。&lt;br&gt;ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。&lt;br&gt;Receiver（接收者）：接受命令并执行。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-责任链模式</title>
@@ -518,31 +543,6 @@
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;抽象工厂模式提供了一种方式，可以将一组具有同一主题的单独的工厂封装起来。在正常使用中，客户端程序需要创建抽象工厂的具体实现，然后使用抽象工厂作为接口来创建这一主题的具体对象。客户端程序不需要知道（或关心）它从这些内部的工厂方法中获得对象的具体类型，因为客户端程序仅使用这些对象的通用接口。抽象工厂模式将一组对象的实现细节与他们的一般使用分离开来。&lt;/p&gt;
 &lt;p&gt;抽象工厂模式的实质是『提供接口，创建一系列相关或独立的对象，而不指定这些对象的具体类』。&lt;/p&gt;
 &lt;h3 id=&quot;产品族&quot;&gt;&lt;a href=&quot;#产品族&quot; class=&quot;headerlink&quot; title=&quot;产品族&quot;&gt;&lt;/a&gt;产品族&lt;/h3&gt;&lt;p&gt;产品族，是指位于不同产品等级结构，功能相关联的产品组成的家族。&lt;br&gt;抽象工厂是指一个工厂等级结构可以创建出分属于不同产品等级结构的一个产品族中的所有对象。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="创建型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-工厂方法模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/19/设计模式-工厂方法模式/</id>
-    <published>2018-04-19T02:15:58.000Z</published>
-    <updated>2018-04-20T06:24:01.397Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;工厂方法模式又称多态性工厂模式。在工厂方法模式中，核心的工厂类不再负责所有的产品的创建，而是将具体创建的工作交给子类去做。该核心类成为一个抽象工厂角色，仅负责给出具体工厂子类必须实现的接口，而不接触哪一个产品类应当被实例化这种细节。&lt;/p&gt;
-&lt;h3 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h3&gt;&lt;p&gt;将类的实例化（具体产品的创建）延迟到工厂类的子类（具体工厂）中完成，即由子类来决定应该实例化（创建）哪一个类。&lt;/p&gt;
     
     </summary>
     
