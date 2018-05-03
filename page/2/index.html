@@ -207,6 +207,174 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/03/设计模式-中介者模式/">设计模式-中介者模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式。</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>Mediator–抽象中介者角色：抽象中介者角色定义统一的接口，用于各同事角色之间的通信。</li>
+<li>Concrete Mediator–具体中介者角色：具体中介者角色，通过协调各同事角色实现协作行为，因此它必须依赖于各个同事角色。</li>
+<li>Colleague–同事角色：每一个同事角色都知道中介者角色，而且与其它的同事角色通信的时候，一定要通过中介者角色来协作。 每个同事类的行为分为二种：一种是同事本身的行为，这种行为叫做自发行为(Self-Method);第二种是必须依赖中介者才能完成的行为，叫做依赖行为(Dep-Method)。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/03/设计模式-中介者模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/05/02/设计模式-迭代器模式/">设计模式-迭代器模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-02
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>它提供一种方法访问一个容器对象中各个元素， 而又不需暴露该 对象的内部细节。在PHP中我们对迭代模式的使用，通常只需实现Iterator接口即可</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>它支持以不同的方式遍历一个聚合对象。 </li>
+<li>迭代器简化了聚合类。 </li>
+<li>在同一个聚合上可以有多个遍历。 </li>
+<li>在迭代器模式中，增加新的聚合类和迭代器类都很方便，无须修改原有代码。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/02/设计模式-迭代器模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/05/02/设计模式-命令模式/">设计模式-命令模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-02
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
+          <div class="read-more">
+            <a href="/2018/05/02/设计模式-命令模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/02/设计模式-责任链模式/">设计模式-责任链模式</a>
         
       </h1>
@@ -320,57 +488,6 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/04/27/Linux-vmstat命令/">Linux-vmstat命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-27
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>vmstat</code> 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmstat(选项)(参数)</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/04/27/Linux-vmstat命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
           <a class="post-link" href="/2018/04/27/设计模式-享元模式/">设计模式-享元模式</a>
         
       </h1>
@@ -412,116 +529,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/04/27/设计模式-享元模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/27/Nginx-try-files理解/">Nginx-try_files理解</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-27
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Nginx/">Nginx</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>以 <code>try_files $uri $uri/ /index.php;</code> 为例</p>
-<ol>
-<li>当用户请求 <code>http://servers.blog.ustc.edu.cn/example</code> 时，这里的 <code>$uri</code> 就是 <code>/example</code>。<code>try_files</code> 会到硬盘里尝试找这个文件。如果存在名为 <code>/$root/example</code>的文件，就直接把这个文件的内容发送给用户。</li>
-<li>如果未找到 <code>example</code> 的文件，然后就看 <code>$uri/</code>，增加了一个 <code>/</code>，也就是看有没有名为 <code>/$root/example/</code> 的目录。</li>
-<li>如果又未找到，就会 <code>fall back</code> 到 <code>try_files</code> 的最后一个选项 <code>/index.php</code>，发起一个内部 「子请求」，也就是相当于 <code>nginx</code> 发起一个 <code>HTTP</code> 请求到 <code>http://servers.blog.ustc.edu.cn/index.php</code>。这个请求会被 <code>location ~ \.php$ { ... } catch</code>住，也就是进入 <code>FastCGI</code> 的处理程序。具体的 <code>URI</code> 及参数在 <code>REQUEST_URI</code> 中传递给 <code>FastCGI</code> 和 程序，因此不受 <code>URI</code> 变化的影响。</li>
-</ol>
-          <div class="read-more">
-            <a href="/2018/04/27/Nginx-try-files理解/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/26/Nginx-内置变量/">Nginx-内置变量</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-26
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Nginx/">Nginx</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p><code>$arg_name</code>：请求中的参数名，即「?」后面的<code>arg_name=arg_value</code>形式的<code>arg_name</code>  </p>
-<p><code>$args</code>：请求中的参数值，即「?」后面的<code>arg_name=arg_value</code>形式的<code>arg_value</code>     </p>
-<p><code>$binary_remote_addr</code>：客户端地址的二进制形式，固定长度为4个字节  </p>
-<p><code>$body_bytes_sent</code>：传输给客户端的字节数，响应头不计算在内  </p>
-<p><code>$bytes_sent</code>：传输给客户端的字节数  </p>
-<p><code>$connection</code>：TCP连接的序列号   </p>
-          <div class="read-more">
-            <a href="/2018/04/26/Nginx-内置变量/" class="read-more-link">阅读更多</a>
           </div>
         
       
