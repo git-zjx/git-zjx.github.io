@@ -207,6 +207,63 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/03/设计模式-策略模式/">设计模式-策略模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>抽象策略角色：策略类，通常由一个接口或者抽象类实现。</li>
+<li>具体策略角色：包装了相关的算法和行为。</li>
+<li>环境角色：持有一个策略类的引用，最终给客户端调用。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/03/设计模式-策略模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/03/设计模式-状态模式/">设计模式-状态模式</a>
         
       </h1>
@@ -240,7 +297,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>当一个对象内在状态改变时允许其改变行为，这个对象看起来像改变了其类。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>环境类（Context）: 定义客户感兴趣的接口。维护一个ConcreteState子类的实例，这个实例定义当前状态。</li>
 <li>抽象状态类（State）: 定义一个接口以封装与Context的一个特定状态相关的行为。</li>
 <li>具体状态类（ConcreteState）: 每一子类实现一个与Context的一个状态相关的行为。</li>
@@ -297,7 +354,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。也叫发布-订阅模式</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>抽象目标角色（Subject）：目标角色知道它的观察者，可以有任意多个观察者观察同一个目标。并且提供注册和删除观察者对象的接口。目标角色往往由抽象类或者接口来实现。</li>
 <li>抽象观察者角色（Observer）：为那些在目标发生改变时需要获得通知的对象定义一个更新接口。抽象观察者角色主要由抽象类或者接口来实现。</li>
 <li>具体目标角色（Concrete Subject）：将有关状态存入各个Concrete Observer对象。当它的状态发生改变时, 向它的各个观察者发出通知。</li>
@@ -355,7 +412,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过对缺失对象的封装，以提供默认无任何行为的对象替代品</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>抽象协作对象</li>
 <li>具体协作对象</li>
 <li>空对象</li>
@@ -412,7 +469,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在不破坏封闭的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到原先保存的状态。又叫做快照模式或Token模式</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>Originator(发起人)：负责创建一个备忘录Memento，用以记录当前时刻自身的内部状态，并可使用备忘录恢复内部状态。Originator可以根据需要决定Memento存储自己的哪些内部状态。</li>
 <li>Memento(备忘录)：负责存储Originator对象的内部状态，并可以防止Originator以外的其他对象访问备忘录。备忘录有两个接口：Caretaker只能看到备忘录的窄接口，他只能将备忘录传递给其他对象。Originator却可看到备忘录的宽接口，允许它访问返回到先前状态所需要的所有数据。</li>
 <li>Caretaker(管理者):负责备忘录Memento，不能对Memento的内容进行访问或者操作。</li>
@@ -469,7 +526,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>Mediator–抽象中介者角色：抽象中介者角色定义统一的接口，用于各同事角色之间的通信。</li>
 <li>Concrete Mediator–具体中介者角色：具体中介者角色，通过协调各同事角色实现协作行为，因此它必须依赖于各个同事角色。</li>
 <li>Colleague–同事角色：每一个同事角色都知道中介者角色，而且与其它的同事角色通信的时候，一定要通过中介者角色来协作。 每个同事类的行为分为二种：一种是同事本身的行为，这种行为叫做自发行为(Self-Method);第二种是必须依赖中介者才能完成的行为，叫做依赖行为(Dep-Method)。</li>
@@ -584,7 +641,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
           <div class="read-more">
             <a href="/2018/05/02/设计模式-命令模式/" class="read-more-link">阅读更多</a>
           </div>
@@ -637,7 +694,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>使多个对象都有机会处理请求，从而避免了请求的发送者和接受者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，直到有对象处理它为止。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>抽象处理者角色：定义出一个处理请求的接口。如果需要，接口可以定义 出一个方法以设定和返回对下家的引用。这个角色通常由一个Java抽象类或者Java接口实现。上图中Handler类的聚合关系给出了具体子类对下家的引用，抽象方法handleRequest()规范了子类处理请求的操作。</li>
 <li>具体处理者角色：具体处理者接到请求后，可以选择将请求处理掉，或者将请求传给下家。由于具体处理者持有对下家的引用，因此，如果需要，具体处理者可以访问下家。</li>
 </ul>
@@ -693,64 +750,13 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>为其他对象提供一种代理以控制对这个对象的访问。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>抽象角色：通过接口或抽象类声明真实角色实现的业务方法。</li>
 <li>代理角色：实现抽象角色，是真实角色的代理，通过真实角色的业务逻辑方法来实现抽象方法，并可以附加自己的操作。</li>
 <li>真实角色：实现抽象角色，定义真实角色所要实现的业务逻辑，供代理角色调用。</li>
 </ul>
           <div class="read-more">
             <a href="/2018/05/02/设计模式-代理模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/27/Linux-vmstat命令/">Linux-vmstat命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-27
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>vmstat</code> 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmstat(选项)(参数)</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/04/27/Linux-vmstat命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

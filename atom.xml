@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-03T01:34:05.583Z</updated>
+  <updated>2018-05-03T01:51:24.870Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,16 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>设计模式-策略模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-策略模式/</id>
+    <published>2018-05-03T01:46:11.000Z</published>
+    <updated>2018-05-03T01:51:24.870Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式&lt;/p&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象策略角色：策略类，通常由一个接口或者抽象类实现。&lt;/li&gt;
+&lt;li&gt;具体策略角色：包装了相关的算法和行为。&lt;/li&gt;
+&lt;li&gt;环境角色：持有一个策略类的引用，最终给客户端调用。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>设计模式-状态模式</title>
     <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-状态模式/</id>
     <published>2018-05-03T01:29:27.000Z</published>
-    <updated>2018-05-03T01:34:05.583Z</updated>
+    <updated>2018-05-03T01:51:24.730Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;当一个对象内在状态改变时允许其改变行为，这个对象看起来像改变了其类。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;环境类（Context）: 定义客户感兴趣的接口。维护一个ConcreteState子类的实例，这个实例定义当前状态。&lt;/li&gt;
 &lt;li&gt;抽象状态类（State）: 定义一个接口以封装与Context的一个特定状态相关的行为。&lt;/li&gt;
 &lt;li&gt;具体状态类（ConcreteState）: 每一子类实现一个与Context的一个状态相关的行为。&lt;/li&gt;
@@ -50,12 +79,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-观察者模式/</id>
     <published>2018-05-03T01:11:02.000Z</published>
-    <updated>2018-05-03T01:16:31.913Z</updated>
+    <updated>2018-05-03T01:51:24.842Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。也叫发布-订阅模式&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;抽象目标角色（Subject）：目标角色知道它的观察者，可以有任意多个观察者观察同一个目标。并且提供注册和删除观察者对象的接口。目标角色往往由抽象类或者接口来实现。&lt;/li&gt;
 &lt;li&gt;抽象观察者角色（Observer）：为那些在目标发生改变时需要获得通知的对象定义一个更新接口。抽象观察者角色主要由抽象类或者接口来实现。&lt;/li&gt;
 &lt;li&gt;具体目标角色（Concrete Subject）：将有关状态存入各个Concrete Observer对象。当它的状态发生改变时, 向它的各个观察者发出通知。&lt;/li&gt;
@@ -80,12 +109,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-空对象模式/</id>
     <published>2018-05-03T00:56:47.000Z</published>
-    <updated>2018-05-03T01:01:49.931Z</updated>
+    <updated>2018-05-03T01:51:24.811Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通过对缺失对象的封装，以提供默认无任何行为的对象替代品&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;抽象协作对象&lt;/li&gt;
 &lt;li&gt;具体协作对象&lt;/li&gt;
 &lt;li&gt;空对象&lt;/li&gt;
@@ -109,12 +138,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-备忘录模式/</id>
     <published>2018-05-03T00:36:14.000Z</published>
-    <updated>2018-05-03T00:43:07.185Z</updated>
+    <updated>2018-05-03T01:51:24.699Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;在不破坏封闭的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到原先保存的状态。又叫做快照模式或Token模式&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Originator(发起人)：负责创建一个备忘录Memento，用以记录当前时刻自身的内部状态，并可使用备忘录恢复内部状态。Originator可以根据需要决定Memento存储自己的哪些内部状态。&lt;/li&gt;
 &lt;li&gt;Memento(备忘录)：负责存储Originator对象的内部状态，并可以防止Originator以外的其他对象访问备忘录。备忘录有两个接口：Caretaker只能看到备忘录的窄接口，他只能将备忘录传递给其他对象。Originator却可看到备忘录的宽接口，允许它访问返回到先前状态所需要的所有数据。&lt;/li&gt;
 &lt;li&gt;Caretaker(管理者):负责备忘录Memento，不能对Memento的内容进行访问或者操作。&lt;/li&gt;
@@ -138,12 +167,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-中介者模式/</id>
     <published>2018-05-03T00:22:56.000Z</published>
-    <updated>2018-05-03T00:32:34.843Z</updated>
+    <updated>2018-05-03T01:51:24.403Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Mediator–抽象中介者角色：抽象中介者角色定义统一的接口，用于各同事角色之间的通信。&lt;/li&gt;
 &lt;li&gt;Concrete Mediator–具体中介者角色：具体中介者角色，通过协调各同事角色实现协作行为，因此它必须依赖于各个同事角色。&lt;/li&gt;
 &lt;li&gt;Colleague–同事角色：每一个同事角色都知道中介者角色，而且与其它的同事角色通信的时候，一定要通过中介者角色来协作。 每个同事类的行为分为二种：一种是同事本身的行为，这种行为叫做自发行为(Self-Method);第二种是必须依赖中介者才能完成的行为，叫做依赖行为(Dep-Method)。&lt;/li&gt;
@@ -197,12 +226,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-命令模式/</id>
     <published>2018-05-02T05:19:59.000Z</published>
-    <updated>2018-05-02T05:29:34.860Z</updated>
+    <updated>2018-05-03T01:51:24.372Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;p&gt;Client（客户）：负责创建一个具体的命令（Concrete Command）&lt;br&gt;Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。&lt;br&gt;Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。&lt;br&gt;ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。&lt;br&gt;Receiver（接收者）：接受命令并执行。&lt;/p&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;p&gt;Client（客户）：负责创建一个具体的命令（Concrete Command）&lt;br&gt;Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。&lt;br&gt;Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。&lt;br&gt;ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。&lt;br&gt;Receiver（接收者）：接受命令并执行。&lt;/p&gt;
     
     </summary>
     
@@ -222,12 +251,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-责任链模式/</id>
     <published>2018-05-02T05:09:11.000Z</published>
-    <updated>2018-05-02T05:18:17.430Z</updated>
+    <updated>2018-05-03T01:51:24.759Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;使多个对象都有机会处理请求，从而避免了请求的发送者和接受者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，直到有对象处理它为止。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;抽象处理者角色：定义出一个处理请求的接口。如果需要，接口可以定义 出一个方法以设定和返回对下家的引用。这个角色通常由一个Java抽象类或者Java接口实现。上图中Handler类的聚合关系给出了具体子类对下家的引用，抽象方法handleRequest()规范了子类处理请求的操作。&lt;/li&gt;
 &lt;li&gt;具体处理者角色：具体处理者接到请求后，可以选择将请求处理掉，或者将请求传给下家。由于具体处理者持有对下家的引用，因此，如果需要，具体处理者可以访问下家。&lt;/li&gt;
 &lt;/ul&gt;
@@ -250,12 +279,12 @@
     <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-代理模式/</id>
     <published>2018-05-02T02:43:22.000Z</published>
-    <updated>2018-05-02T02:52:07.903Z</updated>
+    <updated>2018-05-03T01:51:24.671Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;为其他对象提供一种代理以控制对这个对象的访问。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;抽象角色：通过接口或抽象类声明真实角色实现的业务方法。&lt;/li&gt;
 &lt;li&gt;代理角色：实现抽象角色，是真实角色的代理，通过真实角色的业务逻辑方法来实现抽象方法，并可以附加自己的操作。&lt;/li&gt;
 &lt;li&gt;真实角色：实现抽象角色，定义真实角色所要实现的业务逻辑，供代理角色调用。&lt;/li&gt;
@@ -300,12 +329,12 @@
     <link href="http://www.zhaojiaxing.top/2018/04/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/04/27/设计模式-享元模式/</id>
     <published>2018-04-27T07:52:03.000Z</published>
-    <updated>2018-04-27T08:32:23.748Z</updated>
+    <updated>2018-05-03T01:51:24.785Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;享元模式使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件；它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。通常物件中的部分状态是可以分享。常见做法是把它们放在外部数据结构，当需要使用时再将它们传递给享元。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;抽象享元角色：为具体享元角色规定了必须实现的方法，而外蕴状态就是以参数的形式通过此方法传入。&lt;/li&gt;
 &lt;li&gt;具体享元角色：实现抽象角色规定的方法。如果存在内蕴状态，就负责为内蕴状态提供存储空间。&lt;/li&gt;
 &lt;li&gt;享元工厂角色：负责创建和管理享元角色。要想达到共享的目的，这个角色的实现是关键！&lt;/li&gt;
@@ -434,12 +463,12 @@
     <link href="http://www.zhaojiaxing.top/2018/04/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/04/24/设计模式-依赖注入模式/</id>
     <published>2018-04-24T05:53:55.000Z</published>
-    <updated>2018-04-24T06:05:34.371Z</updated>
+    <updated>2018-05-03T01:51:24.281Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;依赖注入是种实现控制反转用于解决依赖性设计模式。一个依赖关系指的是可被利用的一种对象（即服务提供端） 。依赖注入是将所依赖的传递给将使用的从属对象（即客户端）。该服务是将会变成客户端的状态的一部分。 传递服务给客户端，而非允许客户端来建立或寻找服务，是本设计模式的基本要求。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;接口注入&lt;/li&gt;
 &lt;li&gt;setter方法注入&lt;/li&gt;
 &lt;li&gt;构造方法注入&lt;/li&gt;
@@ -464,12 +493,12 @@
     <link href="http://www.zhaojiaxing.top/2018/04/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/04/23/设计模式-装饰模式/</id>
     <published>2018-04-23T05:39:18.000Z</published>
-    <updated>2018-04-23T05:44:49.408Z</updated>
+    <updated>2018-05-03T01:51:24.343Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活，这样可以给某个对象而不是整个类添加一些功能。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;p&gt;增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。&lt;/p&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;p&gt;增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。&lt;/p&gt;
 &lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;装饰类和被装饰类可以独立发展&lt;/li&gt;
 &lt;li&gt;是继承关系的替代方案&lt;/li&gt;
@@ -519,45 +548,15 @@
     <link href="http://www.zhaojiaxing.top/2018/04/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/04/20/设计模式-组合模式/</id>
     <published>2018-04-20T08:30:22.000Z</published>
-    <updated>2018-04-20T08:39:24.834Z</updated>
+    <updated>2018-05-03T01:51:38.644Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将对象组合成树形结构以表示“部分整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。在使用组合模式中需要注意一点也是组合模式最关键的地方：叶子对象和组合对象实现相同的接口。这就是组合模式能够将叶子节点和对象节点进行一致处理的原因。&lt;/p&gt;
-&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;抽象构件角色Component：它为组合中的对象声明接口，也可以为共有接口实现缺省行为。&lt;/li&gt;
 &lt;li&gt;树叶构件角色Leaf：在组合中表示叶节点对象——没有子节点，实现抽象构件角色声明的接口。&lt;/li&gt;
 &lt;li&gt;树枝构件角色Composite：在组合中表示分支节点对象——有子节点，实现抽象构件角色声明的接口；存储子部件。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-桥梁模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%A2%81%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/20/设计模式-桥梁模式/</id>
-    <published>2018-04-20T05:14:11.000Z</published>
-    <updated>2018-04-20T06:24:40.020Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将抽象部分与它的实现部分分离，使它们都可以独立地变化。&lt;/p&gt;
-&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;抽象（Abstraction）角色：它定义了抽象类的接口而且维护着一个指向实现（Implementor）角色的引用。&lt;/li&gt;
-&lt;li&gt;精确抽象（RefinedAbstraction）角色：实现并扩充由抽象角色定义的接口。&lt;/li&gt;
-&lt;li&gt;实现（Implementor）角色：给出了实现类的接口，这里的接口与抽象角色中的接口可以不一致。&lt;/li&gt;
-&lt;li&gt;具体实现（ConcreteImplementor）角色：给出了实现角色定义接口的具体实现。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>

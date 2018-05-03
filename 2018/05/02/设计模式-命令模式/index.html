@@ -231,7 +231,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现方式"><span class="toc-text">实现方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点"><span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成"><span class="toc-text">组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点"><span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li></ol>
     </div>
   </div>
 
@@ -239,7 +239,7 @@
     <div class="post-content">
       
         <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
 <a id="more"></a>
 <h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li>降低对象之间的耦合度。</li>

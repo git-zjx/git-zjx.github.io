@@ -207,6 +207,57 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/04/27/Linux-vmstat命令/">Linux-vmstat命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-04-27
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>vmstat</code> 命令的含义为显示虚拟内存状态（「Viryual Memor Statics」），但是它可以报告关于进程、内存、I/O等系统整体运行状态。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmstat(选项)(参数)</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/04/27/Linux-vmstat命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/04/27/设计模式-享元模式/">设计模式-享元模式</a>
         
       </h1>
@@ -240,7 +291,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>享元模式使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件；它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。通常物件中的部分状态是可以分享。常见做法是把它们放在外部数据结构，当需要使用时再将它们传递给享元。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>抽象享元角色：为具体享元角色规定了必须实现的方法，而外蕴状态就是以参数的形式通过此方法传入。</li>
 <li>具体享元角色：实现抽象角色规定的方法。如果存在内蕴状态，就负责为内蕴状态提供存储空间。</li>
 <li>享元工厂角色：负责创建和管理享元角色。要想达到共享的目的，这个角色的实现是关键！</li>
@@ -518,7 +569,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>依赖注入是种实现控制反转用于解决依赖性设计模式。一个依赖关系指的是可被利用的一种对象（即服务提供端） 。依赖注入是将所依赖的传递给将使用的从属对象（即客户端）。该服务是将会变成客户端的状态的一部分。 传递服务给客户端，而非允许客户端来建立或寻找服务，是本设计模式的基本要求。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>接口注入</li>
 <li>setter方法注入</li>
 <li>构造方法注入</li>
@@ -576,7 +627,7 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活，这样可以给某个对象而不是整个类添加一些功能。</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。</p>
 <h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li>装饰类和被装饰类可以独立发展</li>
 <li>是继承关系的替代方案</li>
@@ -687,71 +738,13 @@
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将对象组合成树形结构以表示“部分整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。在使用组合模式中需要注意一点也是组合模式最关键的地方：叶子对象和组合对象实现相同的接口。这就是组合模式能够将叶子节点和对象节点进行一致处理的原因。</p>
-<h3 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h3><ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
 <li>抽象构件角色Component：它为组合中的对象声明接口，也可以为共有接口实现缺省行为。</li>
 <li>树叶构件角色Leaf：在组合中表示叶节点对象——没有子节点，实现抽象构件角色声明的接口。</li>
 <li>树枝构件角色Composite：在组合中表示分支节点对象——有子节点，实现抽象构件角色声明的接口；存储子部件。</li>
 </ul>
           <div class="read-more">
             <a href="/2018/04/20/设计模式-组合模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/20/设计模式-桥梁模式/">设计模式-桥梁模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-20
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/结构型/">结构型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将抽象部分与它的实现部分分离，使它们都可以独立地变化。</p>
-<h3 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h3><ul>
-<li>抽象（Abstraction）角色：它定义了抽象类的接口而且维护着一个指向实现（Implementor）角色的引用。</li>
-<li>精确抽象（RefinedAbstraction）角色：实现并扩充由抽象角色定义的接口。</li>
-<li>实现（Implementor）角色：给出了实现类的接口，这里的接口与抽象角色中的接口可以不一致。</li>
-<li>具体实现（ConcreteImplementor）角色：给出了实现角色定义接口的具体实现。</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/04/20/设计模式-桥梁模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
