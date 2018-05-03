@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-03T00:43:07.185Z</updated>
+  <updated>2018-05-03T01:01:49.931Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-空对象模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-空对象模式/</id>
+    <published>2018-05-03T00:56:47.000Z</published>
+    <updated>2018-05-03T01:01:49.931Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通过对缺失对象的封装，以提供默认无任何行为的对象替代品&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;抽象协作对象&lt;/li&gt;
+&lt;li&gt;具体协作对象&lt;/li&gt;
+&lt;li&gt;空对象&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-备忘录模式</title>
@@ -525,31 +554,6 @@
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;一个对象池包含一组已经初始化过且可以使用的对象，而可以在有需求时创建和销毁对象。池的用户可以从池子中取得对象，对其进行操作处理，并在不需要时归还给池子而非直接销毁它。这是一种特殊的工厂对象。&lt;/p&gt;
 &lt;h3 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h3&gt;&lt;p&gt;运用对象池化技术可以显著地提升性能，尤其是当对象的初始化过程代价较大或者频率较高时。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="创建型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-多例模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%9A%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/19/设计模式-多例模式/</id>
-    <published>2018-04-19T08:55:58.000Z</published>
-    <updated>2018-04-19T09:33:04.853Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;多例模式：在多例模式中，多例类可以有多个实例，而且多例类必须自己创建、管理自己的实例，并向外界提供自己的实例。&lt;/p&gt;
-&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;p&gt;单例模式的推广版本&lt;/p&gt;
     
     </summary>
     
