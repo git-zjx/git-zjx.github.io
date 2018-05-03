@@ -215,6 +215,69 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/03/设计模式-备忘录模式/">设计模式-备忘录模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+        <div class="post-visits"
+             data-url="/2018/05/03/设计模式-备忘录模式/"
+             data-title="设计模式-备忘录模式">
+            阅读次数
+          </div>
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在不破坏封闭的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到原先保存的状态。又叫做快照模式或Token模式</p>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<li>Originator(发起人)：负责创建一个备忘录Memento，用以记录当前时刻自身的内部状态，并可使用备忘录恢复内部状态。Originator可以根据需要决定Memento存储自己的哪些内部状态。</li>
+<li>Memento(备忘录)：负责存储Originator对象的内部状态，并可以防止Originator以外的其他对象访问备忘录。备忘录有两个接口：Caretaker只能看到备忘录的窄接口，他只能将备忘录传递给其他对象。Originator却可看到备忘录的宽接口，允许它访问返回到先前状态所需要的所有数据。</li>
+<li>Caretaker(管理者):负责备忘录Memento，不能对Memento的内容进行访问或者操作。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/03/设计模式-备忘录模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/03/设计模式-中介者模式/">设计模式-中介者模式</a>
         
       </h1>
@@ -752,64 +815,6 @@
 <p><code>$connection</code>：TCP连接的序列号   </p>
           <div class="read-more">
             <a href="/2018/04/26/Nginx-内置变量/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/24/设计模式-流接口模式/">设计模式-流接口模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-24
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/结构型/">结构型</a>
-            
-          </div>
-        
-        
-        <div class="post-visits"
-             data-url="/2018/04/24/设计模式-流接口模式/"
-             data-title="设计模式-流接口模式">
-            阅读次数
-          </div>
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>流接口（Fluent Interface）是指实现一种面向对象的、能提高代码可读性的 API 的方法，其目的就是可以编写具有自然语言一样可读性的代码，我们对这种代码编写方式还有一个通俗的称呼——方法链。</p>
-          <div class="read-more">
-            <a href="/2018/04/24/设计模式-流接口模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
