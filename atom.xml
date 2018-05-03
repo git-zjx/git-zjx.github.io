@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-03T01:16:31.913Z</updated>
+  <updated>2018-05-03T01:34:05.583Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-状态模式</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-状态模式/</id>
+    <published>2018-05-03T01:29:27.000Z</published>
+    <updated>2018-05-03T01:34:05.583Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;当一个对象内在状态改变时允许其改变行为，这个对象看起来像改变了其类。&lt;/p&gt;
+&lt;h3 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;环境类（Context）: 定义客户感兴趣的接口。维护一个ConcreteState子类的实例，这个实例定义当前状态。&lt;/li&gt;
+&lt;li&gt;抽象状态类（State）: 定义一个接口以封装与Context的一个特定状态相关的行为。&lt;/li&gt;
+&lt;li&gt;具体状态类（ConcreteState）: 每一子类实现一个与Context的一个状态相关的行为。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-观察者模式</title>
@@ -529,35 +558,6 @@
 &lt;li&gt;精确抽象（RefinedAbstraction）角色：实现并扩充由抽象角色定义的接口。&lt;/li&gt;
 &lt;li&gt;实现（Implementor）角色：给出了实现类的接口，这里的接口与抽象角色中的接口可以不一致。&lt;/li&gt;
 &lt;li&gt;具体实现（ConcreteImplementor）角色：给出了实现角色定义接口的具体实现。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-适配器模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/20/设计模式-适配器模式/</id>
-    <published>2018-04-20T00:37:21.000Z</published>
-    <updated>2018-04-20T06:25:00.633Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无法在一起工作的两个类能够在一起工作。&lt;/p&gt;
-&lt;h3 id=&quot;构建方式&quot;&gt;&lt;a href=&quot;#构建方式&quot; class=&quot;headerlink&quot; title=&quot;构建方式&quot;&gt;&lt;/a&gt;构建方式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;类适配器模式&lt;/li&gt;
-&lt;li&gt;对象适配器模式&lt;/li&gt;
-&lt;li&gt;接口适配器模式&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
