@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-04T09:09:01.391Z</updated>
+  <updated>2018-05-04T09:12:54.340Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,18 @@
     <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%88XSS%EF%BC%89/"/>
     <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/</id>
     <published>2018-05-04T07:37:57.000Z</published>
-    <updated>2018-05-04T09:09:01.391Z</updated>
+    <updated>2018-05-04T09:12:54.340Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击 
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击  &lt;/p&gt;
+&lt;p&gt;针对各种不同场景产生的 XSS，需要区分情景对待  &lt;/p&gt;
+&lt;h3 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h3&gt;&lt;p&gt;XSS 漏洞成因是由于动态网页的 Web 应用对用户提交请求参数未做充分的检查过滤，允许用户在提交的数据中掺入 HTML 代码（最主要的是「&amp;gt;」、「&amp;lt;」），然后未加编码地输出到第三方用户的浏览器，这些攻击者恶意提交代码会被受害用户的浏览器解释执行。&lt;/p&gt;
+&lt;h3 id=&quot;类别&quot;&gt;&lt;a href=&quot;#类别&quot; class=&quot;headerlink&quot; title=&quot;类别&quot;&gt;&lt;/a&gt;类别&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;反射型 XSS，只是简单的把用户输入的数据「反射」给浏览器。也叫做「非持久型 XSS 」&lt;/li&gt;
+&lt;li&gt;存储型 XSS，把用户输入的数据「存储」在服务器端。也叫做「持久型 XSS 」&lt;/li&gt;
+&lt;li&gt;DOM Based XSS，通过修改页面的DOM节点形成的XSS  &lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
