@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-04T07:34:19.253Z</updated>
+  <updated>2018-05-04T09:09:01.391Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web安全-跨站脚本攻击（XSS）</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%88XSS%EF%BC%89/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/</id>
+    <published>2018-05-04T07:37:57.000Z</published>
+    <updated>2018-05-04T09:09:01.391Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击 
+        
+      
+    
+    </summary>
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Web安全-同源策略</title>
@@ -561,36 +587,6 @@
 &lt;li&gt;门面不会禁止你访问子系统。&lt;/li&gt;
 &lt;li&gt;你可以（应该）有多个门面对应一个子系统。&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-依赖注入模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/24/设计模式-依赖注入模式/</id>
-    <published>2018-04-24T05:53:55.000Z</published>
-    <updated>2018-05-03T01:51:24.281Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;依赖注入是种实现控制反转用于解决依赖性设计模式。一个依赖关系指的是可被利用的一种对象（即服务提供端） 。依赖注入是将所依赖的传递给将使用的从属对象（即客户端）。该服务是将会变成客户端的状态的一部分。 传递服务给客户端，而非允许客户端来建立或寻找服务，是本设计模式的基本要求。&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;接口注入&lt;/li&gt;
-&lt;li&gt;setter方法注入&lt;/li&gt;
-&lt;li&gt;构造方法注入&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;依赖注入的观念就是&lt;strong&gt;将所有东西先在“外面”准备好，然后再带入“内部”的程式&lt;/strong&gt;中，如此一来你就能够在检视程式码的时候，一目了然地知道这个程式依赖著哪些类别。&lt;/p&gt;
     
     </summary>
     

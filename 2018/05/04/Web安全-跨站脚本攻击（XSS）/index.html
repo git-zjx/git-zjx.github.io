@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Web安全-同源策略"/>
+  <meta name="description" content="Web安全-跨站脚本攻击（XSS）"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/04/Web安全-同源策略/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -89,7 +89,7 @@
 
 
 
-    <title> Web安全-同源策略 - ZJX </title>
+    <title> Web安全-跨站脚本攻击（XSS） - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -205,7 +205,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Web安全-同源策略
+          Web安全-跨站脚本攻击（XSS）
         
       </h1>
 
@@ -229,70 +229,73 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何算同源"><span class="toc-text">如何算同源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#限制范围"><span class="toc-text">限制范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#破解"><span class="toc-text">破解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#成因"><span class="toc-text">成因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类别"><span class="toc-text">类别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防御"><span class="toc-text">防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HttpOnly"><span class="toc-text">HttpOnly</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入检查"><span class="toc-text">输入检查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出检查"><span class="toc-text">输出检查</span></a></li></ol></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。浏览器的同源策略限制了来自不同源的「document」或脚本，对当前「document」读取或设置某些属性</p>
-<h3 id="如何算同源"><a href="#如何算同源" class="headerlink" title="如何算同源"></a>如何算同源</h3><p>域名，协议，端口均相同</p>
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击  </p>
+<p>针对各种不同场景产生的 XSS，需要区分情景对待  </p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><p>XSS 漏洞成因是由于动态网页的 Web 应用对用户提交请求参数未做充分的检查过滤，允许用户在提交的数据中掺入 HTML 代码（最主要的是「&gt;」、「&lt;」），然后未加编码地输出到第三方用户的浏览器，这些攻击者恶意提交代码会被受害用户的浏览器解释执行。</p>
+<h3 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h3><ul>
+<li>反射型 XSS，只是简单的把用户输入的数据「反射」给浏览器。也叫做「非持久型 XSS 」</li>
+<li>存储型 XSS，把用户输入的数据「存储」在服务器端。也叫做「持久型 XSS 」</li>
+<li>DOM Based XSS，通过修改页面的DOM节点形成的XSS  </li>
+</ul>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="HttpOnly"><a href="#HttpOnly" class="headerlink" title="HttpOnly"></a>HttpOnly</h4><p>浏览器禁止页面的 JavaScript 访问带有 HttpOnly 属性的 Cookie  </p>
+<p>主要解决 XSS 后的 Cookie 劫持攻击  </p>
+<p>可以有选择性的加在任何一个 Cookie 值上   </p>
+<h4 id="输入检查"><a href="#输入检查" class="headerlink" title="输入检查"></a>输入检查</h4><p>同时在客户端和服务器端代码实现输入检查  </p>
+<p>一般是检查用户输入的数据中是否包含一些特殊字符，如果发现特殊字符则将这些字符过滤或者编码  </p>
+<p>输入的数据可能会被展示在多个地方，每个地方的语境可能各不相同，如果使用单一的替换操作，则可能会出现问题   </p>
+<h4 id="输出检查"><a href="#输出检查" class="headerlink" title="输出检查"></a>输出检查</h4><p>HtmlEncode、JavascriptEncode、XMLEncode、JSONEncode等编码方式，合适的场景使用合适的编码方式  </p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">URL</th>
-<th style="text-align:center">结果</th>
-<th style="text-align:center">原因</th>
+<th style="text-align:center">输出位置</th>
+<th style="text-align:center">防御方法</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><code>http://store.company.com/dir2/other.html</code></td>
-<td style="text-align:center">成功</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">在HTML标签中输出</td>
+<td style="text-align:center">HtmlEncode</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>http://store.company.com/dir/inner/another.html</code></td>
-<td style="text-align:center">成功</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">在HTML属性中输出</td>
+<td style="text-align:center">HtmlEncode或HTMLEntities</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>https://store.company.com/secure.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同协议 ( https和http )</td>
+<td style="text-align:center">在<script>标签中输出</td>
+<td style="text-align:center">JavascriptEncode</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>http://store.company.com:81/dir/etc.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同端口 ( 81和80)</td>
+<td style="text-align:center">在事件中输出</td>
+<td style="text-align:center">JavascriptEncode</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>http://news.company.com/dir/other.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同域名 ( news和store )</td>
+<td style="text-align:center">在CSS中输出</td>
+<td style="text-align:center">encodeFor</td>
+</tr>
+<tr>
+<td style="text-align:center">在地址中输出</td>
+<td style="text-align:center">检测http协议之后再进行URLEncode</td>
 </tr>
 </tbody>
 </table>
-<a id="more"></a>
-<h3 id="限制范围"><a href="#限制范围" class="headerlink" title="限制范围"></a>限制范围</h3><ul>
-<li>localStorage</li>
-<li>IndexedDB</li>
-<li>DOM</li>
-<li>Cookie</li>
-<li>XMLHttpRequest</li>
+<h4 id="富文本处理"><a href="#富文本处理" class="headerlink" title="富文本处理"></a>富文本处理</h4><p>使用白名单方式，只允许比较安全的标签存在   </p>
+<h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><ul>
+<li>不要在允许位置插入不可信数据</li>
+<li>在向HTML元素内容插入不可信数据前对HTML解码</li>
+<li>在向HTML常见属性插入不可信数据前进行属性解码</li>
+<li>在向HTML JavaScript Data Values插入不可信数据前，进行JavaScript解码</li>
+<li>在向HTML 样式属性值插入不可信数据前，进行CSS解码</li>
+<li>在向HTML URL属性插入不可信数据前，进行URL解码</li>
 </ul>
-<p><code>&lt;script&gt;</code>、<code>&lt;img&gt;</code>、<code>&lt;iframe&gt;</code>、<code>&lt;link&gt;</code>等标签可以跨域加载资源，不受同源策略限制 </p>
-<h3 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h3><ul>
-<li>document.domain </li>
-<li>跨文档通信 API</li>
-<li>JSONP</li>
-<li>WebSocket</li>
-<li>跨域资源共享 CORS</li>
-</ul>
-<p>至于如何使用可以查看参考中的信息<del>复制粘贴实在没啥意思</del></p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/" target="_blank" rel="noopener">《白帽子讲Web安全》</a><br><a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="noopener">浏览器同源政策及其规避方法</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">浏览器的同源策略</a><br><a href="https://segmentfault.com/a/1190000010803881" target="_blank" rel="noopener">同源策略那些事儿</a></p>
-
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/">《白帽子讲Web安全》</a><br><a href="http://netsecurity.51cto.com/art/201006/204283.htm">全面解析跨站脚本攻击</a><br><a href="http://netsecurity.51cto.com/art/201006/204283.htm">全面解析跨站脚本攻击</a><br><a href="https://baike.baidu.com/item/%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB/8186208?fr=aladdin#7">跨站脚本攻击</a></p>
+</script></td></tr></tbody></table>
       
     </div>
 
@@ -307,7 +310,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/04/Web安全-同源策略/">http://www.zhaojiaxing.top/2018/05/04/Web安全-同源策略/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/">http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -335,15 +338,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Web安全-跨站脚本攻击（XSS）</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/03/Linux-vmstat命令/">
-        <span class="next-text nav-default">Linux-vmstat命令</span>
+      <a class="next" href="/2018/05/04/Web安全-同源策略/">
+        <span class="next-text nav-default">Web安全-同源策略</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

@@ -207,6 +207,110 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/">Web安全-跨站脚本攻击（XSS）</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-04
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击  </p>
+<p>针对各种不同场景产生的 XSS，需要区分情景对待  </p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><p>XSS 漏洞成因是由于动态网页的 Web 应用对用户提交请求参数未做充分的检查过滤，允许用户在提交的数据中掺入 HTML 代码（最主要的是「&gt;」、「&lt;」），然后未加编码地输出到第三方用户的浏览器，这些攻击者恶意提交代码会被受害用户的浏览器解释执行。</p>
+<h3 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h3><ul>
+<li>反射型 XSS，只是简单的把用户输入的数据「反射」给浏览器。也叫做「非持久型 XSS 」</li>
+<li>存储型 XSS，把用户输入的数据「存储」在服务器端。也叫做「持久型 XSS 」</li>
+<li>DOM Based XSS，通过修改页面的DOM节点形成的XSS  </li>
+</ul>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="HttpOnly"><a href="#HttpOnly" class="headerlink" title="HttpOnly"></a>HttpOnly</h4><p>浏览器禁止页面的 JavaScript 访问带有 HttpOnly 属性的 Cookie  </p>
+<p>主要解决 XSS 后的 Cookie 劫持攻击  </p>
+<p>可以有选择性的加在任何一个 Cookie 值上   </p>
+<h4 id="输入检查"><a href="#输入检查" class="headerlink" title="输入检查"></a>输入检查</h4><p>同时在客户端和服务器端代码实现输入检查  </p>
+<p>一般是检查用户输入的数据中是否包含一些特殊字符，如果发现特殊字符则将这些字符过滤或者编码  </p>
+<p>输入的数据可能会被展示在多个地方，每个地方的语境可能各不相同，如果使用单一的替换操作，则可能会出现问题   </p>
+<h4 id="输出检查"><a href="#输出检查" class="headerlink" title="输出检查"></a>输出检查</h4><p>HtmlEncode、JavascriptEncode、XMLEncode、JSONEncode等编码方式，合适的场景使用合适的编码方式  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">输出位置</th>
+<th style="text-align:center">防御方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">在HTML标签中输出</td>
+<td style="text-align:center">HtmlEncode</td>
+</tr>
+<tr>
+<td style="text-align:center">在HTML属性中输出</td>
+<td style="text-align:center">HtmlEncode或HTMLEntities</td>
+</tr>
+<tr>
+<td style="text-align:center">在<script>标签中输出</td>
+<td style="text-align:center">JavascriptEncode</td>
+</tr>
+<tr>
+<td style="text-align:center">在事件中输出</td>
+<td style="text-align:center">JavascriptEncode</td>
+</tr>
+<tr>
+<td style="text-align:center">在CSS中输出</td>
+<td style="text-align:center">encodeFor</td>
+</tr>
+<tr>
+<td style="text-align:center">在地址中输出</td>
+<td style="text-align:center">检测http协议之后再进行URLEncode</td>
+</tr>
+</tbody>
+</table>
+<h4 id="富文本处理"><a href="#富文本处理" class="headerlink" title="富文本处理"></a>富文本处理</h4><p>使用白名单方式，只允许比较安全的标签存在   </p>
+<h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><ul>
+<li>不要在允许位置插入不可信数据</li>
+<li>在向HTML元素内容插入不可信数据前对HTML解码</li>
+<li>在向HTML常见属性插入不可信数据前进行属性解码</li>
+<li>在向HTML JavaScript Data Values插入不可信数据前，进行JavaScript解码</li>
+<li>在向HTML 样式属性值插入不可信数据前，进行CSS解码</li>
+<li>在向HTML URL属性插入不可信数据前，进行URL解码</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/">《白帽子讲Web安全》</a><br><a href="http://netsecurity.51cto.com/art/201006/204283.htm">全面解析跨站脚本攻击</a><br><a href="http://netsecurity.51cto.com/art/201006/204283.htm">全面解析跨站脚本攻击</a><br><a href="https://baike.baidu.com/item/%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB/8186208?fr=aladdin#7">跨站脚本攻击</a></p>
+</script></td></tr></tbody></table>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/04/Web安全-同源策略/">Web安全-同源策略</a>
         
       </h1>
@@ -726,63 +830,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/03/设计模式-观察者模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/03/设计模式-空对象模式/">设计模式-空对象模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-03
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过对缺失对象的封装，以提供默认无任何行为的对象替代品</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
-<li>抽象协作对象</li>
-<li>具体协作对象</li>
-<li>空对象</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/03/设计模式-空对象模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
