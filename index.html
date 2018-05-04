@@ -207,6 +207,54 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/04/Web安全-同源策略/">Web安全-同源策略</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-04
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。浏览器的同源策略限制了来自不同源的「document」或脚本，对当前「document」读取或设置某些属性</p>
+<h3 id="如何算同源"><a href="#如何算同源" class="headerlink" title="如何算同源"></a>如何算同源</h3><p>域名，协议，端口均相同</p>
+<p>| URL | 结果 | 原因 |<br>| <code>http://store.company.com/dir2/other.html</code> | 成功 |  |<br>| <code>http://store.company.com/dir/inner/another.html</code> | 成功 |  |<br>| <code>https://store.company.com/secure.html</code> | 失败 | 不同协议 ( https和http ) |<br>| <code>http://store.company.com:81/dir/etc.html</code> | 失败 | 不同端口 ( 81和80) |<br>| <code>http://news.company.com/dir/other.html</code> | 失败 | 不同域名 ( news和store ) |</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/03/Linux-vmstat命令/">Linux-vmstat命令</a>
         
       </h1>
@@ -696,63 +744,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/03/设计模式-空对象模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/03/设计模式-备忘录模式/">设计模式-备忘录模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-03
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在不破坏封闭的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到原先保存的状态。又叫做快照模式或Token模式</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
-<li>Originator(发起人)：负责创建一个备忘录Memento，用以记录当前时刻自身的内部状态，并可使用备忘录恢复内部状态。Originator可以根据需要决定Memento存储自己的哪些内部状态。</li>
-<li>Memento(备忘录)：负责存储Originator对象的内部状态，并可以防止Originator以外的其他对象访问备忘录。备忘录有两个接口：Caretaker只能看到备忘录的窄接口，他只能将备忘录传递给其他对象。Originator却可看到备忘录的宽接口，允许它访问返回到先前状态所需要的所有数据。</li>
-<li>Caretaker(管理者):负责备忘录Memento，不能对Memento的内容进行访问或者操作。</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/03/设计模式-备忘录模式/" class="read-more-link">阅读更多</a>
           </div>
         
       

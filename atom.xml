@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-03T02:48:47.783Z</updated>
+  <updated>2018-05-04T06:46:07.099Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web安全-同源策略</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-同源策略/</id>
+    <published>2018-05-04T05:25:08.000Z</published>
+    <updated>2018-05-04T06:46:07.099Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;同源策略（Same origin
+        
+      
+    
+    </summary>
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-vmstat命令</title>
@@ -534,36 +560,6 @@
 &lt;li&gt;构造方法注入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;依赖注入的观念就是&lt;strong&gt;将所有东西先在“外面”准备好，然后再带入“内部”的程式&lt;/strong&gt;中，如此一来你就能够在检视程式码的时候，一目了然地知道这个程式依赖著哪些类别。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-装饰模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/04/23/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/04/23/设计模式-装饰模式/</id>
-    <published>2018-04-23T05:39:18.000Z</published>
-    <updated>2018-05-03T01:51:24.343Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活，这样可以给某个对象而不是整个类添加一些功能。&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;p&gt;增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。&lt;/p&gt;
-&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;装饰类和被装饰类可以独立发展&lt;/li&gt;
-&lt;li&gt;是继承关系的替代方案&lt;/li&gt;
-&lt;li&gt;优秀的扩展性&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
