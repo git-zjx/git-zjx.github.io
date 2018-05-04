@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-04T06:49:28.900Z</updated>
+  <updated>2018-05-04T07:08:34.462Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,48 @@
     <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/"/>
     <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-同源策略/</id>
     <published>2018-05-04T05:25:08.000Z</published>
-    <updated>2018-05-04T06:49:28.900Z</updated>
+    <updated>2018-05-04T07:08:34.462Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;同源策略（Same origin
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。浏览器的同源策略限制了来自不同源的「document」或脚本，对当前「document」读取或设置某些属性&lt;/p&gt;
+&lt;h3 id=&quot;如何算同源&quot;&gt;&lt;a href=&quot;#如何算同源&quot; class=&quot;headerlink&quot; title=&quot;如何算同源&quot;&gt;&lt;/a&gt;如何算同源&lt;/h3&gt;&lt;p&gt;域名，协议，端口均相同&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;URL&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;结果&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;原因&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://store.company.com/dir2/other.html&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;成功&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://store.company.com/dir/inner/another.html&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;成功&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;https://store.company.com/secure.html&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;失败&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;不同协议 ( https和http )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://store.company.com:81/dir/etc.html&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;失败&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;不同端口 ( 81和80)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://news.company.com/dir/other.html&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;失败&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;不同域名 ( news和store )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
     
     </summary>
     
