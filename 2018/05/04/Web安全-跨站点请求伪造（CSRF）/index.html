@@ -227,10 +227,27 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#成因"><span class="toc-text">成因</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#浏览器的Cookie策略"><span class="toc-text">浏览器的Cookie策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#P3P-头的副作用"><span class="toc-text">P3P 头的副作用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防御"><span class="toc-text">防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#验证码"><span class="toc-text">验证码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP-Referer-检测"><span class="toc-text">HTTP Referer 检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSRF-Token"><span class="toc-text">CSRF Token</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
 
     <div class="post-content">
       
-        
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过伪装来自受信任用户的请求来利用受信任的网站</p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><h4 id="浏览器的Cookie策略"><a href="#浏览器的Cookie策略" class="headerlink" title="浏览器的Cookie策略"></a>浏览器的Cookie策略</h4><p>浏览器所持有的Cookie分为两种：一种是「Session Cookie」，又称「临时Cookie」；另一种是「Third-party Cookie」，也成为「本地Cookie」  </p>
+<p>如果浏览器从一个域的页面中，要加载另一个域的资源，由于安全原因，某些浏览器会阻止 Third-party Cookie 的发送，但是 Session Cookie 会被发送  </p>
+<a id="more"></a>
+<h4 id="P3P-头的副作用"><a href="#P3P-头的副作用" class="headerlink" title="P3P 头的副作用"></a>P3P 头的副作用</h4><p>P3P Header 是 W3C 制定的一项关于隐私的标准，全称是「The Platform for Privacy Preferences」  </p>
+<p>如果网站返回给浏览器的 HTTP 头中包含有 P3P 头，则在某种程度上说，将允许浏览器发送「Third-party Cookie」  </p>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="验证码"><a href="#验证码" class="headerlink" title="验证码"></a>验证码</h4><p>验证码会强制用户必须与应用进行交互，能避免在用户不知情的情况下发送了请求  </p>
+<h4 id="HTTP-Referer-检测"><a href="#HTTP-Referer-检测" class="headerlink" title="HTTP Referer 检测"></a>HTTP Referer 检测</h4><p>检测请求是否来自合法的源，但服务器并非什么时候都能获取到 HTTP Referer ，可以用来检测 CSRF 的发生  </p>
+<h4 id="CSRF-Token"><a href="#CSRF-Token" class="headerlink" title="CSRF Token"></a>CSRF Token</h4><p>CSRF 能够成功的本质原因是重要操作的所有参数都可以被攻击者猜到，由于 Token 的存在，攻击者就无法再构建一个成功的请求  </p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/" target="_blank" rel="noopener">《白帽子讲Web安全》</a><br><a href="https://baike.baidu.com/item/CSRF/2735433" target="_blank" rel="noopener">CSRF</a> </p>
+
       
     </div>
 

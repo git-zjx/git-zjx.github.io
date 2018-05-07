@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-04T09:27:39.956Z</updated>
+  <updated>2018-05-07T08:42:54.700Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,9 +21,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E7%82%B9%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%EF%BC%88CSRF%EF%BC%89/"/>
     <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站点请求伪造（CSRF）/</id>
     <published>2018-05-04T09:26:58.000Z</published>
-    <updated>2018-05-04T09:27:39.956Z</updated>
+    <updated>2018-05-07T08:42:54.700Z</updated>
     
     <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通过伪装来自受信任用户的请求来利用受信任的网站&lt;/p&gt;
+&lt;h3 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h3&gt;&lt;h4 id=&quot;浏览器的Cookie策略&quot;&gt;&lt;a href=&quot;#浏览器的Cookie策略&quot; class=&quot;headerlink&quot; title=&quot;浏览器的Cookie策略&quot;&gt;&lt;/a&gt;浏览器的Cookie策略&lt;/h4&gt;&lt;p&gt;浏览器所持有的Cookie分为两种：一种是「Session Cookie」，又称「临时Cookie」；另一种是「Third-party Cookie」，也成为「本地Cookie」  &lt;/p&gt;
+&lt;p&gt;如果浏览器从一个域的页面中，要加载另一个域的资源，由于安全原因，某些浏览器会阻止 Third-party Cookie 的发送，但是 Session Cookie 会被发送  &lt;/p&gt;
     
     </summary>
     
