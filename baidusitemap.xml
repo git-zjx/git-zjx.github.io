@@ -4,14 +4,38 @@
 
     
   <url>
+    <loc>http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%88XSS%EF%BC%89/</loc>
+    <lastmod>2018-05-07T09:37:28.688Z</lastmod>
+    <data>
+        <display>
+        <title>Web安全-跨站脚本攻击（XSS）</title>
+        <pubTime>2018-05-04T07:37:57.000Z</pubTime>
+        
+        <tag>Web安全</tag>
+         
+        <tag>客户端脚本安全</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web安全" url="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.zhaojiaxing.top/2018/05/07/Web%E5%AE%89%E5%85%A8-%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81/</loc>
-    <lastmod>2018-05-07T09:21:00.177Z</lastmod>
+    <lastmod>2018-05-07T09:37:24.846Z</lastmod>
     <data>
         <display>
         <title>Web安全-点击劫持</title>
         <pubTime>2018-05-07T09:11:01.000Z</pubTime>
         
         <tag>Web安全</tag>
+         
+        <tag>客户端脚本安全</tag>
          
          
            
@@ -25,7 +49,7 @@
     
   <url>
     <loc>http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E7%82%B9%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%EF%BC%88CSRF%EF%BC%89/</loc>
-    <lastmod>2018-05-07T08:42:54.700Z</lastmod>
+    <lastmod>2018-05-07T09:37:24.795Z</lastmod>
     <data>
         <display>
         <title>Web安全-跨站点请求伪造（CSRF）</title>
@@ -33,25 +57,7 @@
         
         <tag>Web安全</tag>
          
-         
-           
-             
-              <breadCrumb title="Web安全" url="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%88XSS%EF%BC%89/</loc>
-    <lastmod>2018-05-04T09:16:28.699Z</lastmod>
-    <data>
-        <display>
-        <title>Web安全-跨站脚本攻击（XSS）</title>
-        <pubTime>2018-05-04T07:37:57.000Z</pubTime>
-        
-        <tag>Web安全</tag>
+        <tag>客户端脚本安全</tag>
          
          
            

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-07T09:21:00.177Z</updated>
+  <updated>2018-05-07T09:37:24.846Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/07/Web%E5%AE%89%E5%85%A8-%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81/"/>
     <id>http://www.zhaojiaxing.top/2018/05/07/Web安全-点击劫持/</id>
     <published>2018-05-07T09:11:01.000Z</published>
-    <updated>2018-05-07T09:21:00.177Z</updated>
+    <updated>2018-05-07T09:37:24.846Z</updated>
     
     <summary type="html">
     
@@ -41,6 +41,8 @@
     
       <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
+      <category term="客户端脚本安全" scheme="http://www.zhaojiaxing.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%84%9A%E6%9C%AC%E5%AE%89%E5%85%A8/"/>
+    
   </entry>
   
   <entry>
@@ -48,7 +50,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E7%82%B9%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%EF%BC%88CSRF%EF%BC%89/"/>
     <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站点请求伪造（CSRF）/</id>
     <published>2018-05-04T09:26:58.000Z</published>
-    <updated>2018-05-07T08:42:54.700Z</updated>
+    <updated>2018-05-07T09:37:24.795Z</updated>
     
     <summary type="html">
     
@@ -63,6 +65,8 @@
     
       <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
+      <category term="客户端脚本安全" scheme="http://www.zhaojiaxing.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%84%9A%E6%9C%AC%E5%AE%89%E5%85%A8/"/>
+    
   </entry>
   
   <entry>
@@ -70,7 +74,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%88XSS%EF%BC%89/"/>
     <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/</id>
     <published>2018-05-04T07:37:57.000Z</published>
-    <updated>2018-05-04T09:16:28.699Z</updated>
+    <updated>2018-05-07T09:37:28.688Z</updated>
     
     <summary type="html">
     
@@ -89,6 +93,8 @@
     
     
       <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="客户端脚本安全" scheme="http://www.zhaojiaxing.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%84%9A%E6%9C%AC%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
