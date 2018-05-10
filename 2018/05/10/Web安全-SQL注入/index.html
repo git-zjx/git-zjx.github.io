@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Web安全-点击劫持"/>
+  <meta name="description" content="Web安全-SQL注入"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/07/Web安全-点击劫持/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/10/Web安全-SQL注入/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Web安全-点击劫持 - ZJX </title>
+    <title> Web安全-SQL注入 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,13 +206,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Web安全-点击劫持
+          Web安全-SQL注入
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-05-07
+          2018-05-10
         </span>
         
           <div class="post-category">
@@ -230,27 +230,20 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#攻击类型"><span class="toc-text">攻击类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防御"><span class="toc-text">防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#frame-busting"><span class="toc-text">frame busting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#X-Frame-Options"><span class="toc-text">X-Frame-Options</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#成因"><span class="toc-text">成因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防御"><span class="toc-text">防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用预编译语句"><span class="toc-text">使用预编译语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用存储过程（原理类似预编译语句）"><span class="toc-text">使用存储过程（原理类似预编译语句）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#检查数据类型"><span class="toc-text">检查数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用安全函数"><span class="toc-text">使用安全函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#最小权限原则"><span class="toc-text">最小权限原则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>点击劫持是一种视觉上的欺骗手段，攻击者使用一个透明的、不可见的 iframe ，覆盖在一个网页上，然后诱使用户在该网页上进行操作</p>
-<h3 id="攻击类型"><a href="#攻击类型" class="headerlink" title="攻击类型"></a>攻击类型</h3><ul>
-<li>iframe 攻击</li>
-<li>Flash 攻击</li>
-<li>图片覆盖攻击 </li>
-<li>拖拽攻击（利用浏览器的拖拽事件）</li>
-<li>触屏劫持</li>
-</ul>
-<a id="more"></a> 
-<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="frame-busting"><a href="#frame-busting" class="headerlink" title="frame busting"></a>frame busting</h4><p>使用 Javascript 代码禁止 iframe 嵌套</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (top.location != location)&#123;</span><br><span class="line">    top.location = self.location;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="X-Frame-Options"><a href="#X-Frame-Options" class="headerlink" title="X-Frame-Options"></a>X-Frame-Options</h4><p>X-Frame-Options 有三个可选值：DENY、SAMEORIGIN、ALLOW-FROM origin  </p>
-<p>当值为 DENY 时，浏览器会拒绝当前页面加载任何 frame 页面<br>当值为 SAMEORIGIN 时，浏览器只加载地址为同源域名下的 frame 页面<br>当值为 ALLOW-FROM origin  时，浏览器会加载所有 frame 页面  </p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/" target="_blank" rel="noopener">《白帽子讲Web安全》</a> </p>
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令</p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><p>用户输入的数据被SQL解释器执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var Shipcity;</span><br><span class="line">Shipcity = Request.form(&apos;Shopcity&apos;)</span><br><span class="line">var sql = &quot;select * from city where shipcity = &apos;&quot;+ Shipcity +&quot;&apos;&quot;;</span><br><span class="line"></span><br><span class="line">// 正常情况</span><br><span class="line">select * from city where shipcity = &apos;beijing&apos;;</span><br><span class="line">// 异常情况，输入 beijing&apos;; drop table city--</span><br><span class="line">select * from city where shipcity = &apos;beijing&apos;; drop table city--</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="使用预编译语句"><a href="#使用预编译语句" class="headerlink" title="使用预编译语句"></a>使用预编译语句</h4><p>防御 SQL 注入的最佳方式，使用预编译的SQL语句，SQL语句的语义不会发生改变，攻击者无法改变SQL结构，也就无法进行攻击</p>
+<h4 id="使用存储过程（原理类似预编译语句）"><a href="#使用存储过程（原理类似预编译语句）" class="headerlink" title="使用存储过程（原理类似预编译语句）"></a>使用存储过程（原理类似预编译语句）</h4><p>需要先将 SQL 语句定义在数据库中，尽量避免使用动态的 SQL </p>
+<h4 id="检查数据类型"><a href="#检查数据类型" class="headerlink" title="检查数据类型"></a>检查数据类型</h4><p>限制数据为指定格式和类型</p>
+<h4 id="使用安全函数"><a href="#使用安全函数" class="headerlink" title="使用安全函数"></a>使用安全函数</h4><h4 id="最小权限原则"><a href="#最小权限原则" class="headerlink" title="最小权限原则"></a>最小权限原则</h4><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/" target="_blank" rel="noopener">《白帽子讲Web安全》</a><br><a href="https://baike.baidu.com/item/sql%E6%B3%A8%E5%85%A5/150289?fr=aladdin" target="_blank" rel="noopener">sql注入</a> </p>
 
       
     </div>
@@ -266,7 +259,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/07/Web安全-点击劫持/">http://www.zhaojiaxing.top/2018/05/07/Web安全-点击劫持/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/10/Web安全-SQL注入/">http://www.zhaojiaxing.top/2018/05/10/Web安全-SQL注入/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -288,7 +281,7 @@
             
               <a href="/tags/Web安全/">Web安全</a>
             
-              <a href="/tags/客户端脚本安全/">客户端脚本安全</a>
+              <a href="/tags/服务器端应用安全/">服务器端应用安全</a>
             
           </div>
         
@@ -296,15 +289,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/10/Web安全-SQL注入/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Web安全-SQL注入</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/04/Web安全-跨站点请求伪造（CSRF）/">
-        <span class="next-text nav-default">Web安全-跨站点请求伪造（CSRF）</span>
+      <a class="next" href="/2018/05/07/Web安全-点击劫持/">
+        <span class="next-text nav-default">Web安全-点击劫持</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
