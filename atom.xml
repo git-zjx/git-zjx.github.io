@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-11T07:06:59.095Z</updated>
+  <updated>2018-05-11T08:48:05.617Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web安全-应用层拒绝服务攻击</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/11/Web%E5%AE%89%E5%85%A8-%E5%BA%94%E7%94%A8%E5%B1%82%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/</id>
+    <published>2018-05-11T08:38:58.000Z</published>
+    <updated>2018-05-11T08:48:05.617Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;利用合理的请求造成资源过载，导致服务不可用&lt;/p&gt;
+&lt;h3 id=&quot;攻击方式&quot;&gt;&lt;a href=&quot;#攻击方式&quot; class=&quot;headerlink&quot; title=&quot;攻击方式&quot;&gt;&lt;/a&gt;攻击方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;对一些消耗资源较大的应用页面不断发起正常请求 &lt;/li&gt;
+&lt;li&gt;构建不完整的 HTTP 请求占住 Web Server 连接不放&lt;/li&gt;
+&lt;li&gt;发送 POST 包时，构造非常大的 Content-Length 值，然后以很低的速度发包，保持连接不断开&lt;/li&gt;
+&lt;li&gt;客户端注入超长的 Cookie&lt;/li&gt;
+&lt;li&gt;ReDOS，基于正则实现&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="服务器端应用安全" scheme="http://www.zhaojiaxing.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Web安全-文件上传漏洞</title>
@@ -552,34 +581,6 @@
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。&lt;/p&gt;
 &lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;p&gt;Client（客户）：负责创建一个具体的命令（Concrete Command）&lt;br&gt;Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。&lt;br&gt;Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。&lt;br&gt;ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。&lt;br&gt;Receiver（接收者）：接受命令并执行。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-责任链模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-责任链模式/</id>
-    <published>2018-05-02T05:09:11.000Z</published>
-    <updated>2018-05-03T01:51:24.759Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;使多个对象都有机会处理请求，从而避免了请求的发送者和接受者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，直到有对象处理它为止。&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;抽象处理者角色：定义出一个处理请求的接口。如果需要，接口可以定义 出一个方法以设定和返回对下家的引用。这个角色通常由一个Java抽象类或者Java接口实现。上图中Handler类的聚合关系给出了具体子类对下家的引用，抽象方法handleRequest()规范了子类处理请求的操作。&lt;/li&gt;
-&lt;li&gt;具体处理者角色：具体处理者接到请求后，可以选择将请求处理掉，或者将请求传给下家。由于具体处理者持有对下家的引用，因此，如果需要，具体处理者可以访问下家。&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     

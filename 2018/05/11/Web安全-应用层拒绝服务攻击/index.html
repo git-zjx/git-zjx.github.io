@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="Web安全-应用层拒绝服务攻击"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/archives/page/3/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,11 +90,7 @@
 
 
 
-    <title>
-  
-    归档 - ZJX
-  
-</title>
+    <title> Web安全-应用层拒绝服务攻击 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,212 +202,119 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Web安全-应用层拒绝服务攻击
+        
+      </h1>
 
-    
-      
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-11
+        </span>
         
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2018</h2>
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
           </div>
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/20/设计模式-适配器模式/" class="archive-post-link">
-            设计模式-适配器模式
-          </a>
-        </span>
+        
       </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#攻击方式"><span class="toc-text">攻击方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防御"><span class="toc-text">防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#限制请求频率"><span class="toc-text">限制请求频率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码做好性能优化"><span class="toc-text">代码做好性能优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络架构做好优化"><span class="toc-text">网络架构做好优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用验证码"><span class="toc-text">使用验证码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断是否是浏览器请求"><span class="toc-text">判断是否是浏览器请求</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>利用合理的请求造成资源过载，导致服务不可用</p>
+<h3 id="攻击方式"><a href="#攻击方式" class="headerlink" title="攻击方式"></a>攻击方式</h3><ul>
+<li>对一些消耗资源较大的应用页面不断发起正常请求 </li>
+<li>构建不完整的 HTTP 请求占住 Web Server 连接不放</li>
+<li>发送 POST 包时，构造非常大的 Content-Length 值，然后以很低的速度发包，保持连接不断开</li>
+<li>客户端注入超长的 Cookie</li>
+<li>ReDOS，基于正则实现</li>
+</ul>
+<a id="more"></a>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="限制请求频率"><a href="#限制请求频率" class="headerlink" title="限制请求频率"></a>限制请求频率</h4><p>通过 IP 与 Cookie 定位一个客户端，如果客户端的请求在一定时间内过于频繁，则对之后来自该客户端的所有请求都重定向到一个页面</p>
+<h4 id="代码做好性能优化"><a href="#代码做好性能优化" class="headerlink" title="代码做好性能优化"></a>代码做好性能优化</h4><h4 id="网络架构做好优化"><a href="#网络架构做好优化" class="headerlink" title="网络架构做好优化"></a>网络架构做好优化</h4><h4 id="使用验证码"><a href="#使用验证码" class="headerlink" title="使用验证码"></a>使用验证码</h4><h4 id="判断是否是浏览器请求"><a href="#判断是否是浏览器请求" class="headerlink" title="判断是否是浏览器请求"></a>判断是否是浏览器请求</h4><p>让客户端解析一段 JavaScript 或者一段 flash </p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/" target="_blank" rel="noopener">《白帽子讲Web安全》</a> </p>
+
+      
+    </div>
+
     
       
-        
-        
-
-        
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/19/设计模式-对象池模式/" class="archive-post-link">
-            设计模式-对象池模式
-          </a>
-        </span>
-      </div>
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/">http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
     
-      
-        
-        
 
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/19/设计模式-多例模式/" class="archive-post-link">
-            设计模式-多例模式
-          </a>
-        </span>
-      </div>
     
-      
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Web安全/">Web安全</a>
+            
+              <a href="/tags/服务器端应用安全/">服务器端应用安全</a>
+            
+          </div>
         
         
-
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/19/设计模式-原型模式/" class="archive-post-link">
-            设计模式-原型模式
-          </a>
-        </span>
-      </div>
+  <nav class="post-nav">
     
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/19/设计模式-建造者模式/" class="archive-post-link">
-            设计模式-建造者模式
-          </a>
-        </span>
-      </div>
     
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/19/设计模式-抽象工厂模式/" class="archive-post-link">
-            设计模式-抽象工厂模式
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/19/设计模式-工厂方法模式/" class="archive-post-link">
-            设计模式-工厂方法模式
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-18
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/18/设计模式-简单工厂模式/" class="archive-post-link">
-            设计模式-简单工厂模式
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            04-18
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/04/18/设计模式-单例模式/" class="archive-post-link">
-            设计模式-单例模式
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
-      <a class="prev" href="/archives/page/2/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
+      <a class="next" href="/2018/05/11/Web安全-文件上传漏洞/">
+        <span class="next-text nav-default">Web安全-文件上传漏洞</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
       </a>
-    
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
@@ -496,6 +399,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     
