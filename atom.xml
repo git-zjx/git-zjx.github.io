@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-10T09:15:02.753Z</updated>
+  <updated>2018-05-11T07:06:59.095Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web安全-文件上传漏洞</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/11/Web%E5%AE%89%E5%85%A8-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/11/Web安全-文件上传漏洞/</id>
+    <published>2018-05-11T06:54:55.000Z</published>
+    <updated>2018-05-11T07:06:59.095Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;指用户上传了一个可执行的脚本文件，并通过此脚本文件获得了执行服务端命令的能力 &lt;/p&gt;
+&lt;h3 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;第三方插件漏洞&lt;/li&gt;
+&lt;li&gt;Web Server 本身特性&lt;/li&gt;
+&lt;li&gt;文件上传检查不严&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="服务器端应用安全" scheme="http://www.zhaojiaxing.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Web安全-SQL注入</title>
@@ -559,35 +586,6 @@
       <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
       <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-代理模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-代理模式/</id>
-    <published>2018-05-02T02:43:22.000Z</published>
-    <updated>2018-05-03T01:51:24.671Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;为其他对象提供一种代理以控制对这个对象的访问。&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;抽象角色：通过接口或抽象类声明真实角色实现的业务方法。&lt;/li&gt;
-&lt;li&gt;代理角色：实现抽象角色，是真实角色的代理，通过真实角色的业务逻辑方法来实现抽象方法，并可以附加自己的操作。&lt;/li&gt;
-&lt;li&gt;真实角色：实现抽象角色，定义真实角色所要实现的业务逻辑，供代理角色调用。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="结构型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B/"/>
     
     
       <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
