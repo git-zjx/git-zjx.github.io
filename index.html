@@ -208,51 +208,6 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/05/14/Linux-日志分析常用脚本/">Linux-日志分析常用脚本</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-14
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-
-        
-          <h4 id="查看访问量前10的-IP-地址"><a href="#查看访问量前10的-IP-地址" class="headerlink" title="查看访问量前10的 IP 地址"></a>查看访问量前10的 IP 地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /var/log/nginx/access.log |cut -f 3 -d &apos; &apos;| sort | uniq -c |sort -k 1 -n -r |head -10</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
           <a class="post-link" href="/2018/05/14/Linux-head命令/">Linux-head命令</a>
         
       </h1>
@@ -716,6 +671,58 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/07/Web安全-点击劫持/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/05/04/Web安全-跨站点请求伪造（CSRF）/">Web安全-跨站点请求伪造（CSRF）</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-04
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过伪装来自受信任用户的请求来利用受信任的网站</p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><h4 id="浏览器的Cookie策略"><a href="#浏览器的Cookie策略" class="headerlink" title="浏览器的Cookie策略"></a>浏览器的Cookie策略</h4><p>浏览器所持有的Cookie分为两种：一种是「Session Cookie」，又称「临时Cookie」；另一种是「Third-party Cookie」，也成为「本地Cookie」  </p>
+<p>如果浏览器从一个域的页面中，要加载另一个域的资源，由于安全原因，某些浏览器会阻止 Third-party Cookie 的发送，但是 Session Cookie 会被发送  </p>
+          <div class="read-more">
+            <a href="/2018/05/04/Web安全-跨站点请求伪造（CSRF）/" class="read-more-link">阅读更多</a>
           </div>
         
       

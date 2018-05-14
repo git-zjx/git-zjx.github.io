@@ -208,58 +208,6 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/05/04/Web安全-跨站点请求伪造（CSRF）/">Web安全-跨站点请求伪造（CSRF）</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-04
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Web安全/">Web安全</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过伪装来自受信任用户的请求来利用受信任的网站</p>
-<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><h4 id="浏览器的Cookie策略"><a href="#浏览器的Cookie策略" class="headerlink" title="浏览器的Cookie策略"></a>浏览器的Cookie策略</h4><p>浏览器所持有的Cookie分为两种：一种是「Session Cookie」，又称「临时Cookie」；另一种是「Third-party Cookie」，也成为「本地Cookie」  </p>
-<p>如果浏览器从一个域的页面中，要加载另一个域的资源，由于安全原因，某些浏览器会阻止 Third-party Cookie 的发送，但是 Session Cookie 会被发送  </p>
-          <div class="read-more">
-            <a href="/2018/05/04/Web安全-跨站点请求伪造（CSRF）/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
           <a class="post-link" href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/">Web安全-跨站脚本攻击（XSS）</a>
         
       </h1>
@@ -778,6 +726,64 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/03/设计模式-状态模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/05/03/设计模式-观察者模式/">设计模式-观察者模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。也叫发布-订阅模式</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>抽象目标角色（Subject）：目标角色知道它的观察者，可以有任意多个观察者观察同一个目标。并且提供注册和删除观察者对象的接口。目标角色往往由抽象类或者接口来实现。</li>
+<li>抽象观察者角色（Observer）：为那些在目标发生改变时需要获得通知的对象定义一个更新接口。抽象观察者角色主要由抽象类或者接口来实现。</li>
+<li>具体目标角色（Concrete Subject）：将有关状态存入各个Concrete Observer对象。当它的状态发生改变时, 向它的各个观察者发出通知。</li>
+<li>具体观察者角色（Concrete Observer）：存储有关状态，这些状态应与目标的状态保持一致。实现Observer的更新接口以使自身状态与目标的状态保持一致。在本角色内也可以维护一个指向Concrete Subject对象的引用。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/03/设计模式-观察者模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
