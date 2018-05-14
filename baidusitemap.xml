@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cat%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T03:27:39.239Z</lastmod>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cut%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T03:43:04.155Z</lastmod>
     <data>
         <display>
-        <title>Linux-cat命令</title>
-        <pubTime>2018-05-14T03:24:08.000Z</pubTime>
+        <title>Linux-cut命令</title>
+        <pubTime>2018-05-14T03:33:00.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -25,7 +25,7 @@
     
   <url>
     <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-sort%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T02:59:16.998Z</lastmod>
+    <lastmod>2018-05-14T03:36:47.917Z</lastmod>
     <data>
         <display>
         <title>Linux-sort命令</title>
@@ -44,8 +44,28 @@
 
     
   <url>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cat%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T03:36:04.957Z</lastmod>
+    <data>
+        <display>
+        <title>Linux-cat命令</title>
+        <pubTime>2018-05-14T03:24:08.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-uniq%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T02:59:11.329Z</lastmod>
+    <lastmod>2018-05-14T03:34:25.525Z</lastmod>
     <data>
         <display>
         <title>Linux-uniq命令</title>

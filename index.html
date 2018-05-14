@@ -208,6 +208,58 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/14/Linux-cut命令/">Linux-cut命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-14
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用来显示行中的指定部分，删除文件中指定字段</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-b：仅显示行中指定直接范围的内容；</span><br><span class="line">-c：仅显示行中指定范围的字符；</span><br><span class="line">-d：指定字段的分隔符，默认的字段分隔符为「TAB」；</span><br><span class="line">-f：显示指定字段的内容；</span><br><span class="line">-n：与「-b」选项连用，不分割多字节字符；</span><br><span class="line">--complement：提取指定字段之外的列；</span><br><span class="line">--out-delimiter=&lt;字段分隔符&gt;：指定输出内容是的字段分割符；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/14/Linux-cut命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/14/Linux-cat命令/">Linux-cat命令</a>
         
       </h1>
@@ -234,17 +286,16 @@
       
         
         
+          
+        
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>连接文件并打印到标准输出设备上，cat经常用来显示文件的内容</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-n或-number：由1开始对所有输出的行数编号；</span><br><span class="line">-b或--number-nonblank：和-n相似，只不过对于空白行不编号；</span><br><span class="line">-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；</span><br><span class="line">-A：显示不可打印字符，行尾显示“$”；</span><br><span class="line">-e：等价于&quot;-vE&quot;选项；</span><br><span class="line">-t：等价于&quot;-vT&quot;选项；</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>文件列表：指定要连接的文件列表</li>
-</ul>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat m1 （在屏幕上显示文件ml的内容）</span><br><span class="line">cat m1 m2 （同时显示文件ml和m2的内容）</span><br><span class="line">cat m1 m2 &gt; file （将文件ml和m2合并后放入文件file中）</span><br></pre></td></tr></table></figure>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/cat" target="_blank" rel="noopener">cat命令</a></p>
-
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-n或-number：由1开始对所有输出的行数编号；</span><br><span class="line">-b或--number-nonblank：和-n相似，只不过对于空白行不编号；</span><br><span class="line">-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；</span><br><span class="line">-A：显示不可打印字符，行尾显示「$」；</span><br><span class="line">-e：等价于「-vE」选项；</span><br><span class="line">-t：等价于「-vT」选项；</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/14/Linux-cat命令/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -287,17 +338,16 @@
       
         
         
+          
+        
 
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用于报告或忽略文件中的重复行，一般与 sort 命令结合使用</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq(选项)(参数)</span><br></pre></td></tr></table></figure>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-c或——count：在每列旁边显示该行重复出现的次数；</span><br><span class="line">-d或--repeated：仅显示重复出现的行列；</span><br><span class="line">-f&lt;栏位&gt;或--skip-fields=&lt;栏位&gt;：忽略比较指定的栏位；</span><br><span class="line">-s&lt;字符位置&gt;或--skip-chars=&lt;字符位置&gt;：忽略比较指定的字符；</span><br><span class="line">-u或——unique：仅显示出一次的行列；</span><br><span class="line">-w&lt;字符位置&gt;或--check-chars=&lt;字符位置&gt;：指定要比较的字符。</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>输入文件：指定要去除的重复行文件。如果不指定此项，则从标准读取数据；</li>
-<li>输出文件：指定要去除重复行后的内容要写入的输出文件。如果不指定此选项，则将内容显示到标准输出设备（显示终端）。</li>
-</ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/uniq" target="_blank" rel="noopener">uniq命令</a></p>
-
+          <div class="read-more">
+            <a href="/2018/05/14/Linux-uniq命令/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -340,15 +390,16 @@
       
         
         
+          
+        
 
         
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从stdin中获取输入</p>
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从 stdin 中获取输入</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-b：忽略每行前面开始出的空格字符；</span><br><span class="line">-c：检查文件是否已经按照顺序排序；</span><br><span class="line">-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；</span><br><span class="line">-f：排序时，将小写字母视为大写字母；</span><br><span class="line">-i：排序时，除了040至176之间的ASCII字符外，忽略其他的字符；</span><br><span class="line">-m：将几个排序号的文件进行合并；</span><br><span class="line">-M：将前面3个字母依照月份的缩写进行排序；</span><br><span class="line">-n：依照数值的大小排序；</span><br><span class="line">-o&lt;输出文件&gt;：将排序后的结果存入制定的文件；</span><br><span class="line">-r：以相反的顺序来排序；</span><br><span class="line">-t&lt;分隔字符&gt;：指定排序时所用的栏位分隔字符；</span><br><span class="line">-k&lt;栏位&gt;：指定需要排序的栏位；</span><br><span class="line">+&lt;起始栏位&gt;-&lt;结束栏位&gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>文件：指定待排序的文件列表。</p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 将CC列数字从大到小顺序排列</span><br><span class="line"># -n是按照数字大小排序，-r是以相反顺序，-k是指定需要排序的栏位，-t指定栏位分隔符为冒号</span><br><span class="line">sort -nrk 3 -t: sort.txt</span><br><span class="line"></span><br><span class="line">eee:40:5.4</span><br><span class="line">eee:60:5.1</span><br><span class="line">ddd:20:4.2</span><br><span class="line">ccc:50:3.3</span><br><span class="line">bbb:10:2.5</span><br><span class="line">aaa:30:1.6</span><br><span class="line">AAA:BB:CC</span><br></pre></td></tr></table></figure>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/sort" target="_blank" rel="noopener">sort命令</a></p>
-
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-b：忽略每行前面开始出的空格字符；</span><br><span class="line">-c：检查文件是否已经按照顺序排序；</span><br><span class="line">-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；</span><br><span class="line">-f：排序时，将小写字母视为大写字母；</span><br><span class="line">-i：排序时，除了 040 至 176 之间的 ASCII 字符外，忽略其他的字符；</span><br><span class="line">-m：将几个排序号的文件进行合并；</span><br><span class="line">-M：将前面 3 个字母依照月份的缩写进行排序；</span><br><span class="line">-n：依照数值的大小排序；</span><br><span class="line">-o&lt;输出文件&gt;：将排序后的结果存入制定的文件；</span><br><span class="line">-r：以相反的顺序来排序；</span><br><span class="line">-t&lt;分隔字符&gt;：指定排序时所用的栏位分隔字符；</span><br><span class="line">-k&lt;栏位&gt;：指定需要排序的栏位；</span><br><span class="line">+&lt;起始栏位&gt;-&lt;结束栏位&gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/14/Linux-sort命令/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -677,93 +728,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/04/Web安全-同源策略/">Web安全-同源策略</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-04
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Web安全/">Web安全</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。浏览器的同源策略限制了来自不同源的「document」或脚本，对当前「document」读取或设置某些属性</p>
-<h3 id="如何算同源"><a href="#如何算同源" class="headerlink" title="如何算同源"></a>如何算同源</h3><p>域名，协议，端口均相同</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">URL</th>
-<th style="text-align:center">结果</th>
-<th style="text-align:center">原因</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>http://store.company.com/dir2/other.html</code></td>
-<td style="text-align:center">成功</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>http://store.company.com/dir/inner/another.html</code></td>
-<td style="text-align:center">成功</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>https://store.company.com/secure.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同协议 ( https和http )</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>http://store.company.com:81/dir/etc.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同端口 ( 81和80)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>http://news.company.com/dir/other.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同域名 ( news和store )</td>
-</tr>
-</tbody>
-</table>
-          <div class="read-more">
-            <a href="/2018/05/04/Web安全-同源策略/" class="read-more-link">阅读更多</a>
           </div>
         
       
