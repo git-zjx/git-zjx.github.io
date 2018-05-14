@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-14T05:22:32.788Z</updated>
+  <updated>2018-05-14T06:47:09.121Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-通用Linux目录名称</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-%E9%80%9A%E7%94%A8Linux%E7%9B%AE%E5%BD%95%E5%90%8D%E7%A7%B0/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-通用Linux目录名称/</id>
+    <published>2018-05-14T06:34:57.000Z</published>
+    <updated>2018-05-14T06:47:09.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;目录&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-head命令</title>
@@ -518,36 +553,6 @@
 &lt;li&gt;环境类（Context）: 定义客户感兴趣的接口。维护一个ConcreteState子类的实例，这个实例定义当前状态。&lt;/li&gt;
 &lt;li&gt;抽象状态类（State）: 定义一个接口以封装与Context的一个特定状态相关的行为。&lt;/li&gt;
 &lt;li&gt;具体状态类（ConcreteState）: 每一子类实现一个与Context的一个状态相关的行为。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-观察者模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-观察者模式/</id>
-    <published>2018-05-03T01:11:02.000Z</published>
-    <updated>2018-05-03T01:51:24.842Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。也叫发布-订阅模式&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;抽象目标角色（Subject）：目标角色知道它的观察者，可以有任意多个观察者观察同一个目标。并且提供注册和删除观察者对象的接口。目标角色往往由抽象类或者接口来实现。&lt;/li&gt;
-&lt;li&gt;抽象观察者角色（Observer）：为那些在目标发生改变时需要获得通知的对象定义一个更新接口。抽象观察者角色主要由抽象类或者接口来实现。&lt;/li&gt;
-&lt;li&gt;具体目标角色（Concrete Subject）：将有关状态存入各个Concrete Observer对象。当它的状态发生改变时, 向它的各个观察者发出通知。&lt;/li&gt;
-&lt;li&gt;具体观察者角色（Concrete Observer）：存储有关状态，这些状态应与目标的状态保持一致。实现Observer的更新接口以使自身状态与目标的状态保持一致。在本角色内也可以维护一个指向Concrete Subject对象的引用。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
