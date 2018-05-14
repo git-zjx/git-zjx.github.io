@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Linux-sort命令"/>
+  <meta name="description" content="Linux-uniq命令"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/14/Linux-uniq命令/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Linux-sort命令 - ZJX </title>
+    <title> Linux-uniq命令 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,7 +206,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Linux-sort命令
+          Linux-uniq命令
         
       </h1>
 
@@ -230,19 +230,21 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-text">实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从stdin中获取输入</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-b：忽略每行前面开始出的空格字符；</span><br><span class="line">-c：检查文件是否已经按照顺序排序；</span><br><span class="line">-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；</span><br><span class="line">-f：排序时，将小写字母视为大写字母；</span><br><span class="line">-i：排序时，除了040至176之间的ASCII字符外，忽略其他的字符；</span><br><span class="line">-m：将几个排序号的文件进行合并；</span><br><span class="line">-M：将前面3个字母依照月份的缩写进行排序；</span><br><span class="line">-n：依照数值的大小排序；</span><br><span class="line">-o&lt;输出文件&gt;：将排序后的结果存入制定的文件；</span><br><span class="line">-r：以相反的顺序来排序；</span><br><span class="line">-t&lt;分隔字符&gt;：指定排序时所用的栏位分隔字符；</span><br><span class="line">-k&lt;栏位&gt;：指定需要排序的栏位；</span><br><span class="line">+&lt;起始栏位&gt;-&lt;结束栏位&gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>文件：指定待排序的文件列表。</p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 将CC列数字从大到小顺序排列</span><br><span class="line"># -n是按照数字大小排序，-r是以相反顺序，-k是指定需要排序的栏位，-t指定栏位分隔符为冒号</span><br><span class="line">sort -nrk 3 -t: sort.txt</span><br><span class="line"></span><br><span class="line">eee:40:5.4</span><br><span class="line">eee:60:5.1</span><br><span class="line">ddd:20:4.2</span><br><span class="line">ccc:50:3.3</span><br><span class="line">bbb:10:2.5</span><br><span class="line">aaa:30:1.6</span><br><span class="line">AAA:BB:CC</span><br></pre></td></tr></table></figure>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/sort" target="_blank" rel="noopener">sort命令</a></p>
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用于报告或忽略文件中的重复行，一般与 sort 命令结合使用</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-c或——count：在每列旁边显示该行重复出现的次数；</span><br><span class="line">-d或--repeated：仅显示重复出现的行列；</span><br><span class="line">-f&lt;栏位&gt;或--skip-fields=&lt;栏位&gt;：忽略比较指定的栏位；</span><br><span class="line">-s&lt;字符位置&gt;或--skip-chars=&lt;字符位置&gt;：忽略比较指定的字符；</span><br><span class="line">-u或——unique：仅显示出一次的行列；</span><br><span class="line">-w&lt;字符位置&gt;或--check-chars=&lt;字符位置&gt;：指定要比较的字符。</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>输入文件：指定要去除的重复行文件。如果不指定此项，则从标准读取数据；</li>
+<li>输出文件：指定要去除重复行后的内容要写入的输出文件。如果不指定此选项，则将内容显示到标准输出设备（显示终端）。</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/uniq" target="_blank" rel="noopener">uniq命令</a></p>
 
       
     </div>
@@ -258,7 +260,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/">http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/14/Linux-uniq命令/">http://www.zhaojiaxing.top/2018/05/14/Linux-uniq命令/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -286,15 +288,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/14/Linux-uniq命令/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Linux-uniq命令</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/11/Web安全-应用层拒绝服务攻击/">
-        <span class="next-text nav-default">Web安全-应用层拒绝服务攻击</span>
+      <a class="next" href="/2018/05/14/Linux-sort命令/">
+        <span class="next-text nav-default">Linux-sort命令</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

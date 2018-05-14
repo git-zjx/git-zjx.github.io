@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-14T02:07:06.979Z</updated>
+  <updated>2018-05-14T02:59:11.329Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux-uniq命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-uniq%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-uniq命令/</id>
+    <published>2018-05-14T02:15:47.000Z</published>
+    <updated>2018-05-14T02:59:11.329Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;用于报告或忽略文件中的重复行，一般与 sort 命令结合使用&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux-sort命令</title>
     <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/</id>
     <published>2018-05-14T01:41:14.000Z</published>
-    <updated>2018-05-14T02:07:06.979Z</updated>
+    <updated>2018-05-14T02:59:16.998Z</updated>
     
     <summary type="html">
     
@@ -552,36 +579,6 @@
 &lt;li&gt;Mediator–抽象中介者角色：抽象中介者角色定义统一的接口，用于各同事角色之间的通信。&lt;/li&gt;
 &lt;li&gt;Concrete Mediator–具体中介者角色：具体中介者角色，通过协调各同事角色实现协作行为，因此它必须依赖于各个同事角色。&lt;/li&gt;
 &lt;li&gt;Colleague–同事角色：每一个同事角色都知道中介者角色，而且与其它的同事角色通信的时候，一定要通过中介者角色来协作。 每个同事类的行为分为二种：一种是同事本身的行为，这种行为叫做自发行为(Self-Method);第二种是必须依赖中介者才能完成的行为，叫做依赖行为(Dep-Method)。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-迭代器模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-迭代器模式/</id>
-    <published>2018-05-02T06:19:57.000Z</published>
-    <updated>2018-05-02T06:31:51.421Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;它提供一种方法访问一个容器对象中各个元素， 而又不需暴露该 对象的内部细节。在PHP中我们对迭代模式的使用，通常只需实现Iterator接口即可&lt;/p&gt;
-&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;它支持以不同的方式遍历一个聚合对象。 &lt;/li&gt;
-&lt;li&gt;迭代器简化了聚合类。 &lt;/li&gt;
-&lt;li&gt;在同一个聚合上可以有多个遍历。 &lt;/li&gt;
-&lt;li&gt;在迭代器模式中，增加新的聚合类和迭代器类都很方便，无须修改原有代码。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
