@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-14T03:50:29.490Z</updated>
+  <updated>2018-05-14T05:22:32.788Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-head%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/14/Linux-head命令/</id>
     <published>2018-05-14T03:48:56.000Z</published>
-    <updated>2018-05-14T03:50:29.490Z</updated>
+    <updated>2018-05-14T05:22:32.788Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;用于显示文件的开头的内容。在默认情况下，head 命令显示文件的头10行内容&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;head(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;p&gt;-n&amp;lt;数字&amp;gt;：指定显示头部内容的行数；&lt;br&gt;-c&amp;lt;字符数&amp;gt;：指定显示头部内容的字符数；&lt;br&gt;-v：总是显示文件名的头信息；&lt;br&gt;-q：不显示文件名的头信息。&lt;/p&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-n&amp;lt;数字&amp;gt;：指定显示头部内容的行数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c&amp;lt;字符数&amp;gt;：指定显示头部内容的字符数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：总是显示文件名的头信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-q：不显示文件名的头信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
