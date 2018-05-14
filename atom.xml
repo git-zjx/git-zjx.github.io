@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-14T08:07:57.645Z</updated>
+  <updated>2018-05-14T08:39:45.908Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-cp命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-cp%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-cp命令/</id>
+    <published>2018-05-14T08:24:38.000Z</published>
+    <updated>2018-05-14T08:39:45.908Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：归档文件，保留其属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b：为每个现有目标文件创建一个备份，而不是覆盖它&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制覆盖现有目标文件，没有提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：覆盖目标文件时提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：创建文件链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p：保留文件属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：递归复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R：递归复制目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：创建符号链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：重写备份特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：仅在源文件的日期和时间比目标文件新时复制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：冗长模式，解释发生的事件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x：将复制限定在当前文件系统&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-touch命令</title>
@@ -513,37 +535,6 @@
     
     
       <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-访问者模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-访问者模式/</id>
-    <published>2018-05-03T02:19:35.000Z</published>
-    <updated>2018-05-03T02:43:08.255Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;封装一些作用于某种数据结构中的各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;抽象访问者(Visitor)：定义了对每一个元素（Element）访问的行为，它的参数就是可以访问的元素，它的方法个数理论上来讲与元素个数（Element的实现类个数）是一样的，从这点不难看出，访问者模式要求元素类的个数不能改变（不能改变的意思是说，如果元素类的个数经常改变，则说明不适合使用访问者模式）。&lt;/li&gt;
-&lt;li&gt;具体访问者(ConcreteVisitor)： 给出对每一个元素类访问时所产生的具体行为。&lt;/li&gt;
-&lt;li&gt;抽象节点(Element)：定义了一个接受访问者（accept）的方法，其意义是指，每一个元素都要可以被访问者访问。&lt;/li&gt;
-&lt;li&gt;具体节点(ConcreteElement)：提供接受访问方法的具体实现，而这个具体的实现，通常情况下是使用访问者提供的访问该元素类的方法。&lt;/li&gt;
-&lt;li&gt;结构对象角色(ObjectStructure)：定义当中所提到的对象结构，对象结构是一个抽象表述，具体点可以理解为一个具有容器性质或者复合对象特性的类，它会含有一组元素（Element），并且可以迭代这些元素，供访问者访问&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
