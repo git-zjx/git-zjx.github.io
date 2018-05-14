@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Web安全-应用层拒绝服务攻击"/>
+  <meta name="description" content="Linux-sort命令"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Web安全-应用层拒绝服务攻击 - ZJX </title>
+    <title> Linux-sort命令 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,18 +206,18 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Web安全-应用层拒绝服务攻击
+          Linux-sort命令
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-05-11
+          2018-05-14
         </span>
         
           <div class="post-category">
             
-              <a href="/categories/Web安全/">Web安全</a>
+              <a href="/categories/Linux/">Linux</a>
             
           </div>
         
@@ -230,25 +230,19 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#攻击方式"><span class="toc-text">攻击方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防御"><span class="toc-text">防御</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#限制请求频率"><span class="toc-text">限制请求频率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码做好性能优化"><span class="toc-text">代码做好性能优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络架构做好优化"><span class="toc-text">网络架构做好优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用验证码"><span class="toc-text">使用验证码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断是否是浏览器请求"><span class="toc-text">判断是否是浏览器请求</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-text">实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>利用合理的请求造成资源过载，导致服务不可用</p>
-<h3 id="攻击方式"><a href="#攻击方式" class="headerlink" title="攻击方式"></a>攻击方式</h3><ul>
-<li>对一些消耗资源较大的应用页面不断发起正常请求 </li>
-<li>构建不完整的 HTTP 请求占住 Web Server 连接不放</li>
-<li>发送 POST 包时，构造非常大的 Content-Length 值，然后以很低的速度发包，保持连接不断开</li>
-<li>客户端注入超长的 Cookie</li>
-<li>ReDOS，基于正则实现</li>
-</ul>
-<a id="more"></a>
-<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><h4 id="限制请求频率"><a href="#限制请求频率" class="headerlink" title="限制请求频率"></a>限制请求频率</h4><p>通过 IP 与 Cookie 定位一个客户端，如果客户端的请求在一定时间内过于频繁，则对之后来自该客户端的所有请求都重定向到一个页面</p>
-<h4 id="代码做好性能优化"><a href="#代码做好性能优化" class="headerlink" title="代码做好性能优化"></a>代码做好性能优化</h4><h4 id="网络架构做好优化"><a href="#网络架构做好优化" class="headerlink" title="网络架构做好优化"></a>网络架构做好优化</h4><h4 id="使用验证码"><a href="#使用验证码" class="headerlink" title="使用验证码"></a>使用验证码</h4><h4 id="判断是否是浏览器请求"><a href="#判断是否是浏览器请求" class="headerlink" title="判断是否是浏览器请求"></a>判断是否是浏览器请求</h4><p>让客户端解析一段 JavaScript 或者一段 flash </p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/10546925/" target="_blank" rel="noopener">《白帽子讲Web安全》</a> </p>
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从stdin中获取输入</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-b：忽略每行前面开始出的空格字符；</span><br><span class="line">-c：检查文件是否已经按照顺序排序；</span><br><span class="line">-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；</span><br><span class="line">-f：排序时，将小写字母视为大写字母；</span><br><span class="line">-i：排序时，除了040至176之间的ASCII字符外，忽略其他的字符；</span><br><span class="line">-m：将几个排序号的文件进行合并；</span><br><span class="line">-M：将前面3个字母依照月份的缩写进行排序；</span><br><span class="line">-n：依照数值的大小排序；</span><br><span class="line">-o&lt;输出文件&gt;：将排序后的结果存入制定的文件；</span><br><span class="line">-r：以相反的顺序来排序；</span><br><span class="line">-t&lt;分隔字符&gt;：指定排序时所用的栏位分隔字符；</span><br><span class="line">-k&lt;栏位&gt;：指定需要排序的栏位；</span><br><span class="line">+&lt;起始栏位&gt;-&lt;结束栏位&gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>文件：指定待排序的文件列表。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 将CC列数字从大到小顺序排列</span><br><span class="line"># -n是按照数字大小排序，-r是以相反顺序，-k是指定需要排序的栏位，-t指定栏位分隔符为冒号</span><br><span class="line">sort -nrk 3 -t: sort.txt</span><br><span class="line"></span><br><span class="line">eee:40:5.4</span><br><span class="line">eee:60:5.1</span><br><span class="line">ddd:20:4.2</span><br><span class="line">ccc:50:3.3</span><br><span class="line">bbb:10:2.5</span><br><span class="line">aaa:30:1.6</span><br><span class="line">AAA:BB:CC</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/sort" target="_blank" rel="noopener">sort命令</a></p>
 
       
     </div>
@@ -264,7 +258,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/">http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/">http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -284,9 +278,7 @@
         
           <div class="post-tags">
             
-              <a href="/tags/Web安全/">Web安全</a>
-            
-              <a href="/tags/服务器端应用安全/">服务器端应用安全</a>
+              <a href="/tags/Linux/">Linux</a>
             
           </div>
         
@@ -294,15 +286,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/14/Linux-sort命令/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Linux-sort命令</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/11/Web安全-文件上传漏洞/">
-        <span class="next-text nav-default">Web安全-文件上传漏洞</span>
+      <a class="next" href="/2018/05/11/Web安全-应用层拒绝服务攻击/">
+        <span class="next-text nav-default">Web安全-应用层拒绝服务攻击</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

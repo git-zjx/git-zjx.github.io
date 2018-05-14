@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-11T08:48:05.617Z</updated>
+  <updated>2018-05-14T02:07:06.979Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-sort命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/</id>
+    <published>2018-05-14T01:41:14.000Z</published>
+    <updated>2018-05-14T02:07:06.979Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从stdin中获取输入&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Web安全-应用层拒绝服务攻击</title>
@@ -556,31 +583,6 @@
 &lt;li&gt;在同一个聚合上可以有多个遍历。 &lt;/li&gt;
 &lt;li&gt;在迭代器模式中，增加新的聚合类和迭代器类都很方便，无须修改原有代码。&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-命令模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/02/设计模式-命令模式/</id>
-    <published>2018-05-02T05:19:59.000Z</published>
-    <updated>2018-05-03T01:51:24.372Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。&lt;/p&gt;
-&lt;h3 id=&quot;组成&quot;&gt;&lt;a href=&quot;#组成&quot; class=&quot;headerlink&quot; title=&quot;组成&quot;&gt;&lt;/a&gt;组成&lt;/h3&gt;&lt;p&gt;Client（客户）：负责创建一个具体的命令（Concrete Command）&lt;br&gt;Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。&lt;br&gt;Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。&lt;br&gt;ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。&lt;br&gt;Receiver（接收者）：接受命令并执行。&lt;/p&gt;
     
     </summary>
     
