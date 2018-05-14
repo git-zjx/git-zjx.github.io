@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-14T07:55:52.656Z</updated>
+  <updated>2018-05-14T08:07:57.645Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-touch命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-touch%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-touch命令/</id>
+    <published>2018-05-14T08:02:19.000Z</published>
+    <updated>2018-05-14T08:07:57.645Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;命令有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建新的空文件。&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;touch(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：或--time=atime 或 --time=access 或 --time=use 只更改存取时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：或--no-create 不建立任何文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：&amp;lt;时间日期&amp;gt; 使用指定的日期时间，而非现在的时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：此参数将忽略不予处理，仅负责解决 BSD 版本 touch 指令的兼容性问题；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：或 --time=mtime或--time=modify 只更该变动时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：&amp;lt;参考文件或目录&amp;gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：&amp;lt;日期时间&amp;gt;  使用指定的日期时间，而非现在的时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：在线帮助；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-ls命令</title>
@@ -510,35 +532,6 @@
 &lt;li&gt;抽象节点(Element)：定义了一个接受访问者（accept）的方法，其意义是指，每一个元素都要可以被访问者访问。&lt;/li&gt;
 &lt;li&gt;具体节点(ConcreteElement)：提供接受访问方法的具体实现，而这个具体的实现，通常情况下是使用访问者提供的访问该元素类的方法。&lt;/li&gt;
 &lt;li&gt;结构对象角色(ObjectStructure)：定义当中所提到的对象结构，对象结构是一个抽象表述，具体点可以理解为一个具有容器性质或者复合对象特性的类，它会含有一组元素（Element），并且可以迭代这些元素，供访问者访问&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="行为型" scheme="http://www.zhaojiaxing.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B/"/>
-    
-    
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
-    
-      <category term="设计模式" scheme="http://www.zhaojiaxing.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-模版模式</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A8%A1%E7%89%88%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/03/设计模式-模版模式/</id>
-    <published>2018-05-03T02:07:49.000Z</published>
-    <updated>2018-05-03T02:14:55.697Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;定义一个操作中的算法的框架，而将一些步骤延迟到子类中。使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。&lt;/p&gt;
-&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;封装不变的部分，扩展可变的部分&lt;/li&gt;
-&lt;li&gt;提取公共部分代码，便于维护&lt;/li&gt;
-&lt;li&gt;行为由父类控制，子类实现&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
