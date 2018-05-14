@@ -208,6 +208,56 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/14/Linux-cd命令/">Linux-cd命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-14
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>切换目录</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-p 如果要切换到的目标目录是一个符号连接，直接切换到符号连接指向的目标目录</span><br><span class="line">-L 如果要切换的目标目录是一个符号的连接，直接切换到字符连接名代表的目录，而非符号连接所指向的目标目录。</span><br><span class="line">- 返回进入此目录之前所在的目录。</span><br></pre></td></tr></table></figure>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd    进入用户主目录；</span><br><span class="line">cd ~  进入用户主目录；</span><br><span class="line">cd -  返回进入此目录之前所在的目录；</span><br><span class="line">cd ..  返回上级目录（若当前目录为“/“，则执行完后还在“/&quot;；&quot;..&quot;为上级目录的意思）；</span><br><span class="line">cd ../..  返回上两级目录；</span><br><span class="line">cd !$  把上个命令的参数作为cd参数使用。</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/cd" target="_blank" rel="noopener">cd命令</a></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/14/Linux-通用Linux目录名称/">Linux-通用Linux目录名称</a>
         
       </h1>
@@ -353,7 +403,7 @@
         
 
         
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用于显示文件的开头的内容。在默认情况下，head 命令显示文件的头10行内容</p>
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于显示文件的开头的内容。在默认情况下，head 命令显示文件的头10行内容</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head(选项)(参数)</span><br></pre></td></tr></table></figure>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-n&lt;数字&gt;：指定显示头部内容的行数；</span><br><span class="line">-c&lt;字符数&gt;：指定显示头部内容的字符数；</span><br><span class="line">-v：总是显示文件名的头信息；</span><br><span class="line">-q：不显示文件名的头信息。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
@@ -405,7 +455,7 @@
         
 
         
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用来显示行中的指定部分，删除文件中指定字段</p>
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来显示行中的指定部分，删除文件中指定字段</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut(选项)(参数)</span><br></pre></td></tr></table></figure>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-b：仅显示行中指定直接范围的内容；</span><br><span class="line">-c：仅显示行中指定范围的字符；</span><br><span class="line">-d：指定字段的分隔符，默认的字段分隔符为「TAB」；</span><br><span class="line">-f：显示指定字段的内容；</span><br><span class="line">-n：与「-b」选项连用，不分割多字节字符；</span><br><span class="line">--complement：提取指定字段之外的列；</span><br><span class="line">--out-delimiter=&lt;字段分隔符&gt;：指定输出内容是的字段分割符；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
@@ -457,7 +507,7 @@
         
 
         
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>连接文件并打印到标准输出设备上，cat经常用来显示文件的内容</p>
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>连接文件并打印到标准输出设备上，cat经常用来显示文件的内容</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat(选项)(参数)</span><br></pre></td></tr></table></figure>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-n或-number：由1开始对所有输出的行数编号；</span><br><span class="line">-b或--number-nonblank：和-n相似，只不过对于空白行不编号；</span><br><span class="line">-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；</span><br><span class="line">-A：显示不可打印字符，行尾显示「$」；</span><br><span class="line">-e：等价于「-vE」选项；</span><br><span class="line">-t：等价于「-vT」选项；</span><br></pre></td></tr></table></figure>
           <div class="read-more">
@@ -509,7 +559,7 @@
         
 
         
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>用于报告或忽略文件中的重复行，一般与 sort 命令结合使用</p>
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于报告或忽略文件中的重复行，一般与 sort 命令结合使用</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq(选项)(参数)</span><br></pre></td></tr></table></figure>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-c或——count：在每列旁边显示该行重复出现的次数；</span><br><span class="line">-d或--repeated：仅显示重复出现的行列；</span><br><span class="line">-f&lt;栏位&gt;或--skip-fields=&lt;栏位&gt;：忽略比较指定的栏位；</span><br><span class="line">-s&lt;字符位置&gt;或--skip-chars=&lt;字符位置&gt;：忽略比较指定的字符；</span><br><span class="line">-u或——unique：仅显示出一次的行列；</span><br><span class="line">-w&lt;字符位置&gt;或--check-chars=&lt;字符位置&gt;：指定要比较的字符。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
@@ -563,7 +613,7 @@
         
           <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从 stdin 中获取输入</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-b：忽略每行前面开始出的空格字符；</span><br><span class="line">-c：检查文件是否已经按照顺序排序；</span><br><span class="line">-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；</span><br><span class="line">-f：排序时，将小写字母视为大写字母；</span><br><span class="line">-i：排序时，除了 040 至 176 之间的 ASCII 字符外，忽略其他的字符；</span><br><span class="line">-m：将几个排序号的文件进行合并；</span><br><span class="line">-M：将前面 3 个字母依照月份的缩写进行排序；</span><br><span class="line">-n：依照数值的大小排序；</span><br><span class="line">-o&lt;输出文件&gt;：将排序后的结果存入制定的文件；</span><br><span class="line">-r：以相反的顺序来排序；</span><br><span class="line">-t&lt;分隔字符&gt;：指定排序时所用的栏位分隔字符；</span><br><span class="line">-k&lt;栏位&gt;：指定需要排序的栏位；</span><br><span class="line">+&lt;起始栏位&gt;-&lt;结束栏位&gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。</span><br></pre></td></tr></table></figure>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-b：忽略每行前面开始出的空格字符；</span><br><span class="line">-c：检查文件是否已经按照顺序排序；</span><br><span class="line">-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；</span><br><span class="line">-f：排序时，将小写字母视为大写字母；</span><br><span class="line">-i：排序时，除了 040 至 176 之间的 ASCII 字符外，忽略其他的字符；</span><br><span class="line">-m：将几个排序号的文件进行合并；</span><br><span class="line">-M：将前面 3 个字母依照月份的缩写进行排序；</span><br><span class="line">-n：依照数值的大小排序；</span><br><span class="line">-o&lt;输出文件&gt;：将排序后的结果存入制定的文件；</span><br><span class="line">-r：以相反的顺序来排序；</span><br><span class="line">-t&lt;分隔字符&gt;：指定排序时所用的栏位分隔字符；</span><br><span class="line">-k&lt;栏位&gt;：指定需要排序的栏位；</span><br><span class="line">+&lt;起始栏位&gt;-&lt;结束栏位&gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/14/Linux-sort命令/" class="read-more-link">阅读更多</a>
           </div>
@@ -729,63 +779,6 @@
 <h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><p>用户输入的数据被SQL解释器执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var Shipcity;</span><br><span class="line">Shipcity = Request.form(&apos;Shopcity&apos;)</span><br><span class="line">var sql = &quot;select * from city where shipcity = &apos;&quot;+ Shipcity +&quot;&apos;&quot;;</span><br><span class="line"></span><br><span class="line">// 正常情况</span><br><span class="line">select * from city where shipcity = &apos;beijing&apos;;</span><br><span class="line">// 异常情况，输入 beijing&apos;; drop table city--</span><br><span class="line">select * from city where shipcity = &apos;beijing&apos;; drop table city--</span><br></pre></td></tr></table></figure></p>
           <div class="read-more">
             <a href="/2018/05/10/Web安全-SQL注入/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/07/Web安全-点击劫持/">Web安全-点击劫持</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-07
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Web安全/">Web安全</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>点击劫持是一种视觉上的欺骗手段，攻击者使用一个透明的、不可见的 iframe ，覆盖在一个网页上，然后诱使用户在该网页上进行操作</p>
-<h3 id="攻击类型"><a href="#攻击类型" class="headerlink" title="攻击类型"></a>攻击类型</h3><ul>
-<li>iframe 攻击</li>
-<li>Flash 攻击</li>
-<li>图片覆盖攻击 </li>
-<li>拖拽攻击（利用浏览器的拖拽事件）</li>
-<li>触屏劫持</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/07/Web安全-点击劫持/" class="read-more-link">阅读更多</a>
           </div>
         
       

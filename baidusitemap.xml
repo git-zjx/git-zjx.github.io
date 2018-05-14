@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-%E9%80%9A%E7%94%A8Linux%E7%9B%AE%E5%BD%95%E5%90%8D%E7%A7%B0/</loc>
-    <lastmod>2018-05-14T06:47:09.121Z</lastmod>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cd%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T07:00:50.416Z</lastmod>
     <data>
         <display>
-        <title>Linux-通用Linux目录名称</title>
-        <pubTime>2018-05-14T06:34:57.000Z</pubTime>
+        <title>Linux-cd命令</title>
+        <pubTime>2018-05-14T06:57:56.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -24,32 +24,12 @@
 
     
   <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-head%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T05:22:32.788Z</lastmod>
+    <loc>http://www.zhaojiaxing.top/2018/05/03/Linux-vmstat%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T06:59:02.764Z</lastmod>
     <data>
         <display>
-        <title>Linux-head命令</title>
-        <pubTime>2018-05-14T03:48:56.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cut%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T03:43:04.155Z</lastmod>
-    <data>
-        <display>
-        <title>Linux-cut命令</title>
-        <pubTime>2018-05-14T03:33:00.000Z</pubTime>
+        <title>Linux-vmstat命令</title>
+        <pubTime>2018-05-03T02:49:40.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -65,7 +45,7 @@
     
   <url>
     <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-sort%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T03:36:47.917Z</lastmod>
+    <lastmod>2018-05-14T06:59:02.732Z</lastmod>
     <data>
         <display>
         <title>Linux-sort命令</title>
@@ -84,8 +64,48 @@
 
     
   <url>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-uniq%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T06:59:02.625Z</lastmod>
+    <data>
+        <display>
+        <title>Linux-uniq命令</title>
+        <pubTime>2018-05-14T02:15:47.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-head%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T06:58:54.392Z</lastmod>
+    <data>
+        <display>
+        <title>Linux-head命令</title>
+        <pubTime>2018-05-14T03:48:56.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cat%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T03:36:04.957Z</lastmod>
+    <lastmod>2018-05-14T06:58:50.758Z</lastmod>
     <data>
         <display>
         <title>Linux-cat命令</title>
@@ -104,12 +124,32 @@
 
     
   <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-uniq%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-14T03:34:25.525Z</lastmod>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-cut%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-05-14T06:58:41.620Z</lastmod>
     <data>
         <display>
-        <title>Linux-uniq命令</title>
-        <pubTime>2018-05-14T02:15:47.000Z</pubTime>
+        <title>Linux-cut命令</title>
+        <pubTime>2018-05-14T03:33:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-%E9%80%9A%E7%94%A8Linux%E7%9B%AE%E5%BD%95%E5%90%8D%E7%A7%B0/</loc>
+    <lastmod>2018-05-14T06:47:09.121Z</lastmod>
+    <data>
+        <display>
+        <title>Linux-通用Linux目录名称</title>
+        <pubTime>2018-05-14T06:34:57.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -269,26 +309,6 @@
            
              
               <breadCrumb title="Web安全" url="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/03/Linux-vmstat%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-03T02:48:47.783Z</lastmod>
-    <data>
-        <display>
-        <title>Linux-vmstat命令</title>
-        <pubTime>2018-05-03T02:49:40.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
           
         </display>
     </data>
