@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-14T08:39:45.908Z</updated>
+  <updated>2018-05-15T01:24:15.809Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-理解Linux的硬链接与软链接</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-%E7%90%86%E8%A7%A3Linux%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E4%B8%8E%E8%BD%AF%E9%93%BE%E6%8E%A5/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-理解Linux的硬链接与软链接/</id>
+    <published>2018-05-15T01:09:29.000Z</published>
+    <updated>2018-05-15T01:24:15.809Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;链接：为 Linux
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-cp命令</title>
@@ -503,31 +530,6 @@
 &lt;li&gt;如果未找到 &lt;code&gt;example&lt;/code&gt; 的文件，然后就看 &lt;code&gt;$uri/&lt;/code&gt;，增加了一个 &lt;code&gt;/&lt;/code&gt;，也就是看有没有名为 &lt;code&gt;/$root/example/&lt;/code&gt; 的目录。&lt;/li&gt;
 &lt;li&gt;如果又未找到，就会 &lt;code&gt;fall back&lt;/code&gt; 到 &lt;code&gt;try_files&lt;/code&gt; 的最后一个选项 &lt;code&gt;/index.php&lt;/code&gt;，发起一个内部 「子请求」，也就是相当于 &lt;code&gt;nginx&lt;/code&gt; 发起一个 &lt;code&gt;HTTP&lt;/code&gt; 请求到 &lt;code&gt;http://servers.blog.ustc.edu.cn/index.php&lt;/code&gt;。这个请求会被 &lt;code&gt;location ~ \.php$ { ... } catch&lt;/code&gt;住，也就是进入 &lt;code&gt;FastCGI&lt;/code&gt; 的处理程序。具体的 &lt;code&gt;URI&lt;/code&gt; 及参数在 &lt;code&gt;REQUEST_URI&lt;/code&gt; 中传递给 &lt;code&gt;FastCGI&lt;/code&gt; 和 程序，因此不受 &lt;code&gt;URI&lt;/code&gt; 变化的影响。&lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx-内置变量</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/03/Nginx-%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/03/Nginx-内置变量/</id>
-    <published>2018-05-03T02:49:00.000Z</published>
-    <updated>2018-05-03T02:48:35.854Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;$arg_name&lt;/code&gt;：请求中的参数名，即「?」后面的&lt;code&gt;arg_name=arg_value&lt;/code&gt;形式的&lt;code&gt;arg_name&lt;/code&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$args&lt;/code&gt;：请求中的参数值，即「?」后面的&lt;code&gt;arg_name=arg_value&lt;/code&gt;形式的&lt;code&gt;arg_value&lt;/code&gt;     &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$binary_remote_addr&lt;/code&gt;：客户端地址的二进制形式，固定长度为4个字节  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$body_bytes_sent&lt;/code&gt;：传输给客户端的字节数，响应头不计算在内  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$bytes_sent&lt;/code&gt;：传输给客户端的字节数  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$connection&lt;/code&gt;：TCP连接的序列号   &lt;/p&gt;
     
     </summary>
     
