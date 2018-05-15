@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-15T07:42:37.861Z</updated>
+  <updated>2018-05-15T07:48:43.362Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,21 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux-mkdir命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-mkdir%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-mkdir命令/</id>
+    <published>2018-05-15T07:43:35.000Z</published>
+    <updated>2018-05-15T07:48:43.362Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;创建目录&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt;mkdir (选项)(参数)&lt;/p&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-Z：设置安全上下文，当使用SELinux时有效；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m&amp;lt;目标属性&amp;gt;或--mode&amp;lt;目标属性&amp;gt;建立目录的同时设置目录的权限；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p或--parents 若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version 显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux-rm命令</title>
     <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-rm%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/15/Linux-rm命令/</id>
     <published>2018-05-15T07:26:09.000Z</published>
-    <updated>2018-05-15T07:42:37.861Z</updated>
+    <updated>2018-05-15T07:48:37.100Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变。&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rm (选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制删除文件或目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：删除已有文件或目录之前先询问用户；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--preserve-root：不对根目录进行递归操作；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示指令的详细执行过程。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -472,35 +490,6 @@
       &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通过伪装来自受信任用户的请求来利用受信任的网站&lt;/p&gt;
 &lt;h3 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h3&gt;&lt;h4 id=&quot;浏览器的Cookie策略&quot;&gt;&lt;a href=&quot;#浏览器的Cookie策略&quot; class=&quot;headerlink&quot; title=&quot;浏览器的Cookie策略&quot;&gt;&lt;/a&gt;浏览器的Cookie策略&lt;/h4&gt;&lt;p&gt;浏览器所持有的Cookie分为两种：一种是「Session Cookie」，又称「临时Cookie」；另一种是「Third-party Cookie」，也成为「本地Cookie」  &lt;/p&gt;
 &lt;p&gt;如果浏览器从一个域的页面中，要加载另一个域的资源，由于安全原因，某些浏览器会阻止 Third-party Cookie 的发送，但是 Session Cookie 会被发送  &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="客户端脚本安全" scheme="http://www.zhaojiaxing.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%84%9A%E6%9C%AC%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web安全-跨站脚本攻击（XSS）</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB%EF%BC%88XSS%EF%BC%89/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-跨站脚本攻击（XSS）/</id>
-    <published>2018-05-04T07:37:57.000Z</published>
-    <updated>2018-05-07T09:37:28.688Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击  &lt;/p&gt;
-&lt;p&gt;针对各种不同场景产生的 XSS，需要区分情景对待  &lt;/p&gt;
-&lt;h3 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h3&gt;&lt;p&gt;XSS 漏洞成因是由于动态网页的 Web 应用对用户提交请求参数未做充分的检查过滤，允许用户在提交的数据中掺入 HTML 代码（最主要的是「&amp;gt;」、「&amp;lt;」），然后未加编码地输出到第三方用户的浏览器，这些攻击者恶意提交代码会被受害用户的浏览器解释执行。&lt;/p&gt;
-&lt;h3 id=&quot;类别&quot;&gt;&lt;a href=&quot;#类别&quot; class=&quot;headerlink&quot; title=&quot;类别&quot;&gt;&lt;/a&gt;类别&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;反射型 XSS，只是简单的把用户输入的数据「反射」给浏览器。也叫做「非持久型 XSS 」&lt;/li&gt;
-&lt;li&gt;存储型 XSS，把用户输入的数据「存储」在服务器端。也叫做「持久型 XSS 」&lt;/li&gt;
-&lt;li&gt;DOM Based XSS，通过修改页面的DOM节点形成的XSS  &lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
