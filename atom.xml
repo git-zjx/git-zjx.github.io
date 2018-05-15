@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-15T08:49:34.676Z</updated>
+  <updated>2018-05-15T09:25:19.464Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-more命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-more%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-more命令/</id>
+    <published>2018-05-15T08:50:33.000Z</published>
+    <updated>2018-05-15T09:25:19.464Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;分页显示文件内容&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-file命令</title>
@@ -69,18 +96,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-rmdir%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/15/Linux-rmdir命令/</id>
     <published>2018-05-15T08:01:58.000Z</published>
-    <updated>2018-05-15T08:04:03.503Z</updated>
+    <updated>2018-05-15T08:50:12.757Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来删除空目录&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来删除空目录&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rmdir(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-p或--parents：删除指定目录后，若该目录的上层目录已变成空目录，则将其一并删除；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--ignore-fail-on-non-empty：此选项使 rmdir 命令忽略由于删除非空目录时导致的错误信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v或-verboes：显示命令的详细执行过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示命令的帮助信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示命令的版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -461,33 +483,6 @@
 &lt;li&gt;发送 POST 包时，构造非常大的 Content-Length 值，然后以很低的速度发包，保持连接不断开&lt;/li&gt;
 &lt;li&gt;客户端注入超长的 Cookie&lt;/li&gt;
 &lt;li&gt;ReDOS，基于正则实现&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="服务器端应用安全" scheme="http://www.zhaojiaxing.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web安全-文件上传漏洞</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/11/Web%E5%AE%89%E5%85%A8-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/11/Web安全-文件上传漏洞/</id>
-    <published>2018-05-11T06:54:55.000Z</published>
-    <updated>2018-05-11T07:06:59.095Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;指用户上传了一个可执行的脚本文件，并通过此脚本文件获得了执行服务端命令的能力 &lt;/p&gt;
-&lt;h3 id=&quot;成因&quot;&gt;&lt;a href=&quot;#成因&quot; class=&quot;headerlink&quot; title=&quot;成因&quot;&gt;&lt;/a&gt;成因&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;第三方插件漏洞&lt;/li&gt;
-&lt;li&gt;Web Server 本身特性&lt;/li&gt;
-&lt;li&gt;文件上传检查不严&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
