@@ -208,6 +208,61 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/03/Nginx-try-files理解/">Nginx-try_files理解</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>以 <code>try_files $uri $uri/ /index.php;</code> 为例</p>
+<ol>
+<li>当用户请求 <code>http://servers.blog.ustc.edu.cn/example</code> 时，这里的 <code>$uri</code> 就是 <code>/example</code>。<code>try_files</code> 会到硬盘里尝试找这个文件。如果存在名为 <code>/$root/example</code>的文件，就直接把这个文件的内容发送给用户。</li>
+<li>如果未找到 <code>example</code> 的文件，然后就看 <code>$uri/</code>，增加了一个 <code>/</code>，也就是看有没有名为 <code>/$root/example/</code> 的目录。</li>
+<li>如果又未找到，就会 <code>fall back</code> 到 <code>try_files</code> 的最后一个选项 <code>/index.php</code>，发起一个内部 「子请求」，也就是相当于 <code>nginx</code> 发起一个 <code>HTTP</code> 请求到 <code>http://servers.blog.ustc.edu.cn/index.php</code>。这个请求会被 <code>location ~ \.php$ { ... } catch</code>住，也就是进入 <code>FastCGI</code> 的处理程序。具体的 <code>URI</code> 及参数在 <code>REQUEST_URI</code> 中传递给 <code>FastCGI</code> 和 程序，因此不受 <code>URI</code> 变化的影响。</li>
+</ol>
+          <div class="read-more">
+            <a href="/2018/05/03/Nginx-try-files理解/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/03/Nginx-内置变量/">Nginx-内置变量</a>
         
       </h1>
@@ -705,64 +760,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/03/设计模式-中介者模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/02/设计模式-迭代器模式/">设计模式-迭代器模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-02
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>它提供一种方法访问一个容器对象中各个元素， 而又不需暴露该 对象的内部细节。在PHP中我们对迭代模式的使用，通常只需实现Iterator接口即可</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>它支持以不同的方式遍历一个聚合对象。 </li>
-<li>迭代器简化了聚合类。 </li>
-<li>在同一个聚合上可以有多个遍历。 </li>
-<li>在迭代器模式中，增加新的聚合类和迭代器类都很方便，无须修改原有代码。</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/02/设计模式-迭代器模式/" class="read-more-link">阅读更多</a>
           </div>
         
       

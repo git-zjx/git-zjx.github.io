@@ -208,6 +208,58 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/14/Linux-uniq命令/">Linux-uniq命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-14
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于报告或忽略文件中的重复行，一般与 sort 命令结合使用</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-c或——count：在每列旁边显示该行重复出现的次数；</span><br><span class="line">-d或--repeated：仅显示重复出现的行列；</span><br><span class="line">-f&lt;栏位&gt;或--skip-fields=&lt;栏位&gt;：忽略比较指定的栏位；</span><br><span class="line">-s&lt;字符位置&gt;或--skip-chars=&lt;字符位置&gt;：忽略比较指定的字符；</span><br><span class="line">-u或——unique：仅显示出一次的行列；</span><br><span class="line">-w&lt;字符位置&gt;或--check-chars=&lt;字符位置&gt;：指定要比较的字符。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/14/Linux-uniq命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/14/Linux-sort命令/">Linux-sort命令</a>
         
       </h1>
@@ -710,61 +762,6 @@
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmstat(选项)(参数)</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/03/Linux-vmstat命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/03/Nginx-try-files理解/">Nginx-try_files理解</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-03
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Nginx/">Nginx</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <p>以 <code>try_files $uri $uri/ /index.php;</code> 为例</p>
-<ol>
-<li>当用户请求 <code>http://servers.blog.ustc.edu.cn/example</code> 时，这里的 <code>$uri</code> 就是 <code>/example</code>。<code>try_files</code> 会到硬盘里尝试找这个文件。如果存在名为 <code>/$root/example</code>的文件，就直接把这个文件的内容发送给用户。</li>
-<li>如果未找到 <code>example</code> 的文件，然后就看 <code>$uri/</code>，增加了一个 <code>/</code>，也就是看有没有名为 <code>/$root/example/</code> 的目录。</li>
-<li>如果又未找到，就会 <code>fall back</code> 到 <code>try_files</code> 的最后一个选项 <code>/index.php</code>，发起一个内部 「子请求」，也就是相当于 <code>nginx</code> 发起一个 <code>HTTP</code> 请求到 <code>http://servers.blog.ustc.edu.cn/index.php</code>。这个请求会被 <code>location ~ \.php$ { ... } catch</code>住，也就是进入 <code>FastCGI</code> 的处理程序。具体的 <code>URI</code> 及参数在 <code>REQUEST_URI</code> 中传递给 <code>FastCGI</code> 和 程序，因此不受 <code>URI</code> 变化的影响。</li>
-</ol>
-          <div class="read-more">
-            <a href="/2018/05/03/Nginx-try-files理解/" class="read-more-link">阅读更多</a>
           </div>
         
       

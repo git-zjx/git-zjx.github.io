@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Linux-cp命令"/>
+  <meta name="description" content="Linux-ln命令"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/14/Linux-cp命令/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/15/Linux-ln命令/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Linux-cp命令 - ZJX </title>
+    <title> Linux-ln命令 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,13 +206,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Linux-cp命令
+          Linux-ln命令
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-05-14
+          2018-05-15
         </span>
         
           <div class="post-category">
@@ -237,15 +237,15 @@
 
     <div class="post-content">
       
-        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-a：归档文件，保留其属性</span><br><span class="line">-b：为每个现有目标文件创建一个备份，而不是覆盖它</span><br><span class="line">-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录</span><br><span class="line">-f：强制覆盖现有目标文件，没有提示</span><br><span class="line">-i：覆盖目标文件时提示</span><br><span class="line">-l：创建硬链接而不是复制文件</span><br><span class="line">-p：保留文件属性</span><br><span class="line">-r：递归复制文件</span><br><span class="line">-R：递归复制目录</span><br><span class="line">-s：创建软链接而不是复制文件</span><br><span class="line">-S：重写备份特性</span><br><span class="line">-u：仅在源文件的日期和时间比目标文件新时复制</span><br><span class="line">-v：冗长模式，解释发生的事件</span><br><span class="line">-x：将复制限定在当前文件系统</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来为文件创件连接，连接类型分为硬连接和符号连接两种，默认的连接类型是硬连接。如果要创建符号连接必须使用「-s」选项。  </p>
+<p>注意：符号链接文件不是一个独立的文件，它的许多属性依赖于源文件，所以给符号链接文件设置存取权限是没有意义的。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-b或--backup：删除，覆盖目标文件之前的备份；</span><br><span class="line">-d或-F或——directory：建立目录的硬连接；</span><br><span class="line">-f或——force：强行建立文件或目录的连接，不论文件或目录是否存在；</span><br><span class="line">-i或——interactive：覆盖既有文件之前先询问用户；</span><br><span class="line">-n或--no-dereference：把符号连接的目的目录视为一般文件；</span><br><span class="line">-s或——symbolic：对源文件建立符号连接，而非硬连接；</span><br><span class="line">-S&lt;字尾备份字符串&gt;或--suffix=&lt;字尾备份字符串&gt;：用「-b」参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，预设的备份字符串是符号「~」，用户可通过「-S」参数来改变它；</span><br><span class="line">-v或——verbose：显示指令执行过程；</span><br><span class="line">-V&lt;备份方式&gt;或--version-control=&lt;备份方式&gt;：用「-b」参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，这个字符串不仅可用「-S」参数变更，当使用「-V」参数&lt;备份方式&gt;指定不同备份方式时，也会产生不同字尾的备份字符串；</span><br><span class="line">--help：在线帮助；</span><br><span class="line">--version：显示版本信息。</span><br></pre></td></tr></table></figure>
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>源文件：制定源文件列表。默认情况下，cp命令不能复制目录，如果要复制目录，则必须使用-R选项；</li>
-<li>目标文件：指定目标文件。当“源文件”为多个文件时，要求“目标文件”为指定的目录。</li>
+<li>源文件：指定连接的源文件。如果使用 -s 选项创建符号连接，则「源文件」可以是文件或者目录。创建硬连接时，则「源文件」参数只能是文件；</li>
+<li>目标文件：指定源文件的目标连接文件。</li>
 </ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/cp" target="_blank" rel="noopener">cp命令</a><br><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/ln" target="_blank" rel="noopener">ln命令</a></p>
 
       
     </div>
@@ -261,7 +261,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/14/Linux-cp命令/">http://www.zhaojiaxing.top/2018/05/14/Linux-cp命令/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/15/Linux-ln命令/">http://www.zhaojiaxing.top/2018/05/15/Linux-ln命令/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -289,15 +289,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/15/Linux-理解Linux的硬链接与软链接/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Linux-理解Linux的硬链接与软链接</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/14/Linux-touch命令/">
-        <span class="next-text nav-default">Linux-touch命令</span>
+      <a class="next" href="/2018/05/15/Linux-理解Linux的硬链接与软链接/">
+        <span class="next-text nav-default">Linux-理解Linux的硬链接与软链接</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>

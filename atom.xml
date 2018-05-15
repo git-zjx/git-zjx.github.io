@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-15T01:24:15.809Z</updated>
+  <updated>2018-05-15T03:25:54.468Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Linux-理解Linux的硬链接与软链接</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-%E7%90%86%E8%A7%A3Linux%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E4%B8%8E%E8%BD%AF%E9%93%BE%E6%8E%A5/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-理解Linux的硬链接与软链接/</id>
-    <published>2018-05-15T01:09:29.000Z</published>
-    <updated>2018-05-15T01:24:15.809Z</updated>
+    <title>Linux-ln命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-ln%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-ln命令/</id>
+    <published>2018-05-15T03:17:01.000Z</published>
+    <updated>2018-05-15T03:25:54.468Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,34 @@
       
         
         
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;链接：为 Linux
+          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来为文件创件连接，连接类型分为硬连接和符号连接两种，默认的连接类型是硬连接。如果要创建符号连接必须使用「-s」选项。 
         
       
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-理解Linux的硬链接与软链接</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-%E7%90%86%E8%A7%A3Linux%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E4%B8%8E%E8%BD%AF%E9%93%BE%E6%8E%A5/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-理解Linux的硬链接与软链接/</id>
+    <published>2018-05-15T01:09:29.000Z</published>
+    <updated>2018-05-15T01:59:29.803Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;链接：为 Linux 系统解决了文件的共享使用，还带来了隐藏文件路径、增加权限安全及节省存储等好处&lt;/li&gt;
+&lt;li&gt;硬链接：若一个 inode 号对应多个文件名，则称这些文件为硬链接。换言之，硬链接就是同一个文件使用了多个别名&lt;/li&gt;
+&lt;li&gt;软链接：若文件用户数据块中存放的内容是另一文件的路径名的指向，则该文件就是软连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;硬链接创建&quot;&gt;&lt;a href=&quot;#硬链接创建&quot; class=&quot;headerlink&quot; title=&quot;硬链接创建&quot;&gt;&lt;/a&gt;硬链接创建&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;link oldfile newfile &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ln oldfile newfile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp -l oldfile newfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -48,13 +72,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-cp%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/14/Linux-cp命令/</id>
     <published>2018-05-14T08:24:38.000Z</published>
-    <updated>2018-05-14T08:39:45.908Z</updated>
+    <updated>2018-05-15T01:59:37.266Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：归档文件，保留其属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b：为每个现有目标文件创建一个备份，而不是覆盖它&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制覆盖现有目标文件，没有提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：覆盖目标文件时提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：创建文件链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p：保留文件属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：递归复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R：递归复制目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：创建符号链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：重写备份特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：仅在源文件的日期和时间比目标文件新时复制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：冗长模式，解释发生的事件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x：将复制限定在当前文件系统&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：归档文件，保留其属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b：为每个现有目标文件创建一个备份，而不是覆盖它&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制覆盖现有目标文件，没有提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：覆盖目标文件时提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：创建硬链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p：保留文件属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：递归复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R：递归复制目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：创建软链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：重写备份特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：仅在源文件的日期和时间比目标文件新时复制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：冗长模式，解释发生的事件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x：将复制限定在当前文件系统&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -215,13 +239,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-cat%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/14/Linux-cat命令/</id>
     <published>2018-05-14T03:24:08.000Z</published>
-    <updated>2018-05-14T06:58:50.758Z</updated>
+    <updated>2018-05-15T03:03:31.571Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;连接文件并打印到标准输出设备上，cat经常用来显示文件的内容&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-n或-number：由1开始对所有输出的行数编号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b或--number-nonblank：和-n相似，只不过对于空白行不编号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-A：显示不可打印字符，行尾显示「$」；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-e：等价于「-vE」选项；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：等价于「-vT」选项；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-A：显示不可打印字符，行尾显示「$」；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b或--number-nonblank：和-n相似，只不过对于空白行不编号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-e：等价于「-vE」选项；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-E或--number-nonblank：在每行结束处显示 $；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n或-number：由1开始对所有输出的行数编号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：等价于「-vT」选项；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-T或--show-tabs：将跳格字符显示为「^I」&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v或--show-nonprinting：使用「^」和「M-」引用，除了 LFD 和 TAB 之外&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -512,31 +536,6 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx-try_files理解</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/03/Nginx-try-files%E7%90%86%E8%A7%A3/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/03/Nginx-try-files理解/</id>
-    <published>2018-05-03T02:49:20.000Z</published>
-    <updated>2018-05-03T02:48:42.307Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;以 &lt;code&gt;try_files $uri $uri/ /index.php;&lt;/code&gt; 为例&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;当用户请求 &lt;code&gt;http://servers.blog.ustc.edu.cn/example&lt;/code&gt; 时，这里的 &lt;code&gt;$uri&lt;/code&gt; 就是 &lt;code&gt;/example&lt;/code&gt;。&lt;code&gt;try_files&lt;/code&gt; 会到硬盘里尝试找这个文件。如果存在名为 &lt;code&gt;/$root/example&lt;/code&gt;的文件，就直接把这个文件的内容发送给用户。&lt;/li&gt;
-&lt;li&gt;如果未找到 &lt;code&gt;example&lt;/code&gt; 的文件，然后就看 &lt;code&gt;$uri/&lt;/code&gt;，增加了一个 &lt;code&gt;/&lt;/code&gt;，也就是看有没有名为 &lt;code&gt;/$root/example/&lt;/code&gt; 的目录。&lt;/li&gt;
-&lt;li&gt;如果又未找到，就会 &lt;code&gt;fall back&lt;/code&gt; 到 &lt;code&gt;try_files&lt;/code&gt; 的最后一个选项 &lt;code&gt;/index.php&lt;/code&gt;，发起一个内部 「子请求」，也就是相当于 &lt;code&gt;nginx&lt;/code&gt; 发起一个 &lt;code&gt;HTTP&lt;/code&gt; 请求到 &lt;code&gt;http://servers.blog.ustc.edu.cn/index.php&lt;/code&gt;。这个请求会被 &lt;code&gt;location ~ \.php$ { ... } catch&lt;/code&gt;住，也就是进入 &lt;code&gt;FastCGI&lt;/code&gt; 的处理程序。具体的 &lt;code&gt;URI&lt;/code&gt; 及参数在 &lt;code&gt;REQUEST_URI&lt;/code&gt; 中传递给 &lt;code&gt;FastCGI&lt;/code&gt; 和 程序，因此不受 &lt;code&gt;URI&lt;/code&gt; 变化的影响。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
-    
-    
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
