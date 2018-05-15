@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-15T05:48:04.011Z</updated>
+  <updated>2018-05-15T07:42:37.861Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Linux-mv命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-mv%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-mv命令/</id>
-    <published>2018-05-15T05:15:00.000Z</published>
-    <updated>2018-05-15T05:48:04.011Z</updated>
+    <title>Linux-rm命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-rm%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-rm命令/</id>
+    <published>2018-05-15T07:26:09.000Z</published>
+    <updated>2018-05-15T07:42:37.861Z</updated>
     
     <summary type="html">
     
@@ -32,6 +32,32 @@
           &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot;
         
       
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-mv命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-mv%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-mv命令/</id>
+    <published>2018-05-15T05:15:00.000Z</published>
+    <updated>2018-05-15T05:49:25.220Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来对文件或目录重新命名，或者将文件从一个目录移到另一个目录中。source表示源文件或目录，target表示目标文件或目录。如果将一个文件移到一个已经存在的目标文件中，则目标文件的内容将被覆盖。  &lt;/p&gt;
+&lt;p&gt;mv命令可以用来将源文件移至一个目标文件中，或将一组文件移至一个目标目录中。源文件被移至目标文件有两种不同的结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果目标文件是到某一目录文件的路径，源文件会被移到此目录下，且文件名不变。&lt;/li&gt;
+&lt;li&gt;如果目标文件不是目录文件，则源文件名（只能有一个）会变为此目标文件名，并覆盖己存在的同名文件。如果源文件和目标文件在同一个目录下，mv的作用就是改文件名。当目标文件是目录文件时，源文件或目录参数可以有多个，则所有的源文件都会被移至目标文件中。所有移到该目录下的文件都将保留以前的文件名。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -484,63 +510,6 @@
       <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
       <category term="客户端脚本安全" scheme="http://www.zhaojiaxing.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%84%9A%E6%9C%AC%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web安全-同源策略</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/04/Web%E5%AE%89%E5%85%A8-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/04/Web安全-同源策略/</id>
-    <published>2018-05-04T05:25:08.000Z</published>
-    <updated>2018-05-04T07:34:19.253Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。浏览器的同源策略限制了来自不同源的「document」或脚本，对当前「document」读取或设置某些属性&lt;/p&gt;
-&lt;h3 id=&quot;如何算同源&quot;&gt;&lt;a href=&quot;#如何算同源&quot; class=&quot;headerlink&quot; title=&quot;如何算同源&quot;&gt;&lt;/a&gt;如何算同源&lt;/h3&gt;&lt;p&gt;域名，协议，端口均相同&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;URL&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;结果&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;原因&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://store.company.com/dir2/other.html&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;成功&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://store.company.com/dir/inner/another.html&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;成功&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;https://store.company.com/secure.html&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;失败&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;不同协议 ( https和http )&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://store.company.com:81/dir/etc.html&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;失败&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;不同端口 ( 81和80)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;http://news.company.com/dir/other.html&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;失败&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;不同域名 ( news和store )&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-    
-    </summary>
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   

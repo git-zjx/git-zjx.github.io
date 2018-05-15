@@ -208,6 +208,63 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/03/设计模式-备忘录模式/">设计模式-备忘录模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/行为型/">行为型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在不破坏封闭的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到原先保存的状态。又叫做快照模式或Token模式</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>Originator(发起人)：负责创建一个备忘录Memento，用以记录当前时刻自身的内部状态，并可使用备忘录恢复内部状态。Originator可以根据需要决定Memento存储自己的哪些内部状态。</li>
+<li>Memento(备忘录)：负责存储Originator对象的内部状态，并可以防止Originator以外的其他对象访问备忘录。备忘录有两个接口：Caretaker只能看到备忘录的窄接口，他只能将备忘录传递给其他对象。Originator却可看到备忘录的宽接口，允许它访问返回到先前状态所需要的所有数据。</li>
+<li>Caretaker(管理者):负责备忘录Memento，不能对Memento的内容进行访问或者操作。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/03/设计模式-备忘录模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/03/设计模式-中介者模式/">设计模式-中介者模式</a>
         
       </h1>
@@ -698,64 +755,6 @@
 <p>依赖注入的观念就是<strong>将所有东西先在“外面”准备好，然后再带入“内部”的程式</strong>中，如此一来你就能够在检视程式码的时候，一目了然地知道这个程式依赖著哪些类别。</p>
           <div class="read-more">
             <a href="/2018/04/24/设计模式-依赖注入模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/23/设计模式-装饰模式/">设计模式-装饰模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-23
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/结构型/">结构型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活，这样可以给某个对象而不是整个类添加一些功能。</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>增加一个修饰类包裹原来的类，包裹的方式一般是通过在将原来的对象作为修饰类的构造函数的参数。装饰类实现新的功能，但是，在不需要用到新功能的地方，它可以直接调用原来的类中的方法。修饰类必须和原来的类有相同的接口。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>装饰类和被装饰类可以独立发展</li>
-<li>是继承关系的替代方案</li>
-<li>优秀的扩展性</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/04/23/设计模式-装饰模式/" class="read-more-link">阅读更多</a>
           </div>
         
       

@@ -208,6 +208,58 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/14/Linux-cut命令/">Linux-cut命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-14
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来显示行中的指定部分，删除文件中指定字段</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-b：仅显示行中指定直接范围的内容；</span><br><span class="line">-c：仅显示行中指定范围的字符；</span><br><span class="line">-d：指定字段的分隔符，默认的字段分隔符为「TAB」；</span><br><span class="line">-f：显示指定字段的内容；</span><br><span class="line">-n：与「-b」选项连用，不分割多字节字符；</span><br><span class="line">--complement：提取指定字段之外的列；</span><br><span class="line">--out-delimiter=&lt;字段分隔符&gt;：指定输出内容是的字段分割符；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/14/Linux-cut命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/14/Linux-cat命令/">Linux-cat命令</a>
         
       </h1>
@@ -676,93 +728,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/04/Web安全-同源策略/">Web安全-同源策略</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-04
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Web安全/">Web安全</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。浏览器的同源策略限制了来自不同源的「document」或脚本，对当前「document」读取或设置某些属性</p>
-<h3 id="如何算同源"><a href="#如何算同源" class="headerlink" title="如何算同源"></a>如何算同源</h3><p>域名，协议，端口均相同</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">URL</th>
-<th style="text-align:center">结果</th>
-<th style="text-align:center">原因</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>http://store.company.com/dir2/other.html</code></td>
-<td style="text-align:center">成功</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>http://store.company.com/dir/inner/another.html</code></td>
-<td style="text-align:center">成功</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>https://store.company.com/secure.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同协议 ( https和http )</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>http://store.company.com:81/dir/etc.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同端口 ( 81和80)</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>http://news.company.com/dir/other.html</code></td>
-<td style="text-align:center">失败</td>
-<td style="text-align:center">不同域名 ( news和store )</td>
-</tr>
-</tbody>
-</table>
-          <div class="read-more">
-            <a href="/2018/05/04/Web安全-同源策略/" class="read-more-link">阅读更多</a>
           </div>
         
       

@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Linux-mv命令"/>
+  <meta name="description" content="Linux-rm命令"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/15/Linux-mv命令/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/15/Linux-rm命令/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Linux-mv命令 - ZJX </title>
+    <title> Linux-rm命令 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,7 +206,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Linux-mv命令
+          Linux-rm命令
         
       </h1>
 
@@ -237,20 +237,13 @@
 
     <div class="post-content">
       
-        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来对文件或目录重新命名，或者将文件从一个目录移到另一个目录中。source表示源文件或目录，target表示目标文件或目录。如果将一个文件移到一个已经存在的目标文件中，则目标文件的内容将被覆盖。  </p>
-<p>mv命令可以用来将源文件移至一个目标文件中，或将一组文件移至一个目标目录中。源文件被移至目标文件有两种不同的结果：</p>
-<ul>
-<li>如果目标文件是到某一目录文件的路径，源文件会被移到此目录下，且文件名不变。</li>
-<li>如果目标文件不是目录文件，则源文件名（只能有一个）会变为此目标文件名，并覆盖己存在的同名文件。如果源文件和目标文件在同一个目录下，mv的作用就是改文件名。当目标文件是目录文件时，源文件或目录参数可以有多个，则所有的源文件都会被移至目标文件中。所有移到该目录下的文件都将保留以前的文件名。</li>
-</ul>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv(选项)(参数)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">--backup=&lt;备份模式&gt;：若需覆盖文件，则覆盖前先行备份；</span><br><span class="line">-b：当文件存在时，覆盖前，为其创建一个备份；</span><br><span class="line">-f：若目标文件或目录与现有的文件或目录重复，则直接覆盖现有的文件或目录；</span><br><span class="line">-i：交互式操作，覆盖前先行询问用户，如果源文件与目标文件或目标目录中的文件同名，则询问用户是否覆盖目标文件。用户输入「y」，表示将覆盖目标文件；输入「n」，表示取消对源文件的移动。这样可以避免误将文件覆盖。</span><br><span class="line">--strip-trailing-slashes：删除源文件中的斜杠「/」；</span><br><span class="line">-S&lt;后缀&gt;：为备份文件指定后缀，而不使用默认的后缀；</span><br><span class="line">--target-directory=&lt;目录&gt;：指定源文件要移动到目标目录；</span><br><span class="line">-u：当源文件比目标文件新或者目标文件不存在时，才执行移动操作。</span><br></pre></td></tr></table></figure>
+        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm (选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；</span><br><span class="line">-f：强制删除文件或目录；</span><br><span class="line">-i：删除已有文件或目录之前先询问用户；</span><br><span class="line">-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；</span><br><span class="line">--preserve-root：不对根目录进行递归操作；</span><br><span class="line">-v：显示指令的详细执行过程。</span><br></pre></td></tr></table></figure>
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>源文件：源文件列表。</li>
-<li>目标文件：如果「目标文件」是文件名则在移动文件的同时，将其改名为「目标文件」；如果「目标文件」是目录名则将源文件移动到「目标文件」下。</li>
+<li>文件：指定被删除的文件列表，如果参数中含有目录，则必须加上-r或者-R选项。</li>
 </ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/mv" target="_blank" rel="noopener">mv命令</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/rm" target="_blank" rel="noopener">rm命令</a></p>
 
       
     </div>
@@ -266,7 +259,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/15/Linux-mv命令/">http://www.zhaojiaxing.top/2018/05/15/Linux-mv命令/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/15/Linux-rm命令/">http://www.zhaojiaxing.top/2018/05/15/Linux-rm命令/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -294,15 +287,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/15/Linux-rm命令/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Linux-rm命令</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/15/Linux-ln命令/">
-        <span class="next-text nav-default">Linux-ln命令</span>
+      <a class="next" href="/2018/05/15/Linux-mv命令/">
+        <span class="next-text nav-default">Linux-mv命令</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
