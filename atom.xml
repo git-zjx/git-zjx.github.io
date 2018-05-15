@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-15T08:04:03.503Z</updated>
+  <updated>2018-05-15T08:33:04.927Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-stat命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-stat%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-stat命令/</id>
+    <published>2018-05-15T08:14:38.000Z</published>
+    <updated>2018-05-15T08:33:04.927Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示文件的状态信息&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;stat(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-L：支持符号连接；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：显示文件系统状态而非文件状态；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：以简洁方式输出信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示指令的帮助信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示指令的版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;文件：指定要显示信息的普通文件或者文件系统对应的设备文件名&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-rmdir命令</title>
@@ -473,35 +498,6 @@
       <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
       <category term="服务器端应用安全" scheme="http://www.zhaojiaxing.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web安全-点击劫持</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/07/Web%E5%AE%89%E5%85%A8-%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/07/Web安全-点击劫持/</id>
-    <published>2018-05-07T09:11:01.000Z</published>
-    <updated>2018-05-07T09:37:24.846Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;点击劫持是一种视觉上的欺骗手段，攻击者使用一个透明的、不可见的 iframe ，覆盖在一个网页上，然后诱使用户在该网页上进行操作&lt;/p&gt;
-&lt;h3 id=&quot;攻击类型&quot;&gt;&lt;a href=&quot;#攻击类型&quot; class=&quot;headerlink&quot; title=&quot;攻击类型&quot;&gt;&lt;/a&gt;攻击类型&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;iframe 攻击&lt;/li&gt;
-&lt;li&gt;Flash 攻击&lt;/li&gt;
-&lt;li&gt;图片覆盖攻击 &lt;/li&gt;
-&lt;li&gt;拖拽攻击（利用浏览器的拖拽事件）&lt;/li&gt;
-&lt;li&gt;触屏劫持&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="客户端脚本安全" scheme="http://www.zhaojiaxing.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%84%9A%E6%9C%AC%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
