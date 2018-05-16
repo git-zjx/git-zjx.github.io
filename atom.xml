@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-16T07:29:18.656Z</updated>
+  <updated>2018-05-16T07:44:50.575Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-tail命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-tail%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/16/Linux-tail命令/</id>
+    <published>2018-05-16T07:38:16.000Z</published>
+    <updated>2018-05-16T07:44:50.575Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;显示文件尾部内容，默认显示 10 行，如果给定的文件不止一个，则在显示的每个文件前面加一个文件名标题。&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-less命令</title>
@@ -462,28 +489,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于报告或忽略文件中的重复行，一般与 sort 命令结合使用&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;uniq(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-c或——count：在每列旁边显示该行重复出现的次数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d或--repeated：仅显示重复出现的行列；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;栏位&amp;gt;或--skip-fields=&amp;lt;栏位&amp;gt;：忽略比较指定的栏位；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s&amp;lt;字符位置&amp;gt;或--skip-chars=&amp;lt;字符位置&amp;gt;：忽略比较指定的字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u或——unique：仅显示出一次的行列；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w&amp;lt;字符位置&amp;gt;或--check-chars=&amp;lt;字符位置&amp;gt;：指定要比较的字符。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-sort命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-sort%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-sort命令/</id>
-    <published>2018-05-14T01:41:14.000Z</published>
-    <updated>2018-05-14T06:59:02.732Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;将文件进行排序，并将排序结果标准输出，既可以从特定的文件，也可以从 stdin 中获取输入&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sort(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-b：忽略每行前面开始出的空格字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：检查文件是否已经按照顺序排序；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：排序时，处理英文字母、数字及空格字符外，忽略其他的字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：排序时，将小写字母视为大写字母；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：排序时，除了 040 至 176 之间的 ASCII 字符外，忽略其他的字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：将几个排序号的文件进行合并；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-M：将前面 3 个字母依照月份的缩写进行排序；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n：依照数值的大小排序；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-o&amp;lt;输出文件&amp;gt;：将排序后的结果存入制定的文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：以相反的顺序来排序；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t&amp;lt;分隔字符&amp;gt;：指定排序时所用的栏位分隔字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k&amp;lt;栏位&amp;gt;：指定需要排序的栏位；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+&amp;lt;起始栏位&amp;gt;-&amp;lt;结束栏位&amp;gt;：以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
