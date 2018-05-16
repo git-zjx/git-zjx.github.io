@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-15T09:25:19.464Z</updated>
+  <updated>2018-05-16T07:29:18.656Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-less命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-less%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/16/Linux-less命令/</id>
+    <published>2018-05-16T07:24:41.000Z</published>
+    <updated>2018-05-16T07:29:18.656Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;浏览文件内容，能够识别向上键和向下键以及向上翻页键和向下翻页键&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-more命令</title>
@@ -464,35 +491,6 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web安全-应用层拒绝服务攻击</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/11/Web%E5%AE%89%E5%85%A8-%E5%BA%94%E7%94%A8%E5%B1%82%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/11/Web安全-应用层拒绝服务攻击/</id>
-    <published>2018-05-11T08:38:58.000Z</published>
-    <updated>2018-05-11T08:48:05.617Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;利用合理的请求造成资源过载，导致服务不可用&lt;/p&gt;
-&lt;h3 id=&quot;攻击方式&quot;&gt;&lt;a href=&quot;#攻击方式&quot; class=&quot;headerlink&quot; title=&quot;攻击方式&quot;&gt;&lt;/a&gt;攻击方式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;对一些消耗资源较大的应用页面不断发起正常请求 &lt;/li&gt;
-&lt;li&gt;构建不完整的 HTTP 请求占住 Web Server 连接不放&lt;/li&gt;
-&lt;li&gt;发送 POST 包时，构造非常大的 Content-Length 值，然后以很低的速度发包，保持连接不断开&lt;/li&gt;
-&lt;li&gt;客户端注入超长的 Cookie&lt;/li&gt;
-&lt;li&gt;ReDOS，基于正则实现&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="Web安全" scheme="http://www.zhaojiaxing.top/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="服务器端应用安全" scheme="http://www.zhaojiaxing.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   

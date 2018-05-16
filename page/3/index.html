@@ -208,6 +208,63 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/11/Web安全-应用层拒绝服务攻击/">Web安全-应用层拒绝服务攻击</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-11
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>利用合理的请求造成资源过载，导致服务不可用</p>
+<h3 id="攻击方式"><a href="#攻击方式" class="headerlink" title="攻击方式"></a>攻击方式</h3><ul>
+<li>对一些消耗资源较大的应用页面不断发起正常请求 </li>
+<li>构建不完整的 HTTP 请求占住 Web Server 连接不放</li>
+<li>发送 POST 包时，构造非常大的 Content-Length 值，然后以很低的速度发包，保持连接不断开</li>
+<li>客户端注入超长的 Cookie</li>
+<li>ReDOS，基于正则实现</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/11/Web安全-应用层拒绝服务攻击/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/11/Web安全-文件上传漏洞/">Web安全-文件上传漏洞</a>
         
       </h1>
@@ -711,65 +768,6 @@
 <p><code>$connection</code>：TCP连接的序列号   </p>
           <div class="read-more">
             <a href="/2018/05/03/Nginx-内置变量/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/03/设计模式-访问者模式/">设计模式-访问者模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-03
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>封装一些作用于某种数据结构中的各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
-<li>抽象访问者(Visitor)：定义了对每一个元素（Element）访问的行为，它的参数就是可以访问的元素，它的方法个数理论上来讲与元素个数（Element的实现类个数）是一样的，从这点不难看出，访问者模式要求元素类的个数不能改变（不能改变的意思是说，如果元素类的个数经常改变，则说明不适合使用访问者模式）。</li>
-<li>具体访问者(ConcreteVisitor)： 给出对每一个元素类访问时所产生的具体行为。</li>
-<li>抽象节点(Element)：定义了一个接受访问者（accept）的方法，其意义是指，每一个元素都要可以被访问者访问。</li>
-<li>具体节点(ConcreteElement)：提供接受访问方法的具体实现，而这个具体的实现，通常情况下是使用访问者提供的访问该元素类的方法。</li>
-<li>结构对象角色(ObjectStructure)：定义当中所提到的对象结构，对象结构是一个抽象表述，具体点可以理解为一个具有容器性质或者复合对象特性的类，它会含有一组元素（Element），并且可以迭代这些元素，供访问者访问</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/03/设计模式-访问者模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
