@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-16T07:44:50.575Z</updated>
+  <updated>2018-05-16T09:02:04.975Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-ps命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-ps%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/16/Linux-ps命令/</id>
+    <published>2018-05-16T07:49:10.000Z</published>
+    <updated>2018-05-16T09:02:04.975Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于报告当前系统的进程状态&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ps(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-A：显示所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-N：显示特定参数的结果的补集&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-a：显示除会话标题和无终端进程外的所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：显示除会话标题外的所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-e：显示所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-C cmdlist：显示包含在 cmdlist 列表中的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-G grplist：显示 grplist 列表中具有组 ID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-U userlist：显示 userlist 列表中的 userid 拥有的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-g grplist：根据会话或包含在 grplist 中的 groupid 来显示进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p pidlist：显示 pidlist 列表中具有 PID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s sesslist：显示 sesslist 列表中具有会话 ID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t ttylist：显示 ttylist 列表中具有终端 ID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u userlist：根据 usrlist 列表中的有效 userid 来显示进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-F：使用额外完整输出&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-O format：显示 format 列表中的特定列和默认列&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-M：显示关于进程的安全信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：显示关于进程的额外调度信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：显示完整的格式列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-j：显示作业信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：显示长列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-o format：只显示 format 中列出的特定列&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-y：不显示进程标记&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-z：显示安全上下文信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H：以层级格式显示进程（显示父进程）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n namelist：定义在 WCHAN 列中显示的值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w：使用宽输出格式，使显示宽度不受限制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L：显示进程线程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-V：显示 ps 版本&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-tail命令</title>
@@ -75,18 +97,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-more%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/15/Linux-more命令/</id>
     <published>2018-05-15T08:50:33.000Z</published>
-    <updated>2018-05-15T09:25:19.464Z</updated>
+    <updated>2018-05-16T09:02:15.350Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;分页显示文件内容&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;分页显示文件内容&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;more(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-&amp;lt;数字&amp;gt;：指定每屏显示的行数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：显示[press space to continue,&amp;apos;q&amp;apos; to quit.]和[Press &amp;apos;h&amp;apos; for instructions]；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：不进行滚屏操作。每次刷新这个屏幕；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：将多个空行压缩成一行显示；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：禁止下划线；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+&amp;lt;数字&amp;gt;：从指定数字的行开始显示。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -467,28 +484,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;连接文件并打印到标准输出设备上，cat经常用来显示文件的内容&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-A：显示不可打印字符，行尾显示「$」；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b或--number-nonblank：和-n相似，只不过对于空白行不编号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-e：等价于「-vE」选项；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-E或--number-nonblank：在每行结束处显示 $；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n或-number：由1开始对所有输出的行数编号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：等价于「-vT」选项；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-T或--show-tabs：将跳格字符显示为「^I」&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v或--show-nonprinting：使用「^」和「M-」引用，除了 LFD 和 TAB 之外&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-uniq命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-uniq%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-uniq命令/</id>
-    <published>2018-05-14T02:15:47.000Z</published>
-    <updated>2018-05-14T06:59:02.625Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于报告或忽略文件中的重复行，一般与 sort 命令结合使用&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;uniq(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-c或——count：在每列旁边显示该行重复出现的次数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d或--repeated：仅显示重复出现的行列；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;栏位&amp;gt;或--skip-fields=&amp;lt;栏位&amp;gt;：忽略比较指定的栏位；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s&amp;lt;字符位置&amp;gt;或--skip-chars=&amp;lt;字符位置&amp;gt;：忽略比较指定的字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u或——unique：仅显示出一次的行列；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w&amp;lt;字符位置&amp;gt;或--check-chars=&amp;lt;字符位置&amp;gt;：指定要比较的字符。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

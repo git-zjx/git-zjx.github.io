@@ -208,6 +208,60 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/15/Linux-ln命令/">Linux-ln命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-15
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来为文件创件连接，连接类型分为硬连接和符号连接两种，默认的连接类型是硬连接。如果要创建符号连接必须使用「-s」选项。  </p>
+<p>注意：符号链接文件不是一个独立的文件，它的许多属性依赖于源文件，所以给符号链接文件设置存取权限是没有意义的。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-b或--backup：删除，覆盖目标文件之前的备份；</span><br><span class="line">-d或-F或——directory：建立目录的硬连接；</span><br><span class="line">-f或——force：强行建立文件或目录的连接，不论文件或目录是否存在；</span><br><span class="line">-i或——interactive：覆盖既有文件之前先询问用户；</span><br><span class="line">-n或--no-dereference：把符号连接的目的目录视为一般文件；</span><br><span class="line">-s或——symbolic：对源文件建立符号连接，而非硬连接；</span><br><span class="line">-S&lt;字尾备份字符串&gt;或--suffix=&lt;字尾备份字符串&gt;：用「-b」参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，预设的备份字符串是符号「~」，用户可通过「-S」参数来改变它；</span><br><span class="line">-v或——verbose：显示指令执行过程；</span><br><span class="line">-V&lt;备份方式&gt;或--version-control=&lt;备份方式&gt;：用「-b」参数备份目标文件后，备份文件的字尾会被加上一个备份字符串，这个字符串不仅可用「-S」参数变更，当使用「-V」参数&lt;备份方式&gt;指定不同备份方式时，也会产生不同字尾的备份字符串；</span><br><span class="line">--help：在线帮助；</span><br><span class="line">--version：显示版本信息。</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>源文件：指定连接的源文件。如果使用 -s 选项创建符号连接，则「源文件」可以是文件或者目录。创建硬连接时，则「源文件」参数只能是文件；</li>
+<li>目标文件：指定源文件的目标连接文件。</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/ln" target="_blank" rel="noopener">ln命令</a></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/15/Linux-理解Linux的硬链接与软链接/">Linux-理解Linux的硬链接与软链接</a>
         
       </h1>
@@ -725,58 +779,6 @@
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-A：显示不可打印字符，行尾显示「$」；</span><br><span class="line">-b或--number-nonblank：和-n相似，只不过对于空白行不编号；</span><br><span class="line">-e：等价于「-vE」选项；</span><br><span class="line">-E或--number-nonblank：在每行结束处显示 $；</span><br><span class="line">-n或-number：由1开始对所有输出的行数编号；</span><br><span class="line">-s或--squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行；</span><br><span class="line">-t：等价于「-vT」选项；</span><br><span class="line">-T或--show-tabs：将跳格字符显示为「^I」</span><br><span class="line">-v或--show-nonprinting：使用「^」和「M-」引用，除了 LFD 和 TAB 之外</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/14/Linux-cat命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/14/Linux-uniq命令/">Linux-uniq命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-14
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于报告或忽略文件中的重复行，一般与 sort 命令结合使用</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uniq(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-c或——count：在每列旁边显示该行重复出现的次数；</span><br><span class="line">-d或--repeated：仅显示重复出现的行列；</span><br><span class="line">-f&lt;栏位&gt;或--skip-fields=&lt;栏位&gt;：忽略比较指定的栏位；</span><br><span class="line">-s&lt;字符位置&gt;或--skip-chars=&lt;字符位置&gt;：忽略比较指定的字符；</span><br><span class="line">-u或——unique：仅显示出一次的行列；</span><br><span class="line">-w&lt;字符位置&gt;或--check-chars=&lt;字符位置&gt;：指定要比较的字符。</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/14/Linux-uniq命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

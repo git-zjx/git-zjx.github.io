@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Linux-tail命令"/>
+  <meta name="description" content="Linux-ps命令"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/16/Linux-tail命令/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/16/Linux-ps命令/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Linux-tail命令 - ZJX </title>
+    <title> Linux-ps命令 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,7 +206,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Linux-tail命令
+          Linux-ps命令
         
       </h1>
 
@@ -230,20 +230,19 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作用"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作用"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用组合"><span class="toc-text">常用组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>显示文件尾部内容，默认显示 10 行，如果给定的文件不止一个，则在显示的每个文件前面加一个文件名标题。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-c bytes：显示文件最后 bytes 个字节</span><br><span class="line">-n lines: 显示文件最后 lines 行</span><br><span class="line">-f：保持 tail 程序的激活状态，并继续显示添加到文件的行</span><br><span class="line">--pid=PID：与 -f 一起使用，跟踪文件直到进程 ID 为 PID 的进程终止</span><br><span class="line">-s sec：与 -f 一起使用，迭代之间休眠 sec 秒</span><br><span class="line">-v：始终显示给定文件名的输出标题</span><br><span class="line">-q：绝不显示给定文件名的输出标题</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>文件列表：指定要显示尾部内容的文件列表。</li>
-</ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/tail" target="_blank" rel="noopener">tail命令</a><br><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
+        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于报告当前系统的进程状态</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps(选项)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">-A：显示所有进程</span><br><span class="line">-N：显示特定参数的结果的补集</span><br><span class="line">-a：显示除会话标题和无终端进程外的所有进程</span><br><span class="line">-d：显示除会话标题外的所有进程</span><br><span class="line">-e：显示所有进程</span><br><span class="line">-C cmdlist：显示包含在 cmdlist 列表中的进程</span><br><span class="line">-G grplist：显示 grplist 列表中具有组 ID 的进程</span><br><span class="line">-U userlist：显示 userlist 列表中的 userid 拥有的进程</span><br><span class="line">-g grplist：根据会话或包含在 grplist 中的 groupid 来显示进程</span><br><span class="line">-p pidlist：显示 pidlist 列表中具有 PID 的进程</span><br><span class="line">-s sesslist：显示 sesslist 列表中具有会话 ID 的进程</span><br><span class="line">-t ttylist：显示 ttylist 列表中具有终端 ID 的进程</span><br><span class="line">-u userlist：根据 usrlist 列表中的有效 userid 来显示进程</span><br><span class="line">-F：使用额外完整输出</span><br><span class="line">-O format：显示 format 列表中的特定列和默认列</span><br><span class="line">-M：显示关于进程的安全信息</span><br><span class="line">-c：显示关于进程的额外调度信息</span><br><span class="line">-f：显示完整的格式列表</span><br><span class="line">-j：显示作业信息</span><br><span class="line">-l：显示长列表</span><br><span class="line">-o format：只显示 format 中列出的特定列</span><br><span class="line">-y：不显示进程标记</span><br><span class="line">-z：显示安全上下文信息</span><br><span class="line">-H：以层级格式显示进程（显示父进程）</span><br><span class="line">-n namelist：定义在 WCHAN 列中显示的值</span><br><span class="line">-w：使用宽输出格式，使显示宽度不受限制</span><br><span class="line">-L：显示进程线程</span><br><span class="line">-V：显示 ps 版本</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="常用组合"><a href="#常用组合" class="headerlink" title="常用组合"></a>常用组合</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ps -ef：显示所有进程信息，连同命令行</span><br><span class="line">ps -ef|grep ssh：ps 与 grep 常用组合用法，查找特定进程</span><br><span class="line">ps aux：列出目前所有的正在内存当中的程序</span><br><span class="line">ps -axjf：列出类似程序树的程序显示</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/peida/archive/2012/12/19/2824418.html" target="_blank" rel="noopener">每天一个linux命令（41）：ps命令</a><br><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
 
       
     </div>
@@ -259,7 +258,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/05/16/Linux-tail命令/">http://www.zhaojiaxing.top/2018/05/16/Linux-tail命令/</a>
+      <a href="http://www.zhaojiaxing.top/2018/05/16/Linux-ps命令/">http://www.zhaojiaxing.top/2018/05/16/Linux-ps命令/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -287,15 +286,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/05/16/Linux-ps命令/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Linux-ps命令</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/05/16/Linux-less命令/">
-        <span class="next-text nav-default">Linux-less命令</span>
+      <a class="next" href="/2018/05/16/Linux-tail命令/">
+        <span class="next-text nav-default">Linux-tail命令</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
