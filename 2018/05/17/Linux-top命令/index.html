@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Linux-top命令"/>
+
+
+
+
+  <meta name="keywords" content="PHP,Python,Linux,Nginx,MySQL,MongoDB,Redis" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ZJX">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/17/Linux-top命令/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?150f30f69a61ad717e87a753716a2653";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Linux-top命令 - ZJX </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ZJX</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">ZJX</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux-top命令
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-17
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作用"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交互命令"><span class="toc-text">交互命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>实时动态地查看系统的整体运行情况</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top(选项)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：以批处理模式操作；</span><br><span class="line">-c：显示完整的治命令；</span><br><span class="line">-d：屏幕刷新间隔时间；</span><br><span class="line">-I：忽略失效过程；</span><br><span class="line">-s：保密模式；</span><br><span class="line">-S：累积模式；</span><br><span class="line">-i&lt;时间&gt;：设置间隔时间；</span><br><span class="line">-u&lt;用户名&gt;：指定用户名；</span><br><span class="line">-p&lt;进程号&gt;：指定进程；</span><br><span class="line">-n&lt;次数&gt;：循环显示的次数。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="交互命令"><a href="#交互命令" class="headerlink" title="交互命令"></a>交互命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">h：显示帮助画面，给出一些简短的命令总结说明；</span><br><span class="line">k：终止一个进程；</span><br><span class="line">i：忽略闲置和僵死进程，这是一个开关式命令；</span><br><span class="line">q：退出程序；</span><br><span class="line">r：重新安排一个进程的优先级别；</span><br><span class="line">S：切换到累计模式；</span><br><span class="line">s：改变两次刷新之间的延迟时间（单位为 s ），如果有小数，就换算成 ms。输入 0 值则系统将不断刷新，默认值是 5s；</span><br><span class="line">f 或者 F：从当前显示中添加或者删除项目；</span><br><span class="line">o 或者 O：改变显示项目的顺序；</span><br><span class="line">l：切换显示平均负载和启动时间信息；</span><br><span class="line">m：切换显示内存信息；</span><br><span class="line">t：切换显示进程和 CPU 状态信息；</span><br><span class="line">c：切换显示命令名称和完整命令行；</span><br><span class="line">M：根据驻留内存大小进行排序；</span><br><span class="line">P：根据CPU使用百分比大小进行排序；</span><br><span class="line">T：根据时间/累计时间进行排序；</span><br><span class="line">w：将当前设置写入 ~/.toprc 文件中。</span><br></pre></td></tr></table></figure>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">top - 16:07:37 up 241 days, 20:11,  1 user,  load average: 0.96, 1.13, 1.25</span><br><span class="line">Tasks: 231 total,   1 running, 230 sleeping,   0 stopped,   0 zombie</span><br><span class="line">Cpu(s): 12.7%us,  8.4%sy,  0.0%ni, 77.1%id,  0.0%wa,  0.0%hi,  1.8%si,  0.0%st</span><br><span class="line">Mem:  12196436k total, 12056552k used,   139884k free,    64564k buffers</span><br><span class="line">Swap:  2097144k total,   151016k used,  1946128k free,  3120236k cached</span><br><span class="line"></span><br><span class="line">PID     USER      PR    NI   VIRT    RES     SHR    S   %CPU    %MEM        TIME+   COMMAND</span><br><span class="line">18411   pplive    20     0  11.9g   7.8g    5372    S  220.2    67.1     16761:00   java</span><br><span class="line"> 1875   pplive    20     0  3958m   127m    4564    S    4.6     1.1     12497:35   java</span><br><span class="line">    4   root      20     0      0      0       0    S    0.3     0.0    184:01.76   ksoftirqd/0</span><br><span class="line">   13   root      20     0      0      0       0    S    0.3     0.0    135:49.83   ksoftirqd/2</span><br><span class="line">   25   root      20     0      0      0       0    S    0.3     0.0    136:54.49   ksoftirqd/5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">第1行：Top 任务队列信息(系统运行状态及平均负载)，与uptime命令结果相同。 </span><br><span class="line">    第1段：系统当前时间，例如：16:07:37</span><br><span class="line">    第2段：系统运行时间，未重启的时间，时间越长系统越稳定。 </span><br><span class="line">    格式：up xx days, HH:MM</span><br><span class="line">    例如：241 days, 20:11, 表示连续运行了241天20小时11分钟</span><br><span class="line">    第3段：当前登录用户数，例如：1 user，表示当前只有1个用户登录</span><br><span class="line">    第4段：系统负载，即任务队列的平均长度，3个数值分别统计最近1，5，15分钟的系统平均负载 </span><br><span class="line">    系统平均负载：单核CPU情况下，0.00 表示没有任何负荷，1.00表示刚好满负荷，超过1侧表示超负荷，理想值是0.7；</span><br><span class="line">    多核CPU负载：CPU核数 * 理想值0.7 = 理想负荷，例如：4核CPU负载不超过2.8何表示没有出现高负载。</span><br><span class="line">第2行：Tasks 进程相关信息 </span><br><span class="line">    第1段：进程总数，例如：Tasks: 231 total, 表示总共运行231个进程</span><br><span class="line">    第2段：正在运行的进程数，例如：1 running,</span><br><span class="line">    第3段：睡眠的进程数，例如：230 sleeping,</span><br><span class="line">    第4段：停止的进程数，例如：0 stopped,</span><br><span class="line">    第5段：僵尸进程数，例如：0 zombie</span><br><span class="line">第3行：Cpus CPU相关信息，如果是多核CPU，按数字1可显示各核CPU信息，此时1行将转为Cpu核数行，数字1可以来回切换。 </span><br><span class="line">    第1段：us 用户空间占用CPU百分比，例如：Cpu(s): 12.7%us,</span><br><span class="line">    第2段：sy 内核空间占用CPU百分比，例如：8.4%sy,</span><br><span class="line">    第3段：ni 用户进程空间内改变过优先级的进程占用CPU百分比，例如：0.0%ni,</span><br><span class="line">    第4段：id 空闲CPU百分比，例如：77.1%id,</span><br><span class="line">    第5段：wa 等待输入输出的CPU时间百分比，例如：0.0%wa,</span><br><span class="line">    第6段：hi CPU服务于硬件中断所耗费的时间总额，例如：0.0%hi,</span><br><span class="line">    第7段：si CPU服务软中断所耗费的时间总额，例如：1.8%si,</span><br><span class="line">    第8段：st Steal time 虚拟机被hypervisor偷去的CPU时间（如果当前处于一个hypervisor下的vm，实际上hypervisor也是要消耗一部分CPU处理时间的）</span><br><span class="line">第4行：Mem 内存相关信息（Mem: 12196436k total, 12056552k used, 139884k free, 64564k buffers） </span><br><span class="line">    第1段：物理内存总量，例如：Mem: 12196436k total,</span><br><span class="line">    第2段：使用的物理内存总量，例如：12056552k used,</span><br><span class="line">    第3段：空闲内存总量，例如：Mem: 139884k free,</span><br><span class="line">    第4段：用作内核缓存的内存量，例如：64564k buffers</span><br><span class="line">第5行：Swap 交换分区相关信息（Swap: 2097144k total, 151016k used, 1946128k free, 3120236k cached） </span><br><span class="line">    第1段：交换区总量，例如：Swap: 2097144k total,</span><br><span class="line">    第2段：使用的交换区总量，例如：151016k used,</span><br><span class="line">    第3段：空闲交换区总量，例如：1946128k free,</span><br><span class="line">    第4段：缓冲的交换区总量，3120236k cached</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/top" target="_blank" rel="noopener">top命令</a><br><a href="https://www.linuxidc.com/Linux/2016-08/133871.htm" target="_blank" rel="noopener">Linux性能分析工具top命令详解</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/17/Linux-top命令/">http://www.zhaojiaxing.top/2018/05/17/Linux-top命令/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/05/16/Linux-ps命令/">
+        <span class="next-text nav-default">Linux-ps命令</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:977904037@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/git-zjx" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.zhihu.com/people/zhao-jiaxing/" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ZJX</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>
