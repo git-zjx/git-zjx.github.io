@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-17T07:50:37.961Z</updated>
+  <updated>2018-05-17T08:38:47.133Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-grep命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-grep%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/17/Linux-grep命令/</id>
+    <published>2018-05-17T08:30:02.000Z</published>
+    <updated>2018-05-17T08:38:47.133Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;文本搜索&lt;/p&gt;
+&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a 不要忽略二进制数据。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-A&amp;lt;显示列数&amp;gt; 除了显示符合范本样式的那一行之外，并显示该行之后的内容。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b 在显示符合范本样式的那一行之外，并显示该行之前的内容。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c 计算符合范本样式的列数。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-C&amp;lt;显示列数&amp;gt;或-&amp;lt;显示列数&amp;gt;  除了显示符合范本样式的那一列之外，并显示该列之前后的内容。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d&amp;lt;进行动作&amp;gt; 当指定要查找的是目录而非文件时，必须使用这项参数，否则 grep 命令将回报信息并停止动作。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-e&amp;lt;范本样式&amp;gt; 指定字符串作为查找文件内容的范本样式。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-E 将范本样式为延伸的普通表示法来使用，意味着使用能使用扩展正则表达式。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;范本文件&amp;gt; 指定范本文件，其内容有一个或多个范本样式，让 grep 查找符合范本条件的文件内容，格式为每一列的范本样式。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-F 将范本样式视为固定字符串的列表。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-G 将范本样式视为普通的表示法来使用。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h 在显示符合范本样式的那一列之前，不标示该列所属的文件名称。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H 在显示符合范本样式的那一列之前，标示该列的文件名称。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i 忽略字符大小写的差别。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l 列出文件内容符合指定的范本样式的文件名称。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L 列出文件内容不符合指定的范本样式的文件名称。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n 在显示符合范本样式的那一列之前，标示出该列的编号。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-q 不显示任何信息。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R/-r 此参数的效果和指定「-d recurse」参数相同。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s 不显示错误信息。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v 反转查找。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w 只显示全字符合的列。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x 只显示全列符合的列。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-y 此参数效果跟「-i」相同。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-o 只输出文件中匹配到的部分。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-du命令</title>
@@ -449,41 +470,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;切换目录&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-p 如果要切换到的目标目录是一个符号连接，直接切换到符号连接指向的目标目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L 如果要切换的目标目录是一个符号的连接，直接切换到字符连接名代表的目录，而非符号连接所指向的目标目录。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- 返回进入此目录之前所在的目录。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-通用Linux目录名称</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-%E9%80%9A%E7%94%A8Linux%E7%9B%AE%E5%BD%95%E5%90%8D%E7%A7%B0/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-通用Linux目录名称/</id>
-    <published>2018-05-14T06:34:57.000Z</published>
-    <updated>2018-05-14T06:47:09.121Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;目录&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td
-        
-      
     
     </summary>
     
