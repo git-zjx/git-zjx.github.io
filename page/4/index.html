@@ -208,6 +208,63 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/">Web安全-跨站脚本攻击（XSS）</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-04
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通常指通过「HTML注入」篡改了网页，插入了恶意脚本，从而在用户浏览网页时，控制用户浏览器的一种攻击  </p>
+<p>针对各种不同场景产生的 XSS，需要区分情景对待  </p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><p>XSS 漏洞成因是由于动态网页的 Web 应用对用户提交请求参数未做充分的检查过滤，允许用户在提交的数据中掺入 HTML 代码（最主要的是「&gt;」、「&lt;」），然后未加编码地输出到第三方用户的浏览器，这些攻击者恶意提交代码会被受害用户的浏览器解释执行。</p>
+<h3 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h3><ul>
+<li>反射型 XSS，只是简单的把用户输入的数据「反射」给浏览器。也叫做「非持久型 XSS 」</li>
+<li>存储型 XSS，把用户输入的数据「存储」在服务器端。也叫做「持久型 XSS 」</li>
+<li>DOM Based XSS，通过修改页面的DOM节点形成的XSS  </li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/04/Web安全-跨站脚本攻击（XSS）/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/04/Web安全-同源策略/">Web安全-同源策略</a>
         
       </h1>
@@ -727,63 +784,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/03/设计模式-观察者模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/03/设计模式-空对象模式/">设计模式-空对象模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-03
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过对缺失对象的封装，以提供默认无任何行为的对象替代品</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
-<li>抽象协作对象</li>
-<li>具体协作对象</li>
-<li>空对象</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/03/设计模式-空对象模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
