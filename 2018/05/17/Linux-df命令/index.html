@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="Linux-df命令"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/page/7/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/17/Linux-df命令/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> ZJX </title>
+    <title> Linux-df命令 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -201,187 +201,112 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/19/设计模式-工厂方法模式/">设计模式-工厂方法模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-19
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/创建型/">创建型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>工厂方法模式又称多态性工厂模式。在工厂方法模式中，核心的工厂类不再负责所有的产品的创建，而是将具体创建的工作交给子类去做。该核心类成为一个抽象工厂角色，仅负责给出具体工厂子类必须实现的接口，而不接触哪一个产品类应当被实例化这种细节。</p>
-<h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>将类的实例化（具体产品的创建）延迟到工厂类的子类（具体工厂）中完成，即由子类来决定应该实例化（创建）哪一个类。</p>
-          <div class="read-more">
-            <a href="/2018/04/19/设计模式-工厂方法模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/18/设计模式-简单工厂模式/">设计模式-简单工厂模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-18
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/创建型/">创建型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>简单工厂模式又称静态工厂方法模式，简单工厂模式的工厂类一般是使用静态方法，通过接收的参数的不同来返回不同的对象实例。<br>还有一种说法是认为静态工厂方法模式和简单工厂模式是两种模式，详情看<a href="https://laravel-china.org/docs/php-design-patterns/2018/SimpleFactory" target="_blank" rel="noopener">简单工厂模式</a>和<a href="https://laravel-china.org/docs/php-design-patterns/2018/StaticFactory" target="_blank" rel="noopener">静态工厂方法模式</a></p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>能够根据外界给定的信息，决定究竟应该创建哪个具体类的对象。明确区分了各自的职责和权力，有利于整个软件体系结构的优化。</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/04/18/设计模式-简单工厂模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/18/设计模式-单例模式/">设计模式-单例模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-18
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/创建型/">创建型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>单例模式，也叫单子模式，是一种常用的软件设计模式。在应用这个模式时，单例对象的类必须保证只有一个实例存在。</p>
-<h3 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h3><ul>
-<li>懒汉方式：指全局的单例实例在第一次被使用时构建。</li>
-<li><p>饿汉方式：指全局的单例实例在类装载时构建。</p>
-          <div class="read-more">
-            <a href="/2018/04/18/设计模式-单例模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-  </section>
-
   
-  <nav class="pagination">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux-df命令
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-17
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
     
-      <a class="prev" href="/page/6/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作用"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用"><span class="toc-text">常用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df(选项)</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-a或--all：包含全部的文件系统；</span><br><span class="line">--block-size=&lt;区块大小&gt;：以指定的区块大小来显示区块数目；</span><br><span class="line">-h或--human-readable：以可读性较高的方式来显示信息；</span><br><span class="line">-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；</span><br><span class="line">-i或--inodes：显示inode的信息；</span><br><span class="line">-k或--kilobytes：指定区块大小为1024字节；</span><br><span class="line">-l或--local：仅显示本地端的文件系统；</span><br><span class="line">-m或--megabytes：指定区块大小为1048576字节；</span><br><span class="line">--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；</span><br><span class="line">-P或--portability：使用POSIX的输出格式；</span><br><span class="line">--sync：在取得磁盘使用信息前，先执行sync指令；</span><br><span class="line">-t&lt;文件系统类型&gt;或--type=&lt;文件系统类型&gt;：仅显示指定文件系统类型的磁盘信息；</span><br><span class="line">-T或--print-type：显示文件系统的类型；</span><br><span class="line">-x&lt;文件系统类型&gt;或--exclude-type=&lt;文件系统类型&gt;：不要显示指定文件系统类型的磁盘信息；</span><br><span class="line">--help：显示帮助；</span><br><span class="line">--version：显示版本信息。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/df" target="_blank" rel="noopener">df命令</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/17/Linux-df命令/">http://www.zhaojiaxing.top/2018/05/17/Linux-df命令/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/05/17/Linux-top命令/">
+        <span class="next-text nav-default">Linux-top命令</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
       </a>
-    
     
   </nav>
 
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
@@ -466,6 +391,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     

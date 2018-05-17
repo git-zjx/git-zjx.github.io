@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-17T07:32:11.637Z</updated>
+  <updated>2018-05-17T07:45:22.877Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-df命令</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-df%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/17/Linux-df命令/</id>
+    <published>2018-05-17T07:41:16.000Z</published>
+    <updated>2018-05-17T07:45:22.877Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;df(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a或--all：包含全部的文件系统；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--block-size=&amp;lt;区块大小&amp;gt;：以指定的区块大小来显示区块数目；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h或--human-readable：以可读性较高的方式来显示信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i或--inodes：显示inode的信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k或--kilobytes：指定区块大小为1024字节；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l或--local：仅显示本地端的文件系统；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m或--megabytes：指定区块大小为1048576字节；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-P或--portability：使用POSIX的输出格式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--sync：在取得磁盘使用信息前，先执行sync指令；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t&amp;lt;文件系统类型&amp;gt;或--type=&amp;lt;文件系统类型&amp;gt;：仅显示指定文件系统类型的磁盘信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-T或--print-type：显示文件系统的类型；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x&amp;lt;文件系统类型&amp;gt;或--exclude-type=&amp;lt;文件系统类型&amp;gt;：不要显示指定文件系统类型的磁盘信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示帮助；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-top命令</title>
@@ -462,28 +484,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示文件的开头的内容。在默认情况下，head 命令显示文件的头10行内容&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;head(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-n&amp;lt;数字&amp;gt;：指定显示头部内容的行数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c&amp;lt;字符数&amp;gt;：指定显示头部内容的字符数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：总是显示文件名的头信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-q：不显示文件名的头信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-cut命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-cut%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-cut命令/</id>
-    <published>2018-05-14T03:33:00.000Z</published>
-    <updated>2018-05-14T06:58:41.620Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来显示行中的指定部分，删除文件中指定字段&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cut(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-b：仅显示行中指定直接范围的内容；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：仅显示行中指定范围的字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：指定字段的分隔符，默认的字段分隔符为「TAB」；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：显示指定字段的内容；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n：与「-b」选项连用，不分割多字节字符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--complement：提取指定字段之外的列；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--out-delimiter=&amp;lt;字段分隔符&amp;gt;：指定输出内容是的字段分割符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示指令的帮助信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示指令的版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
