@@ -251,7 +251,57 @@
 <h4 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 环境变量名称、等号和值之间没有空格</span><br><span class="line">test=testing</span><br><span class="line">echo $test</span><br><span class="line">test=&apos;testing is a long string&apos;</span><br><span class="line">echo $test</span><br></pre></td></tr></table></figure>
 <p>创建新的环境变量，建议使用小写字母，方便区分个人环境变量与系统环境变量  </p>
 <h4 id="移除-1"><a href="#移除-1" class="headerlink" title="移除"></a>移除</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 不用使用 $ 符号</span><br><span class="line">unset test</span><br></pre></td></tr></table></figure>
-<h3 id="默认的环境变量"><a href="#默认的环境变量" class="headerlink" title="默认的环境变量"></a>默认的环境变量</h3><p>bash shell Bourne 变量<br>| 变量 | 描述 |<br>| :-: | :-: |<br>| <code>CDPATH</code> | 冒号分隔的目录列标，用作 cd 命令的搜索路径 |<br>| <code>HOME</code> | 当前用户的主目录 |<br>| <code>IFS</code> | 用于分隔字段的字符列标，shell 使用它们分隔文本字符串 |<br>| <code>MAIL</code> | 当前用户邮箱的文件名。对于新邮件，bash shell 将检查该文件 |<br>| <code>MAILPATH</code> | 当前用户邮箱的多个文件名，由冒号分隔。对于新邮件，bash shell 将检查该列表中的各个文件 |<br>| <code>OPTARG</code> | getopts 命令处理的最后一个选项参数的值 |<br>| <code>OPTIND</code> | getopts 命令处理的最后一个选项参数的索引值 |<br>| <code>PATH</code> | 冒号分隔的目录列标，shell 将在这些目录中查找命令 |<br>| <code>PS1</code> | 主 shell 命令行界面提示字符串 |<br>| <code>PS2</code> | 次 shell 命令行界面提示字符串 |</p>
+<h3 id="默认的环境变量"><a href="#默认的环境变量" class="headerlink" title="默认的环境变量"></a>默认的环境变量</h3><p>bash shell Bourne 变量</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">变量</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>CDPATH</code></td>
+<td style="text-align:center">冒号分隔的目录列标，用作 cd 命令的搜索路径</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>HOME</code></td>
+<td style="text-align:center">当前用户的主目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>IFS</code></td>
+<td style="text-align:center">用于分隔字段的字符列标，shell 使用它们分隔文本字符串</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MAIL</code></td>
+<td style="text-align:center">当前用户邮箱的文件名。对于新邮件，bash shell 将检查该文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>MAILPATH</code></td>
+<td style="text-align:center">当前用户邮箱的多个文件名，由冒号分隔。对于新邮件，bash shell 将检查该列表中的各个文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>OPTARG</code></td>
+<td style="text-align:center">getopts 命令处理的最后一个选项参数的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>OPTIND</code></td>
+<td style="text-align:center">getopts 命令处理的最后一个选项参数的索引值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PATH</code></td>
+<td style="text-align:center">冒号分隔的目录列标，shell 将在这些目录中查找命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PS1</code></td>
+<td style="text-align:center">主 shell 命令行界面提示字符串</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PS2</code></td>
+<td style="text-align:center">次 shell 命令行界面提示字符串</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
