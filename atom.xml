@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-21T03:30:34.562Z</updated>
+  <updated>2018-05-21T06:29:27.239Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-启动文件</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-启动文件/</id>
+    <published>2018-05-21T05:58:40.000Z</published>
+    <updated>2018-05-21T06:29:27.239Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;登录-shell&quot;&gt;&lt;a href=&quot;#登录-shell&quot; class=&quot;headerlink&quot; title=&quot;登录 shell&quot;&gt;&lt;/a&gt;登录 shell&lt;/h3&gt;&lt;p&gt;当登录到 Linux 系统中时，bash shell 将作为登录 shell 启动。登录
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-环境变量</title>
@@ -452,28 +478,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：归档文件，保留其属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b：为每个现有目标文件创建一个备份，而不是覆盖它&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制覆盖现有目标文件，没有提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：覆盖目标文件时提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：创建硬链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p：保留文件属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：递归复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R：递归复制目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：创建软链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：重写备份特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：仅在源文件的日期和时间比目标文件新时复制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：冗长模式，解释发生的事件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x：将复制限定在当前文件系统&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-touch命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-touch%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-touch命令/</id>
-    <published>2018-05-14T08:02:19.000Z</published>
-    <updated>2018-05-14T08:07:57.645Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;命令有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建新的空文件。&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;touch(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：或--time=atime 或 --time=access 或 --time=use 只更改存取时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：或--no-create 不建立任何文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：&amp;lt;时间日期&amp;gt; 使用指定的日期时间，而非现在的时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：此参数将忽略不予处理，仅负责解决 BSD 版本 touch 指令的兼容性问题；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：或 --time=mtime或--time=modify 只更该变动时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：&amp;lt;参考文件或目录&amp;gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：&amp;lt;日期时间&amp;gt;  使用指定的日期时间，而非现在的时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：在线帮助；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
