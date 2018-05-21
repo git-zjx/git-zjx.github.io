@@ -5,11 +5,31 @@
     
   <url>
     <loc>http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
-    <lastmod>2018-05-21T03:14:26.354Z</lastmod>
+    <lastmod>2018-05-21T03:30:34.562Z</lastmod>
     <data>
         <display>
         <title>Linux-环境变量</title>
         <pubTime>2018-05-21T01:36:11.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-%E9%80%9A%E7%94%A8Linux%E7%9B%AE%E5%BD%95%E5%90%8D%E7%A7%B0/</loc>
+    <lastmod>2018-05-21T03:28:44.766Z</lastmod>
+    <data>
+        <display>
+        <title>Linux-通用Linux目录名称</title>
+        <pubTime>2018-05-14T06:34:57.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -550,26 +570,6 @@
         <display>
         <title>Linux-cut命令</title>
         <pubTime>2018-05-14T03:33:00.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.zhaojiaxing.top/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zhaojiaxing.top/2018/05/14/Linux-%E9%80%9A%E7%94%A8Linux%E7%9B%AE%E5%BD%95%E5%90%8D%E7%A7%B0/</loc>
-    <lastmod>2018-05-14T06:47:09.121Z</lastmod>
-    <data>
-        <display>
-        <title>Linux-通用Linux目录名称</title>
-        <pubTime>2018-05-14T06:34:57.000Z</pubTime>
         
         <tag>Linux</tag>
          
