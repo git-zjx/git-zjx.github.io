@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-21T03:13:52.336Z</updated>
+  <updated>2018-05-21T03:14:26.354Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,18 +21,17 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-环境变量/</id>
     <published>2018-05-21T01:36:11.000Z</published>
-    <updated>2018-05-21T03:13:52.336Z</updated>
+    <updated>2018-05-21T03:14:26.354Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;一般是指在操作系统中用来指定操作系统运行环境的一些参数&lt;/p&gt;
-&lt;h3 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot;
-        
-      
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;一般是指在操作系统中用来指定操作系统运行环境的一些参数&lt;/p&gt;
+&lt;h3 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot; title=&quot;类型&quot;&gt;&lt;/a&gt;类型&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全局变量&lt;/li&gt;
+&lt;li&gt;本地变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;全局变量&quot;&gt;&lt;a href=&quot;#全局变量&quot; class=&quot;headerlink&quot; title=&quot;全局变量&quot;&gt;&lt;/a&gt;全局变量&lt;/h3&gt;&lt;p&gt;在 shell 会话和该 shell 产生的任何子进程中都可见&lt;br&gt;系统环境变量始终使用全大写字母来区别于普通用户环境变量&lt;/p&gt;
+&lt;h4 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h4&gt;&lt;p&gt;&lt;code&gt;printenv&lt;/code&gt; 查看所有全局变量&lt;br&gt;&lt;code&gt;echo $HOME&lt;/code&gt; 查看指定全局变量&lt;/p&gt;
     
     </summary>
     
