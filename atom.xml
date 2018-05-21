@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-21T08:32:46.621Z</updated>
+  <updated>2018-05-21T09:10:02.536Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-用户组</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%94%A8%E6%88%B7%E7%BB%84/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/</id>
+    <published>2018-05-21T08:43:33.000Z</published>
+    <updated>2018-05-21T09:10:02.536Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;etc-group-文件&quot;&gt;&lt;a href=&quot;#etc-group-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/group 文件&quot;&gt;&lt;/a&gt;/etc/group 文件&lt;/h3&gt;&lt;p&gt;/etc/group
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-用户</title>
@@ -459,31 +485,6 @@
           &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来为文件创件连接，连接类型分为硬连接和符号连接两种，默认的连接类型是硬连接。如果要创建符号连接必须使用「-s」选项。 
         
       
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-理解Linux的硬链接与软链接</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-%E7%90%86%E8%A7%A3Linux%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E4%B8%8E%E8%BD%AF%E9%93%BE%E6%8E%A5/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-理解Linux的硬链接与软链接/</id>
-    <published>2018-05-15T01:09:29.000Z</published>
-    <updated>2018-05-15T01:59:29.803Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;链接：为 Linux 系统解决了文件的共享使用，还带来了隐藏文件路径、增加权限安全及节省存储等好处&lt;/li&gt;
-&lt;li&gt;硬链接：若一个 inode 号对应多个文件名，则称这些文件为硬链接。换言之，硬链接就是同一个文件使用了多个别名&lt;/li&gt;
-&lt;li&gt;软链接：若文件用户数据块中存放的内容是另一文件的路径名的指向，则该文件就是软连接&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;硬链接创建&quot;&gt;&lt;a href=&quot;#硬链接创建&quot; class=&quot;headerlink&quot; title=&quot;硬链接创建&quot;&gt;&lt;/a&gt;硬链接创建&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;link oldfile newfile &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ln oldfile newfile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp -l oldfile newfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

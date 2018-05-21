@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="Linux-用户组"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/categories/Linux/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,11 +90,7 @@
 
 
 
-    <title>
-  
-    Linux · ZJX
-  
-</title>
+    <title> Linux-用户组 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,258 +202,120 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title category">
-          <h2 class="archive-name">Linux</h2>
-        </div>
-      
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux-用户组
+        
+      </h1>
 
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-21
-          
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-21
         </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-用户组/" class="archive-post-link">
-            Linux-用户组
-          </a>
-        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
       </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc-group-文件"><span class="toc-text">/etc/group 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建新用户组"><span class="toc-text">创建新用户组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改用户组"><span class="toc-text">修改用户组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="etc-group-文件"><a href="#etc-group-文件" class="headerlink" title="/etc/group 文件"></a>/etc/group 文件</h3><p>/etc/group 文件包含关于系统所使用的各用户组的信息，包含 4 个字段：</p>
+<ul>
+<li>用户组名称</li>
+<li>用户组密码</li>
+<li>GID</li>
+<li>属于用户组的用户账户列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:</span><br><span class="line">bin:x:1:</span><br><span class="line">daemon:x:2:</span><br><span class="line">sys:x:3:</span><br><span class="line">adm:x:4:</span><br><span class="line">tty:x:5:</span><br><span class="line">disk:x:6:</span><br><span class="line">lp:x:7:</span><br><span class="line">mem:x:8:</span><br><span class="line">kmem:x:9:</span><br></pre></td></tr></table></figure>
+<p>用于系统账户的用户组将分配 500 以下的 GID，而用户的用户组将从 500 开始分配 GID   </p>
+<p>通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。</p>
+<p>当用户使用某个用户组作为 /etc/passwd 文件里的默认用户组，用户账户不会作为成员出现在 /etc/group 中  </p>
+<h3 id="创建新用户组"><a href="#创建新用户组" class="headerlink" title="创建新用户组"></a>创建新用户组</h3><p>groupadd 命令用于创建用户组。创建新用户组时，系统默认不会分配任何用户。要添加新用户，需使用 usermod 命令  </p>
+<h3 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h3><p>groupmod 用于修改用户组 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-g：修改 GID</span><br><span class="line">-n：修改用户组名称</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/1130136248wlxk/articles/6264419.html" target="_blank" rel="noopener">linux下cat命令详解</a><br><a href="https://www.cnblogs.com/cisum/p/8005641.html" target="_blank" rel="noopener">Linux 用户和用户组管理</a></p>
+
+      
+    </div>
+
     
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-用户/" class="archive-post-link">
-            Linux-用户
-          </a>
-        </span>
-      </div>
-    
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-启动文件/" class="archive-post-link">
-            Linux-启动文件
-          </a>
-        </span>
-      </div>
-    
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/">http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-环境变量/" class="archive-post-link">
-            Linux-环境变量
-          </a>
-        </span>
-      </div>
-    
+
+
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-18
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/18/Linux-tar命令/" class="archive-post-link">
-            Linux-tar命令
-          </a>
-        </span>
-      </div>
-    
       
+    
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-17
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/17/Linux-grep命令/" class="archive-post-link">
-            Linux-grep命令
-          </a>
-        </span>
-      </div>
     
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-17
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/17/Linux-du命令/" class="archive-post-link">
-            Linux-du命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-17
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/17/Linux-df命令/" class="archive-post-link">
-            Linux-df命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-17
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/17/Linux-top命令/" class="archive-post-link">
-            Linux-top命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-16
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/16/Linux-ps命令/" class="archive-post-link">
-            Linux-ps命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-16
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/16/Linux-tail命令/" class="archive-post-link">
-            Linux-tail命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-16
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/16/Linux-less命令/" class="archive-post-link">
-            Linux-less命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-more命令/" class="archive-post-link">
-            Linux-more命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-file命令/" class="archive-post-link">
-            Linux-file命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-stat命令/" class="archive-post-link">
-            Linux-stat命令
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
     
     
-      <a class="next" href="/categories/Linux/page/2/">
-        <span class="next-text">下一页</span>
+      <a class="next" href="/2018/05/21/Linux-用户/">
+        <span class="next-text nav-default">Linux-用户</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
