@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-21T06:29:27.239Z</updated>
+  <updated>2018-05-21T08:32:46.621Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,21 +17,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux-用户</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%94%A8%E6%88%B7/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-用户/</id>
+    <published>2018-05-21T06:39:09.000Z</published>
+    <updated>2018-05-21T08:32:46.621Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;etc-passwd-文件&quot;&gt;&lt;a href=&quot;#etc-passwd-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd 文件&quot;&gt;&lt;/a&gt;/etc/passwd 文件&lt;/h3&gt;&lt;p&gt;将登录名与相应的 UID 值进行匹配，包含以下信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录用户名&lt;/li&gt;
+&lt;li&gt;用户密码&lt;/li&gt;
+&lt;li&gt;用户账户的数值 UID&lt;/li&gt;
+&lt;li&gt;用户账户的数值用户组 ID（GID）&lt;/li&gt;
+&lt;li&gt;用户账户的文本描述（称为注释字段）&lt;/li&gt;
+&lt;li&gt;用户 HOME 目录的位置&lt;/li&gt;
+&lt;li&gt;用户的默认 shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root:x:0:0:root:/root:/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin:x:1:1:bin:/bin:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daemon:x:2:2:daemon:/sbin:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;adm:x:3:4:adm:/var/adm:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sync:x:5:0:sync:/sbin:/bin/sync&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;根用户账户是 Linux 系统的管理员，它的 UID 始终为 0。Linux 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux-启动文件</title>
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-启动文件/</id>
     <published>2018-05-21T05:58:40.000Z</published>
-    <updated>2018-05-21T06:29:27.239Z</updated>
+    <updated>2018-05-21T06:29:53.104Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;登录-shell&quot;&gt;&lt;a href=&quot;#登录-shell&quot; class=&quot;headerlink&quot; title=&quot;登录 shell&quot;&gt;&lt;/a&gt;登录 shell&lt;/h3&gt;&lt;p&gt;当登录到 Linux 系统中时，bash shell 将作为登录 shell 启动。登录
-        
-      
+      &lt;h3 id=&quot;登录-shell&quot;&gt;&lt;a href=&quot;#登录-shell&quot; class=&quot;headerlink&quot; title=&quot;登录 shell&quot;&gt;&lt;/a&gt;登录 shell&lt;/h3&gt;&lt;p&gt;当登录到 Linux 系统中时，bash shell 将作为登录 shell 启动。登录 shell 将查找 4 个不同的启动文件来处理其中的命令。处理文件的顺序如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;etc-profile-文件&quot;&gt;&lt;a href=&quot;#etc-profile-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/profile 文件&quot;&gt;&lt;/a&gt;/etc/profile 文件&lt;/h4&gt;&lt;p&gt;bash shell 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 /etc/profile.d 目录中的特定于应用程序的启动文件&lt;/p&gt;
+&lt;h4 id=&quot;HOME-启动文件&quot;&gt;&lt;a href=&quot;#HOME-启动文件&quot; class=&quot;headerlink&quot; title=&quot;$HOME 启动文件&quot;&gt;&lt;/a&gt;$HOME 启动文件&lt;/h4&gt;&lt;p&gt;这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 Linux 发行版只用其一  &lt;/p&gt;
+&lt;p&gt;.bash_profile 启动文件首先将检查 HOME 目录中是否存在另一个名称为 .bashrc 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 PATH 环境变量中，目的是提供方在 HOME 目录中放置可执行文件的公共位置 &lt;/p&gt;
     
     </summary>
     
@@ -456,28 +484,6 @@
 &lt;li&gt;软链接：若文件用户数据块中存放的内容是另一文件的路径名的指向，则该文件就是软连接&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;硬链接创建&quot;&gt;&lt;a href=&quot;#硬链接创建&quot; class=&quot;headerlink&quot; title=&quot;硬链接创建&quot;&gt;&lt;/a&gt;硬链接创建&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;link oldfile newfile &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ln oldfile newfile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp -l oldfile newfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-cp命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-cp%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-cp命令/</id>
-    <published>2018-05-14T08:24:38.000Z</published>
-    <updated>2018-05-16T09:30:43.698Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：归档文件，保留其属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b：为每个现有目标文件创建一个备份，而不是覆盖它&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制覆盖现有目标文件，没有提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：覆盖目标文件时提示&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：创建硬链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p：保留文件属性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：递归复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R：递归复制目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：创建软链接而不是复制文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：重写备份特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：仅在源文件的日期和时间比目标文件新时复制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：冗长模式，解释发生的事件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x：将复制限定在当前文件系统&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

@@ -241,6 +241,7 @@
 <h4 id="etc-profile-文件"><a href="#etc-profile-文件" class="headerlink" title="/etc/profile 文件"></a>/etc/profile 文件</h4><p>bash shell 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 /etc/profile.d 目录中的特定于应用程序的启动文件</p>
 <h4 id="HOME-启动文件"><a href="#HOME-启动文件" class="headerlink" title="$HOME 启动文件"></a>$HOME 启动文件</h4><p>这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 Linux 发行版只用其一  </p>
 <p>.bash_profile 启动文件首先将检查 HOME 目录中是否存在另一个名称为 .bashrc 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 PATH 环境变量中，目的是提供方在 HOME 目录中放置可执行文件的公共位置 </p>
+<a id="more"></a>
 <h3 id="交互式-shell"><a href="#交互式-shell" class="headerlink" title="交互式 shell"></a>交互式 shell</h3><p>输入什么，解释什么就是交互式 shell，通常是登录 shell 派生出来的，会处理用户 HOME 目录中的 .bashrc 文件 </p>
 <h4 id="bashrc-文件"><a href="#bashrc-文件" class="headerlink" title=".bashrc 文件"></a>.bashrc 文件</h4><p>执行两个任务。首先，检查 /etc/bashrc 文件。其次，可以在 .bashrc 文件中定制个人命令别名或者私有脚本函数</p>
 <h3 id="etc-bashrc-文件"><a href="#etc-bashrc-文件" class="headerlink" title="/etc/bashrc 文件"></a>/etc/bashrc 文件</h3><p>设置一些非全局环境变量，也执行了/etc/profile.d 目录中的特定于应用程序的启动文件</p>
@@ -289,6 +290,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2018/05/21/Linux-用户/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Linux-用户</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
     
     
       <a class="next" href="/2018/05/21/Linux-环境变量/">
