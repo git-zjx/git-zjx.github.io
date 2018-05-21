@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-18T06:31:59.865Z</updated>
+  <updated>2018-05-21T02:10:47.573Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-环境变量</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-环境变量/</id>
+    <published>2018-05-21T01:36:11.000Z</published>
+    <updated>2018-05-21T02:10:47.573Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;一般是指在操作系统中用来指定操作系统运行环境的一些参数&lt;/p&gt;
+&lt;h3 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-tar命令</title>
@@ -448,28 +475,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;命令有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建新的空文件。&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;touch(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：或--time=atime 或 --time=access 或 --time=use 只更改存取时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：或--no-create 不建立任何文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：&amp;lt;时间日期&amp;gt; 使用指定的日期时间，而非现在的时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：此参数将忽略不予处理，仅负责解决 BSD 版本 touch 指令的兼容性问题；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：或 --time=mtime或--time=modify 只更该变动时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：&amp;lt;参考文件或目录&amp;gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：&amp;lt;日期时间&amp;gt;  使用指定的日期时间，而非现在的时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：在线帮助；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-ls命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/14/Linux-ls%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/14/Linux-ls命令/</id>
-    <published>2018-05-14T07:07:37.000Z</published>
-    <updated>2018-05-14T07:55:52.656Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;显示目标列表 &lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ls（选项）（参数）&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a：显示所有档案及目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-A：显示除隐藏文件「.」和「..」以外的所有文件列表；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b：将文件中的不可输出的字符以反斜线「/」加字符编码的方式输出；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-B：不要列出带波浪号的条目（波浪号表示备份副本）；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：与「-lt」选项连用时，按照文件状态时间排序输出目录内容，排序的依据是文件的索引节点中的 ctime 字段。与「-l」选项连用时，则排序的一句是文件的状态改变时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-C：多列显示输出结果。这是默认选项；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：仅显示目录名，而不显示目录下的内容列表。显示符号链接文件本身，而不显示其所指向的目录列表；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：此参数的效果和同时指定「aU」参数相同，并关闭「lst」参数的效果；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-F：在每个输出项后追加文件的类型标识符，具体含义：「*」表示具有可执行权限的普通文件，「/」表示目录，「@」表示符号链接，「|」表示命令管道 FIFO ，「=」表示 sockets 套接字。当文件为普通文件时，不输出任何标识符；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-g：在文件之前列出所有目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-G：在长列表中不显示组名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h：打印大小；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：显示每个文件的索引号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k：以KB（千字节）为单位显示文件大小；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：与「-C」选项功能相反，以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L：如果遇到性质为符号链接的文件或目录，直接列出该链接所指向的原始文件或目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：用「,」号区隔每个文件和目录的名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n：以用户 ID 和组 ID 替代其名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-o：在长列表中不显示所有者名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：以文件名反序排列并输出目录内容列表；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R：递归处理，将指定目录下的所有文件及子目录一并处理；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：显示文件和目录的大小，以区块为单位；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：按照文件大小排列输出；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：用文件和目录的更改时间排序；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：显示文件上一次访问时间而不是修改时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-U：输出列表不排序；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：根据文件版本排列输出&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x：按行而不是列列出条目&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-X：按文件扩展名排列输出&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--file-type：与“-F”选项的功能相同，但是不显示“*”；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--full-time：列出完整的日期与时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--color[=WHEN]：使用不同的颜色高亮显示不同类型的。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
