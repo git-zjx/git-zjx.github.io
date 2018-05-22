@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Linux-条件语句"/>
+
+
+
+
+  <meta name="keywords" content="PHP,Python,Linux,Nginx,MySQL,MongoDB,Redis" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ZJX">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/22/Linux-条件语句/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?150f30f69a61ad717e87a753716a2653";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Linux-条件语句 - ZJX </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ZJX</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">ZJX</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux-条件语句
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-22
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#if-then"><span class="toc-text">if-then</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-then-else"><span class="toc-text">if-then-else</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌套-if-语句"><span class="toc-text">嵌套 if 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-命令"><span class="toc-text">test 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="if-then"><a href="#if-then" class="headerlink" title="if-then"></a>if-then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if command; then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，那么 then 后面的命令不执行  </p>
+<h3 id="if-then-else"><a href="#if-then-else" class="headerlink" title="if-then-else"></a>if-then-else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then </span><br><span class="line">    commands</span><br><span class="line">else</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，将执行 else 后面的所有命令   </p>
+<h3 id="嵌套-if-语句"><a href="#嵌套-if-语句" class="headerlink" title="嵌套 if 语句"></a>嵌套 if 语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if command1</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">elif command2</span><br><span class="line">then </span><br><span class="line">    more commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>bash shell 会按顺序执行 if 语句，只有第一个返回 0 退出状态的命令会导致 then 部分命令被执行  </p>
+<h3 id="test-命令"><a href="#test-命令" class="headerlink" title="test 命令"></a>test 命令</h3><p>test 命令提供一种检测 if-then 语句不同条件的方法。如果 test 命令中列出的条件评估值为 true，test 命令以 0 退出状态码退出 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">if test condition</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ condition ]</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">#### 数值比较</span><br><span class="line"></span><br><span class="line">| 比较| 描述 |</span><br><span class="line">| :-: | :-: |</span><br><span class="line">| `n1 -eq n2` | 检查 n1 是否等于 n2 |</span><br><span class="line">| `n1 -ge n2` | 检查 n1 是否大于或等于 n2 |</span><br><span class="line">| `n1 -gt n2` | 检查 n1 是否大于 n2 |</span><br><span class="line">| `n1 -le n2` | 检查 n1 是否小于或等于 n2 |</span><br><span class="line">| `n1 -lt n2` | 检查 n1 是否小于 n2 |</span><br><span class="line">| `n1 -ne n2` | 检查 n1 是否不等于 n2 |</span><br><span class="line"></span><br><span class="line">只能比较整数数字</span><br><span class="line"></span><br><span class="line">#### 字符串比较</span><br><span class="line"></span><br><span class="line">| 比较| 描述 |</span><br><span class="line">| :-: | :-: |</span><br><span class="line">| `str1 = str2` | 检查 str1 与 str2 是否相同 |</span><br><span class="line">| `str1 != str2` | 检查 str1 与 str2 是否不同 |</span><br><span class="line">| `str1 &lt; str2` | 检查 str1 是否小于 str2 |</span><br><span class="line">| `str1 &gt; str2` | 检查 str1 是否大于 str2 |</span><br><span class="line">| `-n str1` | 检查 str1 的长度是否大于 0 |</span><br><span class="line">| `-z str1` | 检查 str1 的长度是否为 0 |</span><br><span class="line"></span><br><span class="line">比较大小时需要注意：</span><br><span class="line"></span><br><span class="line">- 大于和小于符号需要转义</span><br><span class="line">- 大于和小于的顺序与在 sort 命令中的顺序不同，test 命令使用标准的 ASCII 排序，sort 命令使用为系统当前语言设置定义的排列顺序  </span><br><span class="line"></span><br><span class="line">#### 文件比较</span><br><span class="line"></span><br><span class="line">| 比较| 描述 |</span><br><span class="line">| :-: | :-: |</span><br><span class="line">| `-d file` | 检查 file 是否存在并且是一个目录 |</span><br><span class="line">| `-e file` | 检查 file 是否存在 |</span><br><span class="line">| `-f file` | 检查 file 是否存在并且是一个文件 |</span><br><span class="line">| `-r file` | 检查 file 是否存在并且可读 |</span><br><span class="line">| `-s file` | 检查 file 是否存在不为空 |</span><br><span class="line">| `-w file` | 检查 file 是否存在并且可写 |</span><br><span class="line">| `-x file` | 检查 file 是否存在并且可执行 |</span><br><span class="line">| `-O file` | 检查 file 是否存在并且被当前用户拥有 |</span><br><span class="line">| `-G file` | 检查 file 是否存在并且默认组是否为当前用户组 |</span><br><span class="line">| `file1 -nt file2` | 检查 file1 是否比 file2 新 |</span><br><span class="line">| `file1 -ot file2` | 检查 file1 是否比 file2 旧 |</span><br><span class="line"></span><br><span class="line">### 复合条件检查</span><br></pre></td></tr></table></figure>
+<p>[ condition1 ] &amp;&amp; [ condition2 ]<br>[ condition1 ] || [ condition2 ]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 高级特征</span><br><span class="line"></span><br><span class="line">#### 双圆括号</span><br><span class="line"></span><br><span class="line">双圆括号允许在比较中包含高级数据公式</span><br></pre></td></tr></table></figure></p>
+<p>(( expression ))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">| 比较| 描述 |</span><br><span class="line">| :-: | :-: |</span><br><span class="line">| `val++` | 后增量 |</span><br><span class="line">| `val--` | 后减量 |</span><br><span class="line">| `++val` | 前增量 |</span><br><span class="line">| `--val` | 前减量 |</span><br><span class="line">| `!` | 逻辑否定 |</span><br><span class="line">| `~` | 逐位取反 |</span><br><span class="line">| `**` | 取幂 |</span><br><span class="line">| `&lt;&lt;` | 逐位左移 |</span><br><span class="line">| `&gt;&gt;` | 逐位右移 |</span><br><span class="line">| `&amp;` | 逐位布尔逻辑与 |</span><br><span class="line">| `|` | 逐位布尔逻辑或 |</span><br><span class="line">| `&amp;&amp;` | 逻辑与 |</span><br><span class="line">| `||` | 逻辑或 |</span><br><span class="line"></span><br><span class="line">#### 双方括号</span><br><span class="line"></span><br><span class="line">双方括号为字符串比较提供高级功能</span><br></pre></td></tr></table></figure></p>
+<p>[[ expression ]]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用在 test 命令中使用的标准字符串比较，同时支持模式匹配。  </span><br><span class="line"></span><br><span class="line">模式匹配中，可以定义与字符串值相匹配的正则表达式   </span><br><span class="line"></span><br><span class="line">### case</span><br></pre></td></tr></table></figure></p>
+<p>case variable in<br>pattern1 | pattern2) commands1;;<br>pattern3) commands2;;<br>*) default commands;;<br>esac<br><code>`</code><br>case 命令将指定的变量与不同的模式进行比较。如果变量与模式匹配，shell 执行为该模式指定的命令。可以在一行中列出多个模式，使用竖条操作符将每个模式分开。星号是与任何列出的模式都不匹配的值  </p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/1130136248wlxk/articles/6264419.html" target="_blank" rel="noopener">linux下cat命令详解</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/22/Linux-条件语句/">http://www.zhaojiaxing.top/2018/05/22/Linux-条件语句/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/05/22/Linux-shell脚本/">
+        <span class="next-text nav-default">Linux-shell脚本</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:977904037@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/git-zjx" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.zhihu.com/people/zhao-jiaxing/" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ZJX</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

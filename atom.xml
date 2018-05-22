@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-22T02:34:50.828Z</updated>
+  <updated>2018-05-22T07:01:20.461Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux-条件语句</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/22/Linux-条件语句/</id>
+    <published>2018-05-22T05:26:39.000Z</published>
+    <updated>2018-05-22T07:01:20.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;if-then&quot;&gt;&lt;a href=&quot;#if-then&quot; class=&quot;headerlink&quot; title=&quot;if-then&quot;&gt;&lt;/a&gt;if-then&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux-shell脚本</title>
     <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-shell%E8%84%9A%E6%9C%AC/"/>
     <id>http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/</id>
     <published>2018-05-22T02:17:09.000Z</published>
-    <updated>2018-05-22T02:34:50.828Z</updated>
+    <updated>2018-05-22T05:26:01.987Z</updated>
     
     <summary type="html">
     
@@ -464,28 +490,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;创建目录&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;p&gt;mkdir (选项)(参数)&lt;/p&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-Z：设置安全上下文，当使用SELinux时有效；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m&amp;lt;目标属性&amp;gt;或--mode&amp;lt;目标属性&amp;gt;建立目录的同时设置目录的权限；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p或--parents 若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version 显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-rm命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-rm%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-rm命令/</id>
-    <published>2018-05-15T07:26:09.000Z</published>
-    <updated>2018-05-15T07:48:37.100Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变。&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rm (选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制删除文件或目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：删除已有文件或目录之前先询问用户；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--preserve-root：不对根目录进行递归操作；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示指令的详细执行过程。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

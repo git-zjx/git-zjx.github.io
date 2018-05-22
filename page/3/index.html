@@ -208,6 +208,58 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/15/Linux-rm命令/">Linux-rm命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-15
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm (选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；</span><br><span class="line">-f：强制删除文件或目录；</span><br><span class="line">-i：删除已有文件或目录之前先询问用户；</span><br><span class="line">-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；</span><br><span class="line">--preserve-root：不对根目录进行递归操作；</span><br><span class="line">-v：显示指令的详细执行过程。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/15/Linux-rm命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/15/Linux-mv命令/">Linux-mv命令</a>
         
       </h1>
@@ -732,58 +784,6 @@
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-n&lt;数字&gt;：指定显示头部内容的行数；</span><br><span class="line">-c&lt;字符数&gt;：指定显示头部内容的字符数；</span><br><span class="line">-v：总是显示文件名的头信息；</span><br><span class="line">-q：不显示文件名的头信息。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/14/Linux-head命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/14/Linux-cut命令/">Linux-cut命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-14
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来显示行中的指定部分，删除文件中指定字段</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-b：仅显示行中指定直接范围的内容；</span><br><span class="line">-c：仅显示行中指定范围的字符；</span><br><span class="line">-d：指定字段的分隔符，默认的字段分隔符为「TAB」；</span><br><span class="line">-f：显示指定字段的内容；</span><br><span class="line">-n：与「-b」选项连用，不分割多字节字符；</span><br><span class="line">--complement：提取指定字段之外的列；</span><br><span class="line">--out-delimiter=&lt;字段分隔符&gt;：指定输出内容是的字段分割符；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/14/Linux-cut命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

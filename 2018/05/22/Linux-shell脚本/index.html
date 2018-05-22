@@ -230,7 +230,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#反引号"><span class="toc-text">反引号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向输入输出"><span class="toc-text">重定向输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道"><span class="toc-text">管道</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#反引号"><span class="toc-text">反引号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向输入输出"><span class="toc-text">重定向输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道"><span class="toc-text">管道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数学计算"><span class="toc-text">数学计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#整数"><span class="toc-text">整数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#expr-命令"><span class="toc-text">expr 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#operation"><span class="toc-text">$[operation]</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点型"><span class="toc-text">浮点型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bc"><span class="toc-text">bc</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#退出"><span class="toc-text">退出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构化命令"><span class="toc-text">结构化命令</span></a></li></ol>
     </div>
   </div>
 
@@ -247,6 +247,65 @@
 <p>Linux系统实际上同时运行两条命令，并在系统内部把它们连接在一起。第一条命令生成输出时，输出就立即发送给第二条命令。没有使用中间文件或者缓冲区传递数据  </p>
 <p>命令中可以使用数量不限的管道符，但行长度最多是255个字符  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | sort &gt; rpm.list</span><br></pre></td></tr></table></figure>
+<h3 id="数学计算"><a href="#数学计算" class="headerlink" title="数学计算"></a>数学计算</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><h4 id="expr-命令"><a href="#expr-命令" class="headerlink" title="expr 命令"></a>expr 命令</h4><p>shell 中许多 expr 命令操作符（如星号）有其他含义，使用时须转义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var1=`expr 1 \* 2`</span><br></pre></td></tr></table></figure>
+<h5 id="operation"><a href="#operation" class="headerlink" title="$[operation]"></a>$[operation]</h5><p>只支持整数算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var1 = $[1+5]</span><br></pre></td></tr></table></figure>
+<h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><h5 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var1 = 10.46</span><br><span class="line">var2 = 43.67</span><br><span class="line">var3 = 33.2</span><br><span class="line">var4 = 71</span><br><span class="line">var5=`bc &lt;&lt; EOF</span><br><span class="line">scale = 4</span><br><span class="line">a1 = ($var1 * $var2)</span><br><span class="line">b1 = ($var2 * $var4)</span><br><span class="line">a1 + b1</span><br><span class="line">EOF</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<p>scale 设置精度范围  </p>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p><code>echo $?</code> 可以查看退出状态代码</p>
+<p>退出状态代码</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>0</code></td>
+<td style="text-align:center">命令成功完成</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>1</code></td>
+<td style="text-align:center">通常的未知错误</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>2</code></td>
+<td style="text-align:center">误用 shell 命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>126</code></td>
+<td style="text-align:center">命令无法执行</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>127</code></td>
+<td style="text-align:center">没有找到命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>128</code></td>
+<td style="text-align:center">无效的退出参数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>128+x</code></td>
+<td style="text-align:center">使用 Linux 信号 x 的致命错误</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>130</code></td>
+<td style="text-align:center">使用 Ctrl-C 终止的命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>255</code></td>
+<td style="text-align:center">规范外的退出状态</td>
+</tr>
+</tbody>
+</table>
+<p>默认情况下，shell脚本以脚本中最后一条命令的退出状态退出  </p>
+<p>exit 命令可以指定退出状态，可以在 exit 中使用变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit 5</span><br></pre></td></tr></table></figure>
+<p>退出状态码最高是 255，高于 255 会使用该状态码被 256 除了之后的余数作为状态码   </p>
+<h3 id="结构化命令"><a href="#结构化命令" class="headerlink" title="结构化命令"></a>结构化命令</h3><p><a href="">条件语句if-then</a><br><a href="">条件语句if-then</a></p>
 
       
     </div>
@@ -289,6 +348,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2018/05/22/Linux-条件语句/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Linux-条件语句</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
     
     
       <a class="next" href="/2018/05/21/Linux-文件权限/">
