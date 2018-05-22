@@ -208,6 +208,60 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/22/Linux-shell脚本/">Linux-shell脚本</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-22
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号"></a>反引号</h3><p>反引号在 ESC 按键下面的按键上，和波浪号 ~ 同一按键  </p>
+<p>反引号允许将 shell 命令的输出赋值给变量  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">testing = &apos;date&apos;</span><br><span class="line"># 格式化 date 命令的输出结构复制给 testing</span><br><span class="line">testing = &apos;date +%y%m%d&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="重定向输入输出"><a href="#重定向输入输出" class="headerlink" title="重定向输入输出"></a>重定向输入输出</h3><p>命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号表示数据从输入文件流向命令，大于号表示命令产生的数据流向文件  </p>
+<p>两个大于号（&gt;&gt;）表示附加数据 </p>
+          <div class="read-more">
+            <a href="/2018/05/22/Linux-shell脚本/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/21/Linux-文件权限/">Linux-文件权限</a>
         
       </h1>
@@ -687,58 +741,6 @@
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-a或--all：包含全部的文件系统；</span><br><span class="line">--block-size=&lt;区块大小&gt;：以指定的区块大小来显示区块数目；</span><br><span class="line">-h或--human-readable：以可读性较高的方式来显示信息；</span><br><span class="line">-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；</span><br><span class="line">-i或--inodes：显示inode的信息；</span><br><span class="line">-k或--kilobytes：指定区块大小为1024字节；</span><br><span class="line">-l或--local：仅显示本地端的文件系统；</span><br><span class="line">-m或--megabytes：指定区块大小为1048576字节；</span><br><span class="line">--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；</span><br><span class="line">-P或--portability：使用POSIX的输出格式；</span><br><span class="line">--sync：在取得磁盘使用信息前，先执行sync指令；</span><br><span class="line">-t&lt;文件系统类型&gt;或--type=&lt;文件系统类型&gt;：仅显示指定文件系统类型的磁盘信息；</span><br><span class="line">-T或--print-type：显示文件系统的类型；</span><br><span class="line">-x&lt;文件系统类型&gt;或--exclude-type=&lt;文件系统类型&gt;：不要显示指定文件系统类型的磁盘信息；</span><br><span class="line">--help：显示帮助；</span><br><span class="line">--version：显示版本信息。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/17/Linux-df命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/17/Linux-top命令/">Linux-top命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-17
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>实时动态地查看系统的整体运行情况</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top(选项)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：以批处理模式操作；</span><br><span class="line">-c：显示完整的治命令；</span><br><span class="line">-d：屏幕刷新间隔时间；</span><br><span class="line">-I：忽略失效过程；</span><br><span class="line">-s：保密模式；</span><br><span class="line">-S：累积模式；</span><br><span class="line">-i&lt;时间&gt;：设置间隔时间；</span><br><span class="line">-u&lt;用户名&gt;：指定用户名；</span><br><span class="line">-p&lt;进程号&gt;：指定进程；</span><br><span class="line">-n&lt;次数&gt;：循环显示的次数。</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/17/Linux-top命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

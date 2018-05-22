@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-22T01:29:05.095Z</updated>
+  <updated>2018-05-22T02:34:50.828Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-shell脚本</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-shell%E8%84%9A%E6%9C%AC/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/</id>
+    <published>2018-05-22T02:17:09.000Z</published>
+    <updated>2018-05-22T02:34:50.828Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;反引号&quot;&gt;&lt;a href=&quot;#反引号&quot; class=&quot;headerlink&quot; title=&quot;反引号&quot;&gt;&lt;/a&gt;反引号&lt;/h3&gt;&lt;p&gt;反引号在 ESC 按键下面的按键上，和波浪号 ~ 同一按键  &lt;/p&gt;
+&lt;p&gt;反引号允许将 shell 命令的输出赋值给变量  &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;testing = &amp;apos;date&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 格式化 date 命令的输出结构复制给 testing&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;testing = &amp;apos;date +%y%m%d&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;重定向输入输出&quot;&gt;&lt;a href=&quot;#重定向输入输出&quot; class=&quot;headerlink&quot; title=&quot;重定向输入输出&quot;&gt;&lt;/a&gt;重定向输入输出&lt;/h3&gt;&lt;p&gt;命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号表示数据从输入文件流向命令，大于号表示命令产生的数据流向文件  &lt;/p&gt;
+&lt;p&gt;两个大于号（&amp;gt;&amp;gt;）表示附加数据 &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-文件权限</title>
@@ -462,32 +486,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变。&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rm (选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：强制删除文件或目录；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i：删除已有文件或目录之前先询问用户；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--preserve-root：不对根目录进行递归操作；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示指令的详细执行过程。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-mv命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-mv%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-mv命令/</id>
-    <published>2018-05-15T05:15:00.000Z</published>
-    <updated>2018-05-15T05:49:25.220Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来对文件或目录重新命名，或者将文件从一个目录移到另一个目录中。source表示源文件或目录，target表示目标文件或目录。如果将一个文件移到一个已经存在的目标文件中，则目标文件的内容将被覆盖。  &lt;/p&gt;
-&lt;p&gt;mv命令可以用来将源文件移至一个目标文件中，或将一组文件移至一个目标目录中。源文件被移至目标文件有两种不同的结果：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果目标文件是到某一目录文件的路径，源文件会被移到此目录下，且文件名不变。&lt;/li&gt;
-&lt;li&gt;如果目标文件不是目录文件，则源文件名（只能有一个）会变为此目标文件名，并覆盖己存在的同名文件。如果源文件和目标文件在同一个目录下，mv的作用就是改文件名。当目标文件是目录文件时，源文件或目录参数可以有多个，则所有的源文件都会被移至目标文件中。所有移到该目录下的文件都将保留以前的文件名。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

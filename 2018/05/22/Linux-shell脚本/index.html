@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="Linux-shell脚本"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/tags/Linux/page/2/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,11 +90,7 @@
 
 
 
-    <title>
-  
-    Linux · ZJX
-  
-</title>
+    <title> Linux-shell脚本 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -206,257 +202,115 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux-shell脚本
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-22
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
     
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#反引号"><span class="toc-text">反引号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向输入输出"><span class="toc-text">重定向输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道"><span class="toc-text">管道</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号"></a>反引号</h3><p>反引号在 ESC 按键下面的按键上，和波浪号 ~ 同一按键  </p>
+<p>反引号允许将 shell 命令的输出赋值给变量  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">testing = &apos;date&apos;</span><br><span class="line"># 格式化 date 命令的输出结构复制给 testing</span><br><span class="line">testing = &apos;date +%y%m%d&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="重定向输入输出"><a href="#重定向输入输出" class="headerlink" title="重定向输入输出"></a>重定向输入输出</h3><p>命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号表示数据从输入文件流向命令，大于号表示命令产生的数据流向文件  </p>
+<p>两个大于号（&gt;&gt;）表示附加数据 </p>
+<a id="more"></a>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>管道可以将一个命令的输出重定向到另一条命令，符号是竖条操作符（|）  </p>
+<p>Linux系统实际上同时运行两条命令，并在系统内部把它们连接在一起。第一条命令生成输出时，输出就立即发送给第二条命令。没有使用中间文件或者缓冲区传递数据  </p>
+<p>命令中可以使用数量不限的管道符，但行长度最多是255个字符  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | sort &gt; rpm.list</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
 
     
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-file命令/" class="archive-post-link">
-            Linux-file命令
-          </a>
-        </span>
-      </div>
-    
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-stat命令/" class="archive-post-link">
-            Linux-stat命令
-          </a>
-        </span>
-      </div>
-    
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/">http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-rmdir命令/" class="archive-post-link">
-            Linux-rmdir命令
-          </a>
-        </span>
-      </div>
-    
+
+
       
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-mkdir命令/" class="archive-post-link">
-            Linux-mkdir命令
-          </a>
-        </span>
-      </div>
-    
       
+    
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-rm命令/" class="archive-post-link">
-            Linux-rm命令
-          </a>
-        </span>
-      </div>
     
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-mv命令/" class="archive-post-link">
-            Linux-mv命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-ln命令/" class="archive-post-link">
-            Linux-ln命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/15/Linux-理解Linux的硬链接与软链接/" class="archive-post-link">
-            Linux-理解Linux的硬链接与软链接
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-cp命令/" class="archive-post-link">
-            Linux-cp命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-touch命令/" class="archive-post-link">
-            Linux-touch命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-ls命令/" class="archive-post-link">
-            Linux-ls命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-cd命令/" class="archive-post-link">
-            Linux-cd命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-通用Linux目录名称/" class="archive-post-link">
-            Linux-通用Linux目录名称
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-head命令/" class="archive-post-link">
-            Linux-head命令
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2018-05-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/14/Linux-cut命令/" class="archive-post-link">
-            Linux-cut命令
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
-      <a class="prev" href="/tags/Linux/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
-      </a>
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
     
     
-      <a class="next" href="/tags/Linux/page/3/">
-        <span class="next-text">下一页</span>
+      <a class="next" href="/2018/05/21/Linux-文件权限/">
+        <span class="next-text nav-default">Linux-文件权限</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
