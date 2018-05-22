@@ -230,7 +230,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#if-then"><span class="toc-text">if-then</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-then-else"><span class="toc-text">if-then-else</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌套-if-语句"><span class="toc-text">嵌套 if 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-命令"><span class="toc-text">test 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复合条件检查"><span class="toc-text">复合条件检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高级特征"><span class="toc-text">高级特征</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#双圆括号"><span class="toc-text">双圆括号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#双方括号"><span class="toc-text">双方括号</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#case"><span class="toc-text">case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#if-then"><span class="toc-text">if-then</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-then-else"><span class="toc-text">if-then-else</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#嵌套-if-语句"><span class="toc-text">嵌套 if 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-命令"><span class="toc-text">test 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数值比较"><span class="toc-text">数值比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串比较"><span class="toc-text">字符串比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文件比较"><span class="toc-text">文件比较</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复合条件检"><span class="toc-text">复合条件检</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高级特征"><span class="toc-text">高级特征</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#双圆括号"><span class="toc-text">双圆括号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#双方括号"><span class="toc-text">双方括号</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#case"><span class="toc-text">case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
 
@@ -245,7 +245,135 @@
 <p>bash shell 会按顺序执行 if 语句，只有第一个返回 0 退出状态的命令会导致 then 部分命令被执行  </p>
 <h3 id="test-命令"><a href="#test-命令" class="headerlink" title="test 命令"></a>test 命令</h3><p>test 命令提供一种检测 if-then 语句不同条件的方法。如果 test 命令中列出的条件评估值为 true，test 命令以 0 退出状态码退出 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if test condition</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ condition ]</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<h3 id="复合条件检查"><a href="#复合条件检查" class="headerlink" title="复合条件检查"></a>复合条件检查</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ condition1 ] &amp;&amp; [ condition2 ]</span><br><span class="line">[ condition1 ] || [ condition2 ]</span><br></pre></td></tr></table></figure>
+<h4 id="数值比较"><a href="#数值比较" class="headerlink" title="数值比较"></a>数值比较</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">比较</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">n1 -eq n2</td>
+<td style="text-align:center">检查 n1 是否等于 n2</td>
+</tr>
+<tr>
+<td style="text-align:center">n1 -ge n2</td>
+<td style="text-align:center">检查 n1 是否大于或等于 n2</td>
+</tr>
+<tr>
+<td style="text-align:center">n1 -gt n2</td>
+<td style="text-align:center">检查 n1 是否大于 n2</td>
+</tr>
+<tr>
+<td style="text-align:center">n1 -le n2</td>
+<td style="text-align:center">检查 n1 是否小于或等于 n2</td>
+</tr>
+<tr>
+<td style="text-align:center">n1 -lt n2</td>
+<td style="text-align:center">检查 n1 是否小于 n2</td>
+</tr>
+<tr>
+<td style="text-align:center">n1 -ne n2</td>
+<td style="text-align:center">检查 n1 是否不等于 n2</td>
+</tr>
+</tbody>
+</table>
+<p>只能比较整数数字</p>
+<h4 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">比较</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str1 = str2</td>
+<td style="text-align:center">检查 str1 与 str2 是否相同</td>
+</tr>
+<tr>
+<td style="text-align:center">str1 != str2</td>
+<td style="text-align:center">检查 str1 与 str2 是否不同</td>
+</tr>
+<tr>
+<td style="text-align:center">str1 &lt; str2</td>
+<td style="text-align:center">检查 str1 是否小于 str2</td>
+</tr>
+<tr>
+<td style="text-align:center">str1 &gt; str2</td>
+<td style="text-align:center">检查 str1 是否大于 str2</td>
+</tr>
+<tr>
+<td style="text-align:center">-n str1</td>
+<td style="text-align:center">检查 str1 的长度是否大于 0</td>
+</tr>
+<tr>
+<td style="text-align:center">-z str1</td>
+<td style="text-align:center">检查 str1 的长度是否为 0</td>
+</tr>
+</tbody>
+</table>
+<p>比较大小时需要注意：</p>
+<ul>
+<li>大于和小于符号需要转义</li>
+<li>大于和小于的顺序与在 sort 命令中的顺序不同，test 命令使用标准的 ASCII 排序，sort 命令使用为系统当前语言设置定义的排列顺序  </li>
+</ul>
+<h4 id="文件比较"><a href="#文件比较" class="headerlink" title="文件比较"></a>文件比较</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">比较</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-d file</td>
+<td style="text-align:center">检查 file 是否存在并且是一个目录</td>
+</tr>
+<tr>
+<td style="text-align:center">-e file</td>
+<td style="text-align:center">检查 file 是否存在</td>
+</tr>
+<tr>
+<td style="text-align:center">-f file</td>
+<td style="text-align:center">检查 file 是否存在并且是一个文件</td>
+</tr>
+<tr>
+<td style="text-align:center">-r file</td>
+<td style="text-align:center">检查 file 是否存在并且可读</td>
+</tr>
+<tr>
+<td style="text-align:center">-s file</td>
+<td style="text-align:center">检查 file 是否存在不为空</td>
+</tr>
+<tr>
+<td style="text-align:center">-w file</td>
+<td style="text-align:center">检查 file 是否存在并且可写</td>
+</tr>
+<tr>
+<td style="text-align:center">-x file</td>
+<td style="text-align:center">检查 file 是否存在并且可执行</td>
+</tr>
+<tr>
+<td style="text-align:center">-O file</td>
+<td style="text-align:center">检查 file 是否存在并且被当前用户拥有</td>
+</tr>
+<tr>
+<td style="text-align:center">-G file</td>
+<td style="text-align:center">检查 file 是否存在并且默认组是否为当前用户组</td>
+</tr>
+<tr>
+<td style="text-align:center">file1 -nt file2</td>
+<td style="text-align:center">检查 file1 是否比 file2 新</td>
+</tr>
+<tr>
+<td style="text-align:center">file1 -ot file2</td>
+<td style="text-align:center">检查 file1 是否比 file2 旧</td>
+</tr>
+</tbody>
+</table>
+<h3 id="复合条件检"><a href="#复合条件检" class="headerlink" title="复合条件检"></a>复合条件检</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ condition1 ] &amp;&amp; [ condition2 ]</span><br><span class="line">[ condition1 ] || [ condition2 ]</span><br></pre></td></tr></table></figure>
 <h3 id="高级特征"><a href="#高级特征" class="headerlink" title="高级特征"></a>高级特征</h3><h4 id="双圆括号"><a href="#双圆括号" class="headerlink" title="双圆括号"></a>双圆括号</h4><p>双圆括号允许在比较中包含高级数据公式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(( expression ))</span><br></pre></td></tr></table></figure>
 <table>
@@ -257,58 +385,58 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><code>val++</code></td>
+<td style="text-align:center">val++</td>
 <td style="text-align:center">后增量</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>val--</code></td>
+<td style="text-align:center">val–</td>
 <td style="text-align:center">后减量</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>++val</code></td>
+<td style="text-align:center">++val</td>
 <td style="text-align:center">前增量</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>--val</code></td>
+<td style="text-align:center">–val</td>
 <td style="text-align:center">前减量</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>!</code></td>
+<td style="text-align:center">!</td>
 <td style="text-align:center">逻辑否定</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>~</code></td>
+<td style="text-align:center">~</td>
 <td style="text-align:center">逐位取反</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>**</code></td>
+<td style="text-align:center">**</td>
 <td style="text-align:center">取幂</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>&lt;&lt;</code></td>
+<td style="text-align:center">&lt;&lt;</td>
 <td style="text-align:center">逐位左移</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>&gt;&gt;</code></td>
+<td style="text-align:center">&gt;&gt;</td>
 <td style="text-align:center">逐位右移</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>&amp;</code></td>
+<td style="text-align:center">&amp;</td>
 <td style="text-align:center">逐位布尔逻辑与</td>
 </tr>
 <tr>
-<td style="text-align:center">`</td>
-<td style="text-align:center">`</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 <td>逐位布尔逻辑或</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>&amp;&amp;</code></td>
+<td style="text-align:center">&amp;&amp;</td>
 <td style="text-align:center">逻辑与</td>
 </tr>
 <tr>
-<td style="text-align:center">`</td>
 <td style="text-align:center"></td>
-<td>`</td>
+<td style="text-align:center"></td>
+<td></td>
 <td>逻辑或</td>
 </tr>
 </tbody>
