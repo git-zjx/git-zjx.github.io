@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-21T09:10:02.536Z</updated>
+  <updated>2018-05-22T01:29:05.095Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-文件权限</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-文件权限/</id>
+    <published>2018-05-21T09:25:14.000Z</published>
+    <updated>2018-05-22T01:29:05.095Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# ll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total 24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&amp;gt; usr/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  11 root root 4096 May  7 09:10 data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  19 root root 3040 May 22 08:30 dev&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  76 root root 8192 May 22 08:30 etc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   4 root root   29 May 21 16:04 home&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;ll 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-表示文件&lt;/li&gt;
+&lt;li&gt;d 表示目录&lt;/li&gt;
+&lt;li&gt;l 表示链接&lt;/li&gt;
+&lt;li&gt;c 表示字符设备&lt;/li&gt;
+&lt;li&gt;b 表示块设备&lt;/li&gt;
+&lt;li&gt;n 表示网络设备&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-用户组</title>
@@ -459,32 +488,6 @@
 &lt;li&gt;如果目标文件不是目录文件，则源文件名（只能有一个）会变为此目标文件名，并覆盖己存在的同名文件。如果源文件和目标文件在同一个目录下，mv的作用就是改文件名。当目标文件是目录文件时，源文件或目录参数可以有多个，则所有的源文件都会被移至目标文件中。所有移到该目录下的文件都将保留以前的文件名。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-ln命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-ln%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-ln命令/</id>
-    <published>2018-05-15T03:17:01.000Z</published>
-    <updated>2018-05-15T03:25:54.468Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来为文件创件连接，连接类型分为硬连接和符号连接两种，默认的连接类型是硬连接。如果要创建符号连接必须使用「-s」选项。 
-        
-      
     
     </summary>
     
