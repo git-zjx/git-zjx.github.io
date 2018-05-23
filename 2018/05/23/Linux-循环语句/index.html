@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Linux-循环语句"/>
+
+
+
+
+  <meta name="keywords" content="PHP,Python,Linux,Nginx,MySQL,MongoDB,Redis" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ZJX">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/23/Linux-循环语句/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?150f30f69a61ad717e87a753716a2653";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Linux-循环语句 - ZJX </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ZJX</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">ZJX</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux-循环语句
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-23
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#for-命令"><span class="toc-text">for 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#读取列表的值"><span class="toc-text">读取列表的值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#从变量读取列表"><span class="toc-text">从变量读取列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#读取命令中的值"><span class="toc-text">读取命令中的值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#改变字段分隔符"><span class="toc-text">改变字段分隔符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用通配符读取目录"><span class="toc-text">使用通配符读取目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c-式的-for-命令"><span class="toc-text">c 式的 for 命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="for-命令"><a href="#for-命令" class="headerlink" title="for 命令"></a>for 命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for var in list</span><br><span class="line">do </span><br><span class="line">    commands</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h4 id="读取列表的值"><a href="#读取列表的值" class="headerlink" title="读取列表的值"></a>读取列表的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in Alabama Alaska Arizona Arkansas</span><br><span class="line">do </span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>最后一次迭代之后，变量 $test 在 shell 脚本的其他部分中仍有效，仍是迭代的最后一个值   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in I don\&apos;t know if &quot;this&apos;s&quot; work</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>shell 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in &quot;New York&quot; Nevada</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>for 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
+<a id="more"></a>
+<h4 id="从变量读取列表"><a href="#从变量读取列表" class="headerlink" title="从变量读取列表"></a>从变量读取列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list=&quot;A B C D&quot;</span><br><span class="line"></span><br><span class="line">for test in $list</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h4 id="读取命令中的值"><a href="#读取命令中的值" class="headerlink" title="读取命令中的值"></a>读取命令中的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file=&quot;states&quot;</span><br><span class="line"></span><br><span class="line">for state in `cat $file`</span><br><span class="line">do </span><br><span class="line">    echo $state</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>使用反引号字符来执行生成输出的任何命令，然后在 for 命令中使用命令的输出  </p>
+<h4 id="改变字段分隔符"><a href="#改变字段分隔符" class="headerlink" title="改变字段分隔符"></a>改变字段分隔符</h4><p>环境变量 IFS 定义了 bash shell 用作字段分隔符的字符列表。默认情况下，bash shell 将下面的字符看作字段分隔符：</p>
+<ul>
+<li>空格</li>
+<li>制表符</li>
+<li>换行符</li>
+</ul>
+<p>如果 bash shell 在数据中遇到这几个字符中的一种，它就会认为你正在列表中启动新的数据字符。当处理能够包含空格的数据时，就会出现干扰  </p>
+<p>可以在 shell 脚本中暂时更改环境变量 IFS 的值，限制 bash shell 看作是字段分隔符的字符   </p>
+<p>可以在更改原始 IFS 值之前将它保存起来，当需要运用时会服，防止忘记</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IFS.OLD=$IFS</span><br><span class="line">IFS=$&apos;\n&apos;</span><br><span class="line">IFS=$IFS.OLD</span><br></pre></td></tr></table></figure>
+<p>如果想指定多个 IFS 字符，只需将它们在赋值行中串连起来即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 该赋值使用了换行符、冒号、分号和双引号作为字段分隔符</span><br><span class="line">IFS=$&apos;\n&apos;:;&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="使用通配符读取目录"><a href="#使用通配符读取目录" class="headerlink" title="使用通配符读取目录"></a>使用通配符读取目录</h4><p>文件通配是生成与指定通配符匹配的文件或路径名的过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for file in /home/rich/test/*</span><br><span class="line">do</span><br><span class="line">    if [ -d &quot;$file&quot; ]</span><br><span class="line">    then</span><br><span class="line">        echo &quot;$file is a dic&quot;</span><br><span class="line">    elif [ -f &quot;$file&quot; ]</span><br><span class="line">    then</span><br><span class="line">        echo &quot;$file is a file&quot;</span><br><span class="line">    fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h4 id="c-式的-for-命令"><a href="#c-式的-for-命令" class="headerlink" title="c 式的 for 命令"></a>c 式的 for 命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (( variable assignment; condition; itertion process ))</span><br></pre></td></tr></table></figure>
+<p>c 式的 for 命令有以下特点：</p>
+<ul>
+<li>变量的赋值可以包含空格</li>
+<li>条件中的变量不以美元符号做前缀</li>
+<li>迭代处理式不使用 expr 命令格式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (( i=1; i &lt;= 10; i++ ))</span><br><span class="line">do</span><br><span class="line">    echo $i</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>允许使用多个变量迭代，可以为每个变量定义不同的迭代过程，但只可以使用一个条件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (( a=1, b=10; a &lt;= 10; a++,b-- ))</span><br><span class="line">do</span><br><span class="line">    echo &quot;$a-$b&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/23/Linux-循环语句/">http://www.zhaojiaxing.top/2018/05/23/Linux-循环语句/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/05/22/Linux-条件语句/">
+        <span class="next-text nav-default">Linux-条件语句</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:977904037@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/git-zjx" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.zhihu.com/people/zhao-jiaxing/" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ZJX</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>
