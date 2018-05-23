@@ -47,17 +47,14 @@
     <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/"/>
     <id>http://www.zhaojiaxing.top/2018/05/22/Linux-条件语句/</id>
     <published>2018-05-22T05:26:39.000Z</published>
-    <updated>2018-05-22T07:18:58.940Z</updated>
+    <updated>2018-05-23T01:44:09.823Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;if-then&quot;&gt;&lt;a href=&quot;#if-then&quot; class=&quot;headerlink&quot; title=&quot;if-then&quot;&gt;&lt;/a&gt;if-then&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
+      &lt;h3 id=&quot;if-then&quot;&gt;&lt;a href=&quot;#if-then&quot; class=&quot;headerlink&quot; title=&quot;if-then&quot;&gt;&lt;/a&gt;if-then&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if command; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，那么 then 后面的命令不执行  &lt;/p&gt;
+&lt;h3 id=&quot;if-then-else&quot;&gt;&lt;a href=&quot;#if-then-else&quot; class=&quot;headerlink&quot; title=&quot;if-then-else&quot;&gt;&lt;/a&gt;if-then-else&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;else&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，将执行 else 后面的所有命令   &lt;/p&gt;
     
     </summary>
     
