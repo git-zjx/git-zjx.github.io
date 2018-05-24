@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-24T06:53:23.263Z</updated>
+  <updated>2018-05-24T06:57:14.833Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="http://www.zhaojiaxing.top/2018/05/23/Linux-%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/"/>
     <id>http://www.zhaojiaxing.top/2018/05/23/Linux-处理用户输入/</id>
     <published>2018-05-23T07:01:16.000Z</published>
-    <updated>2018-05-24T06:53:23.263Z</updated>
+    <updated>2018-05-24T06:57:14.833Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;命令行参数&quot;&gt;&lt;a href=&quot;#命令行参数&quot; class=&quot;headerlink&quot; title=&quot;命令行参数&quot;&gt;&lt;/a&gt;命令行参数&lt;/h3&gt;&lt;h4 id=&quot;读取参数&quot;&gt;&lt;a href=&quot;#读取参数&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;命令行参数&quot;&gt;&lt;a href=&quot;#命令行参数&quot; class=&quot;headerlink&quot; title=&quot;命令行参数&quot;&gt;&lt;/a&gt;命令行参数&lt;/h3&gt;&lt;h4 id=&quot;读取参数&quot;&gt;&lt;a href=&quot;#读取参数&quot; class=&quot;headerlink&quot; title=&quot;读取参数&quot;&gt;&lt;/a&gt;读取参数&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bash shell&lt;/code&gt; 将在命令行输入的所有参数赋值给一些特殊变量，这些变量称为位置参数。位置参数通过标准数字表示，其中 &lt;code&gt;$0&lt;/code&gt; 为程序名称，&lt;code&gt;$1&lt;/code&gt; 为第一个参数，&lt;code&gt;$2&lt;/code&gt; 为第二个参数，依次类推，直到 &lt;code&gt;$9&lt;/code&gt; 为第九个参数。如果脚本需要的命令行参数多于 &lt;code&gt;9&lt;/code&gt; 个，那么之后的变量须使用大括号括起来，如 &lt;code&gt;${10}&lt;/code&gt;。  &lt;/p&gt;
+&lt;p&gt;参数在命令行中使用空格分隔，如果参数中包含空格，必须使用引号 &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cat test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo Hello $1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ test Rich&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hello Rich&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ test &amp;apos;Rich Mall&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hell Rich Mall&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
