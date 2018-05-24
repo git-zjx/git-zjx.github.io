@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="Linux-处理用户输入"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/05/23/Linux-处理用户输入/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> ZJX </title>
+    <title> Linux-处理用户输入 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -201,14 +201,12 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
-      
+  
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/05/23/Linux-处理用户输入/">Linux-处理用户输入</a>
+          Linux-处理用户输入
         
       </h1>
 
@@ -229,14 +227,17 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行参数"><span class="toc-text">命令行参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#读取参数"><span class="toc-text">读取参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#读取程序名称"><span class="toc-text">读取程序名称</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊的参数变量"><span class="toc-text">特殊的参数变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参数计数"><span class="toc-text">参数计数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取所有数据"><span class="toc-text">获取所有数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移位"><span class="toc-text">移位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理选项"><span class="toc-text">处理选项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用-getopt-命令"><span class="toc-text">使用 getopt 命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#getopts-命令"><span class="toc-text">getopts 命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
 
     <div class="post-content">
       
-        
-        
-
-        
-          <h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><h4 id="读取参数"><a href="#读取参数" class="headerlink" title="读取参数"></a>读取参数</h4><p>bash shell 将在命令行输入的所有参数赋值给一些特殊变量，这些变量称为位置参数。位置参数通过标准数字表示，其中 $0 为程序名称，$1 为第一个参数，$2 为第二个参数，依次类推，直到 $9 为第九个参数。如果脚本需要的命令行参数多于 9 个，那么之后的变量须使用大括号括起来，如 ${10}。  </p>
+        <h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><h4 id="读取参数"><a href="#读取参数" class="headerlink" title="读取参数"></a>读取参数</h4><p>bash shell 将在命令行输入的所有参数赋值给一些特殊变量，这些变量称为位置参数。位置参数通过标准数字表示，其中 $0 为程序名称，$1 为第一个参数，$2 为第二个参数，依次类推，直到 $9 为第九个参数。如果脚本需要的命令行参数多于 9 个，那么之后的变量须使用大括号括起来，如 ${10}。  </p>
 <p>参数在命令行中使用空格分隔，如果参数中包含空格，必须使用引号 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cat test</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">echo Hello $1</span><br><span class="line"></span><br><span class="line">$ test Rich</span><br><span class="line">Hello Rich</span><br><span class="line"></span><br><span class="line">$ test &apos;Rich Mall&apos;</span><br><span class="line">Hell Rich Mall</span><br></pre></td></tr></table></figure>
 <h4 id="读取程序名称"><a href="#读取程序名称" class="headerlink" title="读取程序名称"></a>读取程序名称</h4><p>使用参数 $0 可以确定 shell 从命令行启动的程序的名称。但传递给变量 $0 的字符串实际上是程序的完整路径，而不仅仅是程序名  </p>
@@ -277,537 +278,69 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># cat test15</span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">while getopts :ab:c opt</span><br><span class="line">do</span><br><span class="line">	case &quot;$opt&quot; in</span><br><span class="line">	a) echo &quot;Found the -a option&quot;;;</span><br><span class="line">	b) echo &quot;Found the -b option, with value $OPTARG&quot;;;</span><br><span class="line">	c) echo &quot;Found the -c option&quot;;;</span><br><span class="line">	d) echo &quot;Found the -d option&quot;;;</span><br><span class="line">	*) echo &quot;Unknown option: $opt&quot;;;</span><br><span class="line">	esac</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">shift $[ $OPTIND - 1 ]</span><br><span class="line"></span><br><span class="line">count=1</span><br><span class="line"></span><br><span class="line">for param in &quot;$@&quot;</span><br><span class="line">do</span><br><span class="line">	echo &quot;Parameter $count: $param&quot;</span><br><span class="line">	count=$[ $count + 1 ]</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">#./test15 -a -b test1 -d test2 test3 test4</span><br><span class="line">Found the -a option</span><br><span class="line">Found the -b option, with value test1</span><br><span class="line">Unknown option: ?</span><br><span class="line">Parameter 1: test2</span><br><span class="line">Parameter 2: test3</span><br><span class="line">Parameter 3: test4</span><br></pre></td></tr></table></figure>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
 
-        
       
     </div>
 
     
-
-    
-
-  </article>
-
-    
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/23/Linux-循环语句/">Linux-循环语句</a>
-        
-      </h1>
+      
 
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-23
-        </span>
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/05/23/Linux-处理用户输入/">http://www.zhaojiaxing.top/2018/05/23/Linux-处理用户输入/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
         
-          <div class="post-category">
+          <div class="post-tags">
             
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="for-命令"><a href="#for-命令" class="headerlink" title="for 命令"></a>for 命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for var in list</span><br><span class="line">do </span><br><span class="line">    commands</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<h4 id="读取列表的值"><a href="#读取列表的值" class="headerlink" title="读取列表的值"></a>读取列表的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in Alabama Alaska Arizona Arkansas</span><br><span class="line">do </span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>最后一次迭代之后，变量 $test 在 shell 脚本的其他部分中仍有效，仍是迭代的最后一个值   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in I don\&apos;t know if &quot;this&apos;s&quot; work</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>shell 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in &quot;New York&quot; Nevada</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>for 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
-          <div class="read-more">
-            <a href="/2018/05/23/Linux-循环语句/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/22/Linux-条件语句/">Linux-条件语句</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-22
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
+              <a href="/tags/Linux/">Linux</a>
             
           </div>
         
         
-      </div>
-    </header>
-
+        
+  <nav class="post-nav">
     
     
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="if-then"><a href="#if-then" class="headerlink" title="if-then"></a>if-then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if command; then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，那么 then 后面的命令不执行  </p>
-<h3 id="if-then-else"><a href="#if-then-else" class="headerlink" title="if-then-else"></a>if-then-else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then </span><br><span class="line">    commands</span><br><span class="line">else</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，将执行 else 后面的所有命令   </p>
-          <div class="read-more">
-            <a href="/2018/05/22/Linux-条件语句/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/22/Linux-shell脚本/">Linux-shell脚本</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-22
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号"></a>反引号</h3><p>反引号在 ESC 按键下面的按键上，和波浪号 ~ 同一按键  </p>
-<p>反引号允许将 shell 命令的输出赋值给变量  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">testing = &apos;date&apos;</span><br><span class="line"># 格式化 date 命令的输出结构复制给 testing</span><br><span class="line">testing = &apos;date +%y%m%d&apos;</span><br></pre></td></tr></table></figure>
-<h3 id="重定向输入输出"><a href="#重定向输入输出" class="headerlink" title="重定向输入输出"></a>重定向输入输出</h3><p>命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号表示数据从输入文件流向命令，大于号表示命令产生的数据流向文件  </p>
-<p>两个大于号（&gt;&gt;）表示附加数据 </p>
-          <div class="read-more">
-            <a href="/2018/05/22/Linux-shell脚本/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-文件权限/">Linux-文件权限</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># ll</span><br><span class="line">total 24</span><br><span class="line">drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup</span><br><span class="line">lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&gt; usr/bin</span><br><span class="line">dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot</span><br><span class="line">drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf</span><br><span class="line">drwxr-xr-x.  11 root root 4096 May  7 09:10 data</span><br><span class="line">drwxr-xr-x.  19 root root 3040 May 22 08:30 dev</span><br><span class="line">drwxr-xr-x.  76 root root 8192 May 22 08:30 etc</span><br><span class="line">drwxr-xr-x.   4 root root   29 May 21 16:04 home</span><br></pre></td></tr></table></figure>
-<p>ll 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：</p>
-<ul>
-<li>-表示文件</li>
-<li>d 表示目录</li>
-<li>l 表示链接</li>
-<li>c 表示字符设备</li>
-<li>b 表示块设备</li>
-<li>n 表示网络设备</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-文件权限/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-用户组/">Linux-用户组</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-
-        
-          <h3 id="etc-group-文件"><a href="#etc-group-文件" class="headerlink" title="/etc/group 文件"></a>/etc/group 文件</h3><p>/etc/group 文件包含关于系统所使用的各用户组的信息，包含 4 个字段：</p>
-<ul>
-<li>用户组名称</li>
-<li>用户组密码</li>
-<li>GID</li>
-<li>属于用户组的用户账户列表</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:</span><br><span class="line">bin:x:1:</span><br><span class="line">daemon:x:2:</span><br><span class="line">sys:x:3:</span><br><span class="line">adm:x:4:</span><br><span class="line">tty:x:5:</span><br><span class="line">disk:x:6:</span><br><span class="line">lp:x:7:</span><br><span class="line">mem:x:8:</span><br><span class="line">kmem:x:9:</span><br></pre></td></tr></table></figure>
-<p>用于系统账户的用户组将分配 500 以下的 GID，而用户的用户组将从 500 开始分配 GID   </p>
-<p>通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。</p>
-<p>当用户使用某个用户组作为 /etc/passwd 文件里的默认用户组，用户账户不会作为成员出现在 /etc/group 中  </p>
-<h3 id="创建新用户组"><a href="#创建新用户组" class="headerlink" title="创建新用户组"></a>创建新用户组</h3><p>groupadd 命令用于创建用户组。创建新用户组时，系统默认不会分配任何用户。要添加新用户，需使用 usermod 命令  </p>
-<h3 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h3><p>groupmod 用于修改用户组 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-g：修改 GID</span><br><span class="line">-n：修改用户组名称</span><br></pre></td></tr></table></figure>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/1130136248wlxk/articles/6264419.html" target="_blank" rel="noopener">linux下cat命令详解</a><br><a href="https://www.cnblogs.com/cisum/p/8005641.html" target="_blank" rel="noopener">Linux 用户和用户组管理</a></p>
-
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-用户/">Linux-用户</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="etc-passwd-文件"><a href="#etc-passwd-文件" class="headerlink" title="/etc/passwd 文件"></a>/etc/passwd 文件</h3><p>将登录名与相应的 UID 值进行匹配，包含以下信息：</p>
-<ul>
-<li>登录用户名</li>
-<li>用户密码</li>
-<li>用户账户的数值 UID</li>
-<li>用户账户的数值用户组 ID（GID）</li>
-<li>用户账户的文本描述（称为注释字段）</li>
-<li>用户 HOME 目录的位置</li>
-<li>用户的默认 shell</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">bin:x:1:1:bin:/bin:/sbin/nologin</span><br><span class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span><br><span class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</span><br><span class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span><br><span class="line">sync:x:5:0:sync:/sbin:/bin/sync</span><br><span class="line">shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</span><br></pre></td></tr></table></figure>
-<p>根用户账户是 Linux 系统的管理员，它的 UID 始终为 0。Linux 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  </p>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-用户/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-启动文件/">Linux-启动文件</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="登录-shell"><a href="#登录-shell" class="headerlink" title="登录 shell"></a>登录 shell</h3><p>当登录到 Linux 系统中时，bash shell 将作为登录 shell 启动。登录 shell 将查找 4 个不同的启动文件来处理其中的命令。处理文件的顺序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">$HOME/.bash_profile</span><br><span class="line">$HOME/.bash_login</span><br><span class="line">$HOME/.profile</span><br></pre></td></tr></table></figure></p>
-<h4 id="etc-profile-文件"><a href="#etc-profile-文件" class="headerlink" title="/etc/profile 文件"></a>/etc/profile 文件</h4><p>bash shell 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 /etc/profile.d 目录中的特定于应用程序的启动文件</p>
-<h4 id="HOME-启动文件"><a href="#HOME-启动文件" class="headerlink" title="$HOME 启动文件"></a>$HOME 启动文件</h4><p>这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 Linux 发行版只用其一  </p>
-<p>.bash_profile 启动文件首先将检查 HOME 目录中是否存在另一个名称为 .bashrc 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 PATH 环境变量中，目的是提供方在 HOME 目录中放置可执行文件的公共位置 </p>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-启动文件/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-环境变量/">Linux-环境变量</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>一般是指在操作系统中用来指定操作系统运行环境的一些参数</p>
-<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><ul>
-<li>全局变量</li>
-<li>本地变量</li>
-</ul>
-<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>在 shell 会话和该 shell 产生的任何子进程中都可见<br>系统环境变量始终使用全大写字母来区别于普通用户环境变量</p>
-<h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><p><code>printenv</code> 查看所有全局变量<br><code>echo $HOME</code> 查看指定全局变量</p>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-环境变量/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/18/Linux-tar命令/">Linux-tar命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-18
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>为linux的文件和目录创建档案</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">-A或--catenate：新增文件到以存在的备份文件；</span><br><span class="line">-B：设置区块大小；</span><br><span class="line">-c或--create：建立新的备份文件；</span><br><span class="line">-C &lt;目录&gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。</span><br><span class="line">-d：记录文件的差别；</span><br><span class="line">-x或--extract或--get：从备份文件中还原文件；</span><br><span class="line">-t或--list：列出备份文件的内容；</span><br><span class="line">-z或--gzip或--ungzip：通过 gzip 指令处理备份文件；</span><br><span class="line">-Z或--compress或--uncompress：通过 compress 指令处理备份文件；</span><br><span class="line">-f&lt;备份文件&gt;或--file=&lt;备份文件&gt;：指定备份文件；</span><br><span class="line">-v或--verbose：显示指令执行过程；</span><br><span class="line">-r：添加文件到已经压缩的文件；</span><br><span class="line">-u：添加改变了和现有的文件到已经存在的压缩文件；</span><br><span class="line">-j：支持 bzip2 解压文件；</span><br><span class="line">-v：显示操作过程；</span><br><span class="line">-l：文件系统边界设置；</span><br><span class="line">-k：保留原有文件不覆盖；</span><br><span class="line">-m：保留文件不被覆盖；</span><br><span class="line">-w：确认压缩文件的正确性；</span><br><span class="line">-p或--same-permissions：用原来的文件权限还原文件；</span><br><span class="line">-P或--absolute-names：文件名使用绝对名称，不移除文件名称前的「/」号；</span><br><span class="line">-N &lt;日期格式&gt; 或 --newer=&lt;日期时间&gt;：只将较指定日期更新的文件保存到备份文件里；</span><br><span class="line">--exclude=&lt;范本样式&gt;：排除符合范本样式的文件。</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/18/Linux-tar命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
-    
-      <a class="next" href="/page/2/">
-        <span class="next-text">下一页</span>
+      <a class="next" href="/2018/05/23/Linux-循环语句/">
+        <span class="next-text nav-default">Linux-循环语句</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
@@ -892,6 +425,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     
