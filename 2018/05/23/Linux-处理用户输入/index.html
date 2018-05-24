@@ -278,6 +278,66 @@
 <p><code>getopts</code> 每处理一个选项，环境变量 <code>OPTIND</code> 的值会增加 <code>1</code>，当达到 <code>getopts</code> 处理的末尾时，可以使用 <code>shift</code> 命令和 <code>OPTIND</code> 值进行操作来移动到参数  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># cat test15</span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">while getopts :ab:c opt</span><br><span class="line">do</span><br><span class="line">	case &quot;$opt&quot; in</span><br><span class="line">	a) echo &quot;Found the -a option&quot;;;</span><br><span class="line">	b) echo &quot;Found the -b option, with value $OPTARG&quot;;;</span><br><span class="line">	c) echo &quot;Found the -c option&quot;;;</span><br><span class="line">	d) echo &quot;Found the -d option&quot;;;</span><br><span class="line">	*) echo &quot;Unknown option: $opt&quot;;;</span><br><span class="line">	esac</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">shift $[ $OPTIND - 1 ]</span><br><span class="line"></span><br><span class="line">count=1</span><br><span class="line"></span><br><span class="line">for param in &quot;$@&quot;</span><br><span class="line">do</span><br><span class="line">	echo &quot;Parameter $count: $param&quot;</span><br><span class="line">	count=$[ $count + 1 ]</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">#./test15 -a -b test1 -d test2 test3 test4</span><br><span class="line">Found the -a option</span><br><span class="line">Found the -b option, with value test1</span><br><span class="line">Unknown option: ?</span><br><span class="line">Parameter 1: test2</span><br><span class="line">Parameter 2: test3</span><br><span class="line">Parameter 3: test4</span><br></pre></td></tr></table></figure>
 <h3 id="标准化选项"><a href="#标准化选项" class="headerlink" title="标准化选项"></a>标准化选项</h3><p>常用的 <code>Linux</code> 命令行选项</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>-a</code></td>
+<td style="text-align:center">显示所有对象</td>
+<td style="text-align:center"><code>-n</code></td>
+<td style="text-align:center">使用非交互式（批量）模式</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-c</code></td>
+<td style="text-align:center">生成计数</td>
+<td style="text-align:center"><code>-o</code></td>
+<td style="text-align:center">指定一个输出文件来重定向输出</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-d</code></td>
+<td style="text-align:center">指定目录</td>
+<td style="text-align:center"><code>-q</code></td>
+<td style="text-align:center">以 <code>quiet</code> 模式执行</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-e</code></td>
+<td style="text-align:center">展开对象</td>
+<td style="text-align:center"><code>-r</code></td>
+<td style="text-align:center">递归处理目录和文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-f</code></td>
+<td style="text-align:center">指定读取数据的文件</td>
+<td style="text-align:center"><code>-s</code></td>
+<td style="text-align:center">以 <code>silent</code> 模式执行</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-h</code></td>
+<td style="text-align:center">显示命令的帮助信息</td>
+<td style="text-align:center"><code>-v</code></td>
+<td style="text-align:center">生成 <code>verbose</code> 输出</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-i</code></td>
+<td style="text-align:center">忽略大小写</td>
+<td style="text-align:center"><code>-x</code></td>
+<td style="text-align:center">排除和拒绝</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-l</code></td>
+<td style="text-align:center">生成长格式的输出</td>
+<td style="text-align:center"><code>-y</code></td>
+<td style="text-align:center">设置所有提问的回答为 <code>yes</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="获取用户输入"><a href="#获取用户输入" class="headerlink" title="获取用户输入"></a>获取用户输入</h3><h4 id="基本读取"><a href="#基本读取" class="headerlink" title="基本读取"></a>基本读取</h4><p><code>read</code> 命令接受标准输入（键盘）的输入，或其他文件描述符的输入。得到输入后，<code>read</code> 命令将数据放入一个标准变量中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># cat test16</span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">echo -n &quot;Enter your name:&quot;</span><br><span class="line"></span><br><span class="line">read name</span><br><span class="line"></span><br><span class="line">echo &quot;Hello $name&quot;</span><br><span class="line"></span><br><span class="line"># ./test16</span><br><span class="line">Enter your name:zjx</span><br><span class="line">Hello zjx</span><br></pre></td></tr></table></figure>
 <p><code>read</code> 命令的 <code>-p</code> 选项，允许在 <code>read</code> 命令行中直接指定一个提示</p>
@@ -289,7 +349,7 @@
 <h4 id="计时"><a href="#计时" class="headerlink" title="计时"></a>计时</h4><p><code>-t</code> 选项指定 <code>read</code> 命令待输入的秒数，当计时器计时数满时，<code>read</code> 命令返回一个非零退出状态 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># cat test20 </span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if read -t 5 -p &quot;Please enter your name: &quot; name</span><br><span class="line">then</span><br><span class="line">	echo &quot;Hello $name&quot;</span><br><span class="line">else</span><br><span class="line">	echo </span><br><span class="line">	echo &quot;Sorry, too slow&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"># ./test20 </span><br><span class="line">Please enter your name: </span><br><span class="line">Sorry, too slow</span><br><span class="line"></span><br><span class="line"># ./test20 </span><br><span class="line">Please enter your name: zjx</span><br><span class="line">Hello zjx</span><br></pre></td></tr></table></figure>
 <p>还可以设置 <code>read</code> 命令计数输入的字符。当输入的字符达到预定数目时自动退出，并将输入的数据赋值给变量，使用 <code>-n1</code> 表示只要接收到一个字符就退出  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># cat test21</span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">read -n1 -p &quot;Do you want to continue [Y/N]? &quot; answer</span><br><span class="line"></span><br><span class="line">case $answer in</span><br><span class="line">Y | y) echo</span><br><span class="line">	echo &quot;Fine, continue on&quot;;;</span><br><span class="line">N | n) echo</span><br><span class="line">	echo &quot;Ok, bye&quot;</span><br><span class="line">	exit;;</span><br><span class="line">esac</span><br><span class="line"></span><br><span class="line">echo &quot;This is the end fo the script&quot;</span><br><span class="line"></span><br><span class="line"># ./test21</span><br><span class="line">Do you want to continue [Y/N]? N</span><br><span class="line">Ok, bye</span><br><span class="line"># ./test21</span><br><span class="line">Do you want to continue [Y/N]? Y</span><br><span class="line">Fine, continue on</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">#### 默读</span><br><span class="line"></span><br><span class="line">`-s` 选项能够使 `read` 命令中输入的数据不显示在监视器上（实际上，数据时显示的，只是 `read` 命令将文本颜色设置成了与背景相同的颜色）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># cat test21</span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">read -n1 -p &quot;Do you want to continue [Y/N]? &quot; answer</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo &quot;This is the end fo the script&quot;</span><br><span class="line"></span><br><span class="line"># ./test21</span><br><span class="line">Do you want to continue [Y/N]? N</span><br><span class="line">Ok, bye</span><br><span class="line"># ./test21</span><br><span class="line">Do you want to continue [Y/N]? Y</span><br><span class="line">Fine, continue on</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">#### 默读</span><br><span class="line"></span><br><span class="line">`-s` 选项能够使 `read` 命令中输入的数据不显示在监视器上（实际上，数据时显示的，只是 `read` 命令将文本颜色设置成了与背景相同的颜色）</span><br></pre></td></tr></table></figure>
 <h1 id="cat-test22"><a href="#cat-test22" class="headerlink" title="cat test22"></a>cat test22</h1><p>#!/bin/bash</p>
 <p>read -s -p “Enter your password: “ pass</p>
 <p>echo<br>echo “Is your password really $pass ?</p>
