@@ -238,13 +238,13 @@
     <div class="post-content">
       
         <h3 id="if-then"><a href="#if-then" class="headerlink" title="if-then"></a>if-then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if command; then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，那么 then 后面的命令不执行  </p>
+<p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，那么 <code>then</code> 后面的命令不执行  </p>
 <h3 id="if-then-else"><a href="#if-then-else" class="headerlink" title="if-then-else"></a>if-then-else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then </span><br><span class="line">    commands</span><br><span class="line">else</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，将执行 else 后面的所有命令   </p>
+<p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，将执行 <code>else</code> 后面的所有命令   </p>
 <a id="more"></a>
 <h3 id="嵌套-if-语句"><a href="#嵌套-if-语句" class="headerlink" title="嵌套 if 语句"></a>嵌套 if 语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if command1</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">elif command2</span><br><span class="line">then </span><br><span class="line">    more commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>bash shell 会按顺序执行 if 语句，只有第一个返回 0 退出状态的命令会导致 then 部分命令被执行  </p>
-<h3 id="test-命令"><a href="#test-命令" class="headerlink" title="test 命令"></a>test 命令</h3><p>test 命令提供一种检测 if-then 语句不同条件的方法。如果 test 命令中列出的条件评估值为 true，test 命令以 0 退出状态码退出 </p>
+<p><code>bash shell</code> 会按顺序执行 <code>if</code> 语句，只有第一个返回 <code>0</code> 退出状态的命令会导致 <code>then</code> 部分命令被执行  </p>
+<h3 id="test-命令"><a href="#test-命令" class="headerlink" title="test 命令"></a>test 命令</h3><p><code>test</code> 命令提供一种检测 <code>if-then</code> 语句不同条件的方法。如果 <code>test</code> 命令中列出的条件评估值为 <code>true</code>，<code>test</code> 命令以 <code>0</code> 退出状态码退出 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if test condition</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ condition ]</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <h4 id="数值比较"><a href="#数值比较" class="headerlink" title="数值比较"></a>数值比较</h4><table>
 <thead>
@@ -318,7 +318,7 @@
 <p>比较大小时需要注意：</p>
 <ul>
 <li>大于和小于符号需要转义</li>
-<li>大于和小于的顺序与在 sort 命令中的顺序不同，test 命令使用标准的 ASCII 排序，sort 命令使用为系统当前语言设置定义的排列顺序  </li>
+<li>大于和小于的顺序与在 <code>sort</code> 命令中的顺序不同，<code>test</code> 命令使用标准的 <code>ASCII</code> 排序，<code>sort</code> 命令使用为系统当前语言设置定义的排列顺序  </li>
 </ul>
 <h4 id="文件比较"><a href="#文件比较" class="headerlink" title="文件比较"></a>文件比较</h4><table>
 <thead>
@@ -441,10 +441,10 @@
 </table>
 <h4 id="双方括号"><a href="#双方括号" class="headerlink" title="双方括号"></a>双方括号</h4><p>双方括号为字符串比较提供高级功能</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[ expression ]]</span><br></pre></td></tr></table></figure>
-<p>使用在 test 命令中使用的标准字符串比较，同时支持模式匹配。  </p>
+<p>使用在 <code>test</code> 命令中使用的标准字符串比较，同时支持模式匹配。  </p>
 <p>模式匹配中，可以定义与字符串值相匹配的正则表达式   </p>
 <h3 id="case"><a href="#case" class="headerlink" title="case"></a>case</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">case variable in</span><br><span class="line">pattern1 | pattern2) commands1;;</span><br><span class="line">pattern3) commands2;;</span><br><span class="line">*) default commands;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
-<p>case 命令将指定的变量与不同的模式进行比较。如果变量与模式匹配，shell 执行为该模式指定的命令。可以在一行中列出多个模式，使用竖条操作符将每个模式分开。星号是与任何列出的模式都不匹配的值  </p>
+<p><code>case</code> 命令将指定的变量与不同的模式进行比较。如果变量与模式匹配，<code>shell</code> 执行为该模式指定的命令。可以在一行中列出多个模式，使用竖条操作符将每个模式分开。星号是与任何列出的模式都不匹配的值  </p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
 
       

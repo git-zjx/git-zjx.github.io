@@ -292,11 +292,11 @@
         
           <h3 id="for-命令"><a href="#for-命令" class="headerlink" title="for 命令"></a>for 命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for var in list</span><br><span class="line">do </span><br><span class="line">    commands</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 <h4 id="读取列表的值"><a href="#读取列表的值" class="headerlink" title="读取列表的值"></a>读取列表的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in Alabama Alaska Arizona Arkansas</span><br><span class="line">do </span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>最后一次迭代之后，变量 $test 在 shell 脚本的其他部分中仍有效，仍是迭代的最后一个值   </p>
+<p>最后一次迭代之后，变量 <code>$test</code> 在 <code>shell</code> 脚本的其他部分中仍有效，仍是迭代的最后一个值   </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in I don\&apos;t know if &quot;this&apos;s&quot; work</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>shell 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  </p>
+<p><code>shell</code> 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in &quot;New York&quot; Nevada</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>for 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
+<p><code>for</code> 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
           <div class="read-more">
             <a href="/2018/05/23/Linux-循环语句/" class="read-more-link">阅读更多</a>
           </div>
@@ -347,9 +347,9 @@
 
         
           <h3 id="if-then"><a href="#if-then" class="headerlink" title="if-then"></a>if-then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if command; then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，那么 then 后面的命令不执行  </p>
+<p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，那么 <code>then</code> 后面的命令不执行  </p>
 <h3 id="if-then-else"><a href="#if-then-else" class="headerlink" title="if-then-else"></a>if-then-else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then </span><br><span class="line">    commands</span><br><span class="line">else</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>if 语句运行在 if 行定义的命令，如果命令的退出状态是 0，将执行 then 后面的所有命令。如果命令的退出状态是 0 以外的其他值，将执行 else 后面的所有命令   </p>
+<p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，将执行 <code>else</code> 后面的所有命令   </p>
           <div class="read-more">
             <a href="/2018/05/22/Linux-条件语句/" class="read-more-link">阅读更多</a>
           </div>
