@@ -318,13 +318,13 @@
 <h4 id="创建本地临时文件"><a href="#创建本地临时文件" class="headerlink" title="创建本地临时文件"></a>创建本地临时文件</h4><p>默认情况下，mktemp 在当前目录创建文件  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mktemp testing.XXXXXX</span><br><span class="line">testing.HHBOKh</span><br></pre></td></tr></table></figure>
 <p>mktemp 命令使用一个 6 字符代码替换 6 个 X，以确保文件名在目录中的唯一性，输出的是所创建的文件的名称  </p>
-<h4 id="在-temp-中创建临时文件"><a href="#在-temp-中创建临时文件" class="headerlink" title="在 /temp 中创建临时文件"></a>在 /temp 中创建临时文件</h4><p>-t 选项强迫 mktemp 在系统的临时文件夹中创建文件。使用该特性时，mktemp 命令返回用于创建临时文件的完整路径名 </p>
+<h4 id="在-temp-中创建临时文件"><a href="#在-temp-中创建临时文件" class="headerlink" title="在 /temp 中创建临时文件"></a>在 /temp 中创建临时文件</h4><p><code>-t</code> 选项强迫 mktemp 在系统的临时文件夹中创建文件。使用该特性时，mktemp 命令返回用于创建临时文件的完整路径名 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># mktemp -t testing.XXXXXX</span><br><span class="line">/tmp/testing.2bRKsD</span><br></pre></td></tr></table></figure>
-<h4 id="创建临时目录"><a href="#创建临时目录" class="headerlink" title="创建临时目录"></a>创建临时目录</h4><p>-d 选项让 mktemp 命令创建一个临时目录  </p>
+<h4 id="创建临时目录"><a href="#创建临时目录" class="headerlink" title="创建临时目录"></a>创建临时目录</h4><p><code>-d</code> 选项让 mktemp 命令创建一个临时目录  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># mktemp -d -t testdir.XXXXXX</span><br><span class="line">/tmp/testdir.asDlpe</span><br></pre></td></tr></table></figure>
 <h3 id="记录消息"><a href="#记录消息" class="headerlink" title="记录消息"></a>记录消息</h3><p>tee 命令就像管道的 T 型接头，它将 STDIN 的数据同时发送到两个目的地，一个是 STDOUT，另一个是 tee 命令指定的文件名  </p>
 <p>由于 tee 重定向来自 STDIN 的数据，因此可以与管道命令配置使用重定向任何命令的输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># date | tee testfile</span><br><span class="line">Mon May 28 15:57:48 CST 2018</span><br><span class="line"># cat testfile</span><br><span class="line">Mon May 28 15:57:48 CST 2018</span><br></pre></td></tr></table></figure></p>
-<p>默认情况下，tee 会覆盖输出文件，可以使用 -a 选项来避免 </p>
+<p>默认情况下，tee 会覆盖输出文件，可以使用 <code>-a</code> 选项来避免 </p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://book.douban.com/subject/3723474/" target="_blank" rel="noopener">Linux命令行和shell脚本编程宝典</a></p>
 
       
