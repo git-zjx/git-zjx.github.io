@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-28T08:20:41.737Z</updated>
+  <updated>2018-05-28T08:48:47.057Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,43 @@
     <link href="http://www.zhaojiaxing.top/2018/05/28/Linux-%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE/"/>
     <id>http://www.zhaojiaxing.top/2018/05/28/Linux-显示数据/</id>
     <published>2018-05-28T05:08:33.000Z</published>
-    <updated>2018-05-28T08:20:41.737Z</updated>
+    <updated>2018-05-28T08:48:47.057Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h3 id=&quot;了解输入和输出&quot;&gt;&lt;a href=&quot;#了解输入和输出&quot; class=&quot;headerlink&quot; title=&quot;了解输入和输出&quot;&gt;&lt;/a&gt;了解输入和输出&lt;/h3&gt;&lt;h4 id=&quot;标准文件描述符&quot;&gt;&lt;a href=&quot;#标准文件描述符&quot; class=&quot;headerlink&quot; title=&quot;标准文件描述符&quot;&gt;&lt;/a&gt;标准文件描述符&lt;/h4&gt;&lt;p&gt;文件描述符是一个非负整数，可以唯一标识会话中打开的文件。每个进程中最多可以有 9 个打开文件的描述符。bash shell 为特殊需要保留前 3 个文件描述符&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;文件描述符&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;缩写&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;STDIN&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;标准输入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;STDOUT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;标准输出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;STDERR&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;标准错误&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&quot;STDIN&quot;&gt;&lt;a href=&quot;#STDIN&quot; class=&quot;headerlink&quot; title=&quot;STDIN&quot;&gt;&lt;/a&gt;STDIN&lt;/h5&gt;&lt;p&gt;shell 通过 STDID 文件描述符从键盘接受输入，并在键入时处理每个字符  &lt;/p&gt;
+&lt;p&gt;使用重定向符号（&amp;lt;）时，Linux 将使用重定向引用的文件替换标准的输入文件描述符&lt;/p&gt;
+&lt;h5 id=&quot;STDOUT&quot;&gt;&lt;a href=&quot;#STDOUT&quot; class=&quot;headerlink&quot; title=&quot;STDOUT&quot;&gt;&lt;/a&gt;STDOUT&lt;/h5&gt;&lt;p&gt;shell 的所有输出（包括 shell 中运行的程序和脚本）都定向到标准输出，也就是监视器  &lt;/p&gt;
+&lt;p&gt;使用重定向符号（&amp;gt;）时，所有通常定向到监视器的输出都会重定向到 shell 指定的文件   &lt;/p&gt;
+&lt;h5 id=&quot;STDERR&quot;&gt;&lt;a href=&quot;#STDERR&quot; class=&quot;headerlink&quot; title=&quot;STDERR&quot;&gt;&lt;/a&gt;STDERR&lt;/h5&gt;&lt;p&gt;STDERR 处理错误信息，是 shell 发送错误消息的目的地   &lt;/p&gt;
+&lt;p&gt;默认情况下，STDERR 与 STDOUT 指向相同的位置，也就是默认情况下，所有错误消息都显示在监视器上，但重定向 STDOUT 不会自动重定向 STDERR，错误消息仍会显示在监视器上  &lt;/p&gt;
     
     </summary>
     
