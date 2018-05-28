@@ -226,6 +226,61 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/15/Linux-stat命令/">Linux-stat命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-15
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于显示文件的状态信息</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stat(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-L：支持符号连接；</span><br><span class="line">-f：显示文件系统状态而非文件状态；</span><br><span class="line">-t：以简洁方式输出信息；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>文件：指定要显示信息的普通文件或者文件系统对应的设备文件名</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/15/Linux-stat命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/15/Linux-rmdir命令/">Linux-rmdir命令</a>
         
       </h1>
@@ -686,58 +741,6 @@
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">-a：显示所有档案及目录；</span><br><span class="line">-A：显示除隐藏文件「.」和「..」以外的所有文件列表；</span><br><span class="line">-b：将文件中的不可输出的字符以反斜线「/」加字符编码的方式输出；</span><br><span class="line">-B：不要列出带波浪号的条目（波浪号表示备份副本）；</span><br><span class="line">-c：与「-lt」选项连用时，按照文件状态时间排序输出目录内容，排序的依据是文件的索引节点中的 ctime 字段。与「-l」选项连用时，则排序的一句是文件的状态改变时间；</span><br><span class="line">-C：多列显示输出结果。这是默认选项；</span><br><span class="line">-d：仅显示目录名，而不显示目录下的内容列表。显示符号链接文件本身，而不显示其所指向的目录列表；</span><br><span class="line">-f：此参数的效果和同时指定「aU」参数相同，并关闭「lst」参数的效果；</span><br><span class="line">-F：在每个输出项后追加文件的类型标识符，具体含义：「*」表示具有可执行权限的普通文件，「/」表示目录，「@」表示符号链接，「|」表示命令管道 FIFO ，「=」表示 sockets 套接字。当文件为普通文件时，不输出任何标识符；</span><br><span class="line">-g：在文件之前列出所有目录；</span><br><span class="line">-G：在长列表中不显示组名称；</span><br><span class="line">-h：打印大小；</span><br><span class="line">-i：显示每个文件的索引号；</span><br><span class="line">-k：以KB（千字节）为单位显示文件大小；</span><br><span class="line">-l：与「-C」选项功能相反，以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等；</span><br><span class="line">-L：如果遇到性质为符号链接的文件或目录，直接列出该链接所指向的原始文件或目录；</span><br><span class="line">-m：用「,」号区隔每个文件和目录的名称；</span><br><span class="line">-n：以用户 ID 和组 ID 替代其名称；</span><br><span class="line">-o：在长列表中不显示所有者名称；</span><br><span class="line">-r：以文件名反序排列并输出目录内容列表；</span><br><span class="line">-R：递归处理，将指定目录下的所有文件及子目录一并处理；</span><br><span class="line">-s：显示文件和目录的大小，以区块为单位；</span><br><span class="line">-S：按照文件大小排列输出；</span><br><span class="line">-t：用文件和目录的更改时间排序；</span><br><span class="line">-u：显示文件上一次访问时间而不是修改时间；</span><br><span class="line">-U：输出列表不排序；</span><br><span class="line">-v：根据文件版本排列输出</span><br><span class="line">-x：按行而不是列列出条目</span><br><span class="line">-X：按文件扩展名排列输出</span><br><span class="line">--file-type：与“-F”选项的功能相同，但是不显示“*”；</span><br><span class="line">--full-time：列出完整的日期与时间；</span><br><span class="line">--color[=WHEN]：使用不同的颜色高亮显示不同类型的。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/14/Linux-ls命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/14/Linux-cd命令/">Linux-cd命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-14
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>切换目录</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-p 如果要切换到的目标目录是一个符号连接，直接切换到符号连接指向的目标目录</span><br><span class="line">-L 如果要切换的目标目录是一个符号的连接，直接切换到字符连接名代表的目录，而非符号连接所指向的目标目录。</span><br><span class="line">- 返回进入此目录之前所在的目录。</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/14/Linux-cd命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

@@ -226,6 +226,58 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/18/Linux-tar命令/">Linux-tar命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-18
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>为linux的文件和目录创建档案</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">-A或--catenate：新增文件到以存在的备份文件；</span><br><span class="line">-B：设置区块大小；</span><br><span class="line">-c或--create：建立新的备份文件；</span><br><span class="line">-C &lt;目录&gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。</span><br><span class="line">-d：记录文件的差别；</span><br><span class="line">-x或--extract或--get：从备份文件中还原文件；</span><br><span class="line">-t或--list：列出备份文件的内容；</span><br><span class="line">-z或--gzip或--ungzip：通过 gzip 指令处理备份文件；</span><br><span class="line">-Z或--compress或--uncompress：通过 compress 指令处理备份文件；</span><br><span class="line">-f&lt;备份文件&gt;或--file=&lt;备份文件&gt;：指定备份文件；</span><br><span class="line">-v或--verbose：显示指令执行过程；</span><br><span class="line">-r：添加文件到已经压缩的文件；</span><br><span class="line">-u：添加改变了和现有的文件到已经存在的压缩文件；</span><br><span class="line">-j：支持 bzip2 解压文件；</span><br><span class="line">-v：显示操作过程；</span><br><span class="line">-l：文件系统边界设置；</span><br><span class="line">-k：保留原有文件不覆盖；</span><br><span class="line">-m：保留文件不被覆盖；</span><br><span class="line">-w：确认压缩文件的正确性；</span><br><span class="line">-p或--same-permissions：用原来的文件权限还原文件；</span><br><span class="line">-P或--absolute-names：文件名使用绝对名称，不移除文件名称前的「/」号；</span><br><span class="line">-N &lt;日期格式&gt; 或 --newer=&lt;日期时间&gt;：只将较指定日期更新的文件保存到备份文件里；</span><br><span class="line">--exclude=&lt;范本样式&gt;：排除符合范本样式的文件。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/18/Linux-tar命令/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/17/Linux-grep命令/">Linux-grep命令</a>
         
       </h1>
@@ -677,61 +729,6 @@
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-b：列出辨识结果时，不显示文件名称；</span><br><span class="line">-c：详细显示指令执行过程，便于排错或分析程序执行的情形；</span><br><span class="line">-f&lt;名称文件&gt;：指定名称文件，其内容有一个或多个文件名称时，让 file 依序辨识这些文件，格式为每列一个文件名称；</span><br><span class="line">-L：直接显示符号连接所指向的文件类别；</span><br><span class="line">-m&lt;魔法数字文件&gt;：指定魔法数字文件；</span><br><span class="line">-v：显示版本信息；</span><br><span class="line">-z：尝试去解读压缩文件的内容。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/15/Linux-file命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/15/Linux-stat命令/">Linux-stat命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-15
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于显示文件的状态信息</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stat(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-L：支持符号连接；</span><br><span class="line">-f：显示文件系统状态而非文件状态；</span><br><span class="line">-t：以简洁方式输出信息；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>文件：指定要显示信息的普通文件或者文件系统对应的设备文件名</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/15/Linux-stat命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

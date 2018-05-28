@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-24T08:48:01.610Z</updated>
+  <updated>2018-05-28T07:59:57.863Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-显示数据</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/28/Linux-%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/28/Linux-显示数据/</id>
+    <published>2018-05-28T05:08:33.000Z</published>
+    <updated>2018-05-28T07:59:57.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-处理用户输入</title>
@@ -153,7 +179,7 @@
       
         
         
-          &lt;h3 id=&quot;etc-group-文件&quot;&gt;&lt;a href=&quot;#etc-group-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/group 文件&quot;&gt;&lt;/a&gt;/etc/group 文件&lt;/h3&gt;&lt;p&gt;/etc/group
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -390,8 +416,7 @@
       
         
         
-          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;显示文件尾部内容，默认显示 10 行，如果给定的文件不止一个，则在显示的每个文件前面加一个文件名标题。&lt;/p&gt;
-&lt;h3
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -417,8 +442,7 @@
       
         
         
-          &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;浏览文件内容，能够识别向上键和向下键以及向上翻页键和向下翻页键&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot;
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -466,31 +490,6 @@
 &lt;p&gt;###语法&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;file(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-b：列出辨识结果时，不显示文件名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：详细显示指令执行过程，便于排错或分析程序执行的情形；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;名称文件&amp;gt;：指定名称文件，其内容有一个或多个文件名称时，让 file 依序辨识这些文件，格式为每列一个文件名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L：直接显示符号连接所指向的文件类别；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m&amp;lt;魔法数字文件&amp;gt;：指定魔法数字文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示版本信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-z：尝试去解读压缩文件的内容。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-stat命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-stat%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-stat命令/</id>
-    <published>2018-05-15T08:14:38.000Z</published>
-    <updated>2018-05-15T08:33:04.927Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示文件的状态信息&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;stat(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-L：支持符号连接；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：显示文件系统状态而非文件状态；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t：以简洁方式输出信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示指令的帮助信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示指令的版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;文件：指定要显示信息的普通文件或者文件系统对应的设备文件名&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
