@@ -226,6 +226,57 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/10/Web安全-SQL注入/">Web安全-SQL注入</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-10
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Web安全/">Web安全</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令</p>
+<h3 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h3><p>用户输入的数据被SQL解释器执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var Shipcity;</span><br><span class="line">Shipcity = Request.form(&apos;Shopcity&apos;)</span><br><span class="line">var sql = &quot;select * from city where shipcity = &apos;&quot;+ Shipcity +&quot;&apos;&quot;;</span><br><span class="line"></span><br><span class="line">// 正常情况</span><br><span class="line">select * from city where shipcity = &apos;beijing&apos;;</span><br><span class="line">// 异常情况，输入 beijing&apos;; drop table city--</span><br><span class="line">select * from city where shipcity = &apos;beijing&apos;; drop table city--</span><br></pre></td></tr></table></figure></p>
+          <div class="read-more">
+            <a href="/2018/05/10/Web安全-SQL注入/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/07/Web安全-点击劫持/">Web安全-点击劫持</a>
         
       </h1>
@@ -739,63 +790,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/03/设计模式-模版模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/03/设计模式-策略模式/">设计模式-策略模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-03
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
-<li>抽象策略角色：策略类，通常由一个接口或者抽象类实现。</li>
-<li>具体策略角色：包装了相关的算法和行为。</li>
-<li>环境角色：持有一个策略类的引用，最终给客户端调用。</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/03/设计模式-策略模式/" class="read-more-link">阅读更多</a>
           </div>
         
       

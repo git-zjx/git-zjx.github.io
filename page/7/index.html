@@ -226,6 +226,64 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/04/27/设计模式-享元模式/">设计模式-享元模式</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-04-27
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/设计模式/">设计模式</a>
+            
+              <a href="/categories/设计模式/结构型/">结构型</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>享元模式使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件；它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。通常物件中的部分状态是可以分享。常见做法是把它们放在外部数据结构，当需要使用时再将它们传递给享元。</p>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>抽象享元角色：为具体享元角色规定了必须实现的方法，而外蕴状态就是以参数的形式通过此方法传入。</li>
+<li>具体享元角色：实现抽象角色规定的方法。如果存在内蕴状态，就负责为内蕴状态提供存储空间。</li>
+<li>享元工厂角色：负责创建和管理享元角色。要想达到共享的目的，这个角色的实现是关键！</li>
+<li>客户端角色：维护对所有享元对象的引用，而且还需要存储对应的外蕴状态。</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/04/27/设计模式-享元模式/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/04/24/设计模式-流接口模式/">设计模式-流接口模式</a>
         
       </h1>
@@ -713,59 +771,6 @@
 <h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>运用对象池化技术可以显著地提升性能，尤其是当对象的初始化过程代价较大或者频率较高时。</p>
           <div class="read-more">
             <a href="/2018/04/19/设计模式-对象池模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/19/设计模式-多例模式/">设计模式-多例模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-19
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/创建型/">创建型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>多例模式：在多例模式中，多例类可以有多个实例，而且多例类必须自己创建、管理自己的实例，并向外界提供自己的实例。</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>单例模式的推广版本</p>
-          <div class="read-more">
-            <a href="/2018/04/19/设计模式-多例模式/" class="read-more-link">阅读更多</a>
           </div>
         
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-28T08:48:47.057Z</updated>
+  <updated>2018-05-29T06:05:34.368Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-脚本控制</title>
+    <link href="http://www.zhaojiaxing.top/2018/05/29/Linux-%E8%84%9A%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <id>http://www.zhaojiaxing.top/2018/05/29/Linux-脚本控制/</id>
+    <published>2018-05-29T00:43:48.000Z</published>
+    <updated>2018-05-29T06:05:34.368Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;处理信号&quot;&gt;&lt;a href=&quot;#处理信号&quot; class=&quot;headerlink&quot; title=&quot;处理信号&quot;&gt;&lt;/a&gt;处理信号&lt;/h3&gt;&lt;h4 id=&quot;Linux-信号回顾&quot;&gt;&lt;a href=&quot;#Linux-信号回顾&quot; class=&quot;headerlink&quot; title=&quot;Linux 信号回顾&quot;&gt;&lt;/a&gt;Linux 信号回顾&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;信号&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;值&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGHUP&lt;/td&gt;
+&lt;td&gt;挂起进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGINT&lt;/td&gt;
+&lt;td&gt;中断进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;3&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGQUIT&lt;/td&gt;
+&lt;td&gt;停止进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;9&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGKILL&lt;/td&gt;
+&lt;td&gt;无条件终止进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;15&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGTERM&lt;/td&gt;
+&lt;td&gt;如果可能的话终止进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;17&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGSTOP&lt;/td&gt;
+&lt;td&gt;无条件停止，但不终止进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;18&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGTSTP&lt;/td&gt;
+&lt;td&gt;停止或暂停进程，但不终止它&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;19&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;SIGCONT&lt;/td&gt;
+&lt;td&gt;重新启动停止的进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;默认情况下，bash shell 会忽略它接收的任何 SIGQUIT 和 SIGTERM 信号，以防止交互的 shell 意外终止   &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-显示数据</title>
@@ -493,29 +564,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;分页显示文件内容&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;more(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-&amp;lt;数字&amp;gt;：指定每屏显示的行数；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：显示[press space to continue,&amp;apos;q&amp;apos; to quit.]和[Press &amp;apos;h&amp;apos; for instructions]；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：不进行滚屏操作。每次刷新这个屏幕；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：将多个空行压缩成一行显示；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：禁止下划线；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+&amp;lt;数字&amp;gt;：从指定数字的行开始显示。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-file命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/15/Linux-file%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/15/Linux-file命令/</id>
-    <published>2018-05-15T08:46:44.000Z</published>
-    <updated>2018-05-16T09:31:11.359Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用来探测给定文件的类型。file 命令对文件的检查分为文件系统、魔法幻数检查和语言检查 3 个过程。&lt;/p&gt;
-&lt;p&gt;###语法&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;file(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-b：列出辨识结果时，不显示文件名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：详细显示指令执行过程，便于排错或分析程序执行的情形；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;名称文件&amp;gt;：指定名称文件，其内容有一个或多个文件名称时，让 file 依序辨识这些文件，格式为每列一个文件名称；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L：直接显示符号连接所指向的文件类别；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m&amp;lt;魔法数字文件&amp;gt;：指定魔法数字文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示版本信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-z：尝试去解读压缩文件的内容。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
