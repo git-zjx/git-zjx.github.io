@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-05-29T06:26:17.833Z</updated>
+  <updated>2018-05-29T06:34:52.634Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/29/Linux-crontab%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/29/Linux-crontab命令/</id>
     <published>2018-05-29T06:15:24.000Z</published>
-    <updated>2018-05-29T06:26:17.833Z</updated>
+    <updated>2018-05-29T06:34:52.634Z</updated>
     
     <summary type="html">
     
@@ -38,6 +38,8 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
@@ -399,7 +401,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/18/Linux-tar%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/18/Linux-tar命令/</id>
     <published>2018-05-18T06:16:06.000Z</published>
-    <updated>2018-05-18T06:31:59.865Z</updated>
+    <updated>2018-05-29T06:36:25.800Z</updated>
     
     <summary type="html">
     
@@ -414,6 +416,8 @@
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
   </entry>
   
   <entry>
@@ -421,7 +425,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-grep%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/17/Linux-grep命令/</id>
     <published>2018-05-17T08:30:02.000Z</published>
-    <updated>2018-05-17T08:38:47.133Z</updated>
+    <updated>2018-05-29T06:35:11.198Z</updated>
     
     <summary type="html">
     
@@ -435,6 +439,8 @@
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
   </entry>
   
   <entry>
@@ -442,7 +448,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-du%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/17/Linux-du命令/</id>
     <published>2018-05-17T07:48:42.000Z</published>
-    <updated>2018-05-17T07:50:37.961Z</updated>
+    <updated>2018-05-29T06:35:11.228Z</updated>
     
     <summary type="html">
     
@@ -457,6 +463,8 @@
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
   </entry>
   
   <entry>
@@ -464,7 +472,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-df%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/17/Linux-df命令/</id>
     <published>2018-05-17T07:41:16.000Z</published>
-    <updated>2018-05-17T07:45:22.877Z</updated>
+    <updated>2018-05-29T06:34:55.777Z</updated>
     
     <summary type="html">
     
@@ -479,6 +487,8 @@
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
   </entry>
   
   <entry>
@@ -486,7 +496,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-top%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/17/Linux-top命令/</id>
     <published>2018-05-17T07:07:28.000Z</published>
-    <updated>2018-05-17T07:32:11.637Z</updated>
+    <updated>2018-05-29T06:36:25.682Z</updated>
     
     <summary type="html">
     
@@ -501,6 +511,8 @@
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
   </entry>
   
   <entry>
@@ -508,7 +520,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-ps%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/16/Linux-ps命令/</id>
     <published>2018-05-16T07:49:10.000Z</published>
-    <updated>2018-05-16T09:02:04.975Z</updated>
+    <updated>2018-05-29T06:35:41.612Z</updated>
     
     <summary type="html">
     
@@ -523,6 +535,8 @@
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
     
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
   </entry>
   
   <entry>
@@ -530,7 +544,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-tail%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/16/Linux-tail命令/</id>
     <published>2018-05-16T07:38:16.000Z</published>
-    <updated>2018-05-16T07:44:50.575Z</updated>
+    <updated>2018-05-29T06:36:25.632Z</updated>
     
     <summary type="html">
     
@@ -548,6 +562,8 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
@@ -556,7 +572,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-less%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/16/Linux-less命令/</id>
     <published>2018-05-16T07:24:41.000Z</published>
-    <updated>2018-05-16T07:29:18.656Z</updated>
+    <updated>2018-05-29T06:35:14.058Z</updated>
     
     <summary type="html">
     
@@ -574,6 +590,8 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+    
+      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
