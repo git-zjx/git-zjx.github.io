@@ -226,6 +226,82 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/29/Linux-crontab命令/">Linux-crontab命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-29
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>crontab 命令被用来提交和管理用户的需要周期性执行的任务</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-e：编辑该用户的计时器设置；</span><br><span class="line">-l：列出该用户的计时器设置；</span><br><span class="line">-r：删除该用户的计时器设置；</span><br><span class="line">-u&lt;用户名称&gt;：指定要设定计时器的用户名称。</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>crontab文件：指定包含待执行任务的crontab文件</li>
+</ul>
+<h3 id="crontab-文件"><a href="#crontab-文件" class="headerlink" title="crontab 文件"></a>crontab 文件</h3><p>用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minute   hour   day   month   week   command</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li>minute： 表示分钟，可以是从0到59之间的任何整数。</li>
+<li>hour：表示小时，可以是从0到23之间的任何整数。</li>
+<li>day：表示日期，可以是从1到31之间的任何整数。</li>
+<li>month：表示月份，可以是从1到12之间的任何整数。</li>
+<li>week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日。</li>
+<li>command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件。</li>
+</ul>
+<p>在以上各个字段中，还可以使用以下特殊字符：</p>
+<ul>
+<li>星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</li>
+<li>逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</li>
+<li>中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</li>
+<li>正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。</li>
+</ul>
+<h3 id="crond-服务"><a href="#crond-服务" class="headerlink" title="crond 服务"></a>crond 服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service crond start    //启动服务</span><br><span class="line">service crond stop     //关闭服务</span><br><span class="line">service crond restart  //重启服务</span><br><span class="line">service crond reload   //重新载入配置</span><br><span class="line">service crond status   //服务状态</span><br></pre></td></tr></table></figure>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>每1分钟执行一次command<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * command</span><br></pre></td></tr></table></figure></p>
+<p>每小时的第3和第15分钟执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,15 * * * * command</span><br></pre></td></tr></table></figure></p>
+<p>在上午8点到11点的第3和第15分钟执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,15 8-11 * * * command</span><br></pre></td></tr></table></figure></p>
+<p>每隔两天的上午8点到11点的第3和第15分钟执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,15 8-11 */2 * * command</span><br></pre></td></tr></table></figure></p>
+<p>每个星期一的上午8点到11点的第3和第15分钟执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,15 8-11 * * 1 command</span><br></pre></td></tr></table></figure></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/crontab" target="_blank" rel="noopener">crontab命令</a></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/29/Linux-脚本控制/">Linux-脚本控制</a>
         
       </h1>
@@ -787,59 +863,6 @@
 <p>根用户账户是 Linux 系统的管理员，它的 UID 始终为 0。Linux 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  </p>
           <div class="read-more">
             <a href="/2018/05/21/Linux-用户/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-启动文件/">Linux-启动文件</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="登录-shell"><a href="#登录-shell" class="headerlink" title="登录 shell"></a>登录 shell</h3><p>当登录到 Linux 系统中时，bash shell 将作为登录 shell 启动。登录 shell 将查找 4 个不同的启动文件来处理其中的命令。处理文件的顺序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">$HOME/.bash_profile</span><br><span class="line">$HOME/.bash_login</span><br><span class="line">$HOME/.profile</span><br></pre></td></tr></table></figure></p>
-<h4 id="etc-profile-文件"><a href="#etc-profile-文件" class="headerlink" title="/etc/profile 文件"></a>/etc/profile 文件</h4><p>bash shell 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 /etc/profile.d 目录中的特定于应用程序的启动文件</p>
-<h4 id="HOME-启动文件"><a href="#HOME-启动文件" class="headerlink" title="$HOME 启动文件"></a>$HOME 启动文件</h4><p>这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 Linux 发行版只用其一  </p>
-<p>.bash_profile 启动文件首先将检查 HOME 目录中是否存在另一个名称为 .bashrc 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 PATH 环境变量中，目的是提供方在 HOME 目录中放置可执行文件的公共位置 </p>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-启动文件/" class="read-more-link">阅读更多</a>
           </div>
         
       
