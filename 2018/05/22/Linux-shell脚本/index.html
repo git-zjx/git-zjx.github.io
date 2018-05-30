@@ -255,22 +255,21 @@
 
     <div class="post-content">
       
-        <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号"></a>反引号</h3><p>反引号在 ESC 按键下面的按键上，和波浪号 ~ 同一按键  </p>
-<p>反引号允许将 shell 命令的输出赋值给变量  </p>
+        <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号"></a>反引号</h3><p>反引号在 <code>ESC</code> 按键下面的按键上，和波浪号 <code>~</code> 同一按键  </p>
+<p>反引号允许将 <code>shell</code> 命令的输出赋值给变量  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">testing = &apos;date&apos;</span><br><span class="line"># 格式化 date 命令的输出结构复制给 testing</span><br><span class="line">testing = &apos;date +%y%m%d&apos;</span><br></pre></td></tr></table></figure>
 <h3 id="重定向输入输出"><a href="#重定向输入输出" class="headerlink" title="重定向输入输出"></a>重定向输入输出</h3><p>命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号表示数据从输入文件流向命令，大于号表示命令产生的数据流向文件  </p>
-<p>两个大于号（&gt;&gt;）表示附加数据 </p>
+<p>两个大于号（<code>&gt;&gt;</code>）表示附加数据 </p>
 <a id="more"></a>
-<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>管道可以将一个命令的输出重定向到另一条命令，符号是竖条操作符（|）  </p>
-<p>Linux系统实际上同时运行两条命令，并在系统内部把它们连接在一起。第一条命令生成输出时，输出就立即发送给第二条命令。没有使用中间文件或者缓冲区传递数据  </p>
-<p>命令中可以使用数量不限的管道符，但行长度最多是255个字符  </p>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>管道可以将一个命令的输出重定向到另一条命令，符号是竖条操作符（<code>|</code>）  </p>
+<p><code>Linux</code>系统实际上同时运行两条命令，并在系统内部把它们连接在一起。第一条命令生成输出时，输出就立即发送给第二条命令。没有使用中间文件或者缓冲区传递数据  </p>
+<p>命令中可以使用数量不限的管道符，但行长度最多是<code>255</code>个字符  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | sort &gt; rpm.list</span><br></pre></td></tr></table></figure>
-<h3 id="数学计算"><a href="#数学计算" class="headerlink" title="数学计算"></a>数学计算</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><h4 id="expr-命令"><a href="#expr-命令" class="headerlink" title="expr 命令"></a>expr 命令</h4><p>shell 中许多 expr 命令操作符（如星号）有其他含义，使用时须转义</p>
+<h3 id="数学计算"><a href="#数学计算" class="headerlink" title="数学计算"></a>数学计算</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><h4 id="expr-命令"><a href="#expr-命令" class="headerlink" title="expr 命令"></a>expr 命令</h4><p><code>shell</code> 中许多 <code>expr</code> 命令操作符（如星号）有其他含义，使用时须转义</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var1=`expr 1 \* 2`</span><br></pre></td></tr></table></figure>
 <h5 id="operation"><a href="#operation" class="headerlink" title="$[operation]"></a>$[operation]</h5><p>只支持整数算法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var1 = $[1+5]</span><br></pre></td></tr></table></figure>
-<h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><h5 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var1 = 10.46</span><br><span class="line">var2 = 43.67</span><br><span class="line">var3 = 33.2</span><br><span class="line">var4 = 71</span><br><span class="line">var5=`bc &lt;&lt; EOF</span><br><span class="line">scale = 4</span><br><span class="line">a1 = ($var1 * $var2)</span><br><span class="line">b1 = ($var2 * $var4)</span><br><span class="line">a1 + b1</span><br><span class="line">EOF</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
-<p>scale 设置精度范围  </p>
+<h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><h5 id="bc"><a href="#bc" class="headerlink" title="bc"></a>bc</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var1 = 10.46</span><br><span class="line">var2 = 43.67</span><br><span class="line">var3 = 33.2</span><br><span class="line">var4 = 71</span><br><span class="line">var5=`bc &lt;&lt; EOF</span><br><span class="line">scale = 4 # 设置精度范围  </span><br><span class="line">a1 = ($var1 * $var2)</span><br><span class="line">b1 = ($var2 * $var4)</span><br><span class="line">a1 + b1</span><br><span class="line">EOF</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
 <h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p><code>echo $?</code> 可以查看退出状态代码</p>
 <p>退出状态代码</p>
 <table>
@@ -291,7 +290,7 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>2</code></td>
-<td style="text-align:center">误用 shell 命令</td>
+<td style="text-align:center">误用 <code>shell</code> 命令</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>126</code></td>
@@ -307,11 +306,11 @@
 </tr>
 <tr>
 <td style="text-align:center"><code>128+x</code></td>
-<td style="text-align:center">使用 Linux 信号 x 的致命错误</td>
+<td style="text-align:center">使用 <code>Linux</code> 信号 <code>x</code> 的致命错误</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>130</code></td>
-<td style="text-align:center">使用 Ctrl-C 终止的命令</td>
+<td style="text-align:center">使用 <code>Ctrl-C</code> 终止的命令</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>255</code></td>
@@ -319,10 +318,10 @@
 </tr>
 </tbody>
 </table>
-<p>默认情况下，shell脚本以脚本中最后一条命令的退出状态退出  </p>
-<p>exit 命令可以指定退出状态，可以在 exit 中使用变量</p>
+<p>默认情况下，<code>shell</code> 脚本以脚本中最后一条命令的退出状态退出  </p>
+<p><code>exit</code> 命令可以指定退出状态，可以在 <code>exit</code> 中使用变量</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit 5</span><br></pre></td></tr></table></figure>
-<p>退出状态码最高是 255，高于 255 会使用该状态码被 256 除了之后的余数作为状态码   </p>
+<p>退出状态码最高是 <code>255</code>，高于 <code>255</code> 会使用该状态码被 <code>256</code> 除了之后的余数作为状态码   </p>
 <h3 id="结构化命令"><a href="#结构化命令" class="headerlink" title="结构化命令"></a>结构化命令</h3><p><a href="https://www.zhaojiaxing.top/2018/05/22/Linux-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/">条件语句</a><br><a href="https://www.zhaojiaxing.top/2018/05/23/Linux-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/">循环语句</a></p>
 <h3 id="处理用户输入"><a href="#处理用户输入" class="headerlink" title="处理用户输入"></a>处理用户输入</h3><p><a href="https://www.zhaojiaxing.top/2018/05/23/Linux-%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/">处理用户输入</a></p>
 <h3 id="显示数据"><a href="#显示数据" class="headerlink" title="显示数据"></a>显示数据</h3><p><a href="https://www.zhaojiaxing.top/2018/05/28/Linux-%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE/">显示数据</a></p>
