@@ -70,7 +70,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/29/Linux-%E8%84%9A%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     <id>http://www.zhaojiaxing.top/2018/05/29/Linux-脚本控制/</id>
     <published>2018-05-29T00:43:48.000Z</published>
-    <updated>2018-05-29T06:26:02.551Z</updated>
+    <updated>2018-05-30T08:29:36.655Z</updated>
     
     <summary type="html">
     
@@ -85,47 +85,42 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGHUP&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGHUP&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;挂起进程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGINT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGINT&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;中断进程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;3&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGQUIT&lt;/td&gt;
-&lt;td&gt;停止进程&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;9&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGKILL&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGQUIT&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;无条件终止进程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;15&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGTERM&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGTERM&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;如果可能的话终止进程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;17&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGSTOP&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGSTOP&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;无条件停止，但不终止进程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;18&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGTSTP&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGTSTP&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;停止或暂停进程，但不终止它&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;19&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;SIGCONT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;code&gt;SIGCONT&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;重新启动停止的进程&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;默认情况下，bash shell 会忽略它接收的任何 SIGQUIT 和 SIGTERM 信号，以防止交互的 shell 意外终止   &lt;/p&gt;
+&lt;p&gt;默认情况下，&lt;code&gt;bash shell&lt;/code&gt; 会忽略它接收的任何 &lt;code&gt;SIGQUIT&lt;/code&gt; 和 &lt;code&gt;SIGTERM&lt;/code&gt; 信号，以防止交互的 &lt;code&gt;shell&lt;/code&gt; 意外终止   &lt;/p&gt;
     
     </summary>
     
