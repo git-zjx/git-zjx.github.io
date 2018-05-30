@@ -43,15 +43,15 @@
     <link href="http://www.zhaojiaxing.top/2018/05/29/Linux-crontab%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.zhaojiaxing.top/2018/05/29/Linux-crontab命令/</id>
     <published>2018-05-29T06:15:24.000Z</published>
-    <updated>2018-05-29T06:34:52.634Z</updated>
+    <updated>2018-05-30T08:41:17.146Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;crontab 命令被用来提交和管理用户的需要周期性执行的任务&lt;/p&gt;
+      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;&lt;code&gt;crontab&lt;/code&gt; 命令被用来提交和管理用户的需要周期性执行的任务&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;crontab(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-e：编辑该用户的计时器设置；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：列出该用户的计时器设置；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：删除该用户的计时器设置；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u&amp;lt;用户名称&amp;gt;：指定要设定计时器的用户名称。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;crontab文件：指定包含待执行任务的crontab文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab&lt;/code&gt;文件：指定包含待执行任务的&lt;code&gt;crontab&lt;/code&gt;文件&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
