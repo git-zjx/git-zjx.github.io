@@ -255,53 +255,53 @@
 
     <div class="post-content">
       
-        <h3 id="etc-passwd-文件"><a href="#etc-passwd-文件" class="headerlink" title="/etc/passwd 文件"></a>/etc/passwd 文件</h3><p>将登录名与相应的 UID 值进行匹配，包含以下信息：</p>
+        <h3 id="etc-passwd-文件"><a href="#etc-passwd-文件" class="headerlink" title="/etc/passwd 文件"></a>/etc/passwd 文件</h3><p>将登录名与相应的 <code>UID</code> 值进行匹配，包含以下信息：</p>
 <ul>
 <li>登录用户名</li>
 <li>用户密码</li>
-<li>用户账户的数值 UID</li>
-<li>用户账户的数值用户组 ID（GID）</li>
+<li>用户账户的数值 <code>UID</code></li>
+<li>用户账户的数值用户组 <code>ID</code>（<code>GID</code>）</li>
 <li>用户账户的文本描述（称为注释字段）</li>
-<li>用户 HOME 目录的位置</li>
-<li>用户的默认 shell</li>
+<li>用户 <code>HOME</code> 目录的位置</li>
+<li>用户的默认 <code>shell</code></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">bin:x:1:1:bin:/bin:/sbin/nologin</span><br><span class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span><br><span class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</span><br><span class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span><br><span class="line">sync:x:5:0:sync:/sbin:/bin/sync</span><br><span class="line">shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</span><br></pre></td></tr></table></figure>
-<p>根用户账户是 Linux 系统的管理员，它的 UID 始终为 0。Linux 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  </p>
+<p>根用户账户是 <code>Linux</code> 系统的管理员，它的 <code>UID</code> 始终为 <code>0</code>。<code>Linux</code> 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  </p>
 <a id="more"></a>
-<p>Linux 将 500 以下的 UID 保留用作系统账户。一些服务甚至需要特定的 UID 才能正常工作  </p>
-<p>密码字段被设置成为一个 x，主要为了防止被恶意破解，真实的密码存储在 /etc/shadow 文件中，只有一些特殊程序才能访问  </p>
-<h3 id="etc-shadow-文件"><a href="#etc-shadow-文件" class="headerlink" title="/etc/shadow 文件"></a>/etc/shadow 文件</h3><p>影子文件，为 Linux 系统管理密码的方式提供了更多的控制。只有根用户才能访问。包含以下字段：</p>
+<p><code>Linux</code> 将 <code>500</code> 以下的 <code>UID</code> 保留用作系统账户。一些服务甚至需要特定的 <code>UID</code> 才能正常工作  </p>
+<p>密码字段被设置成为一个 <code>x</code>，主要为了防止被恶意破解，真实的密码存储在 <code>/etc/shadow</code> 文件中，只有一些特殊程序才能访问  </p>
+<h3 id="etc-shadow-文件"><a href="#etc-shadow-文件" class="headerlink" title="/etc/shadow 文件"></a>/etc/shadow 文件</h3><p>影子文件，为 <code>Linux</code> 系统管理密码的方式提供了更多的控制。只有根用户才能访问。包含以下字段：</p>
 <ul>
-<li>与 /etc/passwd 文件中的登录名相对应的登录名</li>
+<li>与 <code>/etc/passwd</code> 文件中的登录名相对应的登录名</li>
 <li>经过加密的密码</li>
-<li>密码上次修改时距 1970 年 1 月 1 日的天数</li>
+<li>密码上次修改时距 <code>1970</code> 年 <code>1</code> 月 <code>1</code> 日的天数</li>
 <li>距能够修改密码时的最少天数</li>
 <li>距必须修改密码时的天数</li>
 <li>距密码逾期并警告用户修改密码的天数</li>
 <li>从密码逾期开始到账户被禁用的天数</li>
-<li>用户账户已被禁用的天数（存储为自 1970 年 1 月 1 日开始的天数）</li>
+<li>用户账户已被禁用的天数（存储为自 <code>1970</code> 年 <code>1</code> 月 <code>1</code> 日开始的天数）</li>
 <li>保留供未来使用的字段</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root:$6$wp4mNd1W9g8Wfhw1$xP4v/v1Kzeke0ZslSlQv/kI2.:17233:0:99999:7:::</span><br><span class="line">bin:*:15980:0:99999:7:::</span><br><span class="line">daemon:*:15980:0:99999:7:::</span><br><span class="line">adm:*:15980:0:99999:7:::</span><br><span class="line">lp:*:15980:0:99999:7:::</span><br><span class="line">sync:*:15980:0:99999:7:::</span><br><span class="line">shutdown:*:15980:0:99999:7:::</span><br></pre></td></tr></table></figure>
 <p>可以控制用户必须多久修改一次密码，以及当密码未修改时何时禁用账户 </p>
-<h3 id="添加新用户"><a href="#添加新用户" class="headerlink" title="添加新用户"></a>添加新用户</h3><p>useradd 是用于添加新用户的主要工具。此命令可以创建新用户账户同时建立用户的 HOME 目录结构  </p>
+<h3 id="添加新用户"><a href="#添加新用户" class="headerlink" title="添加新用户"></a>添加新用户</h3><p><code>useradd</code> 是用于添加新用户的主要工具。此命令可以创建新用户账户同时建立用户的 <code>HOME</code> 目录结构  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># useradd -D 显示 useradd 命令所使用的默认值</span><br><span class="line">GROUP=100 # 新用户将被添加到用户组 ID 为 100 的公共用户组中</span><br><span class="line">HOME=/home # 新用户将在 /home/loginname 目录下创建一个 HOME 账户</span><br><span class="line">INACTIVE=-1 # 当密码逾期时，账户将不会被禁用</span><br><span class="line">EXPIRE= # 新账户不会在设定日期被设置为逾期</span><br><span class="line">SHELL=/bin/bash # 新账户将使用 bash shell 作为默认 shell</span><br><span class="line">SKEL=/etc/skel # 系统会将 /etc/skel 目录中的内容复制到用户的 HOME 目录</span><br><span class="line">CREATE_MAIL_SPOOL=yes # 系统将在邮件目录中创建一个文件用于用户账户接收邮件</span><br></pre></td></tr></table></figure>
-<p>useradd 命令允许管理员创建一个默认的 HOME 目录配置，然后使用它作为模版来创建新用户的 HOME 目录</p>
-<p>useradd 可以通过命令行参数覆盖默认值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-c comment：添加注释</span><br><span class="line">-d home_dir：为主目录知道不同于登录名的名称</span><br><span class="line">-e expire_date：指定账户将要逾期的日期，采用 YYYY-MM-DD 格式</span><br><span class="line">-f inactive_days：指定密码逾期后，账户被禁用需要的天数。0 表示密码逾期时立即禁用账户；-1 表示禁用此特性</span><br><span class="line">-g initial_group：指定用户登录组的用户组名称或 GID</span><br><span class="line">-G group...：指定用户属于的一个或多个补充用户组</span><br><span class="line">-k：将 /etc/shel 目录内容复制到用户的 HOME 目录（还必须使用 -m）</span><br><span class="line">-m：创建用户的 HOME 目录</span><br><span class="line">-M：不创建户的 HOME 目录（当默认设置为创建时使用）</span><br><span class="line">-n：使用与登录名相同的名称创建一个新用户组</span><br><span class="line">-r：创建一个系统账户</span><br><span class="line">-p passwd：指定密码</span><br><span class="line">-s shell：指定默认登录 shell</span><br><span class="line">-u uid：指定唯一的 UID</span><br></pre></td></tr></table></figure></p>
-<p>通过使用 -D 参数和表示需要修改的值的参数可以直接修改默认值</p>
+<p><code>useradd</code> 命令允许管理员创建一个默认的 <code>HOME</code> 目录配置，然后使用它作为模版来创建新用户的 <code>HOME</code> 目录</p>
+<p><code>useradd</code> 可以通过命令行参数覆盖默认值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-c comment：添加注释</span><br><span class="line">-d home_dir：为主目录知道不同于登录名的名称</span><br><span class="line">-e expire_date：指定账户将要逾期的日期，采用 YYYY-MM-DD 格式</span><br><span class="line">-f inactive_days：指定密码逾期后，账户被禁用需要的天数。0 表示密码逾期时立即禁用账户；-1 表示禁用此特性</span><br><span class="line">-g initial_group：指定用户登录组的用户组名称或 GID</span><br><span class="line">-G group...：指定用户属于的一个或多个补充用户组</span><br><span class="line">-k：将 /etc/shel 目录内容复制到用户的 HOME 目录（还必须使用 -m）</span><br><span class="line">-m：创建用户的 HOME 目录</span><br><span class="line">-M：不创建户的 HOME 目录（当默认设置为创建时使用）</span><br><span class="line">-n：使用与登录名相同的名称创建一个新用户组</span><br><span class="line">-r：创建一个系统账户</span><br><span class="line">-p passwd：指定密码</span><br><span class="line">-s shell：指定默认登录 shell</span><br><span class="line">-u uid：指定唯一的 UID</span><br></pre></td></tr></table></figure></p>
+<p>通过使用 <code>-D</code> 参数和表示需要修改的值的参数可以直接修改默认值</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-b default_name：修改用户的 HOME 目录被创建的位置</span><br><span class="line">-e expiration_date：修改新账户的逾期日期</span><br><span class="line">-f inactive：修改从密码逾期至账户被禁用的天数</span><br><span class="line">-g group：修改所使用的默认用户组名称或 GID</span><br><span class="line">-s shell：修改默认登录 shell</span><br></pre></td></tr></table></figure>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>默认情况下，userdel 只删除 /etc/passwd 文件中的用户信息。使用 -r 参数，会删除用户的 HOME 目录和用户的邮件目录。但是在系统中删除的用户账户可能仍然拥有其他文件</p>
-<p>使用 -r 需要谨慎，删除之前务必检查目录中是否存储了其他人或程序需要使用的重要文件</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>默认情况下，<code>userdel</code> 只删除 <code>/etc/passwd</code> 文件中的用户信息。使用 <code>-r</code> 参数，会删除用户的 <code>HOME</code> 目录和用户的邮件目录。但是在系统中删除的用户账户可能仍然拥有其他文件</p>
+<p>使用 <code>-r</code> 需要谨慎，删除之前务必检查目录中是否存储了其他人或程序需要使用的重要文件</p>
 <h3 id="修改用户"><a href="#修改用户" class="headerlink" title="修改用户"></a>修改用户</h3><h4 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h4><p>编辑用户账户字段，以及指定主要和次要用户组成员</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-c：修改注释</span><br><span class="line">-e：修改逾期日期</span><br><span class="line">-g：修改默认登录用户组</span><br><span class="line">-l：修改用户登录名</span><br><span class="line">-L：锁定用户，使用户无法登录</span><br><span class="line">-p：修改密码</span><br><span class="line">-U：解除锁定</span><br></pre></td></tr></table></figure>
 <h4 id="passwd-和-chpasswd"><a href="#passwd-和-chpasswd" class="headerlink" title="passwd 和 chpasswd"></a>passwd 和 chpasswd</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># passwd test</span><br><span class="line">Changing password for user test.</span><br><span class="line">New password: </span><br><span class="line">BAD PASSWORD: The password is a palindrome</span><br><span class="line">Retype new password: </span><br><span class="line">passwd: all authentication tokens updated successfully.</span><br></pre></td></tr></table></figure>
-<p>如果只使用 passwd 自身，那么它将修改您自己的密码，只有根用户可以修改其他人的密码  </p>
-<p>-e 选项可以强制用户在下次登录时修改密码，这可以将用户的密码设置为一个简单的值，然后再强制他们将密码修改为比较复杂的值 </p>
-<p>chpasswd 命令可以进行批量密码修改 </p>
+<p>如果只使用 <code>passwd</code> 自身，那么它将修改您自己的密码，只有根用户可以修改其他人的密码  </p>
+<p><code>-e</code> 选项可以强制用户在下次登录时修改密码，这可以将用户的密码设置为一个简单的值，然后再强制他们将密码修改为比较复杂的值 </p>
+<p><code>chpasswd</code> 命令可以进行批量密码修改 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">先创建用户密码对应文件，格式为username:password，如abc:abc123，必须以这种格式来书写，并且不能有空行，保存成文本文件user.txt，然后执行chpasswd命令</span><br><span class="line">chpasswd &lt; user.txt</span><br></pre></td></tr></table></figure>
-<h4 id="chsh"><a href="#chsh" class="headerlink" title="chsh"></a>chsh</h4><p>chsh 命令用于修改用户的默认登录 shell。必须使用 shell 的完全路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 查看系统安装了哪些 shell</span><br><span class="line">chsh -l</span><br><span class="line"># 修改 shell</span><br><span class="line">chsh -s /bin/zsh test</span><br></pre></td></tr></table></figure></p>
-<h4 id="chfn"><a href="#chfn" class="headerlink" title="chfn"></a>chfn</h4><p>chfn 命令用于修改 finger 命令显示的信息。这些信息都存放在 /etc/passwd 文件中。若不指定任何选项，会进入问答式界面  </p>
-<h4 id="chage"><a href="#chage" class="headerlink" title="chage"></a>chage</h4><p>chage 命令是用于修改帐号和密码的有效期限</p>
+<h4 id="chsh"><a href="#chsh" class="headerlink" title="chsh"></a>chsh</h4><p><code>chsh</code> 命令用于修改用户的默认登录 <code>shell</code>。必须使用 <code>shell</code> 的完全路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 查看系统安装了哪些 shell</span><br><span class="line">chsh -l</span><br><span class="line"># 修改 shell</span><br><span class="line">chsh -s /bin/zsh test</span><br></pre></td></tr></table></figure></p>
+<h4 id="chfn"><a href="#chfn" class="headerlink" title="chfn"></a>chfn</h4><p><code>chfn</code> 命令用于修改 <code>finger</code> 命令显示的信息。这些信息都存放在 <code>/etc/passwd</code> 文件中。若不指定任何选项，会进入问答式界面  </p>
+<h4 id="chage"><a href="#chage" class="headerlink" title="chage"></a>chage</h4><p><code>chage</code> 命令是用于修改帐号和密码的有效期限</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-d：上一次更改的日期。</span><br><span class="line">-m：密码可更改的最小天数。为零时代表任何时候都可以更改密码。</span><br><span class="line">-M：密码保持有效的最大天数。</span><br><span class="line">-w：用户密码到期前，提前收到警告信息的天数。</span><br><span class="line">-E：帐号到期的日期。过了这天，此帐号将不可用。</span><br><span class="line">-i：停滞时期。如果一个密码已过期这些天，那么此帐号将不可用。</span><br><span class="line">-l：例出当前的设置。由非特权用户来确定他们的密码或帐号何时过期。</span><br></pre></td></tr></table></figure>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/1130136248wlxk/articles/6264419.html" target="_blank" rel="noopener">linux下cat命令详解</a></p>
 

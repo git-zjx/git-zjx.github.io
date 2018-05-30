@@ -255,20 +255,20 @@
 
     <div class="post-content">
       
-        <h3 id="etc-group-文件"><a href="#etc-group-文件" class="headerlink" title="/etc/group 文件"></a>/etc/group 文件</h3><p>/etc/group 文件包含关于系统所使用的各用户组的信息，包含 4 个字段：</p>
+        <h3 id="etc-group-文件"><a href="#etc-group-文件" class="headerlink" title="/etc/group 文件"></a>/etc/group 文件</h3><p>/etc/group 文件包含关于系统所使用的各用户组的信息，包含 <code>4</code> 个字段：</p>
 <ul>
 <li>用户组名称</li>
 <li>用户组密码</li>
-<li>GID</li>
+<li><code>GID</code></li>
 <li>属于用户组的用户账户列表</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:</span><br><span class="line">bin:x:1:</span><br><span class="line">daemon:x:2:</span><br><span class="line">sys:x:3:</span><br><span class="line">adm:x:4:</span><br><span class="line">tty:x:5:</span><br><span class="line">disk:x:6:</span><br><span class="line">lp:x:7:</span><br><span class="line">mem:x:8:</span><br><span class="line">kmem:x:9:</span><br></pre></td></tr></table></figure>
-<p>用于系统账户的用户组将分配 500 以下的 GID，而用户的用户组将从 500 开始分配 GID   </p>
+<p>用于系统账户的用户组将分配 <code>500</code> 以下的 <code>GID</code>，而用户的用户组将从 <code>500</code> 开始分配 <code>GID</code>   </p>
 <p>通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。</p>
-<p>当用户使用某个用户组作为 /etc/passwd 文件里的默认用户组，用户账户不会作为成员出现在 /etc/group 中  </p>
+<p>当用户使用某个用户组作为 <code>/etc/passwd</code> 文件里的默认用户组，用户账户不会作为成员出现在 <code>/etc/group</code> 中  </p>
 <a id="more"></a>
-<h3 id="创建新用户组"><a href="#创建新用户组" class="headerlink" title="创建新用户组"></a>创建新用户组</h3><p>groupadd 命令用于创建用户组。创建新用户组时，系统默认不会分配任何用户。要添加新用户，需使用 usermod 命令  </p>
-<h3 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h3><p>groupmod 用于修改用户组 </p>
+<h3 id="创建新用户组"><a href="#创建新用户组" class="headerlink" title="创建新用户组"></a>创建新用户组</h3><p><code>groupadd</code> 命令用于创建用户组。创建新用户组时，系统默认不会分配任何用户。要添加新用户，需使用 <code>usermod</code> 命令  </p>
+<h3 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h3><p><code>groupmod</code> 用于修改用户组 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-g：修改 GID</span><br><span class="line">-n：修改用户组名称</span><br></pre></td></tr></table></figure>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/1130136248wlxk/articles/6264419.html" target="_blank" rel="noopener">linux下cat命令详解</a><br><a href="https://www.cnblogs.com/cisum/p/8005641.html" target="_blank" rel="noopener">Linux 用户和用户组管理</a></p>
 

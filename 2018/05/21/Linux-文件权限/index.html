@@ -256,32 +256,32 @@
     <div class="post-content">
       
         <h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># ll</span><br><span class="line">total 24</span><br><span class="line">drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup</span><br><span class="line">lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&gt; usr/bin</span><br><span class="line">dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot</span><br><span class="line">drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf</span><br><span class="line">drwxr-xr-x.  11 root root 4096 May  7 09:10 data</span><br><span class="line">drwxr-xr-x.  19 root root 3040 May 22 08:30 dev</span><br><span class="line">drwxr-xr-x.  76 root root 8192 May 22 08:30 etc</span><br><span class="line">drwxr-xr-x.   4 root root   29 May 21 16:04 home</span><br></pre></td></tr></table></figure>
-<p>ll 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：</p>
+<p><code>ll</code> 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：</p>
 <ul>
-<li>-表示文件</li>
-<li>d 表示目录</li>
-<li>l 表示链接</li>
-<li>c 表示字符设备</li>
-<li>b 表示块设备</li>
-<li>n 表示网络设备</li>
+<li><code>-</code>表示文件</li>
+<li><code>d</code> 表示目录</li>
+<li><code>l</code> 表示链接</li>
+<li><code>c</code> 表示字符设备</li>
+<li><code>b</code> 表示块设备</li>
+<li><code>n</code> 表示网络设备</li>
 </ul>
 <a id="more"></a>
-<p>之后是 3 组字符。每组的 3 个字符都定义一个访问权限：</p>
+<p>之后是 <code>3</code> 组字符。每组的 <code>3</code> 个字符都定义一个访问权限：</p>
 <ul>
-<li>r 表示对象读权限</li>
-<li>w 表示对象写权限</li>
-<li>x 表示对象执行权限</li>
+<li><code>r</code> 表示对象读权限</li>
+<li><code>w</code> 表示对象写权限</li>
+<li><code>x</code> 表示对象执行权限</li>
 </ul>
-<p>如果拒绝了某个权限，则相应位置会出现破折号 - 代替。3 组字符分别与 3 种级别的对象安全性对应：</p>
+<p>如果拒绝了某个权限，则相应位置会出现破折号 <code>-</code> 代替。<code>3</code> 组字符分别与 <code>3</code> 种级别的对象安全性对应：</p>
 <ul>
 <li>对象的所有者</li>
 <li>拥有对象的用户组</li>
 <li>系统上的其他任何人</li>
 </ul>
-<h3 id="默认文件权限"><a href="#默认文件权限" class="headerlink" title="默认文件权限"></a>默认文件权限</h3><p>umask 命令为创建的文件和目录设置默认权限  </p>
+<h3 id="默认文件权限"><a href="#默认文件权限" class="headerlink" title="默认文件权限"></a>默认文件权限</h3><p><code>umask</code> 命令为创建的文件和目录设置默认权限  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># umask</span><br><span class="line">0022</span><br></pre></td></tr></table></figure>
-<p>第一个数字表示一种特殊的安全特性，称为粘着位。随后的 3 个数字表示文件或目录的八进制 umask 值。  </p>
-<p>八进制模式安全设置将 3 个 rwx 权限转换成一个 3 位的二进制值，由一个八进制值表示  </p>
+<p>第一个数字表示一种特殊的安全特性，称为粘着位。随后的 <code>3</code> 个数字表示文件或目录的八进制 <code>umask</code> 值。  </p>
+<p>八进制模式安全设置将 <code>3</code> 个 <code>rwx</code> 权限转换成一个 <code>3</code> 位的二进制值，由一个八进制值表示  </p>
 <table>
 <thead>
 <tr>
@@ -294,80 +294,80 @@
 <tbody>
 <tr>
 <td style="text-align:center"><code>---</code></td>
-<td style="text-align:center">000</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center"><code>000</code></td>
+<td style="text-align:center"><code>0</code></td>
 <td style="text-align:center">无权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>--x</code></td>
-<td style="text-align:center">001</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center"><code>001</code></td>
+<td style="text-align:center"><code>1</code></td>
 <td style="text-align:center">只有执行权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>-w-</code></td>
-<td style="text-align:center">010</td>
-<td style="text-align:center">2</td>
+<td style="text-align:center"><code>010</code></td>
+<td style="text-align:center"><code>2</code></td>
 <td style="text-align:center">只有写入权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>-wx</code></td>
-<td style="text-align:center">011</td>
-<td style="text-align:center">3</td>
+<td style="text-align:center"><code>011</code></td>
+<td style="text-align:center"><code>3</code></td>
 <td style="text-align:center">写入和执行权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>r--</code></td>
-<td style="text-align:center">100</td>
-<td style="text-align:center">4</td>
+<td style="text-align:center"><code>100</code></td>
+<td style="text-align:center"><code>4</code></td>
 <td style="text-align:center">只有读取权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>r-x</code></td>
-<td style="text-align:center">101</td>
-<td style="text-align:center">5</td>
+<td style="text-align:center"><code>101</code></td>
+<td style="text-align:center"><code>5</code></td>
 <td style="text-align:center">读取和执行权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>rw-</code></td>
-<td style="text-align:center">110</td>
-<td style="text-align:center">6</td>
+<td style="text-align:center"><code>110</code></td>
+<td style="text-align:center"><code>6</code></td>
 <td style="text-align:center">读取和写入权限</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>rwx</code></td>
-<td style="text-align:center">111</td>
-<td style="text-align:center">7</td>
+<td style="text-align:center"><code>111</code></td>
+<td style="text-align:center"><code>7</code></td>
 <td style="text-align:center">读取、写入和执行权限</td>
 </tr>
 </tbody>
 </table>
-<p>umask 值是一个掩码，掩去不希望为安全级别指定的权限，是从对象完整权限集中减去的值。文件的完整权限是 666，目录的完整权限是 777，由此可以得出新建文件的权限为什么是 644。  </p>
-<h3 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h3><p>chmod 命令修改文件和目录的权限，格式如下：</p>
+<p><code>umask</code> 值是一个掩码，掩去不希望为安全级别指定的权限，是从对象完整权限集中减去的值。文件的完整权限是 <code>666</code>，目录的完整权限是 <code>777</code>，由此可以得出新建文件的权限为什么是 <code>644</code>。  </p>
+<h3 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h3><p><code>chmod</code> 命令修改文件和目录的权限，格式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod options mode file</span><br></pre></td></tr></table></figure>
-<p>mode 参数允许使用八进制或者符号模式来设定权限 </p>
+<p><code>chmod</code> 参数允许使用八进制或者符号模式来设定权限 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 760 newfile</span><br></pre></td></tr></table></figure>
 <p>使用符号模式指定权限的格式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ugoa...][[+-=][rwxXstaugo...]]</span><br></pre></td></tr></table></figure>
 <p>第一组字符串定一个新权限适用的对象：</p>
 <ul>
-<li>u 表示用户</li>
-<li>g 表示用户组</li>
-<li>o 表示其他任何人</li>
-<li>a 表示上述所有 </li>
+<li><code>u</code> 表示用户</li>
+<li><code>g</code> 表示用户组</li>
+<li><code>o</code> 表示其他任何人</li>
+<li><code>a</code> 表示上述所有 </li>
 </ul>
 <p>第二个字符表示是添加权限、减去权限还是给权限赋值  </p>
-<p>第三个字符表示权限，不仅包括普通的 rwx 值，其他设置包括：</p>
+<p>第三个字符表示权限，不仅包括普通的 <code>rwx</code> 值，其他设置包括：</p>
 <ul>
-<li>X 用于指定执行权限，仅当对象为目录或已经拥有执行权限时有效</li>
-<li>s 用于设置正在执行的 UID 或 GID </li>
-<li>t 用于保存程序文本</li>
-<li>u 用于将权限设置为所有者的权限</li>
-<li>g 用于将权限设置为用户组的权限</li>
-<li>o 用于将权限设置为其他人的权限 </li>
+<li><code>X</code> 用于指定执行权限，仅当对象为目录或已经拥有执行权限时有效</li>
+<li><code>s</code> 用于设置正在执行的 <code>UID</code> 或 <code>GID</code> </li>
+<li><code>t</code> 用于保存程序文本</li>
+<li><code>u</code> 用于将权限设置为所有者的权限</li>
+<li><code>g</code> 用于将权限设置为用户组的权限</li>
+<li><code>o</code> 用于将权限设置为其他人的权限 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 将读取权限添加到任何人</span><br><span class="line">chmod o+r newfile</span><br><span class="line"># 删除用户已有的执行权限</span><br><span class="line">chmod u-x newfile</span><br></pre></td></tr></table></figure>
-<p>options 参数的 -R 将循环执行文件和目录的修改 </p>
+<p><code>options</code> 参数的 <code>-R</code> 将循环执行文件和目录的修改 </p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/1130136248wlxk/articles/6264419.html" target="_blank" rel="noopener">linux下cat命令详解</a></p>
 
       

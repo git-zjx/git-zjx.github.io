@@ -283,19 +283,19 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-文件权限/</id>
     <published>2018-05-21T09:25:14.000Z</published>
-    <updated>2018-05-22T01:29:05.095Z</updated>
+    <updated>2018-05-30T09:28:29.333Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# ll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total 24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&amp;gt; usr/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  11 root root 4096 May  7 09:10 data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  19 root root 3040 May 22 08:30 dev&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  76 root root 8192 May 22 08:30 etc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   4 root root   29 May 21 16:04 home&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ll 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ll&lt;/code&gt; 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;-表示文件&lt;/li&gt;
-&lt;li&gt;d 表示目录&lt;/li&gt;
-&lt;li&gt;l 表示链接&lt;/li&gt;
-&lt;li&gt;c 表示字符设备&lt;/li&gt;
-&lt;li&gt;b 表示块设备&lt;/li&gt;
-&lt;li&gt;n 表示网络设备&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&lt;/code&gt;表示文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; 表示目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt; 表示链接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; 表示字符设备&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; 表示块设备&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt; 表示网络设备&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -312,21 +312,21 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%94%A8%E6%88%B7%E7%BB%84/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/</id>
     <published>2018-05-21T08:43:33.000Z</published>
-    <updated>2018-05-30T03:06:39.754Z</updated>
+    <updated>2018-05-30T09:36:16.491Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;etc-group-文件&quot;&gt;&lt;a href=&quot;#etc-group-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/group 文件&quot;&gt;&lt;/a&gt;/etc/group 文件&lt;/h3&gt;&lt;p&gt;/etc/group 文件包含关于系统所使用的各用户组的信息，包含 4 个字段：&lt;/p&gt;
+      &lt;h3 id=&quot;etc-group-文件&quot;&gt;&lt;a href=&quot;#etc-group-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/group 文件&quot;&gt;&lt;/a&gt;/etc/group 文件&lt;/h3&gt;&lt;p&gt;/etc/group 文件包含关于系统所使用的各用户组的信息，包含 &lt;code&gt;4&lt;/code&gt; 个字段：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;用户组名称&lt;/li&gt;
 &lt;li&gt;用户组密码&lt;/li&gt;
-&lt;li&gt;GID&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GID&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;属于用户组的用户账户列表&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root:x:0:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin:x:1:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daemon:x:2:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sys:x:3:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;adm:x:4:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tty:x:5:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;disk:x:6:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lp:x:7:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mem:x:8:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;kmem:x:9:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;用于系统账户的用户组将分配 500 以下的 GID，而用户的用户组将从 500 开始分配 GID   &lt;/p&gt;
+&lt;p&gt;用于系统账户的用户组将分配 &lt;code&gt;500&lt;/code&gt; 以下的 &lt;code&gt;GID&lt;/code&gt;，而用户的用户组将从 &lt;code&gt;500&lt;/code&gt; 开始分配 &lt;code&gt;GID&lt;/code&gt;   &lt;/p&gt;
 &lt;p&gt;通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。&lt;/p&gt;
-&lt;p&gt;当用户使用某个用户组作为 /etc/passwd 文件里的默认用户组，用户账户不会作为成员出现在 /etc/group 中  &lt;/p&gt;
+&lt;p&gt;当用户使用某个用户组作为 &lt;code&gt;/etc/passwd&lt;/code&gt; 文件里的默认用户组，用户账户不会作为成员出现在 &lt;code&gt;/etc/group&lt;/code&gt; 中  &lt;/p&gt;
     
     </summary>
     
@@ -342,22 +342,22 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%94%A8%E6%88%B7/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-用户/</id>
     <published>2018-05-21T06:39:09.000Z</published>
-    <updated>2018-05-21T08:32:46.621Z</updated>
+    <updated>2018-05-30T09:35:40.264Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;etc-passwd-文件&quot;&gt;&lt;a href=&quot;#etc-passwd-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd 文件&quot;&gt;&lt;/a&gt;/etc/passwd 文件&lt;/h3&gt;&lt;p&gt;将登录名与相应的 UID 值进行匹配，包含以下信息：&lt;/p&gt;
+      &lt;h3 id=&quot;etc-passwd-文件&quot;&gt;&lt;a href=&quot;#etc-passwd-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd 文件&quot;&gt;&lt;/a&gt;/etc/passwd 文件&lt;/h3&gt;&lt;p&gt;将登录名与相应的 &lt;code&gt;UID&lt;/code&gt; 值进行匹配，包含以下信息：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;登录用户名&lt;/li&gt;
 &lt;li&gt;用户密码&lt;/li&gt;
-&lt;li&gt;用户账户的数值 UID&lt;/li&gt;
-&lt;li&gt;用户账户的数值用户组 ID（GID）&lt;/li&gt;
+&lt;li&gt;用户账户的数值 &lt;code&gt;UID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;用户账户的数值用户组 &lt;code&gt;ID&lt;/code&gt;（&lt;code&gt;GID&lt;/code&gt;）&lt;/li&gt;
 &lt;li&gt;用户账户的文本描述（称为注释字段）&lt;/li&gt;
-&lt;li&gt;用户 HOME 目录的位置&lt;/li&gt;
-&lt;li&gt;用户的默认 shell&lt;/li&gt;
+&lt;li&gt;用户 &lt;code&gt;HOME&lt;/code&gt; 目录的位置&lt;/li&gt;
+&lt;li&gt;用户的默认 &lt;code&gt;shell&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root:x:0:0:root:/root:/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin:x:1:1:bin:/bin:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daemon:x:2:2:daemon:/sbin:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;adm:x:3:4:adm:/var/adm:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sync:x:5:0:sync:/sbin:/bin/sync&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;根用户账户是 Linux 系统的管理员，它的 UID 始终为 0。Linux 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  &lt;/p&gt;
+&lt;p&gt;根用户账户是 &lt;code&gt;Linux&lt;/code&gt; 系统的管理员，它的 &lt;code&gt;UID&lt;/code&gt; 始终为 &lt;code&gt;0&lt;/code&gt;。&lt;code&gt;Linux&lt;/code&gt; 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  &lt;/p&gt;
     
     </summary>
     
@@ -373,14 +373,14 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-启动文件/</id>
     <published>2018-05-21T05:58:40.000Z</published>
-    <updated>2018-05-21T06:29:53.104Z</updated>
+    <updated>2018-05-30T09:26:08.079Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;登录-shell&quot;&gt;&lt;a href=&quot;#登录-shell&quot; class=&quot;headerlink&quot; title=&quot;登录 shell&quot;&gt;&lt;/a&gt;登录 shell&lt;/h3&gt;&lt;p&gt;当登录到 Linux 系统中时，bash shell 将作为登录 shell 启动。登录 shell 将查找 4 个不同的启动文件来处理其中的命令。处理文件的顺序如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&quot;etc-profile-文件&quot;&gt;&lt;a href=&quot;#etc-profile-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/profile 文件&quot;&gt;&lt;/a&gt;/etc/profile 文件&lt;/h4&gt;&lt;p&gt;bash shell 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 /etc/profile.d 目录中的特定于应用程序的启动文件&lt;/p&gt;
-&lt;h4 id=&quot;HOME-启动文件&quot;&gt;&lt;a href=&quot;#HOME-启动文件&quot; class=&quot;headerlink&quot; title=&quot;$HOME 启动文件&quot;&gt;&lt;/a&gt;$HOME 启动文件&lt;/h4&gt;&lt;p&gt;这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 Linux 发行版只用其一  &lt;/p&gt;
-&lt;p&gt;.bash_profile 启动文件首先将检查 HOME 目录中是否存在另一个名称为 .bashrc 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 PATH 环境变量中，目的是提供方在 HOME 目录中放置可执行文件的公共位置 &lt;/p&gt;
+      &lt;h3 id=&quot;登录-shell&quot;&gt;&lt;a href=&quot;#登录-shell&quot; class=&quot;headerlink&quot; title=&quot;登录 shell&quot;&gt;&lt;/a&gt;登录 shell&lt;/h3&gt;&lt;p&gt;当登录到 &lt;code&gt;Linux&lt;/code&gt; 系统中时，&lt;code&gt;bash shell&lt;/code&gt; 将作为登录 &lt;code&gt;shell&lt;/code&gt; 启动。登录 &lt;code&gt;shell&lt;/code&gt; 将查找 &lt;code&gt;4&lt;/code&gt; 个不同的启动文件来处理其中的命令。处理文件的顺序如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;etc-profile-文件&quot;&gt;&lt;a href=&quot;#etc-profile-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/profile 文件&quot;&gt;&lt;/a&gt;/etc/profile 文件&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bash shell&lt;/code&gt; 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 &lt;code&gt;/etc/profile.d&lt;/code&gt; 目录中的特定于应用程序的启动文件&lt;/p&gt;
+&lt;h4 id=&quot;HOME-启动文件&quot;&gt;&lt;a href=&quot;#HOME-启动文件&quot; class=&quot;headerlink&quot; title=&quot;$HOME 启动文件&quot;&gt;&lt;/a&gt;$HOME 启动文件&lt;/h4&gt;&lt;p&gt;这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 &lt;code&gt;Linux&lt;/code&gt; 发行版只用其一  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.bash_profile&lt;/code&gt; 启动文件首先将检查 &lt;code&gt;HOME&lt;/code&gt; 目录中是否存在另一个名称为 &lt;code&gt;.bashrc&lt;/code&gt; 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 &lt;code&gt;PATH&lt;/code&gt; 环境变量中，目的是提供方在 &lt;code&gt;HOME&lt;/code&gt; 目录中放置可执行文件的公共位置 &lt;/p&gt;
     
     </summary>
     
@@ -396,7 +396,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-环境变量/</id>
     <published>2018-05-21T01:36:11.000Z</published>
-    <updated>2018-05-21T03:30:34.562Z</updated>
+    <updated>2018-05-30T09:31:30.967Z</updated>
     
     <summary type="html">
     
@@ -405,7 +405,7 @@
 &lt;li&gt;全局变量&lt;/li&gt;
 &lt;li&gt;本地变量&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;全局变量&quot;&gt;&lt;a href=&quot;#全局变量&quot; class=&quot;headerlink&quot; title=&quot;全局变量&quot;&gt;&lt;/a&gt;全局变量&lt;/h3&gt;&lt;p&gt;在 shell 会话和该 shell 产生的任何子进程中都可见&lt;br&gt;系统环境变量始终使用全大写字母来区别于普通用户环境变量&lt;/p&gt;
+&lt;h3 id=&quot;全局变量&quot;&gt;&lt;a href=&quot;#全局变量&quot; class=&quot;headerlink&quot; title=&quot;全局变量&quot;&gt;&lt;/a&gt;全局变量&lt;/h3&gt;&lt;p&gt;在 &lt;code&gt;shell&lt;/code&gt; 会话和该 &lt;code&gt;shell&lt;/code&gt; 产生的任何子进程中都可见&lt;br&gt;系统环境变量始终使用全大写字母来区别于普通用户环境变量&lt;/p&gt;
 &lt;h4 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h4&gt;&lt;p&gt;&lt;code&gt;printenv&lt;/code&gt; 查看所有全局变量&lt;br&gt;&lt;code&gt;echo $HOME&lt;/code&gt; 查看指定全局变量&lt;/p&gt;
     
     </summary>
