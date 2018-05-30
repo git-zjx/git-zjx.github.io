@@ -266,6 +266,7 @@
 <p>用于系统账户的用户组将分配 500 以下的 GID，而用户的用户组将从 500 开始分配 GID   </p>
 <p>通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。</p>
 <p>当用户使用某个用户组作为 /etc/passwd 文件里的默认用户组，用户账户不会作为成员出现在 /etc/group 中  </p>
+<a id="more"></a>
 <h3 id="创建新用户组"><a href="#创建新用户组" class="headerlink" title="创建新用户组"></a>创建新用户组</h3><p>groupadd 命令用于创建用户组。创建新用户组时，系统默认不会分配任何用户。要添加新用户，需使用 usermod 命令  </p>
 <h3 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h3><p>groupmod 用于修改用户组 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-g：修改 GID</span><br><span class="line">-n：修改用户组名称</span><br></pre></td></tr></table></figure>

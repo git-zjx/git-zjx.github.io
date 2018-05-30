@@ -264,7 +264,7 @@
     <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-shell%E8%84%9A%E6%9C%AC/"/>
     <id>http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/</id>
     <published>2018-05-22T02:17:09.000Z</published>
-    <updated>2018-05-29T06:11:42.991Z</updated>
+    <updated>2018-05-30T03:07:11.470Z</updated>
     
     <summary type="html">
     
@@ -317,17 +317,21 @@
     <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%94%A8%E6%88%B7%E7%BB%84/"/>
     <id>http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/</id>
     <published>2018-05-21T08:43:33.000Z</published>
-    <updated>2018-05-21T09:10:02.536Z</updated>
+    <updated>2018-05-30T03:06:39.754Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h3 id=&quot;etc-group-文件&quot;&gt;&lt;a href=&quot;#etc-group-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/group 文件&quot;&gt;&lt;/a&gt;/etc/group 文件&lt;/h3&gt;&lt;p&gt;/etc/group 文件包含关于系统所使用的各用户组的信息，包含 4 个字段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户组名称&lt;/li&gt;
+&lt;li&gt;用户组密码&lt;/li&gt;
+&lt;li&gt;GID&lt;/li&gt;
+&lt;li&gt;属于用户组的用户账户列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root:x:0:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin:x:1:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daemon:x:2:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sys:x:3:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;adm:x:4:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tty:x:5:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;disk:x:6:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lp:x:7:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mem:x:8:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;kmem:x:9:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;用于系统账户的用户组将分配 500 以下的 GID，而用户的用户组将从 500 开始分配 GID   &lt;/p&gt;
+&lt;p&gt;通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。&lt;/p&gt;
+&lt;p&gt;当用户使用某个用户组作为 /etc/passwd 文件里的默认用户组，用户账户不会作为成员出现在 /etc/group 中  &lt;/p&gt;
     
     </summary>
     
