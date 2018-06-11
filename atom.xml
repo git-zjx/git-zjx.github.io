@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-11T02:39:07.615Z</updated>
+  <updated>2018-06-11T02:48:07.051Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,19 @@
     <link href="http://www.zhaojiaxing.top/2018/06/11/Nginx-location%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.zhaojiaxing.top/2018/06/11/Nginx-location配置/</id>
     <published>2018-06-11T02:06:51.000Z</published>
-    <updated>2018-06-11T02:39:07.615Z</updated>
+    <updated>2018-06-11T02:48:07.051Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h3 id=&quot;语法规则&quot;&gt;&lt;a href=&quot;#语法规则&quot; class=&quot;headerlink&quot; title=&quot;语法规则&quot;&gt;&lt;/a&gt;语法规则&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;location [=|~|~*|^~] /uri/ &amp;#123; … &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;解析&quot;&gt;&lt;a href=&quot;#解析&quot; class=&quot;headerlink&quot; title=&quot;解析&quot;&gt;&lt;/a&gt;解析&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;=&lt;/code&gt; 表示精确匹配,这个优先级也是最高的&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;^~&lt;/code&gt; 表示 &lt;code&gt;uri&lt;/code&gt; 以某个常规字符串开头，理解为匹配 &lt;code&gt;url&lt;/code&gt; 路径即可。&lt;code&gt;nginx&lt;/code&gt; 不对 &lt;code&gt;url&lt;/code&gt; 做编码，因此请求为 &lt;code&gt;/static/20%/aa&lt;/code&gt;，可以被规则&lt;code&gt;^~ /static/ /aa&lt;/code&gt; 匹配到（注意是空格）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt; 表示区分大小写的正则匹配&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~*&lt;/code&gt; 表示不区分大小写的正则匹配(和上面的唯一区别就是大小写)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!~&lt;/code&gt;和&lt;code&gt;!~*&lt;/code&gt;分别为区分大小写不匹配及不区分大小写不匹配的正则&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/&lt;/code&gt; 通用匹配，任何请求都会匹配到，默认匹配&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
