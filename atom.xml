@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-06T06:09:39.996Z</updated>
+  <updated>2018-06-11T02:39:07.615Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx-location配置</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/11/Nginx-location%E9%85%8D%E7%BD%AE/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/11/Nginx-location配置/</id>
+    <published>2018-06-11T02:06:51.000Z</published>
+    <updated>2018-06-11T02:39:07.615Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-find命令</title>
@@ -547,30 +573,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;实时动态地查看系统的整体运行情况&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;top(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-b：以批处理模式操作；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：显示完整的治命令；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：屏幕刷新间隔时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-I：忽略失效过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：保密模式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：累积模式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i&amp;lt;时间&amp;gt;：设置间隔时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u&amp;lt;用户名&amp;gt;：指定用户名；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p&amp;lt;进程号&amp;gt;：指定进程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n&amp;lt;次数&amp;gt;：循环显示的次数。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-ps命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/16/Linux-ps%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/16/Linux-ps命令/</id>
-    <published>2018-05-16T07:49:10.000Z</published>
-    <updated>2018-05-29T06:35:41.612Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于报告当前系统的进程状态&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ps(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-A：显示所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-N：显示特定参数的结果的补集&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-a：显示除会话标题和无终端进程外的所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：显示除会话标题外的所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-e：显示所有进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-C cmdlist：显示包含在 cmdlist 列表中的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-G grplist：显示 grplist 列表中具有组 ID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-U userlist：显示 userlist 列表中的 userid 拥有的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-g grplist：根据会话或包含在 grplist 中的 groupid 来显示进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p pidlist：显示 pidlist 列表中具有 PID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s sesslist：显示 sesslist 列表中具有会话 ID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t ttylist：显示 ttylist 列表中具有终端 ID 的进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u userlist：根据 usrlist 列表中的有效 userid 来显示进程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-F：使用额外完整输出&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-O format：显示 format 列表中的特定列和默认列&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-M：显示关于进程的安全信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：显示关于进程的额外调度信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f：显示完整的格式列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-j：显示作业信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：显示长列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-o format：只显示 format 中列出的特定列&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-y：不显示进程标记&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-z：显示安全上下文信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H：以层级格式显示进程（显示父进程）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n namelist：定义在 WCHAN 列中显示的值&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w：使用宽输出格式，使显示宽度不受限制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L：显示进程线程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-V：显示 ps 版本&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
