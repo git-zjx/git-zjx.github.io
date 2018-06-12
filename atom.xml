@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-11T03:51:08.277Z</updated>
+  <updated>2018-06-12T00:51:30.625Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-root和alias</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/12/Nginx-root%E5%92%8Calias/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/</id>
+    <published>2018-06-12T00:35:38.000Z</published>
+    <updated>2018-06-12T00:51:30.625Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;&lt;code&gt;nginx&lt;/code&gt; 指定文件路径有两种方式 &lt;code&gt;root&lt;/code&gt; 和 &lt;code&gt;alias&lt;/code&gt;，&lt;code&gt;root&lt;/code&gt; 与 &lt;code&gt;alias&lt;/code&gt; 主要区别在于 &lt;code&gt;nginx&lt;/code&gt; 如何解释 &lt;code&gt;location&lt;/code&gt; 后面的 &lt;code&gt;uri&lt;/code&gt;，这会使两者分别以不同的方式将请求映射到服务器文件上&lt;/p&gt;
+&lt;h3 id=&quot;root&quot;&gt;&lt;a href=&quot;#root&quot; class=&quot;headerlink&quot; title=&quot;root&quot;&gt;&lt;/a&gt;root&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;语法： &lt;code&gt;root path&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;默认值： &lt;code&gt;root html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;配置段： &lt;code&gt;http&lt;/code&gt;、 &lt;code&gt;server&lt;/code&gt;、 &lt;code&gt;location&lt;/code&gt;、 &lt;code&gt;if&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;location ~ ^/weblogs/ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    root /data/weblogs/www.ttlsa.com;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    autoindex on;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    auth_basic &amp;quot;Restricted&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    auth_basic_user_file passwd/weblogs;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果一个请求的 &lt;code&gt;URI&lt;/code&gt; 是 &lt;code&gt;/weblogs/httplogs/www.ttlsa.com-access.log&lt;/code&gt; 时， &lt;code&gt;web 服务器&lt;/code&gt;将会返回服务器上的&lt;br&gt;&lt;code&gt;/data/weblogs/www.ttlsa.com/weblogs/httplogs/www.ttlsa.com-access.log&lt;/code&gt; 的文件。&lt;br&gt;&lt;strong&gt;root 会根据完整的 URI 请求来映射，也就是 /path/uri&lt;/strong&gt;，因此，前面的请求映射为 &lt;code&gt;path/weblogs/httplogs/www.ttlsa.com-access.log&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx-location配置</title>
@@ -551,30 +578,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为&lt;code&gt;KB&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;df(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a或--all：包含全部的文件系统；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--block-size=&amp;lt;区块大小&amp;gt;：以指定的区块大小来显示区块数目；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h或--human-readable：以可读性较高的方式来显示信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i或--inodes：显示inode的信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k或--kilobytes：指定区块大小为1024字节；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l或--local：仅显示本地端的文件系统；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m或--megabytes：指定区块大小为1048576字节；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-P或--portability：使用POSIX的输出格式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--sync：在取得磁盘使用信息前，先执行sync指令；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t&amp;lt;文件系统类型&amp;gt;或--type=&amp;lt;文件系统类型&amp;gt;：仅显示指定文件系统类型的磁盘信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-T或--print-type：显示文件系统的类型；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x&amp;lt;文件系统类型&amp;gt;或--exclude-type=&amp;lt;文件系统类型&amp;gt;：不要显示指定文件系统类型的磁盘信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示帮助；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-top命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-top%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/17/Linux-top命令/</id>
-    <published>2018-05-17T07:07:28.000Z</published>
-    <updated>2018-05-29T06:36:25.682Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;实时动态地查看系统的整体运行情况&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;top(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-b：以批处理模式操作；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c：显示完整的治命令；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：屏幕刷新间隔时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-I：忽略失效过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s：保密模式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S：累积模式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i&amp;lt;时间&amp;gt;：设置间隔时间；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u&amp;lt;用户名&amp;gt;：指定用户名；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p&amp;lt;进程号&amp;gt;：指定进程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-n&amp;lt;次数&amp;gt;：循环显示的次数。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

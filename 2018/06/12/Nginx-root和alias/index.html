@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="Nginx-root和alias"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/page/9/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> ZJX </title>
+    <title> Nginx-root和alias - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -219,134 +219,128 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/18/设计模式-简单工厂模式/">设计模式-简单工厂模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-18
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/创建型/">创建型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>简单工厂模式又称静态工厂方法模式，简单工厂模式的工厂类一般是使用静态方法，通过接收的参数的不同来返回不同的对象实例。<br>还有一种说法是认为静态工厂方法模式和简单工厂模式是两种模式，详情看<a href="https://laravel-china.org/docs/php-design-patterns/2018/SimpleFactory" target="_blank" rel="noopener">简单工厂模式</a>和<a href="https://laravel-china.org/docs/php-design-patterns/2018/StaticFactory" target="_blank" rel="noopener">静态工厂方法模式</a></p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>能够根据外界给定的信息，决定究竟应该创建哪个具体类的对象。明确区分了各自的职责和权力，有利于整个软件体系结构的优化。</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/04/18/设计模式-简单工厂模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/04/18/设计模式-单例模式/">设计模式-单例模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-18
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/创建型/">创建型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>单例模式，也叫单子模式，是一种常用的软件设计模式。在应用这个模式时，单例对象的类必须保证只有一个实例存在。</p>
-<h3 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h3><ul>
-<li>懒汉方式：指全局的单例实例在第一次被使用时构建。</li>
-<li><p>饿汉方式：指全局的单例实例在类装载时构建。</p>
-          <div class="read-more">
-            <a href="/2018/04/18/设计模式-单例模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-  </section>
-
   
-  <nav class="pagination">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Nginx-root和alias
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-12
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
     
-      <a class="prev" href="/page/8/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#root"><span class="toc-text">root</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alias"><span class="toc-text">alias</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#示例-1"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>nginx</code> 指定文件路径有两种方式 <code>root</code> 和 <code>alias</code>，<code>root</code> 与 <code>alias</code> 主要区别在于 <code>nginx</code> 如何解释 <code>location</code> 后面的 <code>uri</code>，这会使两者分别以不同的方式将请求映射到服务器文件上</p>
+<h3 id="root"><a href="#root" class="headerlink" title="root"></a>root</h3><ul>
+<li>语法： <code>root path</code></li>
+<li>默认值： <code>root html</code></li>
+<li>配置段： <code>http</code>、 <code>server</code>、 <code>location</code>、 <code>if</code></li>
+</ul>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/weblogs/ &#123;</span><br><span class="line">    root /data/weblogs/www.ttlsa.com;</span><br><span class="line">    autoindex on;</span><br><span class="line">    auth_basic &quot;Restricted&quot;;</span><br><span class="line">    auth_basic_user_file passwd/weblogs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果一个请求的 <code>URI</code> 是 <code>/weblogs/httplogs/www.ttlsa.com-access.log</code> 时， <code>web 服务器</code>将会返回服务器上的<br><code>/data/weblogs/www.ttlsa.com/weblogs/httplogs/www.ttlsa.com-access.log</code> 的文件。<br><strong>root 会根据完整的 URI 请求来映射，也就是 /path/uri</strong>，因此，前面的请求映射为 <code>path/weblogs/httplogs/www.ttlsa.com-access.log</code></p>
+<a id="more"></a>
+<h3 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h3><ul>
+<li>语法： <code>alias path</code></li>
+<li>配置段： <code>location</code></li>
+</ul>
+<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/weblogs/ &#123;</span><br><span class="line">    root /data/weblogs/www.ttlsa.com;</span><br><span class="line">    autoindex on;</span><br><span class="line">    auth_basic &quot;Restricted&quot;;</span><br><span class="line">    auth_basic_user_file passwd/weblogs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>alias 会把 location 后面配置的路径丢弃掉，把当前匹配到的目录指向到指定的目录。</strong> 如果一个请求的 <code>URI</code> 是 <code>/binapp/a.ttlsa.com/favicon</code> 时， <code>web 服务器</code>将会返回服务器上的 <code>/data/statics/bin/apps/a.ttlsa.com/favicon.jgp</code> 的文件</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol>
+<li>使用 <code>alias</code> 时，目录名后面一定要加 <code>/</code>。</li>
+<li><code>alias</code> 可以指定任何名称。</li>
+<li><code>alias</code> 在使用正则匹配时，必须捕捉要匹配的内容并在指定的内容处使用。</li>
+<li><code>alias</code> 只能位于 <code>location</code> 块中。 </li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.ttlsa.com/nginx/nginx-tutorial-from-entry-to-the-master-ttlsa/" target="_blank" rel="noopener">nginx教程从入门到精通</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/">http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/06/11/Nginx-location配置/">
+        <span class="next-text nav-default">Nginx-location配置</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
       </a>
-    
     
   </nav>
 
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
@@ -431,6 +425,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     
