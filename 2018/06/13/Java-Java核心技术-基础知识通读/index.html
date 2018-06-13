@@ -261,6 +261,74 @@
 <p>在 Java 中， 一共有 8 种基本类型，其中有 4 种整型、 2 种浮点类型、 1 种用于表示 Unicode 编码的字符单元的字符类型 char 和 1 种用于表示真值的 boolean 类型  </p>
 <p>在 Java 中， 整型的范围与运行 Java 代码的机器无关  </p>
 <p><img src="/images/java-integer.png" alt="java-integer"><br><img src="/images/java-float.png" alt="java-float"></p>
+<p>二进制系统中无法精确地表示分数 1/10，会造成舍入误差    </p>
+<p>在 Java 中， char 类型描述了 UTF-16 编码中的一个代码单元  </p>
+<p>强烈建议不要在程序中使用 char 类型， 除非确实需要处理 UTF-16 代码单元。最好将字符串作为抽象数据类型处理   </p>
+<p>整型值和布尔值之间不能进行相互转换  </p>
+<p>在 Java 中， 每个变量都有一个类型。 在声明变量时， 变量的类型位于变量名之前   </p>
+<p>变量名必须是一个以字母开头并由字母或数字构成的序列。需要注意，与大多数程序设计语言相比，Java 中 “字母” 和 “数字” 的范围更大。字母包括 ’A’ ~ ’Z’、 ’a1 ~ ’z、1 或在某种语言中表示字母的任何 Unicode 字符   </p>
+<p>声明一个变量之后，必须用赋值语句对变量进行显式初始化，千万不要使用未初始化的变量，变量的声明尽可能地靠近变量第一次使用的地方   </p>
+<p>利用关键字 final 指示常量，常量名使用全大写   </p>
+<p>可以使用关键字 static final 设置一个类常量  </p>
+<p>整数被 0 除将会产生一个异常， 而浮点数被 0 除将会得到无穷大或 NaN 结果  </p>
+<p><img src="/images/type-transfer.png" alt="type-transfer">  </p>
+<p>如果试图将一个数值从一种类型强制转换为另一种类型， 而又超出了目标类型的表示范围， 结果就会截断成一个完全不同的值  </p>
+<p>从概念上讲， Java 字符串就是 Unicode 字符序列  </p>
+<p>Java 没有内置的字符串类型， 而是在标准 Java 类库中提供了一个预定义 String 类  </p>
+<p>Java 语言允许使用 + 号连接（拼接）两个字符串  </p>
+<p>当将一个字符串与一个非字符串的值进行拼接时，后者被转换成字符串，任何一个 Java 对象都可以转换成字符串    </p>
+<p>一定不要使用 == 运算符检测两个字符串是否相等  </p>
+<p>实际上只有字符串常量是共享的，而 + 或 substring 等操作产生的结果并不是共享的  </p>
+<p>空串 “” 是长度为 0 的字符串  </p>
+<p>String 变量还可以存放一个特殊的值， 名为 null, 这表示目前没有任何对象与该变量关联  </p>
+<p><img src="/images/printf-transfer.png" alt="printf-transfer"></p>
+<p><img src="/images/printf-sign.png" alt="printf-sign"></p>
+<p>如果用一个不存在的文件构造一个 Scanner，或者用一个不能被创建的文件名构造一个 PrintWriter，那么就会发生异常  </p>
+<p>case 标签可以是：类型为 char、 byte、 short 或 int 的常量表达式、枚举常量、从 Java SE 7 开始， case 标签还可以是字符串字面量  </p>
+<p>Biglnteger 类实现了任意精度的整数运算， BigDecimal 实现了任意精度的浮点数运算   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> element : a)</span><br><span class="line">    System.out.println(element);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++)</span><br><span class="line">    System,out.println(a[i]);</span><br></pre></td></tr></table></figure>
+<p>对象的三个主要特性：</p>
+<ul>
+<li>对象的行为（behavior)——可以对对象施加哪些操作，或可以对对象施加哪些方法？</li>
+<li>对象的状态 （state)——当施加那些方法时，对象如何响应？</li>
+<li>对象标识（identity )——如何辨别具有相同行为与状态的不同对象？</li>
+</ul>
+<p>在类之间， 最常见的关系有：</p>
+<ul>
+<li>依赖（uses-a）</li>
+<li>聚合（has-a）</li>
+<li>继承（is-a） </li>
+</ul>
+<p><img src="/images/uml-bound-symbol.png" alt="uml-bound-symbol"></p>
+<p>构造器的名字应该与类名相同  </p>
+<p>在 Java 中，任何对象变量的值都是对存储在另外一个地方的一个对象的引用  </p>
+<p>所有的 Java 对象都存储在堆中。当一个对象包含另一个对象变量时，这个变量依然包含着指向另一个堆对象的指针   </p>
+<p>最好使用不同的类表示不同的概念  </p>
+<p>构造器总是伴随着 new 操作符的执行被调用，而不能对一个已经存在的对象调用构造器来达到重新设置实例域的目的  </p>
+<p>每个类可以有一个以上的构造器  </p>
+<p>一个私有的数据域、一个公有的域访问器方法、一个公有的域更改器方法   </p>
+<p>注意不要编写返回引用可变对象的访问器方法  </p>
+<p>在下面两种情况下使用静态方法：</p>
+<ul>
+<li>一个方法不需要访问对象状态，其所需参数都是通过显式参数提供</li>
+<li>一个方法只需要访问类的静态域</li>
+</ul>
+<p>关键字 static 表示属于类且不属于类对象的变量和函数  </p>
+<p>Java 中方法参数的使用情况：</p>
+<ul>
+<li>一个方法不能修改一个基本数据类型的参数（即数值型或布尔型）。</li>
+<li>一个方法可以改变一个对象参数的状态。</li>
+<li>一个方法不能让对象参数引用一个新的对象</li>
+</ul>
+<p>如果多个方法有相同的名字、不同的参数，便产生了重载  </p>
+<p>如果在编写一个类时没有编写构造器， 那么系统就会提供一个无参数构造器。这个构造器将所有的实例域设置为默认值，数值型数据设置为 0、 布尔型数据设置为 false、 所有对象变量将设置为 null  </p>
+<p>调用构造器的具体处理步骤：</p>
+<ol>
+<li>所有数据域被初始化为默认值（0、 false 或 null。)</li>
+<li>按照在类声明中出现的次序， 依次执行所有域初始化语句和初始化块。</li>
+<li>如果构造器第一行调用了第二个构造器， 则执行第二个构造器主体</li>
+<li>执行这个构造器的主体</li>
+</ol>
 
       
     </div>
