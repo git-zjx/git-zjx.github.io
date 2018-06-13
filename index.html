@@ -226,6 +226,64 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/13/Java-Java核心技术-基础知识通读/">Java-Java核心技术-基础知识通读</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-13
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Java/">Java</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>Java 是一个完整的平台，有一个庞大的库，其中包含了很多可重用的代码和一个提供诸如安全性、 跨操作系统的可移植性以及自动垃圾收集等服务的执行环境  </p>
+<p>Java 特性：简单性，面向对象，分布式，健壮性，安全性，体系结构中立，可移植性，解释型，高性能，多线程，动态性  </p>
+<p>Java 编译器能够检测许多在其他语言中仅在运行时才能够检测出来的问题  </p>
+<p>Java 中的 int 永远为 32 位的整数  </p>
+<p>Java 区分大小写</p>
+<p>类名是以大写字母开头的名词。 如果名字由多个单词组成，每个单词的第一个字母都应该大写  </p>
+<p>源代码的文件名必须与公共类的名字相同，并用 .java 作为扩展名  </p>
+<p>每个 Java 应用程序都必须有一个 main 方法  </p>
+<p>main 方法必须声明为 public  </p>
+<p>Java 是一种强类型语言  </p>
+<p>在 Java 中， 一共有 8 种基本类型，其中有 4 种整型、 2 种浮点类型、 1 种用于表示 Unicode 编码的字符单元的字符类型 char 和 1 种用于表示真值的 boolean 类型  </p>
+<p>在 Java 中， 整型的范围与运行 Java 代码的机器无关  </p>
+<p><img src="/images/java-integer.png" alt="java-integer"></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/">Nginx-ngx_http_core_module模块提供的变量</a>
         
       </h1>
@@ -773,62 +831,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cat test</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">echo Hello $1</span><br><span class="line"></span><br><span class="line">$ test Rich</span><br><span class="line">Hello Rich</span><br><span class="line"></span><br><span class="line">$ test &apos;Rich Mall&apos;</span><br><span class="line">Hell Rich Mall</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/23/Linux-处理用户输入/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/23/Linux-循环语句/">Linux-循环语句</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-23
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="for-命令"><a href="#for-命令" class="headerlink" title="for 命令"></a>for 命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for var in list</span><br><span class="line">do </span><br><span class="line">    commands</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<h4 id="读取列表的值"><a href="#读取列表的值" class="headerlink" title="读取列表的值"></a>读取列表的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in Alabama Alaska Arizona Arkansas</span><br><span class="line">do </span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>最后一次迭代之后，变量 <code>$test</code> 在 <code>shell</code> 脚本的其他部分中仍有效，仍是迭代的最后一个值   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in I don\&apos;t know if &quot;this&apos;s&quot; work</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p><code>shell</code> 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in &quot;New York&quot; Nevada</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p><code>for</code> 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
-          <div class="read-more">
-            <a href="/2018/05/23/Linux-循环语句/" class="read-more-link">阅读更多</a>
           </div>
         
       
