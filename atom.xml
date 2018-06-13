@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-12T00:51:30.625Z</updated>
+  <updated>2018-06-13T00:48:36.861Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-ngx_http_core_module模块提供的变量</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module%E6%A8%A1%E5%9D%97%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8F%98%E9%87%8F/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/</id>
+    <published>2018-06-12T00:57:06.000Z</published>
+    <updated>2018-06-13T00:48:36.861Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;$arg_PARAMETER&lt;/code&gt;：&lt;code&gt;HTTP&lt;/code&gt; 请求中某个参数的值，如 &lt;code&gt;/index.php?site=www.ttlsa.com&lt;/code&gt;，可以使用 &lt;code&gt;$arg_site&lt;/code&gt; 获取 &lt;code&gt;www.ttlsa.com&lt;/code&gt; 这个值  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$args&lt;/code&gt;：&lt;code&gt;HTTP&lt;/code&gt; 请求中的完整参数，如 &lt;code&gt;/index.php?width=500&amp;amp;height=200&lt;/code&gt;，&lt;code&gt;$args&lt;/code&gt; 表示字符串 &lt;code&gt;width=500&amp;amp;height=200&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$binary_remote_addr&lt;/code&gt;：二进制格式的客户端地址  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$body_bytes_sent&lt;/code&gt;：表示在向客户端发送的 http 响应中，包体部分的字节数  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$content_length&lt;/code&gt;：表示客户端请求头部中的 Content-Length 字段  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$content_type&lt;/code&gt;：表示客户端请求头部中的 Content-Type 字段  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$cookie_COOKIE&lt;/code&gt;： 表示在客户端请求头部中的 cookie 字段  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$document_root&lt;/code&gt;：表示当前请求所使用的 root 配置项的值   &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$uri&lt;/code&gt;：表示当前请求的 URI，不带任何参数  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$document_uri&lt;/code&gt;：与 $uri 含义相同   &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$request_uri&lt;/code&gt;：表示客户端发来的原始请求 URI，带完整的参数。$uri 和 $document_uri 未必是用户的原始请求，在内部重定向后可能是重定向后的 URI，而 $request_uri 永远不会改变  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$host&lt;/code&gt;：表示客户端请求头部中的 Host 字段。如果 Host 字段不存在，则以实际处理的 server（虚拟主机）名称代替。如果 Host 字段中带有端口，如 IP:PORT ，那么 $host 是去掉端口的，它的值为 IP。$host 是全小写的。这些特性与 http_HEADER 中的 http_post  不同， http_host 只取出 Host 头部对应的值   &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx-root和alias</title>
@@ -554,30 +585,6 @@
       &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示特定目录的磁盘使用情况，默认为当前目录，默认显示单位为&lt;code&gt;KB&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;du(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a或-all 显示目录中个别文件的大小。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-b或-bytes 显示目录或文件大小时，以 byte 为单位。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c或--total 除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k或--kilobytes 以 KB(1024bytes) 为单位输出。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m或--megabytes 以 MB 为单位输出。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-s或--summarize 仅显示总计，只列出最后加总的值。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h或--human-readable 以 K，M，G 为单位，提高信息的可读性。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x或--one-file-xystem 以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-L&amp;lt;符号链接&amp;gt;或--dereference&amp;lt;符号链接&amp;gt; 显示选项中所指定符号链接的源文件大小。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-S或--separate-dirs 显示个别目录的大小时，并不含其子目录的大小。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-X&amp;lt;文件&amp;gt;或--exclude-from=&amp;lt;文件&amp;gt; 在&amp;lt;文件&amp;gt;指定目录或文件。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--exclude=&amp;lt;目录或文件&amp;gt; 略过指定的目录或文件。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-D或--dereference-args 显示指定符号链接的源文件大小。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H或--si 与-h参数相同，但是 K，M，G 是以 1000 为换算单位。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l或--count-links 重复计算硬件链接的文件。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-df命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/17/Linux-df%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/17/Linux-df命令/</id>
-    <published>2018-05-17T07:41:16.000Z</published>
-    <updated>2018-05-30T08:56:56.788Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为&lt;code&gt;KB&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;df(选项)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot; class=&quot;headerlink&quot; title=&quot;参数&quot;&gt;&lt;/a&gt;参数&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a或--all：包含全部的文件系统；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--block-size=&amp;lt;区块大小&amp;gt;：以指定的区块大小来显示区块数目；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h或--human-readable：以可读性较高的方式来显示信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i或--inodes：显示inode的信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k或--kilobytes：指定区块大小为1024字节；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l或--local：仅显示本地端的文件系统；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m或--megabytes：指定区块大小为1048576字节；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-P或--portability：使用POSIX的输出格式；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--sync：在取得磁盘使用信息前，先执行sync指令；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t&amp;lt;文件系统类型&amp;gt;或--type=&amp;lt;文件系统类型&amp;gt;：仅显示指定文件系统类型的磁盘信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-T或--print-type：显示文件系统的类型；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x&amp;lt;文件系统类型&amp;gt;或--exclude-type=&amp;lt;文件系统类型&amp;gt;：不要显示指定文件系统类型的磁盘信息；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--help：显示帮助；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--version：显示版本信息。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

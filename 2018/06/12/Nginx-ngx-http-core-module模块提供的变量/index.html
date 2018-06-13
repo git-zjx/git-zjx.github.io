@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Nginx-root和alias"/>
+  <meta name="description" content="Nginx-ngx_http_core_module模块提供的变量"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> Nginx-root和alias - ZJX </title>
+    <title> Nginx-ngx_http_core_module模块提供的变量 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -224,7 +224,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Nginx-root和alias
+          Nginx-ngx_http_core_module模块提供的变量
         
       </h1>
 
@@ -248,34 +248,46 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#root"><span class="toc-text">root</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alias"><span class="toc-text">alias</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#示例-1"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>nginx</code> 指定文件路径有两种方式 <code>root</code> 和 <code>alias</code>，<code>root</code> 与 <code>alias</code> 主要区别在于 <code>nginx</code> 如何解释 <code>location</code> 后面的 <code>uri</code>，这会使两者分别以不同的方式将请求映射到服务器文件上</p>
-<h3 id="root"><a href="#root" class="headerlink" title="root"></a>root</h3><ul>
-<li>语法： <code>root path</code></li>
-<li>默认值： <code>root html</code></li>
-<li>配置段： <code>http</code>、 <code>server</code>、 <code>location</code>、 <code>if</code></li>
-</ul>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/weblogs/ &#123;</span><br><span class="line">    root /data/weblogs/www.ttlsa.com;</span><br><span class="line">    autoindex on;</span><br><span class="line">    auth_basic &quot;Restricted&quot;;</span><br><span class="line">    auth_basic_user_file passwd/weblogs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果一个请求的 <code>URI</code> 是 <code>/weblogs/httplogs/www.ttlsa.com-access.log</code> 时， <code>web 服务器</code>将会返回服务器上的<br><code>/data/weblogs/www.ttlsa.com/weblogs/httplogs/www.ttlsa.com-access.log</code> 的文件。<br><strong>root 会根据完整的 URI 请求来映射，也就是 /path/uri</strong>，因此，前面的请求映射为 <code>path/weblogs/httplogs/www.ttlsa.com-access.log</code></p>
+        <p><code>$arg_PARAMETER</code>：<code>HTTP</code> 请求中某个参数的值，如 <code>/index.php?site=www.ttlsa.com</code>，可以使用 <code>$arg_site</code> 获取 <code>www.ttlsa.com</code> 这个值  </p>
+<p><code>$args</code>：<code>HTTP</code> 请求中的完整参数，如 <code>/index.php?width=500&amp;height=200</code>，<code>$args</code> 表示字符串 <code>width=500&amp;height=200</code>  </p>
+<p><code>$binary_remote_addr</code>：二进制格式的客户端地址  </p>
+<p><code>$body_bytes_sent</code>：表示在向客户端发送的 http 响应中，包体部分的字节数  </p>
+<p><code>$content_length</code>：表示客户端请求头部中的 Content-Length 字段  </p>
+<p><code>$content_type</code>：表示客户端请求头部中的 Content-Type 字段  </p>
+<p><code>$cookie_COOKIE</code>： 表示在客户端请求头部中的 cookie 字段  </p>
+<p><code>$document_root</code>：表示当前请求所使用的 root 配置项的值   </p>
+<p><code>$uri</code>：表示当前请求的 URI，不带任何参数  </p>
+<p><code>$document_uri</code>：与 $uri 含义相同   </p>
+<p><code>$request_uri</code>：表示客户端发来的原始请求 URI，带完整的参数。$uri 和 $document_uri 未必是用户的原始请求，在内部重定向后可能是重定向后的 URI，而 $request_uri 永远不会改变  </p>
+<p><code>$host</code>：表示客户端请求头部中的 Host 字段。如果 Host 字段不存在，则以实际处理的 server（虚拟主机）名称代替。如果 Host 字段中带有端口，如 IP:PORT ，那么 $host 是去掉端口的，它的值为 IP。$host 是全小写的。这些特性与 http_HEADER 中的 http_post  不同， http_host 只取出 Host 头部对应的值   </p>
 <a id="more"></a>
-<h3 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h3><ul>
-<li>语法： <code>alias path</code></li>
-<li>配置段： <code>location</code></li>
-</ul>
-<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/weblogs/ &#123;</span><br><span class="line">    root /data/weblogs/www.ttlsa.com;</span><br><span class="line">    autoindex on;</span><br><span class="line">    auth_basic &quot;Restricted&quot;;</span><br><span class="line">    auth_basic_user_file passwd/weblogs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>alias 会把 location 后面配置的路径丢弃掉，把当前匹配到的目录指向到指定的目录。</strong> 如果一个请求的 <code>URI</code> 是 <code>/binapp/a.ttlsa.com/favicon</code> 时， <code>web 服务器</code>将会返回服务器上的 <code>/data/statics/bin/apps/a.ttlsa.com/favicon.jgp</code> 的文件</p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol>
-<li>使用 <code>alias</code> 时，目录名后面一定要加 <code>/</code>。</li>
-<li><code>alias</code> 可以指定任何名称。</li>
-<li><code>alias</code> 在使用正则匹配时，必须捕捉要匹配的内容并在指定的内容处使用。</li>
-<li><code>alias</code> 只能位于 <code>location</code> 块中。 </li>
-</ol>
+<p><code>$hostname</code>：表示 Nginx 所在机器的名称，与 gethostbyname 调用返回的值相同  </p>
+<p><code>$http_HEADER</code>：表示当前 HTTP 请求中响应头部的值。HEADER 名称全小写。如，用 http_host 获取请求中的 Host 头部对应的值   </p>
+<p><code>$sent_http_HEADER</code>：表示返回客户端的 HTTP 响应头部的值，HEADER 名称全小写   </p>
+<p><code>$is_args</code>：表示请求中的 URI 是否带参数，如果带参数，$is_args 值为 ? ，如果不带参数，则为空字符串   </p>
+<p><code>$limit_rate</code>：表示当前连接的限速是多少，0 表示无限速  </p>
+<p><code>$nginx_version</code>：表示当前 Nginx 的版本号   </p>
+<p><code>$query_string</code>：请求 URI 中的参数，与 $args 相同，然而 $query_string 是只读的不会改变   </p>
+<p><code>$remote_addr</code>：表示客户端的地址   </p>
+<p><code>$remote_port</code>：表示客户端连接使用的端口   </p>
+<p><code>$remote_user</code>：表示使用 Auth Basic Module 时定义的用户名   </p>
+<p><code>$request_filename</code>：表示用户请求中的 URI 经过 root 或 alias 转换后的文件路径  </p>
+<p><code>$request_body</code>：表示 HTTP 请求中的包体，该参数只在 proxy_pass 或 fastcgi_pass 中有意义  </p>
+<p><code>$request_body_file</code>：表示 HTTP 请求中的包体存储的临时文件名   </p>
+<p><code>$request_completion</code>：当请求已经全部完成时，其值为 ok 。若没有完成，就要返回客户端，则其值为空字符串；或者在断点续传等情况下使用 HTTP range 访问的并不是文件的最后一块，那么值也是空字符串  </p>
+<p><code>$request_method</code>：表示 HTTP 请求的方法名  </p>
+<p><code>$scheme</code>：表示 HTTP scheme，如，在请求 <a href="https://nginx.com" target="_blank" rel="noopener">https://nginx.com</a> 中表示 https  </p>
+<p><code>$server_addr</code>：表示服务器地址   </p>
+<p><code>$server_name</code>：表示服务器名称  </p>
+<p><code>$server_port</code>：表示服务器端口  </p>
+<p><code>$server_protocol</code>：表示服务器向客户端发送响应的协议，如 HTTP/1.1 或 HTTP/1.0</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.ttlsa.com/nginx/nginx-tutorial-from-entry-to-the-master-ttlsa/" target="_blank" rel="noopener">nginx教程从入门到精通</a></p>
 
       
@@ -292,7 +304,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/">http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/</a>
+      <a href="http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/">http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -320,15 +332,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Nginx-ngx_http_core_module模块提供的变量</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/06/11/Nginx-location配置/">
-        <span class="next-text nav-default">Nginx-location配置</span>
+      <a class="next" href="/2018/06/12/Nginx-root和alias/">
+        <span class="next-text nav-default">Nginx-root和alias</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
