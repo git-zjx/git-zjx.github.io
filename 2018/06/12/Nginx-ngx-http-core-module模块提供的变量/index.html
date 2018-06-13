@@ -258,36 +258,36 @@
         <p><code>$arg_PARAMETER</code>：<code>HTTP</code> 请求中某个参数的值，如 <code>/index.php?site=www.ttlsa.com</code>，可以使用 <code>$arg_site</code> 获取 <code>www.ttlsa.com</code> 这个值  </p>
 <p><code>$args</code>：<code>HTTP</code> 请求中的完整参数，如 <code>/index.php?width=500&amp;height=200</code>，<code>$args</code> 表示字符串 <code>width=500&amp;height=200</code>  </p>
 <p><code>$binary_remote_addr</code>：二进制格式的客户端地址  </p>
-<p><code>$body_bytes_sent</code>：表示在向客户端发送的 http 响应中，包体部分的字节数  </p>
-<p><code>$content_length</code>：表示客户端请求头部中的 Content-Length 字段  </p>
-<p><code>$content_type</code>：表示客户端请求头部中的 Content-Type 字段  </p>
-<p><code>$cookie_COOKIE</code>： 表示在客户端请求头部中的 cookie 字段  </p>
-<p><code>$document_root</code>：表示当前请求所使用的 root 配置项的值   </p>
-<p><code>$uri</code>：表示当前请求的 URI，不带任何参数  </p>
-<p><code>$document_uri</code>：与 $uri 含义相同   </p>
-<p><code>$request_uri</code>：表示客户端发来的原始请求 URI，带完整的参数。$uri 和 $document_uri 未必是用户的原始请求，在内部重定向后可能是重定向后的 URI，而 $request_uri 永远不会改变  </p>
-<p><code>$host</code>：表示客户端请求头部中的 Host 字段。如果 Host 字段不存在，则以实际处理的 server（虚拟主机）名称代替。如果 Host 字段中带有端口，如 IP:PORT ，那么 $host 是去掉端口的，它的值为 IP。$host 是全小写的。这些特性与 http_HEADER 中的 http_post  不同， http_host 只取出 Host 头部对应的值   </p>
+<p><code>$body_bytes_sent</code>：表示在向客户端发送的 <code>http</code> 响应中，包体部分的字节数  </p>
+<p><code>$content_length</code>：表示客户端请求头部中的 <code>Content-Length</code> 字段  </p>
+<p><code>$content_type</code>：表示客户端请求头部中的 <code>Content-Type</code> 字段  </p>
+<p><code>$cookie_COOKIE</code>： 表示在客户端请求头部中的 <code>cookie</code> 字段  </p>
+<p><code>$document_root</code>：表示当前请求所使用的 <code>root</code> 配置项的值   </p>
+<p><code>$uri</code>：表示当前请求的 <code>URI</code>，不带任何参数  </p>
+<p><code>$document_uri</code>：与 <code>$uri</code> 含义相同   </p>
+<p><code>$request_uri</code>：表示客户端发来的原始请求 <code>URI</code>，带完整的参数。<code>$uri</code> 和 <code>$document_uri</code> 未必是用户的原始请求，在内部重定向后可能是重定向后的 <code>URI</code>，而 <code>$request_uri</code> 永远不会改变  </p>
+<p><code>$host</code>：表示客户端请求头部中的 <code>Host</code> 字段。如果 <code>Host</code> 字段不存在，则以实际处理的 <code>server</code>（虚拟主机）名称代替。如果 <code>Host</code> 字段中带有端口，如 <code>IP:PORT</code> ，那么 <code>$host</code> 是去掉端口的，它的值为 <code>IP</code>。<code>$host</code> 是全小写的。这些特性与 <code>http_HEADER</code> 中的 <code>http_post</code>  不同， <code>http_host</code> 只取出 <code>Host</code> 头部对应的值   </p>
 <a id="more"></a>
-<p><code>$hostname</code>：表示 Nginx 所在机器的名称，与 gethostbyname 调用返回的值相同  </p>
-<p><code>$http_HEADER</code>：表示当前 HTTP 请求中响应头部的值。HEADER 名称全小写。如，用 http_host 获取请求中的 Host 头部对应的值   </p>
-<p><code>$sent_http_HEADER</code>：表示返回客户端的 HTTP 响应头部的值，HEADER 名称全小写   </p>
-<p><code>$is_args</code>：表示请求中的 URI 是否带参数，如果带参数，$is_args 值为 ? ，如果不带参数，则为空字符串   </p>
-<p><code>$limit_rate</code>：表示当前连接的限速是多少，0 表示无限速  </p>
-<p><code>$nginx_version</code>：表示当前 Nginx 的版本号   </p>
-<p><code>$query_string</code>：请求 URI 中的参数，与 $args 相同，然而 $query_string 是只读的不会改变   </p>
+<p><code>$hostname</code>：表示 <code>Nginx</code> 所在机器的名称，与 <code>gethostbyname</code> 调用返回的值相同  </p>
+<p><code>$http_HEADER</code>：表示当前 <code>HTTP</code> 请求中响应头部的值。<code>HEADER</code> 名称全小写。如，用 <code>http_host</code> 获取请求中的 <code>Host</code> 头部对应的值   </p>
+<p><code>$sent_http_HEADER</code>：表示返回客户端的 <code>HTTP</code> 响应头部的值，<code>HEADER</code> 名称全小写   </p>
+<p><code>$is_args</code>：表示请求中的 <code>URI</code> 是否带参数，如果带参数，<code>$is_args</code> 值为 <code>?</code> ，如果不带参数，则为空字符串   </p>
+<p><code>$limit_rate</code>：表示当前连接的限速是多少，<code>0</code> 表示无限速  </p>
+<p><code>$nginx_version</code>：表示当前 <code>Nginx</code> 的版本号   </p>
+<p><code>$query_string</code>：请求 <code>URI</code> 中的参数，与 <code>$args</code> 相同，然而 <code>$query_string</code>是只读的不会改变   </p>
 <p><code>$remote_addr</code>：表示客户端的地址   </p>
 <p><code>$remote_port</code>：表示客户端连接使用的端口   </p>
-<p><code>$remote_user</code>：表示使用 Auth Basic Module 时定义的用户名   </p>
-<p><code>$request_filename</code>：表示用户请求中的 URI 经过 root 或 alias 转换后的文件路径  </p>
-<p><code>$request_body</code>：表示 HTTP 请求中的包体，该参数只在 proxy_pass 或 fastcgi_pass 中有意义  </p>
-<p><code>$request_body_file</code>：表示 HTTP 请求中的包体存储的临时文件名   </p>
-<p><code>$request_completion</code>：当请求已经全部完成时，其值为 ok 。若没有完成，就要返回客户端，则其值为空字符串；或者在断点续传等情况下使用 HTTP range 访问的并不是文件的最后一块，那么值也是空字符串  </p>
-<p><code>$request_method</code>：表示 HTTP 请求的方法名  </p>
-<p><code>$scheme</code>：表示 HTTP scheme，如，在请求 <a href="https://nginx.com" target="_blank" rel="noopener">https://nginx.com</a> 中表示 https  </p>
+<p><code>$remote_user</code>：表示使用 <code>Auth Basic Module</code> 时定义的用户名   </p>
+<p><code>$request_filename</code>：表示用户请求中的 <code>URI</code> 经过 <code>root</code> 或 <code>alias</code> 转换后的文件路径  </p>
+<p><code>$request_body</code>：表示 <code>HTTP</code> 请求中的包体，该参数只在 <code>proxy_pass</code> 或 <code>fastcgi_pass</code> 中有意义  </p>
+<p><code>$request_body_file</code>：表示 <code>HTTP</code> 请求中的包体存储的临时文件名   </p>
+<p><code>$request_completion</code>：当请求已经全部完成时，其值为 <code>ok</code> 。若没有完成，就要返回客户端，则其值为空字符串；或者在断点续传等情况下使用 <code>HTTP range</code> 访问的并不是文件的最后一块，那么值也是空字符串  </p>
+<p><code>$request_method</code>：表示 <code>HTTP</code> 请求的方法名  </p>
+<p><code>$scheme</code>：表示 <code>HTTP scheme</code>，如，在请求 <code>https://nginx.com</code> 中表示 <code>https</code>  </p>
 <p><code>$server_addr</code>：表示服务器地址   </p>
 <p><code>$server_name</code>：表示服务器名称  </p>
 <p><code>$server_port</code>：表示服务器端口  </p>
-<p><code>$server_protocol</code>：表示服务器向客户端发送响应的协议，如 HTTP/1.1 或 HTTP/1.0</p>
+<p><code>$server_protocol</code>：表示服务器向客户端发送响应的协议，如 <code>HTTP/1.1</code> 或 <code>HTTP/1.0</code></p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.ttlsa.com/nginx/nginx-tutorial-from-entry-to-the-master-ttlsa/" target="_blank" rel="noopener">nginx教程从入门到精通</a></p>
 
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-13T00:48:36.861Z</updated>
+  <updated>2018-06-13T00:54:04.606Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,22 +21,22 @@
     <link href="http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module%E6%A8%A1%E5%9D%97%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8F%98%E9%87%8F/"/>
     <id>http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/</id>
     <published>2018-06-12T00:57:06.000Z</published>
-    <updated>2018-06-13T00:48:36.861Z</updated>
+    <updated>2018-06-13T00:54:04.606Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;code&gt;$arg_PARAMETER&lt;/code&gt;：&lt;code&gt;HTTP&lt;/code&gt; 请求中某个参数的值，如 &lt;code&gt;/index.php?site=www.ttlsa.com&lt;/code&gt;，可以使用 &lt;code&gt;$arg_site&lt;/code&gt; 获取 &lt;code&gt;www.ttlsa.com&lt;/code&gt; 这个值  &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$args&lt;/code&gt;：&lt;code&gt;HTTP&lt;/code&gt; 请求中的完整参数，如 &lt;code&gt;/index.php?width=500&amp;amp;height=200&lt;/code&gt;，&lt;code&gt;$args&lt;/code&gt; 表示字符串 &lt;code&gt;width=500&amp;amp;height=200&lt;/code&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$binary_remote_addr&lt;/code&gt;：二进制格式的客户端地址  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$body_bytes_sent&lt;/code&gt;：表示在向客户端发送的 http 响应中，包体部分的字节数  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$content_length&lt;/code&gt;：表示客户端请求头部中的 Content-Length 字段  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$content_type&lt;/code&gt;：表示客户端请求头部中的 Content-Type 字段  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$cookie_COOKIE&lt;/code&gt;： 表示在客户端请求头部中的 cookie 字段  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$document_root&lt;/code&gt;：表示当前请求所使用的 root 配置项的值   &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$uri&lt;/code&gt;：表示当前请求的 URI，不带任何参数  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$document_uri&lt;/code&gt;：与 $uri 含义相同   &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$request_uri&lt;/code&gt;：表示客户端发来的原始请求 URI，带完整的参数。$uri 和 $document_uri 未必是用户的原始请求，在内部重定向后可能是重定向后的 URI，而 $request_uri 永远不会改变  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$host&lt;/code&gt;：表示客户端请求头部中的 Host 字段。如果 Host 字段不存在，则以实际处理的 server（虚拟主机）名称代替。如果 Host 字段中带有端口，如 IP:PORT ，那么 $host 是去掉端口的，它的值为 IP。$host 是全小写的。这些特性与 http_HEADER 中的 http_post  不同， http_host 只取出 Host 头部对应的值   &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$body_bytes_sent&lt;/code&gt;：表示在向客户端发送的 &lt;code&gt;http&lt;/code&gt; 响应中，包体部分的字节数  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$content_length&lt;/code&gt;：表示客户端请求头部中的 &lt;code&gt;Content-Length&lt;/code&gt; 字段  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$content_type&lt;/code&gt;：表示客户端请求头部中的 &lt;code&gt;Content-Type&lt;/code&gt; 字段  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$cookie_COOKIE&lt;/code&gt;： 表示在客户端请求头部中的 &lt;code&gt;cookie&lt;/code&gt; 字段  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$document_root&lt;/code&gt;：表示当前请求所使用的 &lt;code&gt;root&lt;/code&gt; 配置项的值   &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$uri&lt;/code&gt;：表示当前请求的 &lt;code&gt;URI&lt;/code&gt;，不带任何参数  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$document_uri&lt;/code&gt;：与 &lt;code&gt;$uri&lt;/code&gt; 含义相同   &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$request_uri&lt;/code&gt;：表示客户端发来的原始请求 &lt;code&gt;URI&lt;/code&gt;，带完整的参数。&lt;code&gt;$uri&lt;/code&gt; 和 &lt;code&gt;$document_uri&lt;/code&gt; 未必是用户的原始请求，在内部重定向后可能是重定向后的 &lt;code&gt;URI&lt;/code&gt;，而 &lt;code&gt;$request_uri&lt;/code&gt; 永远不会改变  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$host&lt;/code&gt;：表示客户端请求头部中的 &lt;code&gt;Host&lt;/code&gt; 字段。如果 &lt;code&gt;Host&lt;/code&gt; 字段不存在，则以实际处理的 &lt;code&gt;server&lt;/code&gt;（虚拟主机）名称代替。如果 &lt;code&gt;Host&lt;/code&gt; 字段中带有端口，如 &lt;code&gt;IP:PORT&lt;/code&gt; ，那么 &lt;code&gt;$host&lt;/code&gt; 是去掉端口的，它的值为 &lt;code&gt;IP&lt;/code&gt;。&lt;code&gt;$host&lt;/code&gt; 是全小写的。这些特性与 &lt;code&gt;http_HEADER&lt;/code&gt; 中的 &lt;code&gt;http_post&lt;/code&gt;  不同， &lt;code&gt;http_host&lt;/code&gt; 只取出 &lt;code&gt;Host&lt;/code&gt; 头部对应的值   &lt;/p&gt;
     
     </summary>
     
