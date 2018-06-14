@@ -259,6 +259,7 @@
 <p>main 方法必须声明为 public  </p>
 <p>Java 是一种强类型语言  </p>
 <p>在 Java 中， 一共有 8 种基本类型，其中有 4 种整型、 2 种浮点类型、 1 种用于表示 Unicode 编码的字符单元的字符类型 char 和 1 种用于表示真值的 boolean 类型  </p>
+<a id="more"></a>
 <p>在 Java 中， 整型的范围与运行 Java 代码的机器无关  </p>
 <p><img src="/images/java-integer.png" alt="java-integer"><br><img src="/images/java-float.png" alt="java-float"></p>
 <p>二进制系统中无法精确地表示分数 1/10，会造成舍入误差    </p>
@@ -334,6 +335,21 @@
 <p>从编译器的角度来看， 嵌套的包之间没有任何关系  </p>
 <p>import 语句应该位于源文件的顶部，但位于 package 语句的后面  </p>
 <p>import 语句不仅可以导人类，还增加了导人静态方法和静态域的功能  </p>
+<p>super 不是一个对象的引用， 不能将 super 赋给另一个对象变量， 它只是一个指示编译器调用超类方法的特殊关键字</p>
+<p>一个对象变量（例如， 变量 e ) 可以指示多种实际类型的现象被称为多态（ polymorphism)。s在运行时能够自动地选择调用哪个方法的现象称为动态绑定（dynamic binding。)  </p>
+<p>由一个公共超类派生出来的所有类的集合被称为继承层次  </p>
+<p>在继承层次中， 从某个特定的类到其祖先的路径被称为该类的继承链   </p>
+<p>程序中出现超类对象的任何地方都可以用子类对象置换  </p>
+<p>Java 语言规范要求 equals 方法具有下面的特性：</p>
+<ol>
+<li>自反性： 对于任何非空引用 x, x.equals(x) 应该返回 true</li>
+<li>对称性: 对于任何引用 x 和 y, 当且仅当 y.equals(x) 返回 true, x.equals(y) 也应该返回 true。</li>
+<li>传递性： 对于任何引用 x、 y 和 z, 如果 x.equals(y) 返 N true， y.equals(z) 返回 true, x.equals(z) 也应该返回 true。</li>
+<li>一致性： 如果 x 和 y 引用的对象没有发生变化，反复调用 x.eqimIS(y) 应该返回同样的结果。</li>
+<li>对于任意非空引用 x, x.equals(null) 应该返回 false</li>
+</ol>
+<p>在比较两个枚举类型的值时， 永远不需要调用 equals, 而直接使用 “==” 就可以  </p>
+<p>在 Java 库中， 使用变量 E 表示集合的元素类型， K 和 V 分别表示表的关键字与值的类型。 T ( 需要时还可以用临近的字母 U 和 S ) 表示 “任意类型”  </p>
 
       
     </div>
