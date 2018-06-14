@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-14T01:51:35.941Z</updated>
+  <updated>2018-06-14T02:12:55.328Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="http://www.zhaojiaxing.top/2018/06/14/Nginx-%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.zhaojiaxing.top/2018/06/14/Nginx-日志配置/</id>
     <published>2018-06-14T00:29:31.000Z</published>
-    <updated>2018-06-14T01:51:35.941Z</updated>
+    <updated>2018-06-14T02:12:55.328Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h3 id=&quot;access-log-指令&quot;&gt;&lt;a href=&quot;#access-log-指令&quot; class=&quot;headerlink&quot; title=&quot;access_log 指令&quot;&gt;&lt;/a&gt;access_log 指令&lt;/h3&gt;&lt;p&gt;设置访问日志&lt;/p&gt;
+&lt;h4 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;access_log path [format [buffer=size [flush=time]][if=condition]];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;access_log path format gzip[=level][buffer=size][flush=time][if=condition];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;access_log syslog:server=address[,parameter=value][format];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;access_log off; # 关闭日志&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;buffer=size #存放访问日志的缓冲区大小 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;flush=time #缓冲区日志刷到磁盘的时间 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if=condition #其他条件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gzip[=level] #压缩级别&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
