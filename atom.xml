@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-14T02:12:55.328Z</updated>
+  <updated>2018-06-15T01:48:53.530Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-日志切割</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/15/Nginx-%E6%97%A5%E5%BF%97%E5%88%87%E5%89%B2/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/15/Nginx-日志切割/</id>
+    <published>2018-06-15T00:42:55.000Z</published>
+    <updated>2018-06-15T01:48:53.530Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Logrotate 是 Linux 下一款日志管理工具，可用于日志文件的转储（即删除旧日志文件，创建新日志文件）。可以根据日志大小或者按照某时段间隔来转储，内部使用 cron 程序来执行。Logrotate 还可以在压缩日志，并发送到指定 E-mail  &lt;/p&gt;
+&lt;h3 id=&quot;配置参数&quot;&gt;&lt;a href=&quot;#配置参数&quot; class=&quot;headerlink&quot; title=&quot;配置参数&quot;&gt;&lt;/a&gt;配置参数&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;compress                        通过 gzip 压缩转储以后的日志&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nocompress                      不压缩&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;copytruncate                    用于还在打开中的日志文件，把当前日志备份并截断&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nocopytruncate                  备份日志文件但是不截断&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;create mode owner group         转储文件，使用指定的文件模式创建新的日志文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nocreate                        不建立新的日志文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;delaycompress 和 compress        一起使用时，转储的日志文件到下一次转储时才压缩&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nodelaycompress                 覆盖 delaycompress 选项，转储同时压缩。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;errors address                  转储时的错误信息发送到指定的 Email 地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ifempty                         即使是空文件也转储，这个是 logrotate 的缺省选项。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;notifempty                      如果是空文件的话，不转储&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mail address                    把转储的日志文件发送到指定的 E-mail 地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nomail                          转储时不发送日志文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;olddir directory                转储后的日志文件放入指定的目录，必须和当前日志文件在同一个文件系统&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;noolddir                        转储后的日志文件和当前日志文件放在同一个目录下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;prerotate/endscript             在转储以前需要执行的命令可以放入这个对，这两个关键字必须单独成行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;postrotate/endscript            在转储以后需要执行的命令可以放入这个对，这两个关键字必须单独成行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daily                           指定转储周期为每天&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;weekly                          指定转储周期为每周&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;monthly                         指定转储周期为每月&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rotate count                    指定日志文件删除之前转储的次数，0 指没有备份，5 指保留5 个备份&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tabootext [+] list 让logrotate   不转储指定扩展名的文件，缺省的扩展名是：.rpm-orig, .rpmsave, v, 和 ~ &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;size size                       当日志文件到达指定的大小时才转储，bytes(缺省)及KB(sizek)或MB(sizem)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Nginx-日志配置</title>
@@ -574,30 +591,6 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-tar命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/18/Linux-tar%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/18/Linux-tar命令/</id>
-    <published>2018-05-18T06:16:06.000Z</published>
-    <updated>2018-05-29T06:36:25.800Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;为linux的文件和目录创建档案&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tar(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-A或--catenate：新增文件到以存在的备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-B：设置区块大小；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c或--create：建立新的备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-C &amp;lt;目录&amp;gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：记录文件的差别；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x或--extract或--get：从备份文件中还原文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t或--list：列出备份文件的内容；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-z或--gzip或--ungzip：通过 gzip 指令处理备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-Z或--compress或--uncompress：通过 compress 指令处理备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;备份文件&amp;gt;或--file=&amp;lt;备份文件&amp;gt;：指定备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v或--verbose：显示指令执行过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：添加文件到已经压缩的文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：添加改变了和现有的文件到已经存在的压缩文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-j：支持 bzip2 解压文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示操作过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：文件系统边界设置；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k：保留原有文件不覆盖；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：保留文件不被覆盖；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w：确认压缩文件的正确性；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p或--same-permissions：用原来的文件权限还原文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-P或--absolute-names：文件名使用绝对名称，不移除文件名称前的「/」号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-N &amp;lt;日期格式&amp;gt; 或 --newer=&amp;lt;日期时间&amp;gt;：只将较指定日期更新的文件保存到备份文件里；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--exclude=&amp;lt;范本样式&amp;gt;：排除符合范本样式的文件。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
