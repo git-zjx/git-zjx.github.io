@@ -226,88 +226,6 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/05/28/Linux-显示数据/">Linux-显示数据</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-28
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="了解输入和输出"><a href="#了解输入和输出" class="headerlink" title="了解输入和输出"></a>了解输入和输出</h3><h4 id="标准文件描述符"><a href="#标准文件描述符" class="headerlink" title="标准文件描述符"></a>标准文件描述符</h4><p>文件描述符是一个非负整数，可以唯一标识会话中打开的文件。每个进程中最多可以有 <code>9</code> 个打开文件的描述符。<code>bash shell</code> 为特殊需要保留前 <code>3</code> 个文件描述符</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">文件描述符</th>
-<th style="text-align:center">缩写</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>0</code></td>
-<td style="text-align:center"><code>STDIN</code></td>
-<td style="text-align:center">标准输入</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>1</code></td>
-<td style="text-align:center"><code>STDOUT</code></td>
-<td style="text-align:center">标准输出</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>2</code></td>
-<td style="text-align:center"><code>STDERR</code></td>
-<td style="text-align:center">标准错误</td>
-</tr>
-</tbody>
-</table>
-<h5 id="STDIN"><a href="#STDIN" class="headerlink" title="STDIN"></a>STDIN</h5><p><code>shell</code> 通过 <code>STDIN</code> 文件描述符从键盘接受输入，并在键入时处理每个字符  </p>
-<p>使用重定向符号（<code>&lt;</code>）时，<code>Linux</code> 将使用重定向引用的文件替换标准的输入文件描述符</p>
-<h5 id="STDOUT"><a href="#STDOUT" class="headerlink" title="STDOUT"></a>STDOUT</h5><p><code>shell</code> 的所有输出（包括 <code>shell</code> 中运行的程序和脚本）都定向到标准输出，也就是监视器  </p>
-<p>使用重定向符号（<code>&gt;</code>）时，所有通常定向到监视器的输出都会重定向到 <code>shell</code> 指定的文件   </p>
-<h5 id="STDERR"><a href="#STDERR" class="headerlink" title="STDERR"></a>STDERR</h5><p><code>STDERR</code> 处理错误信息，是 <code>shell</code> 发送错误消息的目的地   </p>
-<p>默认情况下，<code>STDERR</code> 与 <code>STDOUT</code> 指向相同的位置，也就是默认情况下，所有错误消息都显示在监视器上，但重定向 <code>STDOUT</code> 不会自动重定向 <code>STDERR</code>，错误消息仍会显示在监视器上  </p>
-          <div class="read-more">
-            <a href="/2018/05/28/Linux-显示数据/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
           <a class="post-link" href="/2018/05/23/Linux-处理用户输入/">Linux-处理用户输入</a>
         
       </h1>
@@ -795,6 +713,58 @@
 <h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><p><code>printenv</code> 查看所有全局变量<br><code>echo $HOME</code> 查看指定全局变量</p>
           <div class="read-more">
             <a href="/2018/05/21/Linux-环境变量/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/05/18/Linux-tar命令/">Linux-tar命令</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-18
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>为linux的文件和目录创建档案</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar(选项)(参数)</span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">-A或--catenate：新增文件到以存在的备份文件；</span><br><span class="line">-B：设置区块大小；</span><br><span class="line">-c或--create：建立新的备份文件；</span><br><span class="line">-C &lt;目录&gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。</span><br><span class="line">-d：记录文件的差别；</span><br><span class="line">-x或--extract或--get：从备份文件中还原文件；</span><br><span class="line">-t或--list：列出备份文件的内容；</span><br><span class="line">-z或--gzip或--ungzip：通过 gzip 指令处理备份文件；</span><br><span class="line">-Z或--compress或--uncompress：通过 compress 指令处理备份文件；</span><br><span class="line">-f&lt;备份文件&gt;或--file=&lt;备份文件&gt;：指定备份文件；</span><br><span class="line">-v或--verbose：显示指令执行过程；</span><br><span class="line">-r：添加文件到已经压缩的文件；</span><br><span class="line">-u：添加改变了和现有的文件到已经存在的压缩文件；</span><br><span class="line">-j：支持 bzip2 解压文件；</span><br><span class="line">-v：显示操作过程；</span><br><span class="line">-l：文件系统边界设置；</span><br><span class="line">-k：保留原有文件不覆盖；</span><br><span class="line">-m：保留文件不被覆盖；</span><br><span class="line">-w：确认压缩文件的正确性；</span><br><span class="line">-p或--same-permissions：用原来的文件权限还原文件；</span><br><span class="line">-P或--absolute-names：文件名使用绝对名称，不移除文件名称前的「/」号；</span><br><span class="line">-N &lt;日期格式&gt; 或 --newer=&lt;日期时间&gt;：只将较指定日期更新的文件保存到备份文件里；</span><br><span class="line">--exclude=&lt;范本样式&gt;：排除符合范本样式的文件。</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/05/18/Linux-tar命令/" class="read-more-link">阅读更多</a>
           </div>
         
       
