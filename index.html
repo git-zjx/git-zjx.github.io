@@ -226,6 +226,58 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/19/Nginx-rewrite/">Nginx-rewrite</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-19
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>nginx 的重写模块是一个简单的正则表达式匹配与一个虚拟堆叠机结合。依赖于 PCRE 库，因此需要安装 pcre。根据相关变量重定向和选择不同的配置，从一个 location 跳转到另一个 location，不过这样的循环最多可以执行 10 次，超过后 nginx 将返回 500 错误。同时，重写模块包含 set 指令，来创建新的变量并设其值，这在有些情景下非常有用的，如记录条件标识、传递参数到其他 location、记录做了什么等等  </p>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">break</span><br><span class="line">语法： break</span><br><span class="line">默认值： none</span><br><span class="line">使用字段： server, location, if</span><br><span class="line">完成当前设置的重写规则，停止执行其他的重写规则。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">if</span><br><span class="line">语法： if (condition) &#123; … &#125;</span><br><span class="line">默认值： none</span><br><span class="line">使用字段： server, location</span><br><span class="line">注意：尽量考虑使用 trp_files 代替。</span><br><span class="line">判断的条件可以有以下值：</span><br><span class="line">1. 一个变量的名称：空字符传 ”“ 或者一些 “0” 开始的字符串为 false。</span><br><span class="line">2. 字符串比较：使用 = 或 != 运算符</span><br><span class="line">3. 正则表达式匹配：使用 ~ (区分大小写)和 ~* (不区分大小写)，取反运算 !~ 和 !~*。</span><br><span class="line">4. 文件是否存在：使用 -f 和 !-f 操作符</span><br><span class="line">5. 目录是否存在：使用 -d 和 !-d 操作符</span><br><span class="line">7. 文件、目录、符号链接是否存在：使用 -e 和 !-e 操作符</span><br><span class="line">8. 文件是否可执行：使用 -x 和 !-x 操作符</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/06/19/Nginx-rewrite/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/15/Nginx-日志切割/">Nginx-日志切割</a>
         
       </h1>
@@ -735,88 +787,6 @@
 <p>默认情况下，<code>bash shell</code> 会忽略它接收的任何 <code>SIGQUIT</code> 和 <code>SIGTERM</code> 信号，以防止交互的 <code>shell</code> 意外终止   </p>
           <div class="read-more">
             <a href="/2018/05/29/Linux-脚本控制/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/28/Linux-显示数据/">Linux-显示数据</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-28
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="了解输入和输出"><a href="#了解输入和输出" class="headerlink" title="了解输入和输出"></a>了解输入和输出</h3><h4 id="标准文件描述符"><a href="#标准文件描述符" class="headerlink" title="标准文件描述符"></a>标准文件描述符</h4><p>文件描述符是一个非负整数，可以唯一标识会话中打开的文件。每个进程中最多可以有 <code>9</code> 个打开文件的描述符。<code>bash shell</code> 为特殊需要保留前 <code>3</code> 个文件描述符</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">文件描述符</th>
-<th style="text-align:center">缩写</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>0</code></td>
-<td style="text-align:center"><code>STDIN</code></td>
-<td style="text-align:center">标准输入</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>1</code></td>
-<td style="text-align:center"><code>STDOUT</code></td>
-<td style="text-align:center">标准输出</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>2</code></td>
-<td style="text-align:center"><code>STDERR</code></td>
-<td style="text-align:center">标准错误</td>
-</tr>
-</tbody>
-</table>
-<h5 id="STDIN"><a href="#STDIN" class="headerlink" title="STDIN"></a>STDIN</h5><p><code>shell</code> 通过 <code>STDIN</code> 文件描述符从键盘接受输入，并在键入时处理每个字符  </p>
-<p>使用重定向符号（<code>&lt;</code>）时，<code>Linux</code> 将使用重定向引用的文件替换标准的输入文件描述符</p>
-<h5 id="STDOUT"><a href="#STDOUT" class="headerlink" title="STDOUT"></a>STDOUT</h5><p><code>shell</code> 的所有输出（包括 <code>shell</code> 中运行的程序和脚本）都定向到标准输出，也就是监视器  </p>
-<p>使用重定向符号（<code>&gt;</code>）时，所有通常定向到监视器的输出都会重定向到 <code>shell</code> 指定的文件   </p>
-<h5 id="STDERR"><a href="#STDERR" class="headerlink" title="STDERR"></a>STDERR</h5><p><code>STDERR</code> 处理错误信息，是 <code>shell</code> 发送错误消息的目的地   </p>
-<p>默认情况下，<code>STDERR</code> 与 <code>STDOUT</code> 指向相同的位置，也就是默认情况下，所有错误消息都显示在监视器上，但重定向 <code>STDOUT</code> 不会自动重定向 <code>STDERR</code>，错误消息仍会显示在监视器上  </p>
-          <div class="read-more">
-            <a href="/2018/05/28/Linux-显示数据/" class="read-more-link">阅读更多</a>
           </div>
         
       

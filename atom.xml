@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-15T01:48:53.530Z</updated>
+  <updated>2018-06-19T02:14:48.693Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-rewrite</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/19/Nginx-rewrite/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/19/Nginx-rewrite/</id>
+    <published>2018-06-19T01:03:20.000Z</published>
+    <updated>2018-06-19T02:14:48.693Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;nginx 的重写模块是一个简单的正则表达式匹配与一个虚拟堆叠机结合。依赖于 PCRE 库，因此需要安装 pcre。根据相关变量重定向和选择不同的配置，从一个 location 跳转到另一个 location，不过这样的循环最多可以执行 10 次，超过后 nginx 将返回 500 错误。同时，重写模块包含 set 指令，来创建新的变量并设其值，这在有些情景下非常有用的，如记录条件标识、传递参数到其他 location、记录做了什么等等  &lt;/p&gt;
+&lt;h3 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot; class=&quot;headerlink&quot; title=&quot;指令&quot;&gt;&lt;/a&gt;指令&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;break&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;语法： break&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;默认值： none&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用字段： server, location, if&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;完成当前设置的重写规则，停止执行其他的重写规则。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;语法： if (condition) &amp;#123; … &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;默认值： none&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用字段： server, location&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;注意：尽量考虑使用 trp_files 代替。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;判断的条件可以有以下值：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1. 一个变量的名称：空字符传 ”“ 或者一些 “0” 开始的字符串为 false。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 字符串比较：使用 = 或 != 运算符&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 正则表达式匹配：使用 ~ (区分大小写)和 ~* (不区分大小写)，取反运算 !~ 和 !~*。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4. 文件是否存在：使用 -f 和 !-f 操作符&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5. 目录是否存在：使用 -d 和 !-d 操作符&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7. 文件、目录、符号链接是否存在：使用 -e 和 !-e 操作符&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8. 文件是否可执行：使用 -x 和 !-x 操作符&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx-日志切割</title>
@@ -561,30 +583,6 @@
     
     
       <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-tar命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/18/Linux-tar%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/18/Linux-tar命令/</id>
-    <published>2018-05-18T06:16:06.000Z</published>
-    <updated>2018-05-29T06:36:25.800Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;作用&quot;&gt;&lt;a href=&quot;#作用&quot; class=&quot;headerlink&quot; title=&quot;作用&quot;&gt;&lt;/a&gt;作用&lt;/h3&gt;&lt;p&gt;为linux的文件和目录创建档案&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tar(选项)(参数)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;选项&quot;&gt;&lt;a href=&quot;#选项&quot; class=&quot;headerlink&quot; title=&quot;选项&quot;&gt;&lt;/a&gt;选项&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-A或--catenate：新增文件到以存在的备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-B：设置区块大小；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-c或--create：建立新的备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-C &amp;lt;目录&amp;gt;：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d：记录文件的差别；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-x或--extract或--get：从备份文件中还原文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-t或--list：列出备份文件的内容；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-z或--gzip或--ungzip：通过 gzip 指令处理备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-Z或--compress或--uncompress：通过 compress 指令处理备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f&amp;lt;备份文件&amp;gt;或--file=&amp;lt;备份文件&amp;gt;：指定备份文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v或--verbose：显示指令执行过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r：添加文件到已经压缩的文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u：添加改变了和现有的文件到已经存在的压缩文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-j：支持 bzip2 解压文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v：显示操作过程；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-l：文件系统边界设置；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-k：保留原有文件不覆盖；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-m：保留文件不被覆盖；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-w：确认压缩文件的正确性；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p或--same-permissions：用原来的文件权限还原文件；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-P或--absolute-names：文件名使用绝对名称，不移除文件名称前的「/」号；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-N &amp;lt;日期格式&amp;gt; 或 --newer=&amp;lt;日期时间&amp;gt;：只将较指定日期更新的文件保存到备份文件里；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--exclude=&amp;lt;范本样式&amp;gt;：排除符合范本样式的文件。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
