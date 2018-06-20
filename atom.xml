@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-20T00:45:50.429Z</updated>
+  <updated>2018-06-20T02:51:28.034Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="http://www.zhaojiaxing.top/2018/06/20/Nginx-%E9%9A%90%E8%97%8F%E7%89%88%E6%9C%AC%E5%8F%B7/"/>
     <id>http://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/</id>
     <published>2018-06-20T00:30:38.000Z</published>
-    <updated>2018-06-20T00:45:50.429Z</updated>
+    <updated>2018-06-20T02:51:28.034Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;ol&gt;
+&lt;li&gt;进入 nginx 配置文件的目录（此目录根据安装时决定），用 vim 编辑打开&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# vim nginx.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在 http {···}里加上 server_tokens off; 如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ···&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sendfile on;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    tcp_nopush on;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    keepalive_timeout 60;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    tcp_nodelay on;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    server_tokens off;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ···&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

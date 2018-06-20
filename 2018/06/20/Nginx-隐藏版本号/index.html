@@ -261,6 +261,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim nginx.conf</span><br></pre></td></tr></table></figure>
 <p>在 http {···}里加上 server_tokens off; 如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    ···</span><br><span class="line">    sendfile on;</span><br><span class="line">    tcp_nopush on;</span><br><span class="line">    keepalive_timeout 60;</span><br><span class="line">    tcp_nodelay on;</span><br><span class="line">    server_tokens off;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <ol start="2">
 <li>编辑 php-fpm 配置文件，如 fastcgi.conf 或 fcgi.conf（这个配置文件名也可以自定义的，根据具体文件名修改）：</li>
 </ol>
