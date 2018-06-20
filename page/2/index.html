@@ -226,6 +226,102 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/29/Linux-脚本控制/">Linux-脚本控制</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-29
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="处理信号"><a href="#处理信号" class="headerlink" title="处理信号"></a>处理信号</h3><h4 id="Linux-信号回顾"><a href="#Linux-信号回顾" class="headerlink" title="Linux 信号回顾"></a>Linux 信号回顾</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">信号</th>
+<th style="text-align:center">值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>1</code></td>
+<td style="text-align:center"><code>SIGHUP</code></td>
+<td>挂起进程</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>2</code></td>
+<td style="text-align:center"><code>SIGINT</code></td>
+<td>中断进程</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>3</code></td>
+<td style="text-align:center"><code>SIGQUIT</code></td>
+<td>无条件终止进程</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>15</code></td>
+<td style="text-align:center"><code>SIGTERM</code></td>
+<td>如果可能的话终止进程</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>17</code></td>
+<td style="text-align:center"><code>SIGSTOP</code></td>
+<td>无条件停止，但不终止进程</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>18</code></td>
+<td style="text-align:center"><code>SIGTSTP</code></td>
+<td>停止或暂停进程，但不终止它</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>19</code></td>
+<td style="text-align:center"><code>SIGCONT</code></td>
+<td>重新启动停止的进程</td>
+</tr>
+</tbody>
+</table>
+<p>默认情况下，<code>bash shell</code> 会忽略它接收的任何 <code>SIGQUIT</code> 和 <code>SIGTERM</code> 信号，以防止交互的 <code>shell</code> 意外终止   </p>
+          <div class="read-more">
+            <a href="/2018/05/29/Linux-脚本控制/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/28/Linux-显示数据/">Linux-显示数据</a>
         
       </h1>
@@ -739,62 +835,6 @@
 <p><code>.bash_profile</code> 启动文件首先将检查 <code>HOME</code> 目录中是否存在另一个名称为 <code>.bashrc</code> 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 <code>PATH</code> 环境变量中，目的是提供方在 <code>HOME</code> 目录中放置可执行文件的公共位置 </p>
           <div class="read-more">
             <a href="/2018/05/21/Linux-启动文件/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-环境变量/">Linux-环境变量</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>一般是指在操作系统中用来指定操作系统运行环境的一些参数</p>
-<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><ul>
-<li>全局变量</li>
-<li>本地变量</li>
-</ul>
-<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>在 <code>shell</code> 会话和该 <code>shell</code> 产生的任何子进程中都可见<br>系统环境变量始终使用全大写字母来区别于普通用户环境变量</p>
-<h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><p><code>printenv</code> 查看所有全局变量<br><code>echo $HOME</code> 查看指定全局变量</p>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-环境变量/" class="read-more-link">阅读更多</a>
           </div>
         
       

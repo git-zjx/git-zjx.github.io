@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-19T02:14:48.693Z</updated>
+  <updated>2018-06-20T00:45:50.429Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-隐藏版本号</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/20/Nginx-%E9%9A%90%E8%97%8F%E7%89%88%E6%9C%AC%E5%8F%B7/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/</id>
+    <published>2018-06-20T00:30:38.000Z</published>
+    <updated>2018-06-20T00:45:50.429Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx-rewrite</title>
@@ -550,32 +576,6 @@
 &lt;h4 id=&quot;etc-profile-文件&quot;&gt;&lt;a href=&quot;#etc-profile-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/profile 文件&quot;&gt;&lt;/a&gt;/etc/profile 文件&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bash shell&lt;/code&gt; 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 &lt;code&gt;/etc/profile.d&lt;/code&gt; 目录中的特定于应用程序的启动文件&lt;/p&gt;
 &lt;h4 id=&quot;HOME-启动文件&quot;&gt;&lt;a href=&quot;#HOME-启动文件&quot; class=&quot;headerlink&quot; title=&quot;$HOME 启动文件&quot;&gt;&lt;/a&gt;$HOME 启动文件&lt;/h4&gt;&lt;p&gt;这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 &lt;code&gt;Linux&lt;/code&gt; 发行版只用其一  &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;.bash_profile&lt;/code&gt; 启动文件首先将检查 &lt;code&gt;HOME&lt;/code&gt; 目录中是否存在另一个名称为 &lt;code&gt;.bashrc&lt;/code&gt; 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 &lt;code&gt;PATH&lt;/code&gt; 环境变量中，目的是提供方在 &lt;code&gt;HOME&lt;/code&gt; 目录中放置可执行文件的公共位置 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-环境变量</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-环境变量/</id>
-    <published>2018-05-21T01:36:11.000Z</published>
-    <updated>2018-05-30T09:31:30.967Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;p&gt;一般是指在操作系统中用来指定操作系统运行环境的一些参数&lt;/p&gt;
-&lt;h3 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot; title=&quot;类型&quot;&gt;&lt;/a&gt;类型&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;全局变量&lt;/li&gt;
-&lt;li&gt;本地变量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;全局变量&quot;&gt;&lt;a href=&quot;#全局变量&quot; class=&quot;headerlink&quot; title=&quot;全局变量&quot;&gt;&lt;/a&gt;全局变量&lt;/h3&gt;&lt;p&gt;在 &lt;code&gt;shell&lt;/code&gt; 会话和该 &lt;code&gt;shell&lt;/code&gt; 产生的任何子进程中都可见&lt;br&gt;系统环境变量始终使用全大写字母来区别于普通用户环境变量&lt;/p&gt;
-&lt;h4 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h4&gt;&lt;p&gt;&lt;code&gt;printenv&lt;/code&gt; 查看所有全局变量&lt;br&gt;&lt;code&gt;echo $HOME&lt;/code&gt; 查看指定全局变量&lt;/p&gt;
     
     </summary>
     

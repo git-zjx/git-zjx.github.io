@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="categories"/>
+  <meta name="description" content="Nginx-隐藏版本号"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/categories/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,7 +90,7 @@
 
 
 
-    <title> 分类 - ZJX </title>
+    <title> Nginx-隐藏版本号 - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -219,14 +219,114 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <div class="categories">
-    <div class="categories-title">
-      目前共计 7 个分类
-    </div>
-    <div class="categories-tags">
-      <a class="category-link" href="/categories/Linux/">Linux<span class="category-count">42</span></a> <a class="category-link" href="/categories/Nginx/">Nginx<span class="category-count">8</span></a> <a class="category-link" href="/categories/Web安全/">Web安全<span class="category-count">7</span></a> <a class="category-link" href="/categories/设计模式/">设计模式<span class="category-count">29</span></a>
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Nginx-隐藏版本号
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-20
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     </div>
   </div>
+
+
+    <div class="post-content">
+      
+        <ol>
+<li>进入 nginx 配置文件的目录（此目录根据安装时决定），用 vim 编辑打开</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim nginx.conf</span><br></pre></td></tr></table></figure>
+<p>在 http {···}里加上 server_tokens off; 如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    ···</span><br><span class="line">    sendfile on;</span><br><span class="line">    tcp_nopush on;</span><br><span class="line">    keepalive_timeout 60;</span><br><span class="line">    tcp_nodelay on;</span><br><span class="line">    server_tokens off;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>编辑 php-fpm 配置文件，如 fastcgi.conf 或 fcgi.conf（这个配置文件名也可以自定义的，根据具体文件名修改）：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">找到：</span><br><span class="line">fastcgi_param SERVER_SOFTWARE nginx/$nginx_version;</span><br><span class="line">改为：</span><br><span class="line">fastcgi_param SERVER_SOFTWARE nginx;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>重新加载 nginx 配置：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># /etc/init.d/nginx reload</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.ttlsa.com/nginx/nginx-tutorial-from-entry-to-the-master-ttlsa/" target="_blank" rel="noopener">nginx教程从入门到精通</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/">http://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/06/19/Nginx-rewrite/">
+        <span class="next-text nav-default">Nginx-rewrite</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
