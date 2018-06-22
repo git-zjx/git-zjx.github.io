@@ -226,6 +226,64 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/21/Nginx-基本优化/">Nginx-基本优化</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-21
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="高层的配置"><a href="#高层的配置" class="headerlink" title="高层的配置"></a>高层的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">pid /var/run/nginx.pid;</span><br><span class="line">worker_processes auto;</span><br><span class="line">worker_rlimit_nofile 10000;</span><br></pre></td></tr></table></figure>
+<p>user 和 pid 推荐默认配置  </p>
+<p>worker_processes 定义了 nginx 对外提供 web 服务时的 worker 进程数。最优值取决于许多因素，包括（但不限于） CPU 核心数、存储数据的硬盘数量及负载模式。不能确定的时候，可以将其设置为可用的 CPU 核心数，设置为 auto 时将会尝试自动检测   </p>
+<p>worker_rlimit_nofile 定义了一个 worker 进程的最大打开文件数，理论上这个值是最多打开文件数（ulimit -n）与 nginx 工作进程相除，默认为操作系统的限制，过低可能会出现 too many open files 问题   </p>
+<h3 id="Events-模块"><a href="#Events-模块" class="headerlink" title="Events 模块"></a>Events 模块</h3><p>events 模块包含 nginx 中所有处理连接的设置  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">    worker_connections 2048;</span><br><span class="line">    multi_accept on;</span><br><span class="line">    use epoll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>worker_connections 设置一个 worker 进程同时打开的最大连接数，最大连接数受系统可用的 socket 连接数限制（64k）  </p>
+<p>multi_accept 设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  </p>
+<p>use 设置用于复用客户端线程的轮询方法  </p>
+          <div class="read-more">
+            <a href="/2018/06/21/Nginx-基本优化/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/20/Nginx-隐藏版本号/">Nginx-隐藏版本号</a>
         
       </h1>
@@ -691,61 +749,6 @@
 <p>函数名 <code>func1</code> 每次被引用时，<code>bash shell</code> 返回 <code>func1</code> 函数的定义并执行该函数定义的全部命令，函数使用须在函数定义之后</p>
           <div class="read-more">
             <a href="/2018/05/30/Linux-函数/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/29/Linux-crontab命令/">Linux-crontab命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-29
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p><code>crontab</code> 命令被用来提交和管理用户的需要周期性执行的任务</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-e：编辑该用户的计时器设置；</span><br><span class="line">-l：列出该用户的计时器设置；</span><br><span class="line">-r：删除该用户的计时器设置；</span><br><span class="line">-u&lt;用户名称&gt;：指定要设定计时器的用户名称。</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li><code>crontab</code>文件：指定包含待执行任务的<code>crontab</code>文件</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/29/Linux-crontab命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

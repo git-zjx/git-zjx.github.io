@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-06-20T02:51:28.034Z</updated>
+  <updated>2018-06-22T00:35:22.817Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx-基本优化</title>
+    <link href="http://www.zhaojiaxing.top/2018/06/21/Nginx-%E5%9F%BA%E6%9C%AC%E4%BC%98%E5%8C%96/"/>
+    <id>http://www.zhaojiaxing.top/2018/06/21/Nginx-基本优化/</id>
+    <published>2018-06-21T00:51:33.000Z</published>
+    <updated>2018-06-22T00:35:22.817Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;高层的配置&quot;&gt;&lt;a href=&quot;#高层的配置&quot; class=&quot;headerlink&quot; title=&quot;高层的配置&quot;&gt;&lt;/a&gt;高层的配置&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;user www-data;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pid /var/run/nginx.pid;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;worker_processes auto;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;worker_rlimit_nofile 10000;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;user 和 pid 推荐默认配置  &lt;/p&gt;
+&lt;p&gt;worker_processes 定义了 nginx 对外提供 web 服务时的 worker 进程数。最优值取决于许多因素，包括（但不限于） CPU 核心数、存储数据的硬盘数量及负载模式。不能确定的时候，可以将其设置为可用的 CPU 核心数，设置为 auto 时将会尝试自动检测   &lt;/p&gt;
+&lt;p&gt;worker_rlimit_nofile 定义了一个 worker 进程的最大打开文件数，理论上这个值是最多打开文件数（ulimit -n）与 nginx 工作进程相除，默认为操作系统的限制，过低可能会出现 too many open files 问题   &lt;/p&gt;
+&lt;h3 id=&quot;Events-模块&quot;&gt;&lt;a href=&quot;#Events-模块&quot; class=&quot;headerlink&quot; title=&quot;Events 模块&quot;&gt;&lt;/a&gt;Events 模块&lt;/h3&gt;&lt;p&gt;events 模块包含 nginx 中所有处理连接的设置  &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;events &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    worker_connections 2048;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    multi_accept on;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    use epoll;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;worker_connections 设置一个 worker 进程同时打开的最大连接数，最大连接数受系统可用的 socket 连接数限制（64k）  &lt;/p&gt;
+&lt;p&gt;multi_accept 设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  &lt;/p&gt;
+&lt;p&gt;use 设置用于复用客户端线程的轮询方法  &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx-隐藏版本号</title>
@@ -552,29 +580,6 @@
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root:x:0:0:root:/root:/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin:x:1:1:bin:/bin:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daemon:x:2:2:daemon:/sbin:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;adm:x:3:4:adm:/var/adm:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sync:x:5:0:sync:/sbin:/bin/sync&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;根用户账户是 &lt;code&gt;Linux&lt;/code&gt; 系统的管理员，它的 &lt;code&gt;UID&lt;/code&gt; 始终为 &lt;code&gt;0&lt;/code&gt;。&lt;code&gt;Linux&lt;/code&gt; 系统为各种非实际用户的函数创建了大量用户账户，称为系统账户。系统账户是一个特殊的账户，在系统中运行的服务使用它们访问系统资源  &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-启动文件</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-启动文件/</id>
-    <published>2018-05-21T05:58:40.000Z</published>
-    <updated>2018-05-30T09:26:08.079Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;登录-shell&quot;&gt;&lt;a href=&quot;#登录-shell&quot; class=&quot;headerlink&quot; title=&quot;登录 shell&quot;&gt;&lt;/a&gt;登录 shell&lt;/h3&gt;&lt;p&gt;当登录到 &lt;code&gt;Linux&lt;/code&gt; 系统中时，&lt;code&gt;bash shell&lt;/code&gt; 将作为登录 &lt;code&gt;shell&lt;/code&gt; 启动。登录 &lt;code&gt;shell&lt;/code&gt; 将查找 &lt;code&gt;4&lt;/code&gt; 个不同的启动文件来处理其中的命令。处理文件的顺序如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/etc/profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.bash_login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$HOME/.profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&quot;etc-profile-文件&quot;&gt;&lt;a href=&quot;#etc-profile-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/profile 文件&quot;&gt;&lt;/a&gt;/etc/profile 文件&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bash shell&lt;/code&gt; 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 &lt;code&gt;/etc/profile.d&lt;/code&gt; 目录中的特定于应用程序的启动文件&lt;/p&gt;
-&lt;h4 id=&quot;HOME-启动文件&quot;&gt;&lt;a href=&quot;#HOME-启动文件&quot; class=&quot;headerlink&quot; title=&quot;$HOME 启动文件&quot;&gt;&lt;/a&gt;$HOME 启动文件&lt;/h4&gt;&lt;p&gt;这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 &lt;code&gt;Linux&lt;/code&gt; 发行版只用其一  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.bash_profile&lt;/code&gt; 启动文件首先将检查 &lt;code&gt;HOME&lt;/code&gt; 目录中是否存在另一个名称为 &lt;code&gt;.bashrc&lt;/code&gt; 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 &lt;code&gt;PATH&lt;/code&gt; 环境变量中，目的是提供方在 &lt;code&gt;HOME&lt;/code&gt; 目录中放置可执行文件的公共位置 &lt;/p&gt;
     
     </summary>
     

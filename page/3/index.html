@@ -226,6 +226,59 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/21/Linux-启动文件/">Linux-启动文件</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-21
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="登录-shell"><a href="#登录-shell" class="headerlink" title="登录 shell"></a>登录 shell</h3><p>当登录到 <code>Linux</code> 系统中时，<code>bash shell</code> 将作为登录 <code>shell</code> 启动。登录 <code>shell</code> 将查找 <code>4</code> 个不同的启动文件来处理其中的命令。处理文件的顺序如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/etc/profile</span><br><span class="line">$HOME/.bash_profile</span><br><span class="line">$HOME/.bash_login</span><br><span class="line">$HOME/.profile</span><br></pre></td></tr></table></figure></p>
+<h4 id="etc-profile-文件"><a href="#etc-profile-文件" class="headerlink" title="/etc/profile 文件"></a>/etc/profile 文件</h4><p><code>bash shell</code> 在系统上的主默认启动文件。系统上的每一个用户在登录时都将执行此启动文件。通常在该文件中设置全局变量。会迭代执行 <code>/etc/profile.d</code> 目录中的特定于应用程序的启动文件</p>
+<h4 id="HOME-启动文件"><a href="#HOME-启动文件" class="headerlink" title="$HOME 启动文件"></a>$HOME 启动文件</h4><p>这三个文件具有相同的功能，提供特定于用户的启动文件，用于定义特定于用户的环境变量。大多数 <code>Linux</code> 发行版只用其一  </p>
+<p><code>.bash_profile</code> 启动文件首先将检查 <code>HOME</code> 目录中是否存在另一个名称为 <code>.bashrc</code> 的启动文件。如果存在，则启动文件将执行其中的命令。接下来，启动文件将添加一个目录到 <code>PATH</code> 环境变量中，目的是提供方在 <code>HOME</code> 目录中放置可执行文件的公共位置 </p>
+          <div class="read-more">
+            <a href="/2018/05/21/Linux-启动文件/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/21/Linux-环境变量/">Linux-环境变量</a>
         
       </h1>
@@ -681,58 +734,6 @@
 </ul>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://man.linuxde.net/less" target="_blank" rel="noopener">less命令</a></p>
 
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/15/Linux-more命令/">Linux-more命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-15
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>分页显示文件内容</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more(选项)(参数)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-&lt;数字&gt;：指定每屏显示的行数；</span><br><span class="line">-d：显示[press space to continue,&apos;q&apos; to quit.]和[Press &apos;h&apos; for instructions]；</span><br><span class="line">-c：不进行滚屏操作。每次刷新这个屏幕；</span><br><span class="line">-s：将多个空行压缩成一行显示；</span><br><span class="line">-u：禁止下划线；</span><br><span class="line">+&lt;数字&gt;：从指定数字的行开始显示。</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/15/Linux-more命令/" class="read-more-link">阅读更多</a>
-          </div>
         
       
     </div>

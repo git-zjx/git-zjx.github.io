@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Nginx-基本优化"/>
+
+
+
+
+  <meta name="keywords" content="PHP,Python,Linux,Nginx,MySQL,MongoDB,Redis" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ZJX">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/06/21/Nginx-基本优化/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?150f30f69a61ad717e87a753716a2653";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Nginx-基本优化 - ZJX </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ZJX</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/thoughts">
+        <li class="mobile-menu-item">
+          
+          
+            思考
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">ZJX</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/thoughts">
+            
+            
+              思考
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Nginx-基本优化
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-21
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#高层的配置"><span class="toc-text">高层的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Events-模块"><span class="toc-text">Events 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-模块"><span class="toc-text">HTTP 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完整的配置"><span class="toc-text">完整的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="高层的配置"><a href="#高层的配置" class="headerlink" title="高层的配置"></a>高层的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">pid /var/run/nginx.pid;</span><br><span class="line">worker_processes auto;</span><br><span class="line">worker_rlimit_nofile 10000;</span><br></pre></td></tr></table></figure>
+<p>user 和 pid 推荐默认配置  </p>
+<p>worker_processes 定义了 nginx 对外提供 web 服务时的 worker 进程数。最优值取决于许多因素，包括（但不限于） CPU 核心数、存储数据的硬盘数量及负载模式。不能确定的时候，可以将其设置为可用的 CPU 核心数，设置为 auto 时将会尝试自动检测   </p>
+<p>worker_rlimit_nofile 定义了一个 worker 进程的最大打开文件数，理论上这个值是最多打开文件数（ulimit -n）与 nginx 工作进程相除，默认为操作系统的限制，过低可能会出现 too many open files 问题   </p>
+<h3 id="Events-模块"><a href="#Events-模块" class="headerlink" title="Events 模块"></a>Events 模块</h3><p>events 模块包含 nginx 中所有处理连接的设置  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">    worker_connections 2048;</span><br><span class="line">    multi_accept on;</span><br><span class="line">    use epoll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>worker_connections 设置一个 worker 进程同时打开的最大连接数，最大连接数受系统可用的 socket 连接数限制（64k）  </p>
+<p>multi_accept 设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  </p>
+<p>use 设置用于复用客户端线程的轮询方法  </p>
+<a id="more"></a>
+<h3 id="HTTP-模块"><a href="#HTTP-模块" class="headerlink" title="HTTP 模块"></a>HTTP 模块</h3><p>http 模块控制着 nginx http 处理的所有核心特性 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    server_tokens off;</span><br><span class="line">    sendfile on;</span><br><span class="line">    tcp_nopush on;</span><br><span class="line">    tcp_nodelay on;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>server_tokens 可以关闭在错误页面中显示的 nginx 版本号，提高安全性  </p>
+<p>senfile 设置为 on 表示启动高效传输文件的模式。sendfile 可以让 Nginx 在传输文件时直接在磁盘和 tcp socket 之间传输数据。如果这个参数不开启，会先在用户空间（ Nginx 进程空间）申请一个 buffer ，用 read 函数把数据从磁盘读到 cache，再从 cache 读取到用户空间的 buffer，再用 write 函数把数据从用户空间的 buffer 写入到内核的 buffer，最后到 tcp socket。开启这个参数后可以让数据不用经过用户 buffer  </p>
+<p>tcp_nopush 当使用 sendfile 函数时，tcp_nopush 才起作用，它和指令 tcp_nodelay 是互斥的，表示数据包不会马上传送出去，等到数据包最大时，一次性的传输出去  </p>
+<p>tcp_nodelay 表示 nginx 不再缓存数据，一段一段的发送  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">access_log off;</span><br><span class="line">error_log /var/log/nginx/error.log crit;</span><br></pre></td></tr></table></figure>
+<p>access_log 设置 nginx 是否存储访问日志，禁用可以减少磁盘 IO  </p>
+<p>error_log 设置 nginx 是否存储错误日志  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">keepalive_timeout 10;</span><br><span class="line">client_header_timeout 10;</span><br><span class="line">client_body_timeout 10;</span><br><span class="line">reset_timeout_connection on;</span><br><span class="line">send_timeout 10;</span><br></pre></td></tr></table></figure>
+<p>keepalive_timeout 给客户端分配 keep-alive 连接超时时间，服务器将在这个超时时间过后关闭连接  </p>
+<p>client_header_timeout 和 client_body_timeout 设置请求头和请求体各自的超时时间   </p>
+<p>reset_timeout_connection 设置 nginx 关闭不响应的客户端连接，会释放那个客户端所占有的内存   </p>
+<p>send_timeout 知道客户端的响应超时时间。这个设置不会用于整个转发器，而是在两次客户端读取操作之间。如果在这段时间内，客户端没有读取任何数据，nginx 就会关闭连接  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">limit_conn_zone $binary_remote_addr zone=addr:5m;</span><br><span class="line">limit_conn addr 100;</span><br></pre></td></tr></table></figure>
+<p>limit_conn_zone 设置用于保存各种 key（比如当前连接数）的共享内存的参数。 5m 就是 5 兆字节，这个值应该被设置的足够大以存储（32K<em>5） 32 byte 状态或者（16K</em>5） 64 byte 状态 </p>
+<p>limit_conn 为给定的 key 设置最大连接数。这里 key 是 addr，我们设置的值是 100，也就是说我们允许每一个 IP 地址最多同时打开有 100 个连接  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">include /etc/nginx/mime.types;</span><br><span class="line">default_type text/html;</span><br><span class="line">charset UTF-8;</span><br></pre></td></tr></table></figure>
+<p>include 只是一个在当前文件中包含另一个文件内容的指令。这里我们使用它来加载稍后会用到的一系列的 MIME 类型</p>
+<p>default_type 设置文件使用的默认的 MIME-type  </p>
+<p>charset 设置我们的头文件中的默认的字符集  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gzip on;</span><br><span class="line">gzip_disable &quot;msie6&quot;;</span><br><span class="line"># gzip_static on;</span><br><span class="line">gzip_proxied any;</span><br><span class="line">gzip_min_lenth 1000;</span><br><span class="line">gzip_comp_level 4;</span><br><span class="line">gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript</span><br></pre></td></tr></table></figure>
+<p>gzip 告诉 nginx 采用 gzip 压缩的形式发送数据。这将会减少我们发送的数据量  </p>
+<p>gzip_disable 为指定的客户端禁用 gzip 功能</p>
+<p>gzip_static 告诉 nginx 在压缩资源之前，先查找是否有预先 gzip 处理过的资源，使用 gzip_static 压缩的话要先准备好压缩后的 gz 文件，并且服务器会消耗更多的空间来存储压缩文件和原文件  </p>
+<p>gzip_proxied 允许或者禁止压缩基于请求和响应的响应流。我们设置为 any，意味着将会压缩所有的请求  </p>
+<p>gzip_min_length 设置对数据启用压缩的最少字节数。如果一个请求小于 1000 字节，我们最好不要压缩它，因为压缩这些小的数据会降低处理此请求的所有进程的速度  </p>
+<p>gzip_comp_level 设置数据的压缩等级。这个等级可以是 1-9 之间的任意数值，9 是最慢但是压缩比最大的。我们设置为 4，这是一个比较折中的设置  </p>
+<p>gzip_type 设置需要压缩的数据格式  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># cache informations about file descriptors, frequently accessed files</span><br><span class="line"># can boost performance, but you need to test those values</span><br><span class="line">open_file_cache max=100000 inactive=20s;</span><br><span class="line">open_file_cache_valid 30s;</span><br><span class="line">open_file_cache_min_uses 2;</span><br><span class="line">open_file_cache_errors on;</span><br><span class="line">##</span><br><span class="line"># Virtual Host Configs</span><br><span class="line"># aka our settings for specific servers</span><br><span class="line">##</span><br><span class="line">include /etc/nginx/conf.d/*.conf;</span><br><span class="line">include /etc/nginx/sites-enabled/*;</span><br></pre></td></tr></table></figure>
+<p>open_file_cache 打开缓存的同时也指定了缓存最大数目，以及缓存的时间。我们可以设置一个相对高的最大时间，这样我们可以在它们不活动超过 20 秒后清除掉。  </p>
+<p>open_file_cache_valid 在 open_file_cache 中指定检测正确信息的间隔时间  </p>
+<p>open_file_cache_min_uses 定义了 open_file_cache 中指令参数不活动时间期间里最小的文件数  </p>
+<p>open_file_cache_errors 指定了当搜索一个文件时是否缓存错误信息，也包括再次给配置中添加文件。我们也包括了服务器模块，这些是在不同文件中定义的。如果你的服务器模块不在这些位置，你就得修改这一行来指定正确的位置  </p>
+<h3 id="完整的配置"><a href="#完整的配置" class="headerlink" title="完整的配置"></a>完整的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">pid /var/run/nginx.pid;</span><br><span class="line">worker_processes auto;</span><br><span class="line">worker_rlimit_nofile 100000;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 2048;</span><br><span class="line">    multi_accept on;</span><br><span class="line">    use epoll;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    server_tokens off;</span><br><span class="line">    sendfile on;</span><br><span class="line">    tcp_nopush on;</span><br><span class="line">    tcp_nodelay on;</span><br><span class="line">    access_log off;</span><br><span class="line">    error_log /var/log/nginx/error.log crit;</span><br><span class="line">    keepalive_timeout 10;</span><br><span class="line">    client_header_timeout 10;</span><br><span class="line">    client_body_timeout 10;</span><br><span class="line">    reset_timedout_connection on;</span><br><span class="line">    send_timeout 10;</span><br><span class="line">    limit_conn_zone $binary_remote_addr zone=addr:5m;</span><br><span class="line">    limit_conn addr 100;</span><br><span class="line">    include /etc/nginx/mime.types;</span><br><span class="line">    default_type text/html;</span><br><span class="line">    charset UTF-8;</span><br><span class="line">    </span><br><span class="line">    gzip on;</span><br><span class="line">    gzip_disable &quot;msie6&quot;;</span><br><span class="line">    gzip_proxied any;</span><br><span class="line">    gzip_min_length 1000;</span><br><span class="line">    gzip_comp_level 6;</span><br><span class="line">    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml</span><br><span class="line">    application/xml+rss text/javascript;</span><br><span class="line">    </span><br><span class="line">    open_file_cache max=100000 inactive=20s;</span><br><span class="line">    open_file_cache_valid 30s;</span><br><span class="line">    open_file_cache_min_uses 2;</span><br><span class="line">    open_file_cache_errors on;</span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">    include /etc/nginx/sites-enabled/*;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.ttlsa.com/nginx/nginx-tutorial-from-entry-to-the-master-ttlsa/" target="_blank" rel="noopener">nginx教程从入门到精通</a><br><a href="https://blog.csdn.net/zhxuewu/article/details/77932441" target="_blank" rel="noopener">nginx学习随笔–worker_rlimit_nofile</a><br><a href="https://blog.csdn.net/poechant/article/details/7173826" target="_blank" rel="noopener">高性能Web服务器Nginx的配置与部署研究（8）核心模块之事件模块</a><br><a href="https://blog.csdn.net/u011363729/article/details/70808585" target="_blank" rel="noopener">Nginx –sendfile配置</a><br><a href="https://blog.csdn.net/zmj_88888888/article/details/9169227" target="_blank" rel="noopener">nginx sendfile tcp_nopush tcp_nodelay参数解释</a><br><a href="https://segmentfault.com/q/1010000000125365" target="_blank" rel="noopener">怎么看nginx的gzip_static是否生效</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/06/21/Nginx-基本优化/">http://www.zhaojiaxing.top/2018/06/21/Nginx-基本优化/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/06/20/Nginx-隐藏版本号/">
+        <span class="next-text nav-default">Nginx-隐藏版本号</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:977904037@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/git-zjx" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://www.zhihu.com/people/zhao-jiaxing/" class="iconfont icon-zhihu" title="zhihu"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ZJX</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>
