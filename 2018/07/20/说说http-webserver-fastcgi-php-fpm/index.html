@@ -259,17 +259,18 @@
 
     <div class="post-content">
       
-        <h3 id="Http请求："><a href="#Http请求：" class="headerlink" title="Http请求："></a>Http请求：</h3><p>当用户打开浏览器并输入一串url地址时，到最终页面内容呈现在用户眼前时，这之间的步骤可大致整理如下：</p>
-<p>1）用户输入<a href="http://www.lxlxw.me。" target="_blank" rel="noopener">http://www.lxlxw.me。</a></p>
+        <h3 id="Http请求："><a href="#Http请求：" class="headerlink" title="Http请求："></a>Http请求：</h3><p>当用户打开浏览器并输入一串<code>url</code>地址时，到最终页面内容呈现在用户眼前时，这之间的步骤可大致整理如下：</p>
+<p>1）用户输入<code>http://www.lxlxw.me</code>。</p>
 <p>2）浏览器解析出主机名。</p>
-<p>3）浏览器查询这个主机名的ip地址如192.168.0.1（即dns解析）并获得端口号如80</p>
-<p>4）浏览器发起到192.168.0.1:80的连接。（tcp连接首次握手）</p>
-<p>5）浏览器向服务器发送一条http get或post报文。（有可能会先发送给proxy或gateway，再由它们转发给服务器，如nginx做反向代理以实现负载均衡）</p>
-<p>6）浏览器从服务器读取http响应报文。</p>
+<p>3）浏览器查询这个主机名的<code>ip地址</code>如<code>192.168.0.1</code>（即<code>dns解析</code>）并获得端口号如<code>80</code></p>
+<p>4）浏览器发起到<code>192.168.0.1:80</code>的连接。（<code>tcp连接</code>首次握手）</p>
+<p>5）浏览器向服务器发送一条<code>http get</code>或<code>post</code>报文。（有可能会先发送给<code>proxy</code>或<code>gateway</code>，再由它们转发给服务器，如<code>nginx</code>做反向代理以实现负载均衡）</p>
+<p>6）浏览器从服务器读取<code>http响应报文</code>。</p>
 <p>7）浏览器关闭连接。</p>
-<p>以上便是一条http请求的大致过程，理论上所有的http通信都是由tcp/ip承载的，即http使用tcp连接，其保证了在资源传输过程中是可靠的／不会丢失或损坏的。</p>
-<p>注：http和https比较，https就是在http层和tcp层之间接入了一个密码加密层，称之为TLS或SSL,常用于一些支付等安全性要求较高的网站。</p>
-<h3 id="web服务器"><a href="#web服务器" class="headerlink" title="web服务器"></a>web服务器</h3><p>web服务器可以用来表示web服务器的软件，也可以表示提供web页面的特定设备或机器。这边主要是指通用软件web服务器，如apache或nginx。</p>
+<p>以上便是一条<code>http请求</code>的大致过程，理论上所有的<code>http通信</code>都是由<code>tcp/ip</code>承载的，即<code>http</code>使用<code>tcp连接</code>，其保证了在资源传输过程中是可靠的／不会丢失或损坏的。</p>
+<p>注：<code>http</code>和<code>https</code>比较，<code>https</code>就是在<code>http层</code>和<code>tcp层</code>之间接入了一个密码加密层，称之为<code>TLS</code>或<code>SSL</code>,常用于一些支付等安全性要求较高的网站。</p>
+<a id="more"></a>
+<h3 id="web服务器"><a href="#web服务器" class="headerlink" title="web服务器"></a>web服务器</h3><p><code>web服务器</code>可以用来表示<code>web服务器</code>的软件，也可以表示提供<code>web</code>页面的特定设备或机器。这边主要是指通用软件<code>web服务器</code>，如<code>apache</code>或<code>nginx</code>。</p>
 <p>《http权威指南》中有一份用perl脚本写的web服务器的源码，实现了最简单的收发客户端报文的功能。</p>
 <p>当然，实际的web服务器比这要复杂的多，核心步骤整理如下：</p>
 <p>1）接受一个客户端（浏览器）连接，或者拒绝该客户端的连接并将其关闭。</p>

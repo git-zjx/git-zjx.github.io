@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-07-20T06:01:11.751Z</updated>
+  <updated>2018-07-20T06:14:02.907Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,20 @@
     <link href="http://www.zhaojiaxing.top/2018/07/20/%E8%AF%B4%E8%AF%B4http-webserver-fastcgi-php-fpm/"/>
     <id>http://www.zhaojiaxing.top/2018/07/20/说说http-webserver-fastcgi-php-fpm/</id>
     <published>2018-07-20T05:57:47.000Z</published>
-    <updated>2018-07-20T06:01:11.751Z</updated>
+    <updated>2018-07-20T06:14:02.907Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h3 id=&quot;Http请求：&quot;&gt;&lt;a href=&quot;#Http请求：&quot; class=&quot;headerlink&quot; title=&quot;Http请求：&quot;&gt;&lt;/a&gt;Http请求：&lt;/h3&gt;&lt;p&gt;当用户打开浏览器并输入一串&lt;code&gt;url&lt;/code&gt;地址时，到最终页面内容呈现在用户眼前时，这之间的步骤可大致整理如下：&lt;/p&gt;
+&lt;p&gt;1）用户输入&lt;code&gt;http://www.lxlxw.me&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;2）浏览器解析出主机名。&lt;/p&gt;
+&lt;p&gt;3）浏览器查询这个主机名的&lt;code&gt;ip地址&lt;/code&gt;如&lt;code&gt;192.168.0.1&lt;/code&gt;（即&lt;code&gt;dns解析&lt;/code&gt;）并获得端口号如&lt;code&gt;80&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4）浏览器发起到&lt;code&gt;192.168.0.1:80&lt;/code&gt;的连接。（&lt;code&gt;tcp连接&lt;/code&gt;首次握手）&lt;/p&gt;
+&lt;p&gt;5）浏览器向服务器发送一条&lt;code&gt;http get&lt;/code&gt;或&lt;code&gt;post&lt;/code&gt;报文。（有可能会先发送给&lt;code&gt;proxy&lt;/code&gt;或&lt;code&gt;gateway&lt;/code&gt;，再由它们转发给服务器，如&lt;code&gt;nginx&lt;/code&gt;做反向代理以实现负载均衡）&lt;/p&gt;
+&lt;p&gt;6）浏览器从服务器读取&lt;code&gt;http响应报文&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;7）浏览器关闭连接。&lt;/p&gt;
+&lt;p&gt;以上便是一条&lt;code&gt;http请求&lt;/code&gt;的大致过程，理论上所有的&lt;code&gt;http通信&lt;/code&gt;都是由&lt;code&gt;tcp/ip&lt;/code&gt;承载的，即&lt;code&gt;http&lt;/code&gt;使用&lt;code&gt;tcp连接&lt;/code&gt;，其保证了在资源传输过程中是可靠的／不会丢失或损坏的。&lt;/p&gt;
+&lt;p&gt;注：&lt;code&gt;http&lt;/code&gt;和&lt;code&gt;https&lt;/code&gt;比较，&lt;code&gt;https&lt;/code&gt;就是在&lt;code&gt;http层&lt;/code&gt;和&lt;code&gt;tcp层&lt;/code&gt;之间接入了一个密码加密层，称之为&lt;code&gt;TLS&lt;/code&gt;或&lt;code&gt;SSL&lt;/code&gt;,常用于一些支付等安全性要求较高的网站。&lt;/p&gt;
     
     </summary>
     
