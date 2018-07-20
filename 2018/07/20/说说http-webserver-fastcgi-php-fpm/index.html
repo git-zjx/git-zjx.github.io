@@ -271,21 +271,21 @@
 <p>注：<code>http</code>和<code>https</code>比较，<code>https</code>就是在<code>http层</code>和<code>tcp层</code>之间接入了一个密码加密层，称之为<code>TLS</code>或<code>SSL</code>,常用于一些支付等安全性要求较高的网站。</p>
 <a id="more"></a>
 <h3 id="web服务器"><a href="#web服务器" class="headerlink" title="web服务器"></a>web服务器</h3><p><code>web服务器</code>可以用来表示<code>web服务器</code>的软件，也可以表示提供<code>web</code>页面的特定设备或机器。这边主要是指通用软件<code>web服务器</code>，如<code>apache</code>或<code>nginx</code>。</p>
-<p>《http权威指南》中有一份用perl脚本写的web服务器的源码，实现了最简单的收发客户端报文的功能。</p>
-<p>当然，实际的web服务器比这要复杂的多，核心步骤整理如下：</p>
+<p>《http权威指南》中有一份用<code>perl脚本</code>写的<code>web服务器</code>的源码，实现了最简单的收发客户端报文的功能。</p>
+<p>当然，实际的<code>web服务器</code>比这要复杂的多，核心步骤整理如下：</p>
 <p>1）接受一个客户端（浏览器）连接，或者拒绝该客户端的连接并将其关闭。</p>
-<p>2）接受请求，从网络中读取一条http请求报文并解析。</p>
+<p>2）接受请求，从网络中读取一条<code>http请求</code>报文并解析。</p>
 <p>3）处理请求，对请求报文进行解析。</p>
-<p>4）访问资源，访问报文中指定的资源，有可能是缓存好的html静态页面或图片资源，也有可能是动态资源，如php文件，此时web server会通过fastcgi请求php应用程序以此产生动态资源，下面会详细讲。</p>
-<p>5）创建http响应报文，并回送给客户端。</p>
-<p>6）纪录事务处理过程，即记log。</p>
-<h3 id="Fastcgi与php-fpm"><a href="#Fastcgi与php-fpm" class="headerlink" title="Fastcgi与php-fpm:"></a>Fastcgi与php-fpm:</h3><p>讲Fastcgi之前需要先讲CGI，CGI是为了保证web server传递过来的数据是标准格式的，它是一个协议，方便CGI程序的编写者。Fastcgi是CGI的更高级的一种方式，是用来提高CGI程序性能的。</p>
-<p>web server（如nginx）只是内容的分发者。比如，如果请求/index.html，那么web server会去文件系统中找到这个文件，发送给浏览器，这里分发的是静态资源。</p>
-<p>如果现在请求的是/index.php，根据配置文件，nginx知道这个不是静态文件，需要去找PHP解析器来处理，那么他会把这个请求简单处理后交给PHP解析器。此时CGI便是规定了要传什么数据／以什么格式传输给php解析器的协议。</p>
-<p>当web server收到/index.php这个请求后，会启动对应的CGI程序，这里就是PHP的解析器。接下来PHP解析器会解析php.ini文件，初始化执行环境，然后处理请求，再以CGI规定的格式返回处理后的结果，退出进程。web server再把结果返回给浏览器。</p>
-<p>那么CGI相较于Fastcgi而言其性能瓶颈在哪呢？CGI针对每个http请求都是fork一个新进程来进行处理，处理过程包括解析php.ini文件，初始化执行环境等，然后这个进程会把处理完的数据返回给web服务器，最后web服务器把内容发送给用户，刚才fork的进程也随之退出。 如果下次用户还请求动态资源，那么web服务器又再次fork一个新进程，周而复始的进行。</p>
-<p>而Fastcgi则会先fork一个master，解析配置文件，初始化执行环境，然后再fork多个worker。当请求过来时，master会传递给一个worker，然后立即可以接受下一个请求。这样就避免了重复的劳动，效率自然是高。而且当worker不够用时，master可以根据配置预先启动几个worker等着；当然空闲worker太多时，也会停掉一些，这样就提高了性能，也节约了资源。这就是Fastcgi的对进程的管理。大多数Fastcgi实现都会维护一个进程池。注：swoole作为httpserver，实际上也是类似这样的工作方式。</p>
-<p>那PHP-FPM又是什么呢？它是一个实现了Fastcgi协议的程序,用来管理Fastcgi起的进程的,即能够调度php-cgi进程的程序。现已在PHP内核中就集成了PHP-FPM，使用–enalbe-fpm这个编译参数即可。另外，修改了php.ini配置文件后，没办法平滑重启，需要重启php-fpm才可。此时新fork的worker会用新的配置，已经存在的worker继续处理完手上的活。</p>
+<p>4）访问资源，访问报文中指定的资源，有可能是缓存好的html静态页面或图片资源，也有可能是动态资源，如<code>php文件</code>，此时<code>web server</code>会通过<code>fastcgi</code>请求<code>php应用程序</code>以此产生动态资源，下面会详细讲。</p>
+<p>5）创建<code>http响应报文</code>，并回送给客户端。</p>
+<p>6）纪录事务处理过程，即记<code>log</code>。</p>
+<h3 id="Fastcgi与php-fpm"><a href="#Fastcgi与php-fpm" class="headerlink" title="Fastcgi与php-fpm:"></a>Fastcgi与php-fpm:</h3><p>讲<code>Fastcgi</code>之前需要先讲<code>CGI</code>，<code>CGI</code>是为了保证<code>web server</code>传递过来的数据是标准格式的，它是一个协议，方便<code>CGI</code>程序的编写者。<code>Fastcgi</code>是<code>CGI</code>的更高级的一种方式，是用来提高<code>CGI</code>程序性能的。</p>
+<p><code>web server</code>（如<code>nginx</code>）只是内容的分发者。比如，如果请求<code>/index.html</code>，那么<code>web server</code>会去文件系统中找到这个文件，发送给浏览器，这里分发的是静态资源。</p>
+<p>如果现在请求的是<code>/index.php</code>，根据配置文件，<code>nginx</code>知道这个不是静态文件，需要去找<code>PHP解析器</code>来处理，那么他会把这个请求简单处理后交给<code>HP解析器</code>。此时<code>CGI</code>便是规定了要传什么数据／以什么格式传输给<code>php解析器</code>的协议。</p>
+<p>当<code>web server</code>收到<code>/index.php</code>这个请求后，会启动对应的<code>CGI程序</code>，这里就是<code>PHP的解析器</code>。接下来<code>PHP解析器</code>会解析<code>php.ini</code>文件，初始化执行环境，然后处理请求，再以<code>CGI</code>规定的格式返回处理后的结果，退出进程。<code>web server</code>再把结果返回给浏览器。</p>
+<p>那么<code>CGI</code>相较于<code>Fastcgi</code>而言其性能瓶颈在哪呢？<code>CGI</code>针对每个<code>http请求</code>都是<code>fork</code>一个新进程来进行处理，处理过程包括解析<code>php.ini</code>文件，初始化执行环境等，然后这个进程会把处理完的数据返回给<code>web服务器</code>，最后<code>web服务器</code>把内容发送给用户，刚才<code>fork</code>的进程也随之退出。 如果下次用户还请求动态资源，那么<code>web服务器</code>又再次<code>fork</code>一个新进程，周而复始的进行。</p>
+<p>而<code>Fastcgi</code>则会先<code>fork</code>一个<code>master</code>，解析配置文件，初始化执行环境，然后再<code>fork</code>多个<code>worker</code>。当请求过来时，<code>master</code>会传递给一个<code>worker</code>，然后立即可以接受下一个请求。这样就避免了重复的劳动，效率自然是高。而且当<code>worker</code>不够用时，<code>master</code>可以根据配置预先启动几个<code>worker</code>等着；当然空闲<code>worker</code>太多时，也会停掉一些，这样就提高了性能，也节约了资源。这就是<code>Fastcgi</code>的对进程的管理。大多数<code>Fastcgi</code>实现都会维护一个进程池。注：<code>swoole</code>作为<code>httpserver</code>，实际上也是类似这样的工作方式。</p>
+<p>那<code>PHP-FPM</code>又是什么呢？它是一个实现了<code>Fastcgi</code>协议的程序,用来管理<code>Fastcgi</code>起的进程的,即能够调度<code>php-cgi</code>进程的程序。现已在<code>PHP</code>内核中就集成了<code>PHP-FPM</code>，使用<code>--enalbe-fpm</code>这个编译参数即可。另外，修改了<code>php.ini</code>配置文件后，没办法平滑重启，需要重启<code>php-fpm</code>才可。此时新<code>fork</code>的<code>worker</code>会用新的配置，已经存在的<code>worker</code>继续处理完手上的活。</p>
 <h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p><a href="http://www.lxlxw.me/?p=216" target="_blank" rel="noopener">说说http/webserver/fastcgi/php-fpm</a></p>
 
       
