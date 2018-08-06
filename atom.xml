@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-07-20T07:27:18.423Z</updated>
+  <updated>2018-08-06T03:13:46.552Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么说PHP不支持Unicode编码</title>
+    <link href="http://www.zhaojiaxing.top/2018/08/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4PHP%E4%B8%8D%E6%94%AF%E6%8C%81Unicode%E7%BC%96%E7%A0%81/"/>
+    <id>http://www.zhaojiaxing.top/2018/08/06/为什么说PHP不支持Unicode编码/</id>
+    <published>2018-08-06T03:08:58.000Z</published>
+    <updated>2018-08-06T03:13:46.552Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>说说http/webserver/fastcgi/php-fpm</title>
@@ -556,36 +582,6 @@
 &lt;li&gt;&lt;code&gt;b&lt;/code&gt; 表示块设备&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;n&lt;/code&gt; 表示网络设备&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-用户组</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E7%94%A8%E6%88%B7%E7%BB%84/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-用户组/</id>
-    <published>2018-05-21T08:43:33.000Z</published>
-    <updated>2018-05-30T09:36:16.491Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;etc-group-文件&quot;&gt;&lt;a href=&quot;#etc-group-文件&quot; class=&quot;headerlink&quot; title=&quot;/etc/group 文件&quot;&gt;&lt;/a&gt;/etc/group 文件&lt;/h3&gt;&lt;p&gt;/etc/group 文件包含关于系统所使用的各用户组的信息，包含 &lt;code&gt;4&lt;/code&gt; 个字段：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用户组名称&lt;/li&gt;
-&lt;li&gt;用户组密码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;GID&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;属于用户组的用户账户列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root:x:0:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin:x:1:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;daemon:x:2:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sys:x:3:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;adm:x:4:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tty:x:5:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;disk:x:6:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lp:x:7:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mem:x:8:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;kmem:x:9:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;用于系统账户的用户组将分配 &lt;code&gt;500&lt;/code&gt; 以下的 &lt;code&gt;GID&lt;/code&gt;，而用户的用户组将从 &lt;code&gt;500&lt;/code&gt; 开始分配 &lt;code&gt;GID&lt;/code&gt;   &lt;/p&gt;
-&lt;p&gt;通过使用密码，用户组将允许非用户组成员临时成为用户组成员，不常用。&lt;/p&gt;
-&lt;p&gt;当用户使用某个用户组作为 &lt;code&gt;/etc/passwd&lt;/code&gt; 文件里的默认用户组，用户账户不会作为成员出现在 &lt;code&gt;/etc/group&lt;/code&gt; 中  &lt;/p&gt;
     
     </summary>
     

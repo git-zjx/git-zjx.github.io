@@ -226,6 +226,61 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/03/Nginx-内置变量/">Nginx-内置变量</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p><code>$arg_name</code>：请求中的参数名，即「?」后面的<code>arg_name=arg_value</code>形式的<code>arg_name</code>  </p>
+<p><code>$args</code>：请求中的参数值，即「?」后面的<code>arg_name=arg_value</code>形式的<code>arg_value</code>     </p>
+<p><code>$binary_remote_addr</code>：客户端地址的二进制形式，固定长度为4个字节  </p>
+<p><code>$body_bytes_sent</code>：传输给客户端的字节数，响应头不计算在内  </p>
+<p><code>$bytes_sent</code>：传输给客户端的字节数  </p>
+<p><code>$connection</code>：TCP连接的序列号   </p>
+          <div class="read-more">
+            <a href="/2018/05/03/Nginx-内置变量/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/03/设计模式-访问者模式/">设计模式-访问者模式</a>
         
       </h1>
@@ -726,59 +781,6 @@
 </ul>
           <div class="read-more">
             <a href="/2018/05/02/设计模式-迭代器模式/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/02/设计模式-命令模式/">设计模式-命令模式</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-02
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/设计模式/">设计模式</a>
-            
-              <a href="/categories/设计模式/行为型/">行为型</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>Client（客户）：负责创建一个具体的命令（Concrete Command）<br>Invoker（调用者）：调用者持有一个命令对象，并在某个时刻调用命令对象的 execute() 方法。<br>Command（命令接口）：包含命令对象的 execute() 方法和 undo() 方法。<br>ConcreteCommand（具体命令）：实现命令接口。包括两个操作，执行命令和撤销命令。<br>Receiver（接收者）：接受命令并执行。</p>
-          <div class="read-more">
-            <a href="/2018/05/02/设计模式-命令模式/" class="read-more-link">阅读更多</a>
           </div>
         
       
