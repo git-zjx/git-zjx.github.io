@@ -266,6 +266,7 @@
 <li>再进一步，PHP 会按照脚本文件的编码，来决定字符串的编码。就比如：<code>$string = &quot;中文&quot;</code>;，如果脚本文件是 UTF-8，就会把中文的 UTF-8 的编码：<code>E4B8ADE69687</code>给保存起来。</li>
 <li>再进一步，如前说所，PHP 并不保存字符串的编码信息。所以即便中文保存为:<code>E4B8ADE69687</code>,在字符串原生函数看来，都只是一串二进制数。所以，PHP 原生字符串函数只能操作单字节字符！就是把一个字节当做一个字符来处理！</li>
 </ul>
+<a id="more"></a>
 <p>如果想明白了上面几点，上面的代码例子就自然明白了：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件编码UTF-8</span></span><br><span class="line"><span class="keyword">echo</span> bin2hex(<span class="string">"中文"</span>); <span class="comment">// 可以看到，"中文"对应的二进制就是：e4b8ade69687</span></span><br><span class="line"><span class="keyword">echo</span> strlen(<span class="string">"中文"</span>); <span class="comment">// 所以按照单字节来统计长度，就是6 </span></span><br><span class="line"><span class="keyword">echo</span> substr(<span class="string">"中文"</span>,<span class="number">0</span>,<span class="number">1</span>) <span class="comment">// 取0到1个字节，也就是e4，并不对应某个字符的编码，所以乱码</span></span><br><span class="line"><span class="keyword">echo</span> substr(<span class="string">"中文"</span>,<span class="number">0</span>,<span class="number">3</span>) <span class="comment">// 取0到3个字节，刚好把`中`的编码取出来</span></span><br></pre></td></tr></table></figure>
 <p>同理，如果把文件编码换成GBK或者别的，再实验也会得到类似的结果，只不过GBK一个汉字占2字节。</p>

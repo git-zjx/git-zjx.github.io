@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-08-06T03:13:46.552Z</updated>
+  <updated>2018-08-06T03:15:59.861Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -21,17 +21,21 @@
     <link href="http://www.zhaojiaxing.top/2018/08/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4PHP%E4%B8%8D%E6%94%AF%E6%8C%81Unicode%E7%BC%96%E7%A0%81/"/>
     <id>http://www.zhaojiaxing.top/2018/08/06/为什么说PHP不支持Unicode编码/</id>
     <published>2018-08-06T03:08:58.000Z</published>
-    <updated>2018-08-06T03:13:46.552Z</updated>
+    <updated>2018-08-06T03:15:59.861Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;p&gt;经常看到有说法：PHP不支持Unicode，或者说PHP在底层不支持Unicode。虽然我知道PHP编码很蛋疼，各种字符串处理函数非常不规范，但也还能显示中文，一直没弄明白这个不支持Unicode是什么意思。花了一些时间来梳理这方面的信息。&lt;/p&gt;
+&lt;p&gt;先从一个例子来引入：&lt;br&gt;一个PHP脚本如下，假设文件的编码是UTF-8:&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//文件编码UTF-8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; strlen(&lt;span class=&quot;string&quot;&gt;&quot;中文&quot;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;// 6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; substr(&lt;span class=&quot;string&quot;&gt;&quot;中文&quot;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// 乱码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; substr(&lt;span class=&quot;string&quot;&gt;&quot;中文&quot;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// 中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;很奇怪吧，从上面看，似乎把一个汉字当成了3个字符。这就要从PHP对于字符串的存储上说起了。&lt;/p&gt;
+&lt;p&gt;我总结了一下，如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PHP 的字符串，是由字节( byte )组成的数组构成的。也就是说，类似于 C 语言 &lt;code&gt;char a[3] = &amp;quot;abc&amp;quot;&lt;/code&gt; 这样，一个字符占据一个字节。&lt;/li&gt;
+&lt;li&gt;除此之外，并没有存储文本的编码信息，也就是说 PHP 并不知道这些字符串的二进制数据，应该对应怎样的编码。&lt;/li&gt;
+&lt;li&gt;再进一步，PHP 会按照脚本文件的编码，来决定字符串的编码。就比如：&lt;code&gt;$string = &amp;quot;中文&amp;quot;&lt;/code&gt;;，如果脚本文件是 UTF-8，就会把中文的 UTF-8 的编码：&lt;code&gt;E4B8ADE69687&lt;/code&gt;给保存起来。&lt;/li&gt;
+&lt;li&gt;再进一步，如前说所，PHP 并不保存字符串的编码信息。所以即便中文保存为:&lt;code&gt;E4B8ADE69687&lt;/code&gt;,在字符串原生函数看来，都只是一串二进制数。所以，PHP 原生字符串函数只能操作单字节字符！就是把一个字节当做一个字符来处理！&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
