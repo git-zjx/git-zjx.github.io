@@ -226,6 +226,64 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/11/Nginx-location配置/">Nginx-location配置</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-11
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location [=|~|~*|^~] /uri/ &#123; … &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><ul>
+<li><code>=</code> 表示精确匹配,这个优先级也是最高的</li>
+<li><code>^~</code> 表示 <code>uri</code> 以某个常规字符串开头，理解为匹配 <code>url</code> 路径即可。<code>nginx</code> 不对 <code>url</code> 做编码，因此请求为 <code>/static/20%/aa</code>，可以被规则<code>^~ /static/ /aa</code> 匹配到（注意是空格）</li>
+<li><code>~</code> 表示区分大小写的正则匹配</li>
+<li><code>~*</code> 表示不区分大小写的正则匹配(和上面的唯一区别就是大小写)</li>
+<li><code>!~</code>和<code>!~*</code>分别为区分大小写不匹配及不区分大小写不匹配的正则</li>
+<li><code>/</code> 通用匹配，任何请求都会匹配到，默认匹配</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/06/11/Nginx-location配置/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/06/Linux-find命令/">Linux-find命令</a>
         
       </h1>
@@ -760,65 +818,6 @@
 <p>两个大于号（<code>&gt;&gt;</code>）表示附加数据 </p>
           <div class="read-more">
             <a href="/2018/05/22/Linux-shell脚本/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/21/Linux-文件权限/">Linux-文件权限</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-21
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># ll</span><br><span class="line">total 24</span><br><span class="line">drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup</span><br><span class="line">lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&gt; usr/bin</span><br><span class="line">dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot</span><br><span class="line">drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf</span><br><span class="line">drwxr-xr-x.  11 root root 4096 May  7 09:10 data</span><br><span class="line">drwxr-xr-x.  19 root root 3040 May 22 08:30 dev</span><br><span class="line">drwxr-xr-x.  76 root root 8192 May 22 08:30 etc</span><br><span class="line">drwxr-xr-x.   4 root root   29 May 21 16:04 home</span><br></pre></td></tr></table></figure>
-<p><code>ll</code> 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：</p>
-<ul>
-<li><code>-</code>表示文件</li>
-<li><code>d</code> 表示目录</li>
-<li><code>l</code> 表示链接</li>
-<li><code>c</code> 表示字符设备</li>
-<li><code>b</code> 表示块设备</li>
-<li><code>n</code> 表示网络设备</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/05/21/Linux-文件权限/" class="read-more-link">阅读更多</a>
           </div>
         
       

@@ -226,6 +226,61 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/08/27/MySQL-B-Tree和B-Tree/">MySQL-B-Tree和B+Tree</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-27
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/MySQL/">MySQL</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="B-Tree"><a href="#B-Tree" class="headerlink" title="B Tree"></a>B Tree</h3><p>B-Tree是为磁盘等外存储设备设计的一种平衡查找树。因此在讲B-Tree之前先了解下磁盘的相关知识。</p>
+<p>系统从磁盘读取数据到内存时是以磁盘块（block）为基本单位的，位于同一个磁盘块中的数据会被一次性读取出来，而不是需要什么取什么。</p>
+<p>InnoDB存储引擎中有页（Page）的概念，页是其磁盘管理的最小单位。InnoDB存储引擎中默认每个页的大小为16KB，可通过参数innodb_page_size将页的大小设置为4K、8K、16K，在MySQL中可通过如下命令查看页的大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;innodb_page_size&apos;;</span><br></pre></td></tr></table></figure>
+<p>而系统一个磁盘块的存储空间往往没有这么大，因此InnoDB每次申请磁盘空间时都会是若干地址连续磁盘块来达到页的大小16KB。InnoDB在把磁盘数据读入到磁盘时会以页为基本单位，在查询数据时如果一个页中的每条数据都能有助于定位数据记录的位置，这将会减少磁盘I/O次数，提高查询效率</p>
+<p>B-Tree结构的数据可以让系统高效的找到数据所在的磁盘块。为了描述B-Tree，首先定义一条记录为一个二元组[key, data] ，key为记录的键值，对应表中的主键值，data为一行记录中除主键外的数据。对于不同的记录，key值互不相同</p>
+          <div class="read-more">
+            <a href="/2018/08/27/MySQL-B-Tree和B-Tree/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/08/06/为什么说PHP不支持Unicode编码/">为什么说PHP不支持Unicode编码</a>
         
       </h1>
@@ -711,64 +766,6 @@
 <p>如果一个请求的 <code>URI</code> 是 <code>/weblogs/httplogs/www.ttlsa.com-access.log</code> 时， <code>web 服务器</code>将会返回服务器上的<br><code>/data/weblogs/www.ttlsa.com/weblogs/httplogs/www.ttlsa.com-access.log</code> 的文件。<br><strong>root 会根据完整的 URI 请求来映射，也就是 /path/uri</strong>，因此，前面的请求映射为 <code>path/weblogs/httplogs/www.ttlsa.com-access.log</code></p>
           <div class="read-more">
             <a href="/2018/06/12/Nginx-root和alias/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/06/11/Nginx-location配置/">Nginx-location配置</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-06-11
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Nginx/">Nginx</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location [=|~|~*|^~] /uri/ &#123; … &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><ul>
-<li><code>=</code> 表示精确匹配,这个优先级也是最高的</li>
-<li><code>^~</code> 表示 <code>uri</code> 以某个常规字符串开头，理解为匹配 <code>url</code> 路径即可。<code>nginx</code> 不对 <code>url</code> 做编码，因此请求为 <code>/static/20%/aa</code>，可以被规则<code>^~ /static/ /aa</code> 匹配到（注意是空格）</li>
-<li><code>~</code> 表示区分大小写的正则匹配</li>
-<li><code>~*</code> 表示不区分大小写的正则匹配(和上面的唯一区别就是大小写)</li>
-<li><code>!~</code>和<code>!~*</code>分别为区分大小写不匹配及不区分大小写不匹配的正则</li>
-<li><code>/</code> 通用匹配，任何请求都会匹配到，默认匹配</li>
-</ul>
-          <div class="read-more">
-            <a href="/2018/06/11/Nginx-location配置/" class="read-more-link">阅读更多</a>
           </div>
         
       

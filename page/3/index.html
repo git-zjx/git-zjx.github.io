@@ -226,6 +226,65 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/05/21/Linux-文件权限/">Linux-文件权限</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-21
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># ll</span><br><span class="line">total 24</span><br><span class="line">drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup</span><br><span class="line">lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&gt; usr/bin</span><br><span class="line">dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot</span><br><span class="line">drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf</span><br><span class="line">drwxr-xr-x.  11 root root 4096 May  7 09:10 data</span><br><span class="line">drwxr-xr-x.  19 root root 3040 May 22 08:30 dev</span><br><span class="line">drwxr-xr-x.  76 root root 8192 May 22 08:30 etc</span><br><span class="line">drwxr-xr-x.   4 root root   29 May 21 16:04 home</span><br></pre></td></tr></table></figure>
+<p><code>ll</code> 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：</p>
+<ul>
+<li><code>-</code>表示文件</li>
+<li><code>d</code> 表示目录</li>
+<li><code>l</code> 表示链接</li>
+<li><code>c</code> 表示字符设备</li>
+<li><code>b</code> 表示块设备</li>
+<li><code>n</code> 表示网络设备</li>
+</ul>
+          <div class="read-more">
+            <a href="/2018/05/21/Linux-文件权限/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/05/21/Linux-用户组/">Linux-用户组</a>
         
       </h1>
@@ -698,58 +757,6 @@
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：以批处理模式操作；</span><br><span class="line">-c：显示完整的治命令；</span><br><span class="line">-d：屏幕刷新间隔时间；</span><br><span class="line">-I：忽略失效过程；</span><br><span class="line">-s：保密模式；</span><br><span class="line">-S：累积模式；</span><br><span class="line">-i&lt;时间&gt;：设置间隔时间；</span><br><span class="line">-u&lt;用户名&gt;：指定用户名；</span><br><span class="line">-p&lt;进程号&gt;：指定进程；</span><br><span class="line">-n&lt;次数&gt;：循环显示的次数。</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/17/Linux-top命令/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/16/Linux-ps命令/">Linux-ps命令</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-16
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用于报告当前系统的进程状态</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps(选项)</span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">-A：显示所有进程</span><br><span class="line">-N：显示特定参数的结果的补集</span><br><span class="line">-a：显示除会话标题和无终端进程外的所有进程</span><br><span class="line">-d：显示除会话标题外的所有进程</span><br><span class="line">-e：显示所有进程</span><br><span class="line">-C cmdlist：显示包含在 cmdlist 列表中的进程</span><br><span class="line">-G grplist：显示 grplist 列表中具有组 ID 的进程</span><br><span class="line">-U userlist：显示 userlist 列表中的 userid 拥有的进程</span><br><span class="line">-g grplist：根据会话或包含在 grplist 中的 groupid 来显示进程</span><br><span class="line">-p pidlist：显示 pidlist 列表中具有 PID 的进程</span><br><span class="line">-s sesslist：显示 sesslist 列表中具有会话 ID 的进程</span><br><span class="line">-t ttylist：显示 ttylist 列表中具有终端 ID 的进程</span><br><span class="line">-u userlist：根据 usrlist 列表中的有效 userid 来显示进程</span><br><span class="line">-F：使用额外完整输出</span><br><span class="line">-O format：显示 format 列表中的特定列和默认列</span><br><span class="line">-M：显示关于进程的安全信息</span><br><span class="line">-c：显示关于进程的额外调度信息</span><br><span class="line">-f：显示完整的格式列表</span><br><span class="line">-j：显示作业信息</span><br><span class="line">-l：显示长列表</span><br><span class="line">-o format：只显示 format 中列出的特定列</span><br><span class="line">-y：不显示进程标记</span><br><span class="line">-z：显示安全上下文信息</span><br><span class="line">-H：以层级格式显示进程（显示父进程）</span><br><span class="line">-n namelist：定义在 WCHAN 列中显示的值</span><br><span class="line">-w：使用宽输出格式，使显示宽度不受限制</span><br><span class="line">-L：显示进程线程</span><br><span class="line">-V：显示 ps 版本</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/05/16/Linux-ps命令/" class="read-more-link">阅读更多</a>
           </div>
         
       

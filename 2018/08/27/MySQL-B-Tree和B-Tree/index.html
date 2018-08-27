@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="Personal Blog"/>
+  <meta name="description" content="MySQL-B-Tree和B+Tree"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://www.zhaojiaxing.top/archives/2018/05/"/>
+<link rel="canonical" href="http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree和B-Tree/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
@@ -90,11 +90,7 @@
 
 
 
-    <title>
-  
-    归档 - ZJX
-  
-</title>
+    <title> MySQL-B-Tree和B+Tree - ZJX </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -224,340 +220,136 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title">
-          <span class="archive-post-counter">
-            目前共计 91 篇日志
-          </span>
-        </div>
-      
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          MySQL-B-Tree和B+Tree
+        
+      </h1>
 
-    
-      
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-27
+        </span>
         
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2018</h2>
+          <div class="post-category">
+            
+              <a href="/categories/MySQL/">MySQL</a>
+            
           </div>
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-30
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/30/Linux-函数/" class="archive-post-link">
-            Linux-函数
-          </a>
-        </span>
+        
       </div>
-    
-      
-        
-        
+    </header>
 
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-29
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/29/Linux-crontab命令/" class="archive-post-link">
-            Linux-crontab命令
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-29
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/29/Linux-脚本控制/" class="archive-post-link">
-            Linux-脚本控制
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-28
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/28/Linux-显示数据/" class="archive-post-link">
-            Linux-显示数据
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-23
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/23/Linux-处理用户输入/" class="archive-post-link">
-            Linux-处理用户输入
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-23
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/23/Linux-循环语句/" class="archive-post-link">
-            Linux-循环语句
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-22
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/22/Linux-条件语句/" class="archive-post-link">
-            Linux-条件语句
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-22
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/22/Linux-shell脚本/" class="archive-post-link">
-            Linux-shell脚本
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-文件权限/" class="archive-post-link">
-            Linux-文件权限
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-用户组/" class="archive-post-link">
-            Linux-用户组
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-用户/" class="archive-post-link">
-            Linux-用户
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-启动文件/" class="archive-post-link">
-            Linux-启动文件
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-21
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/21/Linux-环境变量/" class="archive-post-link">
-            Linux-环境变量
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-18
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/18/Linux-tar命令/" class="archive-post-link">
-            Linux-tar命令
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            05-17
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2018/05/17/Linux-grep命令/" class="archive-post-link">
-            Linux-grep命令
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
     
     
-      <a class="next" href="/archives/2018/05/page/2/">
-        <span class="next-text">下一页</span>
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#B-Tree"><span class="toc-text">B Tree</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="B-Tree"><a href="#B-Tree" class="headerlink" title="B Tree"></a>B Tree</h3><p>B-Tree是为磁盘等外存储设备设计的一种平衡查找树。因此在讲B-Tree之前先了解下磁盘的相关知识。</p>
+<p>系统从磁盘读取数据到内存时是以磁盘块（block）为基本单位的，位于同一个磁盘块中的数据会被一次性读取出来，而不是需要什么取什么。</p>
+<p>InnoDB存储引擎中有页（Page）的概念，页是其磁盘管理的最小单位。InnoDB存储引擎中默认每个页的大小为16KB，可通过参数innodb_page_size将页的大小设置为4K、8K、16K，在MySQL中可通过如下命令查看页的大小：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;innodb_page_size&apos;;</span><br></pre></td></tr></table></figure>
+<p>而系统一个磁盘块的存储空间往往没有这么大，因此InnoDB每次申请磁盘空间时都会是若干地址连续磁盘块来达到页的大小16KB。InnoDB在把磁盘数据读入到磁盘时会以页为基本单位，在查询数据时如果一个页中的每条数据都能有助于定位数据记录的位置，这将会减少磁盘I/O次数，提高查询效率</p>
+<p>B-Tree结构的数据可以让系统高效的找到数据所在的磁盘块。为了描述B-Tree，首先定义一条记录为一个二元组[key, data] ，key为记录的键值，对应表中的主键值，data为一行记录中除主键外的数据。对于不同的记录，key值互不相同</p>
+<a id="more"></a>
+<p>一棵m阶的B-Tree有如下特性： </p>
+<ol>
+<li>每个节点最多有m个孩子。 </li>
+<li>除了根节点和叶子节点外，其它每个节点至少有Ceil(m/2)个孩子。 </li>
+<li>若根节点不是叶子节点，则至少有2个孩子 </li>
+<li>所有叶子节点都在同一层，且不包含其它关键字信息 </li>
+<li>每个非终端节点包含n个关键字信息（P0,P1,…Pn, k1,…kn） </li>
+<li>关键字的个数n满足：ceil(m/2)-1 &lt;= n &lt;= m-1 </li>
+<li>ki(i=1,…n)为关键字，且关键字升序排序。 </li>
+<li>Pi(i=1,…n)为指向子树根节点的指针。P(i-1)指向的子树的所有节点关键字均小于ki，但都大于k(i-1)</li>
+</ol>
+<p>B-Tree中的每个节点根据实际情况可以包含大量的关键字信息和分支，如下图所示为一个3阶的B-Tree：</p>
+<p><img src="/images/B-Tree.png" alt="B-Tree"></p>
+<p>每个节点占用一个盘块的磁盘空间，一个节点上有两个升序排序的关键字和三个指向子树根节点的指针，指针存储的是子节点所在磁盘块的地址。两个关键词划分成的三个范围域对应三个指针指向的子树的数据的范围域。以根节点为例，关键字为17和35，P1指针指向的子树的数据范围为小于17，P2指针指向的子树的数据范围为17~35，P3指针指向的子树的数据范围为大于35。</p>
+<p>模拟查找关键字29的过程：</p>
+<ol>
+<li>根据根节点找到磁盘块1，读入内存。【磁盘I/O操作第1次】</li>
+<li>比较关键字29在区间（17,35），找到磁盘块1的指针P2。</li>
+<li>根据P2指针找到磁盘块3，读入内存。【磁盘I/O操作第2次】</li>
+<li>比较关键字29在区间（26,30），找到磁盘块3的指针P2。</li>
+<li>根据P2指针找到磁盘块8，读入内存。【磁盘I/O操作第3次】</li>
+<li>在磁盘块8中的关键字列表中找到关键字29。</li>
+</ol>
+<p>分析上面过程，发现需要3次磁盘I/O操作，和3次内存查找操作。由于内存中的关键字是一个有序表结构，可以利用二分法查找提高效率。而3次磁盘I/O操作是影响整个B-Tree查找效率的决定因素。B-Tree相对于AVLTree缩减了节点个数，使每次磁盘I/O取到内存的数据都发挥了作用，从而提高了查询效率</p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.zhaojiaxing.top">ZJX</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree和B-Tree/">http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree和B-Tree/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/MySQL/">MySQL</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/08/06/为什么说PHP不支持Unicode编码/">
+        <span class="next-text nav-default">为什么说PHP不支持Unicode编码</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
       </main>
@@ -642,6 +434,11 @@
     </div>
 
     
+  
+  
+
+  
+
 
 
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-08-06T03:15:59.861Z</updated>
+  <updated>2018-08-27T02:00:41.235Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL-B-Tree和B+Tree</title>
+    <link href="http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree%E5%92%8CB-Tree/"/>
+    <id>http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree和B-Tree/</id>
+    <published>2018-08-27T01:38:33.000Z</published>
+    <updated>2018-08-27T02:00:41.235Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;B-Tree&quot;&gt;&lt;a href=&quot;#B-Tree&quot; class=&quot;headerlink&quot; title=&quot;B Tree&quot;&gt;&lt;/a&gt;B Tree&lt;/h3&gt;&lt;p&gt;B-Tree是为磁盘等外存储设备设计的一种平衡查找树。因此在讲B-Tree之前先了解下磁盘的相关知识。&lt;/p&gt;
+&lt;p&gt;系统从磁盘读取数据到内存时是以磁盘块（block）为基本单位的，位于同一个磁盘块中的数据会被一次性读取出来，而不是需要什么取什么。&lt;/p&gt;
+&lt;p&gt;InnoDB存储引擎中有页（Page）的概念，页是其磁盘管理的最小单位。InnoDB存储引擎中默认每个页的大小为16KB，可通过参数innodb_page_size将页的大小设置为4K、8K、16K，在MySQL中可通过如下命令查看页的大小：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;show variables like &amp;apos;innodb_page_size&amp;apos;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而系统一个磁盘块的存储空间往往没有这么大，因此InnoDB每次申请磁盘空间时都会是若干地址连续磁盘块来达到页的大小16KB。InnoDB在把磁盘数据读入到磁盘时会以页为基本单位，在查询数据时如果一个页中的每条数据都能有助于定位数据记录的位置，这将会减少磁盘I/O次数，提高查询效率&lt;/p&gt;
+&lt;p&gt;B-Tree结构的数据可以让系统高效的找到数据所在的磁盘块。为了描述B-Tree，首先定义一条记录为一个二元组[key, data] ，key为记录的键值，对应表中的主键值，data为一行记录中除主键外的数据。对于不同的记录，key值互不相同&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://www.zhaojiaxing.top/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.zhaojiaxing.top/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么说PHP不支持Unicode编码</title>
@@ -557,35 +582,6 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;testing = &amp;apos;date&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 格式化 date 命令的输出结构复制给 testing&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;testing = &amp;apos;date +%y%m%d&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;重定向输入输出&quot;&gt;&lt;a href=&quot;#重定向输入输出&quot; class=&quot;headerlink&quot; title=&quot;重定向输入输出&quot;&gt;&lt;/a&gt;重定向输入输出&lt;/h3&gt;&lt;p&gt;命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号（&lt;code&gt;&amp;lt;&lt;/code&gt;）表示数据从输入文件流向命令，大于号（&lt;code&gt;&amp;gt;&lt;/code&gt;）表示命令产生的数据流向文件  &lt;/p&gt;
 &lt;p&gt;两个大于号（&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;）表示附加数据 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-文件权限</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/21/Linux-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/21/Linux-文件权限/</id>
-    <published>2018-05-21T09:25:14.000Z</published>
-    <updated>2018-05-30T09:28:29.333Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;查看&quot;&gt;&lt;a href=&quot;#查看&quot; class=&quot;headerlink&quot; title=&quot;查看&quot;&gt;&lt;/a&gt;查看&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# ll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total 24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   2 root root  151 Apr 27 09:00 backup&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx.   1 root root    7 Mar 14 10:43 bin -&amp;gt; usr/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dr-xr-xr-x.   5 root root 4096 Mar 14 11:04 boot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   2 root root   20 Mar 14 17:10 conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  11 root root 4096 May  7 09:10 data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  19 root root 3040 May 22 08:30 dev&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.  76 root root 8192 May 22 08:30 etc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;drwxr-xr-x.   4 root root   29 May 21 16:04 home&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;ll&lt;/code&gt; 命令可以查看文件和目录权限，第一个字段就是描述文件和目录的权限的代码。字段的第一个字符定义了对象的类型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-&lt;/code&gt;表示文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;d&lt;/code&gt; 表示目录&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;l&lt;/code&gt; 表示链接&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;c&lt;/code&gt; 表示字符设备&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;b&lt;/code&gt; 表示块设备&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;n&lt;/code&gt; 表示网络设备&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
