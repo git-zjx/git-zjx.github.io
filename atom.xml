@@ -5,9 +5,9 @@
   <subtitle>Zhao Jiaxing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.zhaojiaxing.top/"/>
+  <link href="https://www.zhaojiaxing.top/"/>
   <updated>2018-08-29T01:50:45.917Z</updated>
-  <id>http://www.zhaojiaxing.top/</id>
+  <id>https://www.zhaojiaxing.top/</id>
   
   <author>
     <name>ZJX</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>关于字符编码，你所需要知道的</title>
-    <link href="http://www.zhaojiaxing.top/2018/08/29/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%EF%BC%8C%E4%BD%A0%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84/"/>
-    <id>http://www.zhaojiaxing.top/2018/08/29/关于字符编码，你所需要知道的/</id>
+    <link href="https://www.zhaojiaxing.top/2018/08/29/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%EF%BC%8C%E4%BD%A0%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84/"/>
+    <id>https://www.zhaojiaxing.top/2018/08/29/关于字符编码，你所需要知道的/</id>
     <published>2018-08-29T01:37:04.000Z</published>
     <updated>2018-08-29T01:50:45.917Z</updated>
     
@@ -35,17 +35,17 @@
     
     </summary>
     
-      <category term="基础" scheme="http://www.zhaojiaxing.top/categories/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="https://www.zhaojiaxing.top/categories/%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="基础" scheme="http://www.zhaojiaxing.top/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="https://www.zhaojiaxing.top/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>位、字节、字和字长</title>
-    <link href="http://www.zhaojiaxing.top/2018/08/29/%E4%BD%8D%E3%80%81%E5%AD%97%E8%8A%82%E3%80%81%E5%AD%97%E5%92%8C%E5%AD%97%E9%95%BF/"/>
-    <id>http://www.zhaojiaxing.top/2018/08/29/位、字节、字和字长/</id>
+    <link href="https://www.zhaojiaxing.top/2018/08/29/%E4%BD%8D%E3%80%81%E5%AD%97%E8%8A%82%E3%80%81%E5%AD%97%E5%92%8C%E5%AD%97%E9%95%BF/"/>
+    <id>https://www.zhaojiaxing.top/2018/08/29/位、字节、字和字长/</id>
     <published>2018-08-29T01:06:16.000Z</published>
     <updated>2018-08-29T01:15:52.788Z</updated>
     
@@ -61,17 +61,17 @@
     
     </summary>
     
-      <category term="基础" scheme="http://www.zhaojiaxing.top/categories/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="https://www.zhaojiaxing.top/categories/%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="基础" scheme="http://www.zhaojiaxing.top/tags/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="https://www.zhaojiaxing.top/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>MySQL-B-Tree和B+Tree</title>
-    <link href="http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree%E5%92%8CB-Tree/"/>
-    <id>http://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree和B-Tree/</id>
+    <link href="https://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree%E5%92%8CB-Tree/"/>
+    <id>https://www.zhaojiaxing.top/2018/08/27/MySQL-B-Tree和B-Tree/</id>
     <published>2018-08-27T01:38:33.000Z</published>
     <updated>2018-08-27T02:10:02.246Z</updated>
     
@@ -86,17 +86,17 @@
     
     </summary>
     
-      <category term="MySQL" scheme="http://www.zhaojiaxing.top/categories/MySQL/"/>
+      <category term="MySQL" scheme="https://www.zhaojiaxing.top/categories/MySQL/"/>
     
     
-      <category term="MySQL" scheme="http://www.zhaojiaxing.top/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://www.zhaojiaxing.top/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>为什么说PHP不支持Unicode编码</title>
-    <link href="http://www.zhaojiaxing.top/2018/08/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4PHP%E4%B8%8D%E6%94%AF%E6%8C%81Unicode%E7%BC%96%E7%A0%81/"/>
-    <id>http://www.zhaojiaxing.top/2018/08/06/为什么说PHP不支持Unicode编码/</id>
+    <link href="https://www.zhaojiaxing.top/2018/08/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4PHP%E4%B8%8D%E6%94%AF%E6%8C%81Unicode%E7%BC%96%E7%A0%81/"/>
+    <id>https://www.zhaojiaxing.top/2018/08/06/为什么说PHP不支持Unicode编码/</id>
     <published>2018-08-06T03:08:58.000Z</published>
     <updated>2018-08-06T03:15:59.861Z</updated>
     
@@ -116,17 +116,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/categories/PHP/"/>
+      <category term="PHP" scheme="https://www.zhaojiaxing.top/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/tags/PHP/"/>
+      <category term="PHP" scheme="https://www.zhaojiaxing.top/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>说说http/webserver/fastcgi/php-fpm</title>
-    <link href="http://www.zhaojiaxing.top/2018/07/20/%E8%AF%B4%E8%AF%B4http-webserver-fastcgi-php-fpm/"/>
-    <id>http://www.zhaojiaxing.top/2018/07/20/说说http-webserver-fastcgi-php-fpm/</id>
+    <link href="https://www.zhaojiaxing.top/2018/07/20/%E8%AF%B4%E8%AF%B4http-webserver-fastcgi-php-fpm/"/>
+    <id>https://www.zhaojiaxing.top/2018/07/20/说说http-webserver-fastcgi-php-fpm/</id>
     <published>2018-07-20T05:57:47.000Z</published>
     <updated>2018-07-20T07:27:18.423Z</updated>
     
@@ -145,25 +145,25 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://www.zhaojiaxing.top/categories/PHP/"/>
+      <category term="PHP" scheme="https://www.zhaojiaxing.top/categories/PHP/"/>
     
-      <category term="HTTP" scheme="http://www.zhaojiaxing.top/categories/PHP/HTTP/"/>
+      <category term="HTTP" scheme="https://www.zhaojiaxing.top/categories/PHP/HTTP/"/>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/PHP/HTTP/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/PHP/HTTP/Nginx/"/>
     
     
-      <category term="CGI" scheme="http://www.zhaojiaxing.top/tags/CGI/"/>
+      <category term="CGI" scheme="https://www.zhaojiaxing.top/tags/CGI/"/>
     
-      <category term="FastCGI" scheme="http://www.zhaojiaxing.top/tags/FastCGI/"/>
+      <category term="FastCGI" scheme="https://www.zhaojiaxing.top/tags/FastCGI/"/>
     
-      <category term="FPM" scheme="http://www.zhaojiaxing.top/tags/FPM/"/>
+      <category term="FPM" scheme="https://www.zhaojiaxing.top/tags/FPM/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-基本优化</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/21/Nginx-%E5%9F%BA%E6%9C%AC%E4%BC%98%E5%8C%96/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/21/Nginx-基本优化/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/21/Nginx-%E5%9F%BA%E6%9C%AC%E4%BC%98%E5%8C%96/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/21/Nginx-基本优化/</id>
     <published>2018-06-21T00:51:33.000Z</published>
     <updated>2018-06-22T00:35:22.817Z</updated>
     
@@ -181,17 +181,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-隐藏版本号</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/20/Nginx-%E9%9A%90%E8%97%8F%E7%89%88%E6%9C%AC%E5%8F%B7/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/20/Nginx-%E9%9A%90%E8%97%8F%E7%89%88%E6%9C%AC%E5%8F%B7/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/20/Nginx-隐藏版本号/</id>
     <published>2018-06-20T00:30:38.000Z</published>
     <updated>2018-06-20T02:51:28.034Z</updated>
     
@@ -206,17 +206,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-rewrite</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/19/Nginx-rewrite/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/19/Nginx-rewrite/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/19/Nginx-rewrite/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/19/Nginx-rewrite/</id>
     <published>2018-06-19T01:03:20.000Z</published>
     <updated>2018-06-19T02:14:48.693Z</updated>
     
@@ -228,17 +228,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-日志切割</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/15/Nginx-%E6%97%A5%E5%BF%97%E5%88%87%E5%89%B2/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/15/Nginx-日志切割/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/15/Nginx-%E6%97%A5%E5%BF%97%E5%88%87%E5%89%B2/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/15/Nginx-日志切割/</id>
     <published>2018-06-15T00:42:55.000Z</published>
     <updated>2018-06-15T01:48:53.530Z</updated>
     
@@ -254,8 +254,8 @@
   
   <entry>
     <title>Nginx-日志配置</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/14/Nginx-%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/14/Nginx-日志配置/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/14/Nginx-%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/14/Nginx-日志配置/</id>
     <published>2018-06-14T00:29:31.000Z</published>
     <updated>2018-06-14T02:12:55.328Z</updated>
     
@@ -266,17 +266,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-ngx_http_core_module模块提供的变量</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module%E6%A8%A1%E5%9D%97%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8F%98%E9%87%8F/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module%E6%A8%A1%E5%9D%97%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8F%98%E9%87%8F/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/</id>
     <published>2018-06-12T00:57:06.000Z</published>
     <updated>2018-06-13T00:54:04.606Z</updated>
     
@@ -297,17 +297,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-root和alias</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/12/Nginx-root%E5%92%8Calias/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/12/Nginx-root%E5%92%8Calias/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/12/Nginx-root和alias/</id>
     <published>2018-06-12T00:35:38.000Z</published>
     <updated>2018-06-12T00:51:30.625Z</updated>
     
@@ -324,17 +324,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx-location配置</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/11/Nginx-location%E9%85%8D%E7%BD%AE/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/11/Nginx-location配置/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/11/Nginx-location%E9%85%8D%E7%BD%AE/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/11/Nginx-location配置/</id>
     <published>2018-06-11T02:06:51.000Z</published>
     <updated>2018-06-11T03:51:08.277Z</updated>
     
@@ -352,17 +352,17 @@
     
     </summary>
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/categories/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/categories/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.zhaojiaxing.top/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://www.zhaojiaxing.top/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Linux-find命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/06/06/Linux-find%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/06/06/Linux-find命令/</id>
+    <link href="https://www.zhaojiaxing.top/2018/06/06/Linux-find%E5%91%BD%E4%BB%A4/"/>
+    <id>https://www.zhaojiaxing.top/2018/06/06/Linux-find命令/</id>
     <published>2018-06-06T05:25:43.000Z</published>
     <updated>2018-06-06T06:09:39.996Z</updated>
     
@@ -373,19 +373,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+      <category term="命令" scheme="https://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>Linux-函数</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/30/Linux-%E5%87%BD%E6%95%B0/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/30/Linux-函数/</id>
+    <link href="https://www.zhaojiaxing.top/2018/05/30/Linux-%E5%87%BD%E6%95%B0/"/>
+    <id>https://www.zhaojiaxing.top/2018/05/30/Linux-函数/</id>
     <published>2018-05-30T00:38:24.000Z</published>
     <updated>2018-05-30T08:36:31.688Z</updated>
     
@@ -397,17 +397,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux-crontab命令</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/29/Linux-crontab%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/29/Linux-crontab命令/</id>
+    <link href="https://www.zhaojiaxing.top/2018/05/29/Linux-crontab%E5%91%BD%E4%BB%A4/"/>
+    <id>https://www.zhaojiaxing.top/2018/05/29/Linux-crontab命令/</id>
     <published>2018-05-29T06:15:24.000Z</published>
     <updated>2018-05-30T08:45:12.182Z</updated>
     
@@ -422,19 +422,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
-      <category term="命令" scheme="http://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
+      <category term="命令" scheme="https://www.zhaojiaxing.top/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>Linux-脚本控制</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/29/Linux-%E8%84%9A%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/29/Linux-脚本控制/</id>
+    <link href="https://www.zhaojiaxing.top/2018/05/29/Linux-%E8%84%9A%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <id>https://www.zhaojiaxing.top/2018/05/29/Linux-脚本控制/</id>
     <published>2018-05-29T00:43:48.000Z</published>
     <updated>2018-05-30T08:29:36.655Z</updated>
     
@@ -490,17 +490,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux-显示数据</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/28/Linux-%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/28/Linux-显示数据/</id>
+    <link href="https://www.zhaojiaxing.top/2018/05/28/Linux-%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE/"/>
+    <id>https://www.zhaojiaxing.top/2018/05/28/Linux-显示数据/</id>
     <published>2018-05-28T05:08:33.000Z</published>
     <updated>2018-05-30T08:10:23.338Z</updated>
     
@@ -542,17 +542,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux-处理用户输入</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/23/Linux-%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/23/Linux-处理用户输入/</id>
+    <link href="https://www.zhaojiaxing.top/2018/05/23/Linux-%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/"/>
+    <id>https://www.zhaojiaxing.top/2018/05/23/Linux-处理用户输入/</id>
     <published>2018-05-23T07:01:16.000Z</published>
     <updated>2018-05-30T07:46:43.172Z</updated>
     
@@ -564,17 +564,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux-循环语句</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/23/Linux-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/23/Linux-循环语句/</id>
+    <link href="https://www.zhaojiaxing.top/2018/05/23/Linux-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/"/>
+    <id>https://www.zhaojiaxing.top/2018/05/23/Linux-循环语句/</id>
     <published>2018-05-23T00:52:30.000Z</published>
     <updated>2018-05-30T07:45:57.684Z</updated>
     
@@ -590,10 +590,10 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
     
   </entry>
   
