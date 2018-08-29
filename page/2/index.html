@@ -226,6 +226,67 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/">Nginx-ngx_http_core_module模块提供的变量</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-12
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p><code>$arg_PARAMETER</code>：<code>HTTP</code> 请求中某个参数的值，如 <code>/index.php?site=www.ttlsa.com</code>，可以使用 <code>$arg_site</code> 获取 <code>www.ttlsa.com</code> 这个值  </p>
+<p><code>$args</code>：<code>HTTP</code> 请求中的完整参数，如 <code>/index.php?width=500&amp;height=200</code>，<code>$args</code> 表示字符串 <code>width=500&amp;height=200</code>  </p>
+<p><code>$binary_remote_addr</code>：二进制格式的客户端地址  </p>
+<p><code>$body_bytes_sent</code>：表示在向客户端发送的 <code>http</code> 响应中，包体部分的字节数  </p>
+<p><code>$content_length</code>：表示客户端请求头部中的 <code>Content-Length</code> 字段  </p>
+<p><code>$content_type</code>：表示客户端请求头部中的 <code>Content-Type</code> 字段  </p>
+<p><code>$cookie_COOKIE</code>： 表示在客户端请求头部中的 <code>cookie</code> 字段  </p>
+<p><code>$document_root</code>：表示当前请求所使用的 <code>root</code> 配置项的值   </p>
+<p><code>$uri</code>：表示当前请求的 <code>URI</code>，不带任何参数  </p>
+<p><code>$document_uri</code>：与 <code>$uri</code> 含义相同   </p>
+<p><code>$request_uri</code>：表示客户端发来的原始请求 <code>URI</code>，带完整的参数。<code>$uri</code> 和 <code>$document_uri</code> 未必是用户的原始请求，在内部重定向后可能是重定向后的 <code>URI</code>，而 <code>$request_uri</code> 永远不会改变  </p>
+<p><code>$host</code>：表示客户端请求头部中的 <code>Host</code> 字段。如果 <code>Host</code> 字段不存在，则以实际处理的 <code>server</code>（虚拟主机）名称代替。如果 <code>Host</code> 字段中带有端口，如 <code>IP:PORT</code> ，那么 <code>$host</code> 是去掉端口的，它的值为 <code>IP</code>。<code>$host</code> 是全小写的。这些特性与 <code>http_HEADER</code> 中的 <code>http_post</code>  不同， <code>http_host</code> 只取出 <code>Host</code> 头部对应的值   </p>
+          <div class="read-more">
+            <a href="/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/12/Nginx-root和alias/">Nginx-root和alias</a>
         
       </h1>
@@ -768,59 +829,6 @@
 <p><code>for</code> 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
           <div class="read-more">
             <a href="/2018/05/23/Linux-循环语句/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/22/Linux-条件语句/">Linux-条件语句</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-22
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="if-then"><a href="#if-then" class="headerlink" title="if-then"></a>if-then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if command; then</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，那么 <code>then</code> 后面的命令不执行  </p>
-<h3 id="if-then-else"><a href="#if-then-else" class="headerlink" title="if-then-else"></a>if-then-else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if command</span><br><span class="line">then </span><br><span class="line">    commands</span><br><span class="line">else</span><br><span class="line">    commands</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，将执行 <code>else</code> 后面的所有命令   </p>
-          <div class="read-more">
-            <a href="/2018/05/22/Linux-条件语句/" class="read-more-link">阅读更多</a>
           </div>
         
       

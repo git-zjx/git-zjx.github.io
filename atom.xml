@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-08-29T01:15:52.788Z</updated>
+  <updated>2018-08-29T01:50:45.917Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于字符编码，你所需要知道的</title>
+    <link href="http://www.zhaojiaxing.top/2018/08/29/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%EF%BC%8C%E4%BD%A0%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84/"/>
+    <id>http://www.zhaojiaxing.top/2018/08/29/关于字符编码，你所需要知道的/</id>
+    <published>2018-08-29T01:37:04.000Z</published>
+    <updated>2018-08-29T01:50:45.917Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="基础" scheme="http://www.zhaojiaxing.top/categories/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="基础" scheme="http://www.zhaojiaxing.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>位、字节、字和字长</title>
@@ -561,29 +587,6 @@
 &lt;p&gt;&lt;code&gt;shell&lt;/code&gt; 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  &lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for test in &amp;quot;New York&amp;quot; Nevada&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo $test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;for&lt;/code&gt; 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-条件语句</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/22/Linux-条件语句/</id>
-    <published>2018-05-22T05:26:39.000Z</published>
-    <updated>2018-05-30T07:31:37.302Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;if-then&quot;&gt;&lt;a href=&quot;#if-then&quot; class=&quot;headerlink&quot; title=&quot;if-then&quot;&gt;&lt;/a&gt;if-then&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if command; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;if&lt;/code&gt; 语句运行在 &lt;code&gt;if&lt;/code&gt; 行定义的命令，如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt;，将执行 &lt;code&gt;then&lt;/code&gt; 后面的所有命令。如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt; 以外的其他值，那么 &lt;code&gt;then&lt;/code&gt; 后面的命令不执行  &lt;/p&gt;
-&lt;h3 id=&quot;if-then-else&quot;&gt;&lt;a href=&quot;#if-then-else&quot; class=&quot;headerlink&quot; title=&quot;if-then-else&quot;&gt;&lt;/a&gt;if-then-else&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;else&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;if&lt;/code&gt; 语句运行在 &lt;code&gt;if&lt;/code&gt; 行定义的命令，如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt;，将执行 &lt;code&gt;then&lt;/code&gt; 后面的所有命令。如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt; 以外的其他值，将执行 &lt;code&gt;else&lt;/code&gt; 后面的所有命令   &lt;/p&gt;
     
     </summary>
     
