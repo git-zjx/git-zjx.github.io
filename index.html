@@ -226,6 +226,62 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/08/29/位、字节、字和字长/">位、字节、字和字长</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-29
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/基础/">基础</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="位"><a href="#位" class="headerlink" title="位"></a>位</h3><p>二进制数系统中，位简记为 b,也称为比特，每个二进制数字 0 或 1 就是一个位(bit)。位是数据存储的最小单位，其中 8 bit 就称为一个字节（Byte）。计算机中的 CPU 位数指的是 CPU 一次能处理的最大位数。例如 32 位计算机的 CPU 一个机器周期内可以处理 32 位二进制数据</p>
+<h3 id="字节"><a href="#字节" class="headerlink" title="字节"></a>字节</h3><p>字节是计算机中数据处理的基本单位。计算机中以字节为单位存储和解释信息，规定一个字节由八个二进制位构成，即 1 个字节等于 8 个比特（1Byte=8bit），比字小，是构成字的单位</p>
+<h3 id="字"><a href="#字" class="headerlink" title="字"></a>字</h3><p>计算机进行数据处理时，一次存取、加工和传送的数据长度称为字（word）。一个字通常由一个或多个（一般是字节的整数位）字节构成 </p>
+<p>在计算机的运算器、控制器中，通常都是以字为单位进行传送的。字出现在不同的地址其含义是不相同。例如，送往控制器去的字是指令，而送往运算器去的字就是一个数</p>
+<h3 id="字长"><a href="#字长" class="headerlink" title="字长"></a>字长</h3><p>计算机的每个字所包含的位数称为字长。根据计算机的不同，字长有固定的和可变的两种。固定字长，即字长度不论什么情况都是固定不变的；可变字长，则在一定范围内，其长度是可变的。</p>
+<p>计算的字长是指它一次可处理的二进制数字的数目。计算机处理数据的速率，自然和它一次能加工的位数以及进行运算的快慢有关。如果一台计算机的字长是另一台计算机的两倍，即使两台计算机的速度相同，在相同的时间内，前者能做的工作是后者的两倍。</p>
+<p>字长是衡量计算机性能的一个重要因素。</p>
+          <div class="read-more">
+            <a href="/2018/08/29/位、字节、字和字长/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/08/27/MySQL-B-Tree和B-Tree/">MySQL-B-Tree和B+Tree</a>
         
       </h1>
@@ -709,63 +765,6 @@
 <p><code>$host</code>：表示客户端请求头部中的 <code>Host</code> 字段。如果 <code>Host</code> 字段不存在，则以实际处理的 <code>server</code>（虚拟主机）名称代替。如果 <code>Host</code> 字段中带有端口，如 <code>IP:PORT</code> ，那么 <code>$host</code> 是去掉端口的，它的值为 <code>IP</code>。<code>$host</code> 是全小写的。这些特性与 <code>http_HEADER</code> 中的 <code>http_post</code>  不同， <code>http_host</code> 只取出 <code>Host</code> 头部对应的值   </p>
           <div class="read-more">
             <a href="/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/06/12/Nginx-root和alias/">Nginx-root和alias</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-06-12
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Nginx/">Nginx</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>nginx</code> 指定文件路径有两种方式 <code>root</code> 和 <code>alias</code>，<code>root</code> 与 <code>alias</code> 主要区别在于 <code>nginx</code> 如何解释 <code>location</code> 后面的 <code>uri</code>，这会使两者分别以不同的方式将请求映射到服务器文件上</p>
-<h3 id="root"><a href="#root" class="headerlink" title="root"></a>root</h3><ul>
-<li>语法： <code>root path</code></li>
-<li>默认值： <code>root html</code></li>
-<li>配置段： <code>http</code>、 <code>server</code>、 <code>location</code>、 <code>if</code></li>
-</ul>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/weblogs/ &#123;</span><br><span class="line">    root /data/weblogs/www.ttlsa.com;</span><br><span class="line">    autoindex on;</span><br><span class="line">    auth_basic &quot;Restricted&quot;;</span><br><span class="line">    auth_basic_user_file passwd/weblogs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果一个请求的 <code>URI</code> 是 <code>/weblogs/httplogs/www.ttlsa.com-access.log</code> 时， <code>web 服务器</code>将会返回服务器上的<br><code>/data/weblogs/www.ttlsa.com/weblogs/httplogs/www.ttlsa.com-access.log</code> 的文件。<br><strong>root 会根据完整的 URI 请求来映射，也就是 /path/uri</strong>，因此，前面的请求映射为 <code>path/weblogs/httplogs/www.ttlsa.com-access.log</code></p>
-          <div class="read-more">
-            <a href="/2018/06/12/Nginx-root和alias/" class="read-more-link">阅读更多</a>
           </div>
         
       

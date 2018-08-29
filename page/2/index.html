@@ -226,6 +226,63 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/12/Nginx-root和alias/">Nginx-root和alias</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-12
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><code>nginx</code> 指定文件路径有两种方式 <code>root</code> 和 <code>alias</code>，<code>root</code> 与 <code>alias</code> 主要区别在于 <code>nginx</code> 如何解释 <code>location</code> 后面的 <code>uri</code>，这会使两者分别以不同的方式将请求映射到服务器文件上</p>
+<h3 id="root"><a href="#root" class="headerlink" title="root"></a>root</h3><ul>
+<li>语法： <code>root path</code></li>
+<li>默认值： <code>root html</code></li>
+<li>配置段： <code>http</code>、 <code>server</code>、 <code>location</code>、 <code>if</code></li>
+</ul>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/weblogs/ &#123;</span><br><span class="line">    root /data/weblogs/www.ttlsa.com;</span><br><span class="line">    autoindex on;</span><br><span class="line">    auth_basic &quot;Restricted&quot;;</span><br><span class="line">    auth_basic_user_file passwd/weblogs;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果一个请求的 <code>URI</code> 是 <code>/weblogs/httplogs/www.ttlsa.com-access.log</code> 时， <code>web 服务器</code>将会返回服务器上的<br><code>/data/weblogs/www.ttlsa.com/weblogs/httplogs/www.ttlsa.com-access.log</code> 的文件。<br><strong>root 会根据完整的 URI 请求来映射，也就是 /path/uri</strong>，因此，前面的请求映射为 <code>path/weblogs/httplogs/www.ttlsa.com-access.log</code></p>
+          <div class="read-more">
+            <a href="/2018/06/12/Nginx-root和alias/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/11/Nginx-location配置/">Nginx-location配置</a>
         
       </h1>
@@ -764,60 +821,6 @@
 <p><code>if</code> 语句运行在 <code>if</code> 行定义的命令，如果命令的退出状态是 <code>0</code>，将执行 <code>then</code> 后面的所有命令。如果命令的退出状态是 <code>0</code> 以外的其他值，将执行 <code>else</code> 后面的所有命令   </p>
           <div class="read-more">
             <a href="/2018/05/22/Linux-条件语句/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/22/Linux-shell脚本/">Linux-shell脚本</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-22
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号"></a>反引号</h3><p>反引号在 <code>ESC</code> 按键下面的按键上，和波浪号 <code>~</code> 同一按键  </p>
-<p>反引号允许将 <code>shell</code> 命令的输出赋值给变量  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">testing = &apos;date&apos;</span><br><span class="line"># 格式化 date 命令的输出结构复制给 testing</span><br><span class="line">testing = &apos;date +%y%m%d&apos;</span><br></pre></td></tr></table></figure>
-<h3 id="重定向输入输出"><a href="#重定向输入输出" class="headerlink" title="重定向输入输出"></a>重定向输入输出</h3><p>命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号（<code>&lt;</code>）表示数据从输入文件流向命令，大于号（<code>&gt;</code>）表示命令产生的数据流向文件  </p>
-<p>两个大于号（<code>&gt;&gt;</code>）表示附加数据 </p>
-          <div class="read-more">
-            <a href="/2018/05/22/Linux-shell脚本/" class="read-more-link">阅读更多</a>
           </div>
         
       

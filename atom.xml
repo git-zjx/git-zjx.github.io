@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhaojiaxing.top/"/>
-  <updated>2018-08-27T02:10:02.246Z</updated>
+  <updated>2018-08-29T01:15:52.788Z</updated>
   <id>http://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>位、字节、字和字长</title>
+    <link href="http://www.zhaojiaxing.top/2018/08/29/%E4%BD%8D%E3%80%81%E5%AD%97%E8%8A%82%E3%80%81%E5%AD%97%E5%92%8C%E5%AD%97%E9%95%BF/"/>
+    <id>http://www.zhaojiaxing.top/2018/08/29/位、字节、字和字长/</id>
+    <published>2018-08-29T01:06:16.000Z</published>
+    <updated>2018-08-29T01:15:52.788Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;位&quot;&gt;&lt;a href=&quot;#位&quot; class=&quot;headerlink&quot; title=&quot;位&quot;&gt;&lt;/a&gt;位&lt;/h3&gt;&lt;p&gt;二进制数系统中，位简记为 b,也称为比特，每个二进制数字 0 或 1 就是一个位(bit)。位是数据存储的最小单位，其中 8 bit 就称为一个字节（Byte）。计算机中的 CPU 位数指的是 CPU 一次能处理的最大位数。例如 32 位计算机的 CPU 一个机器周期内可以处理 32 位二进制数据&lt;/p&gt;
+&lt;h3 id=&quot;字节&quot;&gt;&lt;a href=&quot;#字节&quot; class=&quot;headerlink&quot; title=&quot;字节&quot;&gt;&lt;/a&gt;字节&lt;/h3&gt;&lt;p&gt;字节是计算机中数据处理的基本单位。计算机中以字节为单位存储和解释信息，规定一个字节由八个二进制位构成，即 1 个字节等于 8 个比特（1Byte=8bit），比字小，是构成字的单位&lt;/p&gt;
+&lt;h3 id=&quot;字&quot;&gt;&lt;a href=&quot;#字&quot; class=&quot;headerlink&quot; title=&quot;字&quot;&gt;&lt;/a&gt;字&lt;/h3&gt;&lt;p&gt;计算机进行数据处理时，一次存取、加工和传送的数据长度称为字（word）。一个字通常由一个或多个（一般是字节的整数位）字节构成 &lt;/p&gt;
+&lt;p&gt;在计算机的运算器、控制器中，通常都是以字为单位进行传送的。字出现在不同的地址其含义是不相同。例如，送往控制器去的字是指令，而送往运算器去的字就是一个数&lt;/p&gt;
+&lt;h3 id=&quot;字长&quot;&gt;&lt;a href=&quot;#字长&quot; class=&quot;headerlink&quot; title=&quot;字长&quot;&gt;&lt;/a&gt;字长&lt;/h3&gt;&lt;p&gt;计算机的每个字所包含的位数称为字长。根据计算机的不同，字长有固定的和可变的两种。固定字长，即字长度不论什么情况都是固定不变的；可变字长，则在一定范围内，其长度是可变的。&lt;/p&gt;
+&lt;p&gt;计算的字长是指它一次可处理的二进制数字的数目。计算机处理数据的速率，自然和它一次能加工的位数以及进行运算的快慢有关。如果一台计算机的字长是另一台计算机的两倍，即使两台计算机的速度相同，在相同的时间内，前者能做的工作是后者的两倍。&lt;/p&gt;
+&lt;p&gt;字长是衡量计算机性能的一个重要因素。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="基础" scheme="http://www.zhaojiaxing.top/categories/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="基础" scheme="http://www.zhaojiaxing.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL-B-Tree和B+Tree</title>
@@ -558,30 +584,6 @@
 &lt;p&gt;&lt;code&gt;if&lt;/code&gt; 语句运行在 &lt;code&gt;if&lt;/code&gt; 行定义的命令，如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt;，将执行 &lt;code&gt;then&lt;/code&gt; 后面的所有命令。如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt; 以外的其他值，那么 &lt;code&gt;then&lt;/code&gt; 后面的命令不执行  &lt;/p&gt;
 &lt;h3 id=&quot;if-then-else&quot;&gt;&lt;a href=&quot;#if-then-else&quot; class=&quot;headerlink&quot; title=&quot;if-then-else&quot;&gt;&lt;/a&gt;if-then-else&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;else&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;if&lt;/code&gt; 语句运行在 &lt;code&gt;if&lt;/code&gt; 行定义的命令，如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt;，将执行 &lt;code&gt;then&lt;/code&gt; 后面的所有命令。如果命令的退出状态是 &lt;code&gt;0&lt;/code&gt; 以外的其他值，将执行 &lt;code&gt;else&lt;/code&gt; 后面的所有命令   &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-shell脚本</title>
-    <link href="http://www.zhaojiaxing.top/2018/05/22/Linux-shell%E8%84%9A%E6%9C%AC/"/>
-    <id>http://www.zhaojiaxing.top/2018/05/22/Linux-shell脚本/</id>
-    <published>2018-05-22T02:17:09.000Z</published>
-    <updated>2018-05-30T07:23:11.675Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;反引号&quot;&gt;&lt;a href=&quot;#反引号&quot; class=&quot;headerlink&quot; title=&quot;反引号&quot;&gt;&lt;/a&gt;反引号&lt;/h3&gt;&lt;p&gt;反引号在 &lt;code&gt;ESC&lt;/code&gt; 按键下面的按键上，和波浪号 &lt;code&gt;~&lt;/code&gt; 同一按键  &lt;/p&gt;
-&lt;p&gt;反引号允许将 &lt;code&gt;shell&lt;/code&gt; 命令的输出赋值给变量  &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;testing = &amp;apos;date&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 格式化 date 命令的输出结构复制给 testing&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;testing = &amp;apos;date +%y%m%d&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;重定向输入输出&quot;&gt;&lt;a href=&quot;#重定向输入输出&quot; class=&quot;headerlink&quot; title=&quot;重定向输入输出&quot;&gt;&lt;/a&gt;重定向输入输出&lt;/h3&gt;&lt;p&gt;命令总是位于在命令行的开始位置，重定向符号指向数据流动的方向，小于号（&lt;code&gt;&amp;lt;&lt;/code&gt;）表示数据从输入文件流向命令，大于号（&lt;code&gt;&amp;gt;&lt;/code&gt;）表示命令产生的数据流向文件  &lt;/p&gt;
-&lt;p&gt;两个大于号（&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;）表示附加数据 &lt;/p&gt;
     
     </summary>
     
