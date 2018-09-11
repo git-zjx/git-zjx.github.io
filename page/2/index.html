@@ -226,6 +226,57 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/06/14/Nginx-日志配置/">Nginx-日志配置</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-06-14
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Nginx/">Nginx</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="access-log-指令"><a href="#access-log-指令" class="headerlink" title="access_log 指令"></a>access_log 指令</h3><p>设置访问日志</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">access_log path [format [buffer=size [flush=time]][if=condition]];</span><br><span class="line"></span><br><span class="line">access_log path format gzip[=level][buffer=size][flush=time][if=condition];</span><br><span class="line"></span><br><span class="line">access_log syslog:server=address[,parameter=value][format];</span><br><span class="line"></span><br><span class="line">access_log off; # 关闭日志</span><br><span class="line"></span><br><span class="line">buffer=size #存放访问日志的缓冲区大小 </span><br><span class="line">flush=time #缓冲区日志刷到磁盘的时间 </span><br><span class="line">if=condition #其他条件</span><br><span class="line">gzip[=level] #压缩级别</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/06/14/Nginx-日志配置/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/06/12/Nginx-ngx-http-core-module模块提供的变量/">Nginx-ngx_http_core_module模块提供的变量</a>
         
       </h1>
@@ -773,62 +824,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cat test</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">echo Hello $1</span><br><span class="line"></span><br><span class="line">$ test Rich</span><br><span class="line">Hello Rich</span><br><span class="line"></span><br><span class="line">$ test &apos;Rich Mall&apos;</span><br><span class="line">Hell Rich Mall</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/05/23/Linux-处理用户输入/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/05/23/Linux-循环语句/">Linux-循环语句</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-05-23
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Linux/">Linux</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="for-命令"><a href="#for-命令" class="headerlink" title="for 命令"></a>for 命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for var in list</span><br><span class="line">do </span><br><span class="line">    commands</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<h4 id="读取列表的值"><a href="#读取列表的值" class="headerlink" title="读取列表的值"></a>读取列表的值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in Alabama Alaska Arizona Arkansas</span><br><span class="line">do </span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>最后一次迭代之后，变量 <code>$test</code> 在 <code>shell</code> 脚本的其他部分中仍有效，仍是迭代的最后一个值   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in I don\&apos;t know if &quot;this&apos;s&quot; work</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p><code>shell</code> 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for test in &quot;New York&quot; Nevada</span><br><span class="line">do</span><br><span class="line">    echo $test</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p><code>for</code> 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   </p>
-          <div class="read-more">
-            <a href="/2018/05/23/Linux-循环语句/" class="read-more-link">阅读更多</a>
           </div>
         
       

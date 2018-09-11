@@ -226,6 +226,61 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/09/11/bug-simplexml-load-file函数运行返回False/">bug-simplexml_load_file函数运行返回False</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-09-11
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/bug/">bug</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><p>阿里云主机上运行 <code>simplexml_load_file函数运行返回False</code> 大部分情况下会出现获取不到返回值的情况，目前没有找到根源，手头的两个云主机，一个可以正常运行，一个就会出现问题 </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>排除文件权限问题</p>
+<p>排除了 php.ini 配置 disable_functions </p>
+<p>cli 模式下可用，且是同一 php.ini，排除配置文件的问题</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>使用 <code>file_get_contents</code> 和 <code>simplexml_load_string</code> 替换 <code>simplexml_load_file函数运行返回False</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$xmlStr = file_get_contents(<span class="string">'test.xml'</span>);</span><br><span class="line">$xml = simplexml_load_string($xmlStr);</span><br></pre></td></tr></table></figure>
+          <div class="read-more">
+            <a href="/2018/09/11/bug-simplexml-load-file函数运行返回False/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/08/29/关于字符编码，你所需要知道的/">关于字符编码，你所需要知道的</a>
         
       </h1>
@@ -699,57 +754,6 @@
 <h3 id="配置参数"><a href="#配置参数" class="headerlink" title="配置参数"></a>配置参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">compress                        通过 gzip 压缩转储以后的日志</span><br><span class="line">nocompress                      不压缩</span><br><span class="line">copytruncate                    用于还在打开中的日志文件，把当前日志备份并截断</span><br><span class="line">nocopytruncate                  备份日志文件但是不截断</span><br><span class="line">create mode owner group         转储文件，使用指定的文件模式创建新的日志文件</span><br><span class="line">nocreate                        不建立新的日志文件</span><br><span class="line">delaycompress 和 compress        一起使用时，转储的日志文件到下一次转储时才压缩</span><br><span class="line">nodelaycompress                 覆盖 delaycompress 选项，转储同时压缩。</span><br><span class="line">errors address                  转储时的错误信息发送到指定的 Email 地址</span><br><span class="line">ifempty                         即使是空文件也转储，这个是 logrotate 的缺省选项。</span><br><span class="line">notifempty                      如果是空文件的话，不转储</span><br><span class="line">mail address                    把转储的日志文件发送到指定的 E-mail 地址</span><br><span class="line">nomail                          转储时不发送日志文件</span><br><span class="line">olddir directory                转储后的日志文件放入指定的目录，必须和当前日志文件在同一个文件系统</span><br><span class="line">noolddir                        转储后的日志文件和当前日志文件放在同一个目录下</span><br><span class="line">prerotate/endscript             在转储以前需要执行的命令可以放入这个对，这两个关键字必须单独成行</span><br><span class="line">postrotate/endscript            在转储以后需要执行的命令可以放入这个对，这两个关键字必须单独成行</span><br><span class="line">daily                           指定转储周期为每天</span><br><span class="line">weekly                          指定转储周期为每周</span><br><span class="line">monthly                         指定转储周期为每月</span><br><span class="line">rotate count                    指定日志文件删除之前转储的次数，0 指没有备份，5 指保留5 个备份</span><br><span class="line">tabootext [+] list 让logrotate   不转储指定扩展名的文件，缺省的扩展名是：.rpm-orig, .rpmsave, v, 和 ~ </span><br><span class="line">size size                       当日志文件到达指定的大小时才转储，bytes(缺省)及KB(sizek)或MB(sizem)</span><br></pre></td></tr></table></figure>
           <div class="read-more">
             <a href="/2018/06/15/Nginx-日志切割/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/06/14/Nginx-日志配置/">Nginx-日志配置</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-06-14
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Nginx/">Nginx</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h3 id="access-log-指令"><a href="#access-log-指令" class="headerlink" title="access_log 指令"></a>access_log 指令</h3><p>设置访问日志</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">access_log path [format [buffer=size [flush=time]][if=condition]];</span><br><span class="line"></span><br><span class="line">access_log path format gzip[=level][buffer=size][flush=time][if=condition];</span><br><span class="line"></span><br><span class="line">access_log syslog:server=address[,parameter=value][format];</span><br><span class="line"></span><br><span class="line">access_log off; # 关闭日志</span><br><span class="line"></span><br><span class="line">buffer=size #存放访问日志的缓冲区大小 </span><br><span class="line">flush=time #缓冲区日志刷到磁盘的时间 </span><br><span class="line">if=condition #其他条件</span><br><span class="line">gzip[=level] #压缩级别</span><br></pre></td></tr></table></figure>
-          <div class="read-more">
-            <a href="/2018/06/14/Nginx-日志配置/" class="read-more-link">阅读更多</a>
           </div>
         
       

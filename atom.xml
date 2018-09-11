@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.zhaojiaxing.top/"/>
-  <updated>2018-08-29T01:50:45.917Z</updated>
+  <updated>2018-09-11T08:37:10.143Z</updated>
   <id>https://www.zhaojiaxing.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bug-simplexml_load_file函数运行返回False</title>
+    <link href="https://www.zhaojiaxing.top/2018/09/11/bug-simplexml-load-file%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E8%BF%94%E5%9B%9EFalse/"/>
+    <id>https://www.zhaojiaxing.top/2018/09/11/bug-simplexml-load-file函数运行返回False/</id>
+    <published>2018-09-11T08:23:28.000Z</published>
+    <updated>2018-09-11T08:37:10.143Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;来源&quot;&gt;&lt;a href=&quot;#来源&quot; class=&quot;headerlink&quot; title=&quot;来源&quot;&gt;&lt;/a&gt;来源&lt;/h3&gt;&lt;p&gt;阿里云主机上运行 &lt;code&gt;simplexml_load_file函数运行返回False&lt;/code&gt; 大部分情况下会出现获取不到返回值的情况，目前没有找到根源，手头的两个云主机，一个可以正常运行，一个就会出现问题 &lt;/p&gt;
+&lt;h3 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h3&gt;&lt;p&gt;排除文件权限问题&lt;/p&gt;
+&lt;p&gt;排除了 php.ini 配置 disable_functions &lt;/p&gt;
+&lt;p&gt;cli 模式下可用，且是同一 php.ini，排除配置文件的问题&lt;/p&gt;
+&lt;h3 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;file_get_contents&lt;/code&gt; 和 &lt;code&gt;simplexml_load_string&lt;/code&gt; 替换 &lt;code&gt;simplexml_load_file函数运行返回False&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$xmlStr = file_get_contents(&lt;span class=&quot;string&quot;&gt;&#39;test.xml&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$xml = simplexml_load_string($xmlStr);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="bug" scheme="https://www.zhaojiaxing.top/categories/bug/"/>
+    
+    
+      <category term="bug" scheme="https://www.zhaojiaxing.top/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>关于字符编码，你所需要知道的</title>
@@ -561,32 +586,6 @@
       &lt;h3 id=&quot;命令行参数&quot;&gt;&lt;a href=&quot;#命令行参数&quot; class=&quot;headerlink&quot; title=&quot;命令行参数&quot;&gt;&lt;/a&gt;命令行参数&lt;/h3&gt;&lt;h4 id=&quot;读取参数&quot;&gt;&lt;a href=&quot;#读取参数&quot; class=&quot;headerlink&quot; title=&quot;读取参数&quot;&gt;&lt;/a&gt;读取参数&lt;/h4&gt;&lt;p&gt;&lt;code&gt;bash shell&lt;/code&gt; 将在命令行输入的所有参数赋值给一些特殊变量，这些变量称为位置参数。位置参数通过标准数字表示，其中 &lt;code&gt;$0&lt;/code&gt; 为程序名称，&lt;code&gt;$1&lt;/code&gt; 为第一个参数，&lt;code&gt;$2&lt;/code&gt; 为第二个参数，依次类推，直到 &lt;code&gt;$9&lt;/code&gt; 为第九个参数。如果脚本需要的命令行参数多于 &lt;code&gt;9&lt;/code&gt; 个，那么之后的变量须使用大括号括起来，如 &lt;code&gt;${10}&lt;/code&gt;。  &lt;/p&gt;
 &lt;p&gt;参数在命令行中使用空格分隔，如果参数中包含空格，必须使用引号 &lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cat test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo Hello $1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ test Rich&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hello Rich&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ test &amp;apos;Rich Mall&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hell Rich Mall&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://www.zhaojiaxing.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://www.zhaojiaxing.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-循环语句</title>
-    <link href="https://www.zhaojiaxing.top/2018/05/23/Linux-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/"/>
-    <id>https://www.zhaojiaxing.top/2018/05/23/Linux-循环语句/</id>
-    <published>2018-05-23T00:52:30.000Z</published>
-    <updated>2018-05-30T07:45:57.684Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;for-命令&quot;&gt;&lt;a href=&quot;#for-命令&quot; class=&quot;headerlink&quot; title=&quot;for 命令&quot;&gt;&lt;/a&gt;for 命令&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for var in list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;do &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;读取列表的值&quot;&gt;&lt;a href=&quot;#读取列表的值&quot; class=&quot;headerlink&quot; title=&quot;读取列表的值&quot;&gt;&lt;/a&gt;读取列表的值&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for test in Alabama Alaska Arizona Arkansas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;do &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo $test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;最后一次迭代之后，变量 &lt;code&gt;$test&lt;/code&gt; 在 &lt;code&gt;shell&lt;/code&gt; 脚本的其他部分中仍有效，仍是迭代的最后一个值   &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for test in I don\&amp;apos;t know if &amp;quot;this&amp;apos;s&amp;quot; work&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo $test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;shell&lt;/code&gt; 看到列表中的单引号，会试图用它们来定义一个单独的数据值，所有可以使用转义字符或者使用双引号来解决该问题  &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for test in &amp;quot;New York&amp;quot; Nevada&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo $test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;for&lt;/code&gt; 命令用空格分隔列表中的每个值，如果数值中间有空格则必须使用双引号将它们包起来   &lt;/p&gt;
     
     </summary>
     
