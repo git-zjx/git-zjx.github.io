@@ -5,8 +5,8 @@
 - [SQL四种语言：DDL,DML,DCL,TCL](https://github.com/git-zjx/git-zjx.github.io/issues/15)
 - [MySQL 5.6 原生Online DDL解析 ](https://github.com/git-zjx/git-zjx.github.io/issues/23)
 
-- [01 | 基础架构：一条SQL查询语句是如何执行的？](https://github.com/git-zjx/git-zjx.github.io/issues/6)
-- [02 | 日志系统：一条SQL更新语句是如何执行的？](https://github.com/git-zjx/git-zjx.github.io/issues/7)
+- [01 - 基础架构：一条SQL查询语句是如何执行的？](https://github.com/git-zjx/git-zjx.github.io/issues/6)
+- [02 - 日志系统：一条SQL更新语句是如何执行的？](https://github.com/git-zjx/git-zjx.github.io/issues/7)
 - [03 | 事务隔离：为什么你改了我还看不见？](https://github.com/git-zjx/git-zjx.github.io/issues/8)
 - [04 | 深入浅出索引（上）](https://github.com/git-zjx/git-zjx.github.io/issues/9)
 - [05 | 深入浅出索引（下）](https://github.com/git-zjx/git-zjx.github.io/issues/13)
