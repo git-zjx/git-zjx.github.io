@@ -21,6 +21,8 @@
 - [14 - count(*)这么慢，我该怎么办？](https://github.com/git-zjx/git-zjx.github.io/issues/24)
 - [15 - 答疑文章（一）：日志和索引相关问题](https://github.com/git-zjx/git-zjx.github.io/issues/25)
 - [16 - “order by”是怎么工作的？ ](https://github.com/git-zjx/git-zjx.github.io/issues/26)
+- [17 - 如何正确地显示随机消息？](https://github.com/git-zjx/git-zjx.github.io/issues/27)
+- [18 - 为什么这些SQL语句逻辑相同，性能却差异巨大？](https://github.com/git-zjx/git-zjx.github.io/issues/28)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
