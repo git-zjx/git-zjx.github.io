@@ -23,6 +23,8 @@
 - [16 - “order by”是怎么工作的？ ](https://github.com/git-zjx/git-zjx.github.io/issues/26)
 - [17 - 如何正确地显示随机消息？](https://github.com/git-zjx/git-zjx.github.io/issues/27)
 - [18 - 为什么这些SQL语句逻辑相同，性能却差异巨大？](https://github.com/git-zjx/git-zjx.github.io/issues/28)
+- [19 - 为什么我只查一行的语句，也执行这么慢？](https://github.com/git-zjx/git-zjx.github.io/issues/29)
+- [20 - 幻读是什么，幻读有什么问题？](https://github.com/git-zjx/git-zjx.github.io/issues/30)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
