@@ -1,3 +1,4 @@
+# 记录
 ### MySQL
 - [MySQL 5.7 日志时间与系统时间不一致的问题](https://github.com/git-zjx/git-zjx.github.io/issues/2)
 - [B树和B+树的插入、删除图文详解](https://github.com/git-zjx/git-zjx.github.io/issues/10)
