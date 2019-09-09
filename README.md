@@ -26,10 +26,15 @@
 - [18 - 为什么这些SQL语句逻辑相同，性能却差异巨大？](https://github.com/git-zjx/git-zjx.github.io/issues/28)
 - [19 - 为什么我只查一行的语句，也执行这么慢？](https://github.com/git-zjx/git-zjx.github.io/issues/29)
 - [20 - 幻读是什么，幻读有什么问题？](https://github.com/git-zjx/git-zjx.github.io/issues/30)
+- [21 - 为什么我只改一行的语句，锁这么多？](https://github.com/git-zjx/git-zjx.github.io/issues/32)
+- [22 - MySQL有哪些“饮鸩止渴”提高性能的方法？](https://github.com/git-zjx/git-zjx.github.io/issues/33)
+- [23 - MySQL是怎么保证数据不丢的？](https://github.com/git-zjx/git-zjx.github.io/issues/34)
+
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
 - [PhpStorm 解决 git 乱码问题](https://github.com/git-zjx/git-zjx.github.io/issues/5)
 - [解决 IDEA 下的 Terminal 中文乱码(Unicode 编码)的方法](https://github.com/git-zjx/git-zjx.github.io/issues/12)
+- [消除 field accessed via magic method 提示](https://github.com/git-zjx/git-zjx.github.io/issues/31)
 ### Yii
 - [Yii 数据库访问、查询生成器和活动记录三者的关系](https://github.com/git-zjx/git-zjx.github.io/issues/1)
