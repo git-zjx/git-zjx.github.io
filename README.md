@@ -29,6 +29,9 @@
 - [21 - 为什么我只改一行的语句，锁这么多？](https://github.com/git-zjx/git-zjx.github.io/issues/32)
 - [22 - MySQL有哪些“饮鸩止渴”提高性能的方法？](https://github.com/git-zjx/git-zjx.github.io/issues/33)
 - [23 - MySQL是怎么保证数据不丢的？](https://github.com/git-zjx/git-zjx.github.io/issues/34)
+- [24 - MySQL是怎么保证主备一致的？](https://github.com/git-zjx/git-zjx.github.io/issues/35)
+- [25 - MySQL是怎么保证高可用的？](https://github.com/git-zjx/git-zjx.github.io/issues/36)
+- [26 - 备库为什么会延迟好几个小时？](https://github.com/git-zjx/git-zjx.github.io/issues/37)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
