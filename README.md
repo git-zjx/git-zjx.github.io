@@ -32,6 +32,9 @@
 - [24 - MySQL是怎么保证主备一致的？](https://github.com/git-zjx/git-zjx.github.io/issues/35)
 - [25 - MySQL是怎么保证高可用的？](https://github.com/git-zjx/git-zjx.github.io/issues/36)
 - [26 - 备库为什么会延迟好几个小时？](https://github.com/git-zjx/git-zjx.github.io/issues/37)
+- [27 - 主库出问题了，从库怎么办？](https://github.com/git-zjx/git-zjx.github.io/issues/38)
+- [28 - 读写分离有哪些坑？](https://github.com/git-zjx/git-zjx.github.io/issues/39)
+- [29 - 如何判断一个数据库是不是出问题了？](https://github.com/git-zjx/git-zjx.github.io/issues/40)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
