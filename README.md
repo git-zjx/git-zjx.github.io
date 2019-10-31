@@ -35,6 +35,9 @@
 - [27 - 主库出问题了，从库怎么办？](https://github.com/git-zjx/git-zjx.github.io/issues/38)
 - [28 - 读写分离有哪些坑？](https://github.com/git-zjx/git-zjx.github.io/issues/39)
 - [29 - 如何判断一个数据库是不是出问题了？](https://github.com/git-zjx/git-zjx.github.io/issues/40)
+- [30 - 答疑文章（二）：用动态的观点看加锁](https://github.com/git-zjx/git-zjx.github.io/issues/41)
+- [31 - 误删数据后除了跑路，还能怎么办？](https://github.com/git-zjx/git-zjx.github.io/issues/42)
+- [32 - 为什么还有kill不掉的语句？](https://github.com/git-zjx/git-zjx.github.io/issues/43)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
