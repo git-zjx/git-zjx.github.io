@@ -51,3 +51,6 @@
 - [消除 field accessed via magic method 提示](https://github.com/git-zjx/git-zjx.github.io/issues/31)
 ### Yii
 - [Yii 数据库访问、查询生成器和活动记录三者的关系](https://github.com/git-zjx/git-zjx.github.io/issues/1)
+### Linux
+- [Cannot add PPA: 'ppa:~ondrej/ubuntu/php' 的解决办法](https://github.com/git-zjx/git-zjx.github.io/issues/47)
+- [搭建Git服务器](https://github.com/git-zjx/git-zjx.github.io/issues/48)
