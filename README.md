@@ -1,10 +1,10 @@
 # 记录
 ### MySQL
 - [MySQL 5.7 日志时间与系统时间不一致的问题](https://github.com/git-zjx/git-zjx.github.io/issues/2)
-- [B树和B+树的插入、删除图文详解](https://github.com/git-zjx/git-zjx.github.io/issues/10)
-- [MySQL的重做日志(redo log)回滚日志(undo log)以及二进制日志(binlog)简介](https://github.com/git-zjx/git-zjx.github.io/issues/11)
-- [SQL四种语言：DDL,DML,DCL,TCL](https://github.com/git-zjx/git-zjx.github.io/issues/15)
-- [MySQL 5.6 原生Online DDL解析 ](https://github.com/git-zjx/git-zjx.github.io/issues/23)
+- [B树和B+树的插入、删除图文详解[转载]](https://github.com/git-zjx/git-zjx.github.io/issues/10)
+- [MySQL的重做日志(redo log)回滚日志(undo log)以及二进制日志(binlog)简介[转载]](https://github.com/git-zjx/git-zjx.github.io/issues/11)
+- [SQL四种语言：DDL,DML,DCL,TCL[转载]](https://github.com/git-zjx/git-zjx.github.io/issues/15)
+- [MySQL 5.6 原生Online DDL解析[转载]](https://github.com/git-zjx/git-zjx.github.io/issues/23)
 ###### MySQL实战45讲
 - [01 - 基础架构：一条SQL查询语句是如何执行的？](https://github.com/git-zjx/git-zjx.github.io/issues/6)
 - [02 - 日志系统：一条SQL更新语句是如何执行的？](https://github.com/git-zjx/git-zjx.github.io/issues/7)
@@ -47,7 +47,7 @@
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
 - [PhpStorm 解决 git 乱码问题](https://github.com/git-zjx/git-zjx.github.io/issues/5)
-- [解决 IDEA 下的 Terminal 中文乱码(Unicode 编码)的方法](https://github.com/git-zjx/git-zjx.github.io/issues/12)
+- [解决 IDEA 下的 Terminal 中文乱码(Unicode 编码)的方法[转载]](https://github.com/git-zjx/git-zjx.github.io/issues/12)
 - [消除 field accessed via magic method 提示](https://github.com/git-zjx/git-zjx.github.io/issues/31)
 ### Yii
 - [Yii 数据库访问、查询生成器和活动记录三者的关系](https://github.com/git-zjx/git-zjx.github.io/issues/1)
