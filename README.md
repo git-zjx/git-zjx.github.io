@@ -38,6 +38,11 @@
 - [30 - 答疑文章（二）：用动态的观点看加锁](https://github.com/git-zjx/git-zjx.github.io/issues/41)
 - [31 - 误删数据后除了跑路，还能怎么办？](https://github.com/git-zjx/git-zjx.github.io/issues/42)
 - [32 - 为什么还有kill不掉的语句？](https://github.com/git-zjx/git-zjx.github.io/issues/43)
+- [33 - 我查这么多数据，会不会把数据库内存打爆？](https://github.com/git-zjx/git-zjx.github.io/issues/44)
+- [34 - 到底可不可以使用join？](https://github.com/git-zjx/git-zjx.github.io/issues/45)
+- [35 - join语句怎么优化？](https://github.com/git-zjx/git-zjx.github.io/issues/46)
+- [36 - 为什么临时表可以重名？](https://github.com/git-zjx/git-zjx.github.io/issues/49)
+- [37 - 什么时候会使用内部临时表？](https://github.com/git-zjx/git-zjx.github.io/issues/50)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
