@@ -43,6 +43,10 @@
 - [35 - join语句怎么优化？](https://github.com/git-zjx/git-zjx.github.io/issues/46)
 - [36 - 为什么临时表可以重名？](https://github.com/git-zjx/git-zjx.github.io/issues/49)
 - [37 - 什么时候会使用内部临时表？](https://github.com/git-zjx/git-zjx.github.io/issues/50)
+- [38 - 都说InnoDB好，那还要不要使用Memory引擎？](https://github.com/git-zjx/git-zjx.github.io/issues/51)
+- [39 - 自增主键为什么不是连续的？](https://github.com/git-zjx/git-zjx.github.io/issues/52)
+- [40 - insert语句的锁为什么这么多？](https://github.com/git-zjx/git-zjx.github.io/issues/53)
+- [41 - 怎么最快地复制一张表？](https://github.com/git-zjx/git-zjx.github.io/issues/54)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
