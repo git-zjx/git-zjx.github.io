@@ -47,6 +47,10 @@
 - [39 - 自增主键为什么不是连续的？](https://github.com/git-zjx/git-zjx.github.io/issues/52)
 - [40 - insert语句的锁为什么这么多？](https://github.com/git-zjx/git-zjx.github.io/issues/53)
 - [41 - 怎么最快地复制一张表？](https://github.com/git-zjx/git-zjx.github.io/issues/54)
+- [42 - 要不要使用分区表？](https://github.com/git-zjx/git-zjx.github.io/issues/55)
+- [43 - grant之后要跟着flush privileges吗？](https://github.com/git-zjx/git-zjx.github.io/issues/56)
+- [44 - 答疑文章（三）：说一说这些好问题](https://github.com/git-zjx/git-zjx.github.io/issues/57)
+- [45 - 自增id用完怎么办？](https://github.com/git-zjx/git-zjx.github.io/issues/58)
 ### PhpStrom
 - [Cannot run program "svn" (in directory ""): CreateProcess error=2](https://github.com/git-zjx/git-zjx.github.io/issues/3)
 - [PhpStorm 使用 cmder](https://github.com/git-zjx/git-zjx.github.io/issues/4)
