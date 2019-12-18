@@ -62,3 +62,4 @@
 ### Linux
 - [Cannot add PPA: 'ppa:~ondrej/ubuntu/php' 的解决办法](https://github.com/git-zjx/git-zjx.github.io/issues/47)
 - [搭建Git服务器](https://github.com/git-zjx/git-zjx.github.io/issues/48)
+- [Homestead 在 Windows 下软链接报错的解决办法](https://github.com/git-zjx/git-zjx.github.io/issues/59)
